@@ -8,16 +8,19 @@ export default function FactoryStory() {
   const [isPlaying, setIsPlaying] = useState(false)
 
   return (
-    <section id="about" className="py-12 md:py-16 bg-[#FAF8F5]">
+    <section id="about" className="py-10 md:py-16 bg-[#FAF8F5]">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
         {/* Main Heading */}
         <ScrollReveal>
           <h2
             style={{ fontFamily: 'Georgia, serif' }}
-            className="text-3xl sm:text-[42px] font-normal text-[#6B1A2A] leading-tight mb-3 tracking-normal"
+            className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#6B1A2A] leading-tight mb-2 tracking-[0.5px]"
           >
             We Don&apos;t Source. We Are<br />Manufacture.
           </h2>
+
+          {/* Gold Accent Divider Bar matching Krishaz */}
+          <div className="w-[60px] sm:w-[80px] h-[2px] bg-[#C9A84C] mx-auto my-2.5 sm:my-3.5"></div>
 
           {/* Subtitle */}
           <p
@@ -25,7 +28,7 @@ export default function FactoryStory() {
               fontFamily:
                 '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
             }}
-            className="text-[14px] text-[#2C2C2C] max-w-lg mx-auto mb-8 font-normal leading-relaxed"
+            className="text-[13px] sm:text-[14px] text-[#2C2C2C] max-w-lg mx-auto mb-7 font-normal leading-relaxed"
           >
             From our manufacturing unit in Jaipur, every piece is designed, crafted and quality-checked by our skilled artisans.
           </p>
@@ -33,7 +36,7 @@ export default function FactoryStory() {
 
         {/* 3 Circular Badges */}
         <ScrollReveal delay={100}>
-          <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-8 max-w-lg mx-auto">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-7 max-w-lg mx-auto">
             {/* Badge 1 */}
             <div className="flex flex-col items-center text-center space-y-2 group">
               <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-[#C9A84C] flex items-center justify-center text-[#C9A84C] bg-white shadow-sm transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:shadow-md">
@@ -60,59 +63,47 @@ export default function FactoryStory() {
                 <Award className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.5]" />
               </div>
               <span className="text-[11px] sm:text-xs font-medium text-neutral-700 leading-tight">
-                Premium<br />Quality
+                100% Quality<br />Inspection
               </span>
             </div>
           </div>
         </ScrollReveal>
 
-        {/* Video Player Card */}
+        {/* Video Card Container */}
         <ScrollReveal delay={150}>
-          <div className="relative rounded-3xl overflow-hidden bg-black aspect-[4/3] sm:aspect-[16/10] shadow-2xl border-2 border-neutral-800 card-hover-lift">
-            {/* Background Factory / Showroom visual */}
-            <div
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.02]"
-              style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1200&auto=format&fit=crop')`,
-              }}
-            ></div>
-            <div className="absolute inset-0 bg-black/40"></div>
+          <div className="relative rounded-2xl overflow-hidden border border-neutral-200/90 shadow-md group">
+            {/* Background Thumbnail Image */}
+            <div className="relative aspect-[16/9] w-full bg-neutral-900">
+              <img
+                src="https://images.unsplash.com/photo-1611591475870-0f2d80d21051?q=80&w=1200&auto=format&fit=crop"
+                alt="Shyambaba Factory Crafting"
+                className="w-full h-full object-cover opacity-85 group-hover:scale-102 transition-transform duration-700"
+                loading="lazy"
+              />
 
-            {/* Top Left Speed Tag "1.00" */}
-            <div className="absolute top-4 left-4 text-xs font-mono text-white/90 bg-black/50 px-2 py-0.5 rounded">
-              1.00
-            </div>
+              {/* Play Button Overlay */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-colors">
+                <a
+                  href="https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20watch%20your%20factory%20manufacturing%20videos."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#6B1A2A] text-white flex items-center justify-center shadow-xl group-hover:scale-110 active:scale-95 transition-all"
+                  aria-label="Play Factory Video"
+                  style={{ WebkitTapHighlightColor: 'transparent' }}
+                >
+                  <Play className="w-6 h-6 sm:w-7 sm:h-7 fill-white ml-1" />
+                </a>
+              </div>
 
-            {/* Top Right Phone Numbers */}
-            <div className="absolute top-4 right-4 text-right text-[11px] sm:text-xs font-mono text-white font-bold bg-black/60 backdrop-blur-sm px-3 py-1 rounded-lg border border-white/10 space-y-0.5">
-              <div>📞 9876543210</div>
-              <div>📞 7742126346</div>
-            </div>
-
-            {/* Central Circular Red Play Button */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <a
-                href="https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20please%20send%20me%20your%20Jaipur%20factory%20video%20tour."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#800020] hover:bg-[#6B1A2A] text-white flex items-center justify-center shadow-2xl border-4 border-white/90 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-105 active:scale-95"
-                aria-label="Play Factory Video"
-              >
-                <Play className="w-7 h-7 sm:w-9 sm:h-9 fill-white ml-1" />
-              </a>
-            </div>
-
-            {/* Bottom Left "Book Video Call" Pill Button inside video */}
-            <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-              <a
-                href="https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20would%20like%20to%20Book%20a%20Video%20Call."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-tactile inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#6B1A2A] text-white text-xs font-bold shadow-lg hover:bg-[#521320] border border-white/20"
-              >
-                <Video className="w-4 h-4" />
-                <span>Book Video Call</span>
-              </a>
+              {/* Bottom Caption */}
+              <div className="absolute bottom-3 left-4 right-4 text-left">
+                <span className="text-white font-semibold text-xs sm:text-sm drop-shadow block">
+                  Tour Our Jaipur Workshop
+                </span>
+                <span className="text-white/80 text-[10px] sm:text-xs font-light block">
+                  Watch casting, polishing &amp; 22K gold-plating live
+                </span>
+              </div>
             </div>
           </div>
         </ScrollReveal>

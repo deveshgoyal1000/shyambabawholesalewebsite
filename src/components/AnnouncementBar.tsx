@@ -7,57 +7,57 @@ export default function AnnouncementBar() {
   const [currency, setCurrency] = useState('INR')
 
   return (
-    <div className="bg-maroon text-cream text-xs font-medium border-b border-gold/30">
-      <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col md:flex-row items-center justify-between gap-2">
-        {/* Left: Contact & Working Hours */}
-        <div className="hidden lg:flex items-center space-x-4 text-cream/80">
+    <div className="bg-[#6B1A2A] text-[#FAF8F5] text-xs font-medium border-b border-[#C9A84C]/30 select-none">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 py-1.5 sm:py-2 flex items-center justify-between gap-2">
+        {/* Left: Contact & Working Hours (Desktop Only) */}
+        <div className="hidden xl:flex items-center space-x-4 text-[#FAF8F5]/80 text-[11px]">
           <span className="flex items-center gap-1.5">
-            <Phone className="w-3.5 h-3.5 text-gold" />
+            <Phone className="w-3 h-3 text-[#C9A84C]" />
             +91 98765 43210 / +91 77421 26346
           </span>
-          <span className="text-gold/40">|</span>
+          <span className="text-[#C9A84C]/40">|</span>
           <span className="flex items-center gap-1.5">
-            <Clock className="w-3.5 h-3.5 text-gold" />
-            Factory Hours: 10:30 AM - 7:30 PM IST
+            <Clock className="w-3 h-3 text-[#C9A84C]" />
+            Factory: 10:30 AM - 7:30 PM IST
           </span>
         </div>
 
-        {/* Center: Main Wholesale Announcement Ticker */}
-        <div className="flex items-center justify-center gap-2 text-center">
-          <Sparkles className="w-3.5 h-3.5 text-gold animate-pulse flex-shrink-0" />
-          <span className="tracking-wide">
-            <strong className="text-gold font-semibold uppercase">Low MOV ₹3,000/-</strong> (Direct Website)
-            <span className="mx-2 text-gold/40">•</span>
-            Worldwide B2B Export to 50+ Countries
-            <span className="mx-2 text-gold/40">•</span>
-            <span className="underline decoration-gold underline-offset-4 font-semibold text-white">
+        {/* Center: Main Wholesale Announcement Ticker (Always Visible, Single Line Mobile) */}
+        <div className="flex-1 flex items-center justify-center gap-1.5 sm:gap-2 text-center overflow-hidden">
+          <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#C9A84C] animate-pulse flex-shrink-0" />
+          <span className="tracking-wide text-[11px] sm:text-xs truncate sm:overflow-visible">
+            <strong className="text-[#C9A84C] font-bold uppercase tracking-wider">Low MOV ₹3,000/-</strong>
+            <span className="mx-1.5 sm:mx-2 text-[#C9A84C]/50">•</span>
+            <span>Worldwide B2B Export</span>
+            <span className="mx-1.5 sm:mx-2 text-[#C9A84C]/50">•</span>
+            <span className="underline decoration-[#C9A84C] underline-offset-2 sm:underline-offset-4 font-semibold text-white">
               Direct Jaipur Manufacturer
             </span>
           </span>
         </div>
 
-        {/* Right: Country / Currency Selector */}
-        <div className="flex items-center space-x-3 text-cream/90 text-[11px]">
-          <div className="flex items-center gap-1 bg-maroon-dark/60 px-2 py-0.5 rounded border border-gold/20">
-            <Globe className="w-3 h-3 text-gold" />
+        {/* Right: Currency Selector (Desktop / Tablet Only) */}
+        <div className="hidden md:flex items-center space-x-3 text-[#FAF8F5]/90 text-[11px]">
+          <div className="flex items-center gap-1 bg-[#521320]/80 px-2 py-0.5 rounded border border-[#C9A84C]/30">
+            <Globe className="w-3 h-3 text-[#C9A84C]" />
             <select
               value={currency}
               onChange={(e) => setCurrency(e.target.value)}
-              className="bg-transparent text-cream focus:outline-none cursor-pointer"
+              className="bg-transparent text-white focus:outline-none cursor-pointer text-[11px]"
             >
-              <option value="INR" className="bg-maroon text-white">🇮🇳 INR (₹)</option>
-              <option value="USD" className="bg-maroon text-white">🇺🇸 USD ($)</option>
-              <option value="GBP" className="bg-maroon text-white">🇬🇧 GBP (£)</option>
-              <option value="AED" className="bg-maroon text-white">🇦🇪 AED (د.إ)</option>
-              <option value="CAD" className="bg-maroon text-white">🇨🇦 CAD ($)</option>
-              <option value="MYR" className="bg-maroon text-white">🇲🇾 MYR (RM)</option>
+              <option value="INR" className="bg-[#6B1A2A] text-white">🇮🇳 INR (₹)</option>
+              <option value="USD" className="bg-[#6B1A2A] text-white">🇺🇸 USD ($)</option>
+              <option value="GBP" className="bg-[#6B1A2A] text-white">🇬🇧 GBP (£)</option>
+              <option value="AED" className="bg-[#6B1A2A] text-white">🇦🇪 AED (د.إ)</option>
+              <option value="CAD" className="bg-[#6B1A2A] text-white">🇨🇦 CAD ($)</option>
+              <option value="MYR" className="bg-[#6B1A2A] text-white">🇲🇾 MYR (RM)</option>
             </select>
           </div>
           <a
             href="https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20book%20a%20video%20call%20for%20wholesale%20selection"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-gold transition-colors duration-250 font-medium flex items-center gap-1 text-gold"
+            className="hover:text-[#C9A84C] transition-colors duration-200 font-medium flex items-center gap-1 text-[#C9A84C]"
           >
             Video Call Booking
           </a>

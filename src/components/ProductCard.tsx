@@ -44,7 +44,10 @@ export default function ProductCard({ product }: { product: ProductData }) {
     'https://images.unsplash.com/photo-1611591475870-0f2d80d21051?q=80&w=600&auto=format&fit=crop'
 
   return (
-    <div className="group relative bg-white rounded-2xl border border-[#EAE3D8] hover:border-[#C9A84C]/60 overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.03)] card-hover-lift flex flex-col justify-between">
+    <div
+      className="group relative bg-white rounded-xl sm:rounded-2xl border border-[#EAE3D8] hover:border-[#C9A84C]/60 overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.03)] active:scale-[0.985] card-hover-lift flex flex-col justify-between"
+      style={{ WebkitTapHighlightColor: 'transparent' }}
+    >
       {/* Top Media Container */}
       <div className="relative aspect-square overflow-hidden bg-[#F7F4EE]">
         {/* Primary Product Image with Synchronized Calm Zoom */}
@@ -69,15 +72,15 @@ export default function ProductCard({ product }: { product: ProductData }) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
 
         {/* Top Left Badges */}
-        <div className="absolute top-2.5 left-2.5 flex flex-col gap-1.5 z-10">
+        <div className="absolute top-2 left-2 sm:top-2.5 sm:left-2.5 flex flex-col gap-1 z-10">
           {product.isNewArrival && (
-            <span className="px-2.5 py-0.5 rounded-full bg-[#C9A84C] text-neutral-900 text-[10px] font-bold uppercase tracking-wider shadow-sm">
-              New Arrival
+            <span className="px-2 py-0.5 rounded-full bg-[#C9A84C] text-neutral-900 text-[9px] sm:text-[10px] font-bold uppercase tracking-wider shadow-sm">
+              New
             </span>
           )}
           {product.isFeatured && (
-            <span className="px-2.5 py-0.5 rounded-full bg-[#6B1A2A] text-white text-[10px] font-bold uppercase tracking-wider shadow-sm">
-              Hot Seller
+            <span className="px-2 py-0.5 rounded-full bg-[#6B1A2A] text-white text-[9px] sm:text-[10px] font-bold uppercase tracking-wider shadow-sm">
+              Hot
             </span>
           )}
         </div>
@@ -86,25 +89,25 @@ export default function ProductCard({ product }: { product: ProductData }) {
         <button
           onClick={copyCode}
           title="Click to copy Product Code"
-          className="absolute top-2.5 right-2.5 z-10 px-2.5 py-1 bg-black/75 hover:bg-black/90 active:scale-95 backdrop-blur-md rounded-md text-[11px] font-bold text-white border border-white/20 flex items-center gap-1 shadow-sm transition-colors duration-200"
+          className="absolute top-2 right-2 sm:top-2.5 sm:right-2.5 z-10 px-2 py-0.5 sm:px-2.5 sm:py-1 bg-black/75 hover:bg-black/90 active:scale-95 backdrop-blur-md rounded-md text-[10px] sm:text-[11px] font-bold text-white border border-white/20 flex items-center gap-1 shadow-sm transition-colors duration-200"
         >
           {copied ? (
             <>
-              <Check className="w-3.5 h-3.5 text-[#25D366]" />
+              <Check className="w-3 h-3 text-[#25D366]" />
               <span className="text-[#25D366]">Copied</span>
             </>
           ) : (
             <>
-              <Tag className="w-3 h-3 text-[#C9A84C]" />
+              <Tag className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#C9A84C]" />
               <span>{product.productCode}</span>
             </>
           )}
         </button>
 
-        {/* Quick View Button overlay */}
+        {/* Quick View Button overlay (Desktop) */}
         <Link
           href={`/products/${product.slug}`}
-          className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+          className="absolute inset-0 hidden sm:flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
         >
           <span className="px-4 py-2 bg-white/95 text-[#6B1A2A] hover:bg-[#6B1A2A] hover:text-white font-bold text-xs rounded-full shadow-lg border border-[#C9A84C]/40 flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition-all duration-[360ms] ease-[cubic-bezier(0.22,1,0.36,1)]">
             <Eye className="w-3.5 h-3.5" />
@@ -117,55 +120,52 @@ export default function ProductCard({ product }: { product: ProductData }) {
       <div className="h-[2px] bg-[#C9A84C] w-full"></div>
 
       {/* Product Content Details */}
-      <div className="p-4 flex-1 flex flex-col justify-between space-y-3 bg-white">
+      <div className="p-3 sm:p-4 flex-1 flex flex-col justify-between space-y-2 sm:space-y-3 bg-white">
         <div>
           {/* Prominent Product Code Display Bar */}
-          <div className="flex items-center justify-between text-xs pb-1.5 border-b border-[#F5EFE6]">
-            <span className="text-[11px] font-bold text-[#6B1A2A] uppercase tracking-wider flex items-center gap-1">
+          <div className="flex items-center justify-between text-xs pb-1 sm:pb-1.5 border-b border-[#F5EFE6]">
+            <span className="text-[10px] sm:text-[11px] font-bold text-[#6B1A2A] uppercase tracking-wider flex items-center gap-1">
               <span className="text-[#9A7E2E]">Code:</span>
-              <span className="bg-[#C9A84C]/15 text-[#6B1A2A] px-1.5 py-0.5 rounded font-mono font-bold">
+              <span className="bg-[#C9A84C]/15 text-[#6B1A2A] px-1 py-0.5 rounded font-mono font-bold">
                 {product.productCode}
               </span>
             </span>
-            <span className="text-[10px] text-green-700 bg-green-50 px-2 py-0.5 rounded-full font-semibold border border-green-200/80">
+            <span className="text-[9px] sm:text-[10px] text-green-700 bg-green-50 px-1.5 py-0.5 rounded-full font-semibold border border-green-200/80">
               ● In Stock
             </span>
           </div>
 
           {/* Product Title */}
-          <Link href={`/products/${product.slug}`} className="block mt-2">
-            <h4 className="font-serif font-bold text-base text-[#121212] group-hover:text-[#6B1A2A] transition-colors duration-250 line-clamp-2 leading-snug">
+          <Link href={`/products/${product.slug}`} className="block mt-1.5 sm:mt-2">
+            <h4 className="font-serif font-bold text-xs sm:text-sm md:text-base text-[#121212] group-hover:text-[#6B1A2A] transition-colors duration-200 line-clamp-2 leading-snug">
               {product.name}
             </h4>
           </Link>
 
           {/* Specifications Preview (Metal / Plating / Pack) */}
-          <div className="mt-2 text-[11px] text-neutral-600 space-y-1">
+          <div className="mt-1.5 sm:mt-2 text-[10px] sm:text-[11px] text-neutral-600 space-y-0.5 sm:space-y-1">
             <div className="flex items-center justify-between">
-              <span className="text-neutral-400">Base Metal:</span>
-              <span className="font-medium text-neutral-800 truncate">Virgin Brass</span>
+              <span className="text-neutral-400">Metal:</span>
+              <span className="font-medium text-neutral-800 truncate">Brass</span>
             </div>
             <div className="flex items-center justify-between">
               <span className="text-neutral-400">Plating:</span>
-              <span className="font-medium text-neutral-800 truncate">22K Micro Gold</span>
-            </div>
-            <div className="flex items-center justify-between">
-              <span className="text-neutral-400">Wholesale MOQ:</span>
-              <span className="font-bold text-[#6B1A2A]">12 Pairs / Box</span>
+              <span className="font-medium text-neutral-800 truncate">22K Gold / Silver</span>
             </div>
           </div>
         </div>
 
         {/* Action Button: Inquire on WhatsApp (NO PRICE SHOWN) */}
-        <div className="pt-2">
+        <div className="pt-1.5 sm:pt-2">
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-tactile w-full inline-flex items-center justify-center gap-2 px-3.5 py-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs rounded-xl shadow-sm hover:shadow"
+            className="btn-tactile w-full inline-flex items-center justify-center gap-1.5 px-2.5 sm:px-3.5 py-2 sm:py-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-[11px] sm:text-xs rounded-lg sm:rounded-xl shadow-sm hover:shadow"
+            style={{ WebkitTapHighlightColor: 'transparent' }}
           >
-            <MessageCircle className="w-4 h-4 fill-white" />
-            <span>Inquire Price on WhatsApp</span>
+            <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-white" />
+            <span className="truncate">Inquire on WhatsApp</span>
           </a>
         </div>
       </div>

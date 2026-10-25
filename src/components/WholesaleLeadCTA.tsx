@@ -8,7 +8,7 @@ export default function WholesaleLeadCTA() {
   return (
     <section className="w-full bg-[#FAF8F5]">
       {/* 1. Maroon Banner matching Krishaz exactly */}
-      <div className="bg-[#6B1A2A] text-white py-14 px-5 sm:px-8 text-center">
+      <div className="bg-[#6B1A2A] text-white py-12 sm:py-16 px-4 sm:px-8 text-center">
         <ScrollReveal>
           <div className="max-w-2xl mx-auto">
             {/* Headline */}
@@ -25,10 +25,11 @@ export default function WholesaleLeadCTA() {
             </p>
 
             {/* Action Buttons */}
-            <div className="mt-7 max-w-sm mx-auto space-y-3">
+            <div className="mt-6 sm:mt-7 max-w-[290px] sm:max-w-sm mx-auto space-y-3">
               <a
                 href="#categories"
-                className="btn-tactile block w-full bg-[#D4AF37] hover:bg-[#C9A84C] text-neutral-950 font-semibold text-sm py-3 px-6 rounded-full shadow-md hover:shadow-lg text-center font-sans"
+                className="btn-tactile block w-full bg-[#D4AF37] hover:bg-[#C9A84C] text-neutral-950 font-semibold text-xs sm:text-sm py-3 sm:py-3.5 px-6 rounded-full shadow-md hover:shadow-lg text-center font-sans"
+                style={{ WebkitTapHighlightColor: 'transparent' }}
               >
                 Shop Wholesale
               </a>
@@ -37,14 +38,15 @@ export default function WholesaleLeadCTA() {
                 href="https://wa.me/919876543210?text=Hello%20Shyambaba%20Wholesale%2C%20I%20want%20to%20contact%20you%20regarding%20wholesale%20partnership."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-tactile block w-full bg-transparent hover:bg-white/10 text-white font-semibold text-sm py-3 px-6 rounded-full border border-white text-center font-sans"
+                className="btn-tactile block w-full bg-transparent hover:bg-white/10 text-white font-semibold text-xs sm:text-sm py-3 sm:py-3.5 px-6 rounded-full border border-white text-center font-sans"
+                style={{ WebkitTapHighlightColor: 'transparent' }}
               >
                 Contact Us
               </a>
             </div>
 
             {/* 3 Trust Badges matching Krishaz */}
-            <div className="mt-8 space-y-2 text-[#EFE7D6] text-xs font-medium font-sans">
+            <div className="mt-7 sm:mt-8 space-y-2 text-[#EFE7D6] text-xs font-medium font-sans">
               <div className="flex items-center justify-center gap-6">
                 <span className="flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-[#D4AF37]" /> Premium Quality
@@ -69,14 +71,14 @@ export default function WholesaleLeadCTA() {
           <img
             src="/images/cta/model_jewellery_perfect.png"
             alt="Shyambaba Wholesale Premium Jewellery Model"
-            className="w-full h-auto object-cover transition-transform duration-700 ease-out hover:scale-[1.01]"
+            className="w-full h-auto object-cover"
             loading="lazy"
           />
         </div>
       </ScrollReveal>
 
       {/* 3. Contact Us Box matching Krishaz */}
-      <div className="bg-white py-8 px-4 text-center border-t border-[#EAE4DA]">
+      <div className="bg-white py-7 sm:py-8 px-4 text-center border-t border-[#EAE4DA]">
         <h3
           style={{ fontFamily: 'Georgia, serif' }}
           className="text-xl sm:text-2xl font-normal text-neutral-900 mb-2"

@@ -21,7 +21,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
+      setIsScrolled(window.scrollY > 15)
     }
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
@@ -55,47 +55,56 @@ export default function Header() {
     <header
       className={`sticky top-0 z-40 transition-[background-color,box-shadow,border-color] duration-300 ease-out ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.06)] border-b border-[#EAE3D8]'
+          ? 'bg-white/95 backdrop-blur-md shadow-[0_4px_16px_rgba(0,0,0,0.06)] border-b border-[#EAE3D8]'
           : 'bg-white border-b border-[#EAE3D8]/80'
       }`}
     >
       {/* Top Main Navigation Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-18 sm:h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Left: Mobile Hamburger Menu Button */}
           <div className="flex items-center">
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="p-2 text-neutral-800 hover:text-[#6B1A2A] active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6B1A2A]/40 rounded-lg"
+              className="p-2 -ml-2 text-[#121212] hover:text-[#6B1A2A] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
+              style={{ WebkitTapHighlightColor: 'transparent' }}
               aria-label="Open navigation menu"
             >
-              <Menu className="w-6 h-6 stroke-[2]" />
+              <Menu className="w-6 h-6 stroke-[1.8]" />
             </button>
           </div>
 
           {/* Center: Brand Logo */}
           <div className="flex-1 flex justify-center text-center">
-            <Link href="/" className="inline-flex flex-col items-center group">
+            <Link
+              href="/"
+              className="inline-flex flex-col items-center group select-none"
+              style={{ WebkitTapHighlightColor: 'transparent' }}
+            >
               {/* Crown Motif with subtle scale on hover */}
-              <div className="flex items-center justify-center text-[#6B1A2A] mb-0.5 transition-transform duration-300 group-hover:scale-110">
-                <Crown className="w-6 h-6 sm:w-7 sm:h-7 text-[#6B1A2A]" />
+              <div className="flex items-center justify-center text-[#6B1A2A] mb-0.5 transition-transform duration-300 group-hover:scale-105">
+                <Crown className="w-5 h-5 sm:w-6 sm:h-6 text-[#6B1A2A]" />
               </div>
-              {/* Brand Name */}
-              <span className="font-serif text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-[#1A1A1A] uppercase leading-none group-hover:text-[#6B1A2A] transition-colors duration-200">
+              {/* Brand Name in Georgia Serif */}
+              <span
+                style={{ fontFamily: 'Georgia, serif' }}
+                className="text-[20px] sm:text-2xl lg:text-3xl font-bold tracking-tight text-[#1A1A1A] uppercase leading-none group-hover:text-[#6B1A2A] transition-colors duration-200"
+              >
                 Shyambaba
               </span>
               {/* Wholesale Tagline */}
-              <span className="text-[9px] sm:text-[10px] tracking-[0.3em] font-semibold text-neutral-700 uppercase mt-0.5">
+              <span className="text-[8px] sm:text-[9px] tracking-[0.35em] font-semibold text-neutral-600 uppercase mt-0.5">
                 WHOLESALE
               </span>
             </Link>
           </div>
 
           {/* Right: Search & Shopping Bag Icons */}
-          <div className="flex items-center gap-1 sm:gap-2">
+          <div className="flex items-center gap-0.5 sm:gap-2">
             <button
               onClick={() => setSearchOpen(!searchOpen)}
-              className="p-2 text-neutral-800 hover:text-[#6B1A2A] active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6B1A2A]/40 rounded-lg"
+              className="p-2 text-[#121212] hover:text-[#6B1A2A] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
+              style={{ WebkitTapHighlightColor: 'transparent' }}
               aria-label="Search"
             >
               <Search className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.8]" />
@@ -103,7 +112,8 @@ export default function Header() {
 
             <Link
               href="/collections/all"
-              className="p-2 text-neutral-800 hover:text-[#6B1A2A] active:scale-95 transition-all relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6B1A2A]/40 rounded-lg"
+              className="p-2 text-[#121212] hover:text-[#6B1A2A] active:scale-95 transition-transform duration-150 relative focus-visible:outline-none rounded-lg"
+              style={{ WebkitTapHighlightColor: 'transparent' }}
               aria-label="Cart / Catalogue"
             >
               <ShoppingBag className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.8]" />
@@ -117,7 +127,7 @@ export default function Header() {
             searchOpen ? 'max-h-16 opacity-100 pb-3 pt-1 border-t border-neutral-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="relative">
+          <div className="relative max-w-md mx-auto">
             <input
               type="text"
               placeholder="Search Product Code (e.g. ER-4272, ER-001)..."
@@ -180,10 +190,11 @@ export default function Header() {
         >
           {/* Drawer Header */}
           <div className="flex items-center justify-between pb-4 border-b border-neutral-200 mb-6">
-            <span className="font-serif text-xl font-bold text-[#6B1A2A]">Menu</span>
+            <span style={{ fontFamily: 'Georgia, serif' }} className="text-xl font-bold text-[#6B1A2A]">Menu</span>
             <button
               onClick={() => setMobileMenuOpen(false)}
               className="p-1.5 text-neutral-800 hover:text-[#6B1A2A] active:scale-95 transition-all rounded-lg"
+              style={{ WebkitTapHighlightColor: 'transparent' }}
               aria-label="Close menu"
             >
               <X className="w-6 h-6" />

@@ -84,60 +84,66 @@ export default async function CollectionPage({
       <AnnouncementBar />
       <Header />
 
-      <main className="flex-1 py-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <main className="flex-1 py-6 sm:py-10">
+        <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
           {/* Breadcrumb & Navigation */}
-          <div className="flex items-center justify-between pb-6 border-b border-cream-border mb-8">
+          <div className="flex items-center justify-between pb-4 sm:pb-6 border-b border-cream-border mb-6 sm:mb-8">
             <Link
               href="/"
               className="btn-tactile inline-flex items-center gap-1.5 text-xs font-semibold text-charcoal/70 hover:text-maroon transition-colors"
+              style={{ WebkitTapHighlightColor: 'transparent' }}
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Back to Home</span>
             </Link>
 
-            <div className="text-xs text-charcoal/60">
+            <div className="text-xs text-charcoal/60 truncate max-w-[200px] sm:max-w-none">
               <span>Home</span> / <span className="text-maroon font-semibold">{categoryTitle}</span>
             </div>
           </div>
 
           {/* Collection Title Banner */}
           <ScrollReveal>
-            <div className="text-center max-w-2xl mx-auto mb-8 space-y-2">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#9A7E2E]">
+            <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
+              <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#9A7E2E] block mb-1">
                 Jaipur Manufacturer Catalogue
               </span>
               <h1
                 style={{ fontFamily: 'Georgia, serif' }}
-                className="text-3xl sm:text-[42px] font-normal text-[#6B1A2A] tracking-normal leading-tight"
+                className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#6B1A2A] tracking-[0.5px] leading-tight"
               >
                 {categoryTitle}
               </h1>
+
+              {/* Gold Accent Divider Bar matching Krishaz */}
+              <div className="w-[60px] sm:w-[80px] h-[2px] bg-[#C9A84C] mx-auto my-2.5 sm:my-3.5"></div>
+
               <p
                 style={{
                   fontFamily:
                     '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 }}
-                className="text-[14px] text-[#2C2C2C] font-normal"
+                className="text-[13px] sm:text-[14px] text-[#2C2C2C] font-normal"
               >
-                Low MOV ₹3,000/- • Unique Product Codes • Instant WhatsApp Bulk Inquiries
+                Low MOV ₹3,000/- &bull; Unique Product Codes &bull; Instant WhatsApp Bulk Inquiries
               </p>
             </div>
           </ScrollReveal>
 
           {/* Quick Category Filters Horizontal Bar */}
-          <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 scrollbar-none">
+          <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-6 sm:mb-8 scrollbar-none touch-pan-x">
             {filterCategories.map((cat) => {
               const isActive = cat.slug === slug || (slug === 'all' && cat.slug === 'all')
               return (
                 <Link
                   key={cat.slug}
                   href={`/collections/${cat.slug}`}
-                  className={`btn-tactile px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap border ${
+                  className={`btn-tactile px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs font-semibold whitespace-nowrap border ${
                     isActive
                       ? 'bg-[#6B1A2A] text-white border-[#6B1A2A] shadow-sm'
                       : 'bg-white text-neutral-700 border-neutral-200 hover:border-[#C9A84C] hover:text-[#6B1A2A]'
                   }`}
+                  style={{ WebkitTapHighlightColor: 'transparent' }}
                 >
                   {cat.name}
                 </Link>
@@ -145,10 +151,10 @@ export default async function CollectionPage({
             })}
           </div>
 
-          {/* Products Grid */}
+          {/* Products Grid: 2 columns on mobile for luxury catalogue look */}
           {products.length > 0 ? (
             <ScrollReveal delay={100}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5">
                 {products.map((p) => (
                   <ProductCard key={p.id} product={p} />
                 ))}

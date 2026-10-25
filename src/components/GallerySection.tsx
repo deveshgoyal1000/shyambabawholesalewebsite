@@ -31,72 +31,74 @@ export default function GallerySection() {
       <div className="max-w-2xl lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading & Subtitle */}
         <ScrollReveal>
-          <div className="text-center mb-6">
+          <div className="text-center mb-6 sm:mb-8">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-3xl sm:text-[42px] font-normal text-[#6B1A2A] tracking-normal leading-tight"
+              className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#6B1A2A] tracking-[0.5px] leading-tight"
             >
               Explore Shyambaba&apos;s Gallery
             </h2>
+
+            {/* Gold Accent Divider Bar matching Krishaz */}
+            <div className="w-[60px] sm:w-[80px] h-[2px] bg-[#C9A84C] mx-auto my-2.5 sm:my-3.5"></div>
+
             <p
               style={{
                 fontFamily:
                   '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
               }}
-              className="text-[14px] text-[#2C2C2C] mt-2 font-normal text-center"
+              className="text-[13px] sm:text-[14px] text-[#2C2C2C] font-normal text-center"
             >
               The Art Of Adornment
             </p>
           </div>
         </ScrollReveal>
 
-        {/* Gallery Cards Container */}
+        {/* Gallery Cards Container with smooth mobile scroll snap */}
         <ScrollReveal delay={100}>
-          <div className="flex sm:grid sm:grid-cols-3 gap-4 sm:gap-6 overflow-x-auto pb-4 scrollbar-none snap-x">
+          <div className="flex sm:grid sm:grid-cols-3 gap-3.5 sm:gap-6 overflow-x-auto pb-4 scrollbar-none snap-x touch-pan-x">
             {galleryItems.map((item) => (
               <div
                 key={item.id}
-                className="flex-shrink-0 w-64 sm:w-auto snap-center relative rounded-3xl p-1.5 bg-white border-2 border-[#D4AF37]/60 shadow-[0_2px_12px_rgba(0,0,0,0.04)] card-hover-lift group"
+                className="flex-shrink-0 w-64 sm:w-auto snap-center relative rounded-2xl sm:rounded-3xl p-1 bg-white border-2 border-[#D4AF37]/50 shadow-[0_2px_12px_rgba(0,0,0,0.04)] card-hover-lift group"
               >
-                {/* Inner Video Container */}
-                <div className="relative aspect-[9/14] sm:aspect-[9/15] rounded-2xl overflow-hidden bg-neutral-900">
-                  <div
-                    className="w-full h-full bg-cover bg-center card-img-zoom"
-                    style={{ backgroundImage: `url('${item.image}')` }}
-                  ></div>
-                  <div className="absolute inset-0 bg-black/20"></div>
+                {/* 9:16 Vertical Video Aspect Ratio */}
+                <div className="relative aspect-[9/16] rounded-xl sm:rounded-2xl overflow-hidden bg-black/10">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover card-img-zoom"
+                    loading="lazy"
+                  />
 
-                  {/* Speed Tag "1.00" */}
+                  {/* Dark gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+
+                  {/* Top Speed Tag if available */}
                   {item.speedTag && (
-                    <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-neutral-900 text-[10px] font-mono px-2 py-0.5 rounded font-bold shadow-sm">
-                      {item.speedTag}
+                    <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-white font-mono text-[10px] sm:text-xs px-2.5 py-1 rounded-md border border-white/20">
+                      {item.speedTag}x
                     </div>
                   )}
 
-                  {/* Circular Dark Red Play Button */}
+                  {/* Center Play Button Overlay */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <a
-                      href="https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20please%20send%20me%20your%20HD%20product%20reels%20and%20videos."
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#800020] hover:bg-[#6B1A2A] text-white flex items-center justify-center shadow-2xl border-2 sm:border-4 border-white transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-105 active:scale-95"
-                      aria-label="Play video"
-                    >
-                      <Play className="w-6 h-6 sm:w-7 sm:h-7 fill-white ml-1" />
-                    </a>
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/90 text-[#6B1A2A] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" />
+                    </div>
+                  </div>
+
+                  {/* Bottom Video Title */}
+                  <div className="absolute bottom-3 left-3 right-3 text-white text-center">
+                    <span className="text-xs sm:text-sm font-medium tracking-wide drop-shadow">
+                      {item.title}
+                    </span>
                   </div>
                 </div>
               </div>
             ))}
           </div>
         </ScrollReveal>
-
-        {/* Scroll indicator bar on mobile */}
-        <div className="sm:hidden flex justify-center mt-2">
-          <div className="w-16 h-1 rounded-full bg-[#D4AF37]/40">
-            <div className="w-8 h-full rounded-full bg-[#6B1A2A]"></div>
-          </div>
-        </div>
       </div>
     </section>
   )

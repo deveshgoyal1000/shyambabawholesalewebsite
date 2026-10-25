@@ -50,76 +50,90 @@ export default function FAQSection() {
   }
 
   return (
-    <section id="faq" className="py-12 md:py-16 bg-[#FAF8F5]">
-      <div className="max-w-2xl mx-auto px-4 sm:px-6">
+    <section id="faq" className="py-10 md:py-16 bg-[#FAF8F5]">
+      <div className="max-w-2xl mx-auto px-3.5 sm:px-6">
         {/* Section Heading & Subtitle */}
         <ScrollReveal>
-          <div className="text-center mb-8">
+          <div className="text-center mb-6 sm:mb-9">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-3xl sm:text-[42px] font-normal text-[#6B1A2A] tracking-normal leading-tight"
+              className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#6B1A2A] tracking-[0.5px] leading-tight"
             >
               Frequently Asked Questions
             </h2>
+
+            {/* Gold Accent Divider Bar matching Krishaz */}
+            <div className="w-[60px] sm:w-[80px] h-[2px] bg-[#C9A84C] mx-auto my-2.5 sm:my-3.5"></div>
+
             <p
               style={{
                 fontFamily:
                   '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
               }}
-              className="text-[14px] text-[#2C2C2C] font-normal mt-2 text-center"
+              className="text-[13px] sm:text-[14px] text-[#2C2C2C] font-normal"
             >
-              Everything you need to know about purchasing wholesale jewellery directly
+              Everything You Need to Know About Ordering Wholesale
             </p>
           </div>
         </ScrollReveal>
 
-        {/* Accordion List with Smooth Grid Animation */}
+        {/* Accordion List */}
         <ScrollReveal delay={100}>
-          <div className="space-y-2.5">
-            {faqs.map((faq, idx) => {
-              const isOpen = openIndex === idx
-              return (
-                <div
-                  key={idx}
-                  className="bg-white rounded-2xl border border-[#E7DFD5] overflow-hidden shadow-[0_1px_4px_rgba(0,0,0,0.02)] transition-colors duration-300 hover:border-[#C9A84C]/50"
+          <div className="space-y-3">
+            {faqs.map((faq, idx) => (
+              <div
+                key={faq.question}
+                className="bg-white rounded-xl border border-neutral-200/90 overflow-hidden shadow-[0_2px_6px_rgba(0,0,0,0.02)] transition-colors duration-200 hover:border-[#C9A84C]/60"
+              >
+                <button
+                  onClick={() => toggle(idx)}
+                  className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-3 font-semibold text-xs sm:text-sm text-neutral-900 focus:outline-none"
+                  style={{ WebkitTapHighlightColor: 'transparent' }}
+                  aria-expanded={openIndex === idx}
                 >
-                  <button
-                    onClick={() => toggle(idx)}
-                    className="w-full p-4 sm:p-4.5 text-left flex items-center justify-between gap-4 hover:bg-[#FAF8F5] transition-colors duration-250"
-                    aria-expanded={isOpen}
-                  >
-                    <span
-                      style={{
-                        fontFamily:
-                          '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-                      }}
-                      className="font-semibold text-xs sm:text-sm text-[#121212]"
-                    >
-                      {faq.question}
-                    </span>
-                    <div className="text-[#6B1A2A] font-bold text-lg flex-shrink-0 transition-transform duration-300 ease-out">
-                      {isOpen ? (
-                        <Minus className="w-4 h-4 stroke-[2.5]" />
-                      ) : (
-                        <Plus className="w-4 h-4 stroke-[2.5]" />
-                      )}
-                    </div>
-                  </button>
+                  <span className="leading-snug">{faq.question}</span>
+                  <div className="w-6 h-6 rounded-full bg-[#FAF5E8] flex items-center justify-center text-[#6B1A2A] flex-shrink-0 transition-transform duration-200">
+                    {openIndex === idx ? (
+                      <Minus className="w-3.5 h-3.5" />
+                    ) : (
+                      <Plus className="w-3.5 h-3.5" />
+                    )}
+                  </div>
+                </button>
 
-                  <div
-                    className={`grid transition-[grid-template-rows,opacity] duration-[360ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                      isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
-                    }`}
-                  >
-                    <div className="overflow-hidden">
-                      <div className="px-4 pb-4 pt-1 text-xs sm:text-sm text-[#2C2C2C] leading-relaxed border-t border-[#F5EFE6] whitespace-pre-line bg-[#FDFBF9]">
-                        {faq.answer}
-                      </div>
-                    </div>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    openIndex === idx ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <div className="px-4 pb-4 sm:px-5 sm:pb-5 pt-1 text-neutral-600 text-xs sm:text-sm font-normal leading-relaxed whitespace-pre-line border-t border-neutral-100">
+                    {faq.answer}
                   </div>
                 </div>
-              )
-            })}
+              </div>
+            ))}
+          </div>
+
+          {/* Bottom WhatsApp Contact Strip */}
+          <div className="mt-8 text-center bg-white rounded-xl p-4 sm:p-5 border border-neutral-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="text-left">
+              <span className="text-xs sm:text-sm font-semibold text-neutral-900 block">
+                Have more questions?
+              </span>
+              <span className="text-[11px] sm:text-xs text-neutral-500 block">
+                Our Jaipur wholesale desk is available 10:30 AM to 7:30 PM IST.
+              </span>
+            </div>
+            <a
+              href="https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20have%20a%20question%20regarding%20wholesale%20orders."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-tactile inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold tracking-wide shadow"
+              style={{ WebkitTapHighlightColor: 'transparent' }}
+            >
+              <MessageCircle className="w-4 h-4 fill-white" />
+              <span>Ask on WhatsApp</span>
+            </a>
           </div>
         </ScrollReveal>
       </div>

@@ -61,22 +61,26 @@ export default function InternationalWholesale() {
   const displayed = showAll ? countries : countries.slice(0, 5)
 
   return (
-    <section id="international" className="py-12 md:py-16 bg-[#FAF8F5]">
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
+    <section id="international" className="py-10 md:py-16 bg-[#FAF8F5]">
+      <div className="max-w-2xl mx-auto px-3.5 sm:px-6 text-center">
         {/* Section Heading & Subtitle */}
         <ScrollReveal>
           <h2
             style={{ fontFamily: 'Georgia, serif' }}
-            className="text-3xl sm:text-[42px] font-normal text-[#6B1A2A] mb-2 tracking-normal leading-tight text-center"
+            className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#6B1A2A] tracking-[0.5px] leading-tight text-center"
           >
             We Serve Retailers Worldwide
           </h2>
+
+          {/* Gold Accent Divider Bar matching Krishaz */}
+          <div className="w-[60px] sm:w-[80px] h-[2px] bg-[#C9A84C] mx-auto my-2.5 sm:my-3.5"></div>
+
           <p
             style={{
               fontFamily:
                 '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
             }}
-            className="text-[14px] text-[#2C2C2C] mb-8 font-normal text-center"
+            className="text-[13px] sm:text-[14px] text-[#2C2C2C] mb-6 sm:mb-8 font-normal text-center"
           >
             Delivering Premium Jewellery to Your Country
           </p>
@@ -84,89 +88,85 @@ export default function InternationalWholesale() {
 
         {/* Stacked Country Cards */}
         <ScrollReveal delay={100}>
-          <div className="space-y-3">
+          <div className="space-y-2.5 sm:space-y-3">
             {displayed.map((c) => (
               <a
                 key={c.country}
                 href={c.queryUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between p-3 sm:p-4 bg-white rounded-2xl border border-neutral-200/80 shadow-[0_2px_8px_rgba(0,0,0,0.03)] card-hover-lift hover:border-[#C9A84C]/60 group text-left"
+                className="flex items-center justify-between p-3 sm:p-4 bg-white rounded-xl sm:rounded-2xl border border-neutral-200/80 shadow-[0_2px_8px_rgba(0,0,0,0.03)] card-hover-lift hover:border-[#C9A84C]/60 group text-left active:scale-[0.99]"
+                style={{ WebkitTapHighlightColor: 'transparent' }}
               >
-                <div className="flex items-center gap-3.5">
+                <div className="flex items-center gap-3 sm:gap-3.5">
                   {/* Flag Image */}
-                  <div className="w-9 h-6 sm:w-10 sm:h-7 rounded overflow-hidden shadow-sm flex-shrink-0 border border-neutral-200">
+                  <div className="w-8 h-5 sm:w-10 sm:h-7 rounded overflow-hidden shadow-sm flex-shrink-0 border border-neutral-200">
                     <img
                       src={c.flag}
-                      alt={c.country}
+                      alt={`${c.country} Flag`}
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />
                   </div>
 
-                  {/* Country Name + Popular Badge */}
-                  <div className="flex items-center gap-2">
-                    <span className="font-semibold text-sm sm:text-base text-[#121212] group-hover:text-[#6B1A2A] transition-colors duration-250">
+                  <div>
+                    <h3 className="text-xs sm:text-sm font-semibold text-neutral-900 group-hover:text-[#6B1A2A] transition-colors flex items-center gap-1.5">
                       {c.country}
-                    </span>
-                    {c.popular && (
-                      <span className="px-2 py-0.5 rounded-full bg-[#C9A84C] text-white text-[9px] font-bold uppercase tracking-wider">
-                        POPULAR
-                      </span>
-                    )}
+                      {c.popular && (
+                        <span className="text-[9px] bg-[#FAF5E8] text-[#9A7E2E] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider border border-[#C9A84C]/30">
+                          Popular
+                        </span>
+                      )}
+                    </h3>
+                    <p className="text-[10px] sm:text-xs text-neutral-500 font-normal mt-0.5">
+                      Express Air Cargo &bull; Doorstep Delivery
+                    </p>
                   </div>
                 </div>
 
-                {/* Arrow Circle */}
-                <div className="w-8 h-8 rounded-full border border-neutral-200 flex items-center justify-center text-neutral-400 group-hover:border-[#6B1A2A] group-hover:text-[#6B1A2A] group-hover:bg-[#6B1A2A]/5 group-hover:translate-x-1 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]">
-                  <ChevronRight className="w-4 h-4 stroke-[2]" />
+                {/* Arrow Button */}
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-neutral-100 group-hover:bg-[#6B1A2A] text-neutral-600 group-hover:text-white flex items-center justify-center transition-all flex-shrink-0 ml-2">
+                  <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
               </a>
             ))}
           </div>
+
+          {/* View More / Less Button */}
+          {!showAll && (
+            <button
+              onClick={() => setShowAll(true)}
+              className="mt-5 text-xs font-semibold text-[#6B1A2A] hover:text-[#521320] flex items-center gap-1 mx-auto underline decoration-[#C9A84C] underline-offset-4"
+              style={{ WebkitTapHighlightColor: 'transparent' }}
+            >
+              <span>View All 50+ Countries</span>
+              <ChevronRight className="w-3.5 h-3.5" />
+            </button>
+          )}
         </ScrollReveal>
 
-        {/* "+ More Countries" Button */}
-        <div className="mt-6 mb-12">
-          <button
-            onClick={() => setShowAll(!showAll)}
-            className="btn-tactile px-8 py-3 rounded-full bg-[#6B1A2A] hover:bg-[#521320] text-white font-semibold text-xs sm:text-sm tracking-wide shadow-md"
-          >
-            {showAll ? 'Show Fewer Countries' : '+ More Countries'}
-          </button>
-        </div>
-      </div>
-
-      {/* Full-Width Solid Maroon Strip */}
-      <div className="bg-[#6B1A2A] text-white py-6 px-4">
-        <div className="max-w-4xl mx-auto grid grid-cols-3 gap-2 text-center">
-          <div className="flex flex-col items-center justify-center space-y-2 group">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-[#C9A84C] flex items-center justify-center text-[#C9A84C] transition-transform duration-200 group-hover:scale-105">
-              <Globe className="w-5 h-5 sm:w-6 sm:h-6" />
+        {/* Maroon Trust Bar matching Krishaz screenshot */}
+        <ScrollReveal delay={150}>
+          <div className="mt-8 sm:mt-10 bg-[#6B1A2A] rounded-xl sm:rounded-2xl p-4 sm:p-5 text-white shadow-md">
+            <div className="grid grid-cols-3 gap-2 text-center divide-x divide-white/20">
+              <div className="px-1 sm:px-2">
+                <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-[#C9A84C] mx-auto mb-1" />
+                <span className="text-[10px] sm:text-xs font-bold block">50+ Countries</span>
+                <span className="text-[8px] sm:text-[10px] text-white/70 block">Exported</span>
+              </div>
+              <div className="px-1 sm:px-2">
+                <PackageCheck className="w-4 h-4 sm:w-5 sm:h-5 text-[#C9A84C] mx-auto mb-1" />
+                <span className="text-[10px] sm:text-xs font-bold block">100% Insured</span>
+                <span className="text-[8px] sm:text-[10px] text-white/70 block">Air Cargo</span>
+              </div>
+              <div className="px-1 sm:px-2">
+                <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-[#C9A84C] mx-auto mb-1" />
+                <span className="text-[10px] sm:text-xs font-bold block">Customs Clear</span>
+                <span className="text-[8px] sm:text-[10px] text-white/70 block">Documentation</span>
+              </div>
             </div>
-            <span className="text-[11px] sm:text-xs font-semibold text-[#FDF8F3] tracking-wide">
-              Worldwide Shipping
-            </span>
           </div>
-
-          <div className="flex flex-col items-center justify-center space-y-2 group">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-[#C9A84C] flex items-center justify-center text-[#C9A84C] transition-transform duration-200 group-hover:scale-105">
-              <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6" />
-            </div>
-            <span className="text-[11px] sm:text-xs font-semibold text-[#FDF8F3] tracking-wide">
-              Safe &amp; Secure Delivery
-            </span>
-          </div>
-
-          <div className="flex flex-col items-center justify-center space-y-2 group">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-[#C9A84C] flex items-center justify-center text-[#C9A84C] transition-transform duration-200 group-hover:scale-105">
-              <PackageCheck className="w-5 h-5 sm:w-6 sm:h-6" />
-            </div>
-            <span className="text-[11px] sm:text-xs font-semibold text-[#FDF8F3] tracking-wide">
-              Customs Support
-            </span>
-          </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   )

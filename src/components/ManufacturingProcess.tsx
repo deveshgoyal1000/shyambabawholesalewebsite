@@ -38,75 +38,67 @@ export default function ManufacturingProcess() {
   ]
 
   return (
-    <section className="py-12 md:py-16 bg-[#FAF8F5]">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-10 md:py-16 bg-[#FAF8F5]">
+      <div className="max-w-4xl mx-auto px-3.5 sm:px-6 lg:px-8">
         {/* Section Heading matching Krishaz exactly */}
         <ScrollReveal>
-          <div className="text-center mb-8 sm:mb-10">
+          <div className="text-center mb-6 sm:mb-9">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-2xl sm:text-3xl md:text-4xl font-normal text-[#6B1A2A]"
+              className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#6B1A2A] tracking-[0.5px] leading-tight"
             >
               From Sketch To Stunning Jewellery
             </h2>
+
+            {/* Gold Accent Divider Bar matching Krishaz */}
+            <div className="w-[60px] sm:w-[80px] h-[2px] bg-[#C9A84C] mx-auto my-2.5 sm:my-3.5"></div>
+
+            <p
+              style={{
+                fontFamily:
+                  '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+              }}
+              className="text-[13px] sm:text-[14px] text-[#2C2C2C] font-normal"
+            >
+              Our 5-Step Precision Manufacturing Pipeline
+            </p>
           </div>
         </ScrollReveal>
 
         {/* 5 Step Cards matching Krishaz layout */}
         <ScrollReveal delay={100}>
-          <div className="max-w-xl mx-auto space-y-3.5 sm:space-y-4">
+          <div className="max-w-xl mx-auto space-y-3 sm:space-y-4">
             {steps.map((step) => (
               <div
                 key={step.num}
-                className="group bg-white rounded-2xl p-3 sm:p-4 border border-[#E7DFD5] hover:border-[#C9A84C]/60 shadow-[0_2px_8px_rgba(0,0,0,0.03)] card-hover-lift flex items-center gap-3.5 sm:gap-5"
+                className="flex items-center gap-3.5 sm:gap-4 p-3 sm:p-4 bg-white rounded-xl sm:rounded-2xl border border-neutral-200/90 shadow-[0_2px_8px_rgba(0,0,0,0.03)] card-hover-lift group"
               >
-                {/* Left Column: Real Process Photo with Gentle Zoom */}
-                <div className="w-[105px] sm:w-[130px] md:w-[150px] aspect-[4/3] rounded-xl overflow-hidden shrink-0 border border-[#FAF5EE] bg-[#FAF8F5]">
+                {/* Step Image */}
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-[#FAF8F5] border border-neutral-200 flex-shrink-0">
                   <img
                     src={step.image}
                     alt={step.title}
-                    className="w-full h-full object-cover card-img-zoom"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />
                 </div>
 
-                {/* Right Column: Number arrow + Title + Description */}
-                <div className="flex-1 min-w-0 pr-1">
-                  <div className="flex items-center gap-1.5 text-[#C9A84C] font-bold text-sm sm:text-base">
-                    <span>{step.num}</span>
-                    <span className="group-hover:translate-x-1 transition-transform duration-300 ease-out">
-                      →
+                {/* Step Info */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#6B1A2A] text-white text-[10px] sm:text-xs font-bold flex items-center justify-center flex-shrink-0">
+                      {step.num}
                     </span>
+                    <h3 className="font-semibold text-xs sm:text-sm text-neutral-900 group-hover:text-[#6B1A2A] transition-colors truncate">
+                      {step.title}
+                    </h3>
                   </div>
-                  <h3 className="font-serif font-bold text-base sm:text-lg text-neutral-900 mt-0.5 leading-snug group-hover:text-[#6B1A2A] transition-colors duration-250">
-                    {step.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-neutral-600 mt-1 leading-relaxed font-sans">
+                  <p className="text-[11px] sm:text-xs text-neutral-600 font-normal leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
               </div>
             ))}
-          </div>
-        </ScrollReveal>
-
-        {/* Custom Designs Card directly below Step 5 matching Krishaz */}
-        <ScrollReveal delay={150}>
-          <div className="mt-8 text-center bg-white rounded-2xl p-6 border border-[#E7DFD5] hover:border-[#C9A84C]/50 max-w-xl mx-auto shadow-[0_2px_8px_rgba(0,0,0,0.03)] card-hover-lift">
-            <h3
-              style={{ fontFamily: 'Georgia, serif' }}
-              className="text-xl sm:text-2xl font-normal text-neutral-900"
-            >
-              Custom Designs?
-            </h3>
-            <a
-              href="https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale%2C%20I%20want%20to%20enquire%20about%20Custom%20Designs."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-tactile mt-3.5 inline-block bg-[#6B1A2A] hover:bg-[#541421] text-white font-semibold text-xs sm:text-sm px-8 py-2.5 rounded-full shadow-sm hover:shadow"
-            >
-              Enquire Now
-            </a>
           </div>
         </ScrollReveal>
       </div>
