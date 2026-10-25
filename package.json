@@ -1,0 +1,38 @@
+{
+  "name": "shyambabawholesale",
+  "version": "1.0.0",
+  "description": "Shyambaba Wholesale Jewellery Website with Payload CMS",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "generate:types": "payload generate:types",
+    "generate:importmap": "payload generate:importMap",
+    "postinstall": "node scripts/patch-payload.js"
+  },
+  "dependencies": {
+    "@payloadcms/db-sqlite": "3.92.0",
+    "@payloadcms/next": "3.92.0",
+    "@payloadcms/richtext-lexical": "3.92.0",
+    "autoprefixer": "^10.6.1",
+    "lucide-react": "^1.61.0",
+    "next": "16.4.3",
+    "payload": "3.92.0",
+    "postcss": "^8.5.31",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sharp": "^0.33.0",
+    "tailwindcss": "^3.4.19"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.20.2"
+  }
+}
