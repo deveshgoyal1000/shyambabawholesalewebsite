@@ -127,6 +127,138 @@ h1, h2, h3, h4, .font-serif {
   width: 100%;
 }
 
+/* Luxury Living & Ambient Hero Keyframes */
+@keyframes cinemaDrift {
+  0% {
+    transform: scale(1.0) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.036) translate3d(0, -6px, 0);
+  }
+  100% {
+    transform: scale(1.0) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes lightRayBreathe {
+  0%, 100% {
+    opacity: 0.28;
+    transform: scale(0.96) translate(-50%, -50%);
+  }
+  50% {
+    opacity: 0.48;
+    transform: scale(1.06) translate(-50%, -50%);
+  }
+}
+
+@keyframes glassShineSweep {
+  0%, 72% {
+    transform: translateX(-150%) skewX(-22deg);
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.7;
+  }
+  84% {
+    transform: translateX(250%) skewX(-22deg);
+    opacity: 0.7;
+  }
+  85%, 100% {
+    opacity: 0;
+    transform: translateX(250%) skewX(-22deg);
+  }
+}
+
+@keyframes goldHaloPulse {
+  0%, 100% {
+    box-shadow: 0 6px 20px rgba(107, 26, 42, 0.45), 0 0 0 1px rgba(201, 168, 76, 0.35);
+  }
+  50% {
+    box-shadow: 0 8px 30px rgba(107, 26, 42, 0.65), 0 0 16px 3px rgba(201, 168, 76, 0.55);
+  }
+}
+
+@keyframes checkStrokeDraw {
+  from {
+    stroke-dashoffset: 24;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes goldRingBreathe {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.25);
+    border-color: rgba(201, 168, 76, 0.75);
+  }
+  50% {
+    box-shadow: 0 0 10px 2px rgba(201, 168, 76, 0.5);
+    border-color: rgba(201, 168, 76, 1);
+  }
+}
+
+@keyframes sparkleFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-2.5px) rotate(4deg);
+  }
+}
+
+@keyframes lineExpandOut {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes statDividerGrow {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.animate-cinema-drift {
+  animation: cinemaDrift 24s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.animate-light-breathe {
+  animation: lightRayBreathe 9s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.animate-glass-shine {
+  animation: glassShineSweep 5.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  will-change: transform, opacity;
+}
+
+.animate-gold-halo {
+  animation: goldHaloPulse 3.5s ease-in-out infinite;
+  will-change: box-shadow;
+}
+
+.animate-sparkle-float {
+  animation: sparkleFloat 3s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-gold-ring-breathe {
+  animation: goldRingBreathe 4s ease-in-out infinite;
+  will-change: box-shadow, border-color;
+}
+
 /* Scroll entrance animations */
 .reveal-init {
   opacity: 0;

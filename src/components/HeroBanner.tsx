@@ -2,16 +2,16 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Check } from 'lucide-react'
+import { Sparkles, ArrowRight } from 'lucide-react'
 
 export default function HeroBanner() {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    // Trigger smooth entrance sequence shortly after mount
+    // Trigger entrance sequence after initial render
     const timer = setTimeout(() => {
       setMounted(true)
-    }, 60)
+    }, 50)
     return () => clearTimeout(timer)
   }, [])
 
@@ -23,109 +23,161 @@ export default function HeroBanner() {
   ]
 
   return (
-    <section className="relative min-h-[580px] sm:min-h-[640px] flex flex-col justify-between text-center text-white overflow-hidden">
-      {/* Full-bleed background photography with smooth loading zoom-out entrance */}
+    <section className="relative min-h-[580px] sm:min-h-[640px] flex flex-col justify-between text-center text-white overflow-hidden select-none">
+      {/* 1. Full-bleed background photography with Continuous Cinema Drift (Living Animation) */}
       <div
-        className={`absolute inset-0 bg-cover bg-center transition-all duration-[1600ms] ease-out will-change-transform ${
-          mounted ? 'scale-100 opacity-100' : 'scale-110 opacity-70'
-        }`}
+        className={`absolute inset-0 bg-cover bg-center will-change-transform ${
+          mounted ? 'animate-cinema-drift opacity-100' : 'scale-110 opacity-70'
+        } transition-opacity duration-1000`}
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1600&auto=format&fit=crop')`,
         }}
       ></div>
 
-      {/* Dark warm overlay with subtle lens-flare gradient matching Krishaz */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90"></div>
+      {/* 2. Dark warm vignette overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/75 to-black/90 pointer-events-none"></div>
+
+      {/* 3. Ambient Living Gold Light Ray (Breathes gently behind content while user stays on site) */}
+      <div
+        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[500px] h-[340px] sm:h-[500px] rounded-full pointer-events-none animate-light-breathe"
+        style={{
+          background:
+            'radial-gradient(circle, rgba(201, 168, 76, 0.22) 0%, rgba(107, 26, 42, 0.12) 50%, transparent 75%)',
+          filter: 'blur(45px)',
+        }}
+      ></div>
 
       {/* Center Content */}
       <div className="relative z-10 max-w-xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-8 flex flex-col items-center flex-1 justify-center">
-        {/* Main Headline matching Krishaz: line 1 + line 2 in Georgia serif with loading entrance */}
-        <h1
-          style={{ fontFamily: 'Georgia, serif' }}
-          className="text-white leading-[1.2] mb-3 text-center"
-        >
-          {/* Pre-heading: India's Trusted */}
-          <span
-            className={`block text-xl sm:text-2xl font-normal text-[#FAF8F5]/90 mb-1 tracking-wide transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-              mounted
-                ? 'opacity-100 translate-y-0'
-                : 'opacity-0 translate-y-4'
-            }`}
-            style={{ transitionDelay: '120ms' }}
-          >
-            India&apos;s Trusted
-          </span>
-
-          {/* Main Headline: Brass Jewellery Manufacturer & Exporters */}
-          <span
-            className={`block text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white transition-all duration-750 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-              mounted
-                ? 'opacity-100 translate-y-0'
-                : 'opacity-0 translate-y-6'
-            }`}
-            style={{ transitionDelay: '260ms' }}
-          >
-            Brass Jewellery Manufacturer &amp; Exporters
-          </span>
-        </h1>
-
-        {/* Subtitle with loading entrance */}
-        <p
-          className={`text-xs sm:text-sm text-neutral-200 max-w-sm sm:max-w-md mx-auto mb-6 sm:mb-8 font-light leading-relaxed transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        {/* Pre-heading: India's Trusted with Crown Sparkle & Tracking Expansion */}
+        <div
+          className={`flex flex-col items-center mb-2 transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
             mounted
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-4'
           }`}
-          style={{ transitionDelay: '400ms' }}
+          style={{ transitionDelay: '100ms' }}
+        >
+          <div className="inline-flex items-center gap-1.5 sm:gap-2">
+            <Sparkles className="w-3.5 h-3.5 text-[#C9A84C] animate-sparkle-float flex-shrink-0" />
+            <span
+              style={{ fontFamily: 'Georgia, serif' }}
+              className={`text-lg sm:text-2xl font-normal text-[#FAF8F5]/90 transition-all duration-1000 ease-out ${
+                mounted ? 'tracking-[0.2em]' : 'tracking-normal'
+              }`}
+            >
+              India&apos;s Trusted
+            </span>
+            <Sparkles className="w-3.5 h-3.5 text-[#C9A84C] animate-sparkle-float flex-shrink-0 [animation-delay:1.5s]" />
+          </div>
+
+          {/* Delicate Hairline Gold Rule that unrolls from center on load */}
+          <div
+            className={`h-[1px] bg-gradient-to-r from-transparent via-[#C9A84C] to-transparent mt-1.5 transition-all duration-1000 ease-out ${
+              mounted ? 'w-24 sm:w-32 opacity-80' : 'w-0 opacity-0'
+            }`}
+            style={{ transitionDelay: '350ms' }}
+          ></div>
+        </div>
+
+        {/* Main Headline: Curtain Reveal (Words slide up smoothly from behind an overflow mask) */}
+        <div className="overflow-hidden mb-3">
+          <h1
+            style={{ fontFamily: 'Georgia, serif', transitionDelay: '240ms' }}
+            className={`text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.2] transition-all duration-800 ease-[cubic-bezier(0.19,1,0.22,1)] ${
+              mounted
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-8'
+            }`}
+          >
+            Brass Jewellery Manufacturer &amp; Exporters
+          </h1>
+        </div>
+
+        {/* Subtitle with soft optical focus entrance */}
+        <p
+          className={`text-xs sm:text-sm text-neutral-200 max-w-sm sm:max-w-md mx-auto mb-6 sm:mb-8 font-light leading-relaxed transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
+            mounted
+              ? 'opacity-100 translate-y-0 filter-none'
+              : 'opacity-0 translate-y-4 blur-[2px]'
+          }`}
+          style={{ transitionDelay: '380ms' }}
         >
           Supplying 10,000+ Retailers, Boutiques &amp; Resellers<br className="hidden sm:inline" />
           {' '}Across 50+ Countries.
         </p>
 
-        {/* 4 Trust points with Circular Gold Checkmarks (Staggered Entrance) */}
+        {/* 4 Trust points with Animated SVG Stroke Draw & Continuous Gold Ring Breathing */}
         <div className="space-y-2.5 sm:space-y-3 mb-7 sm:mb-8 w-full max-w-xs text-left mx-auto">
           {points.map((pt, idx) => (
             <div
               key={pt}
-              className={`flex items-center gap-3 transition-all duration-600 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+              className={`group/item flex items-center gap-3 transition-all duration-600 ease-[cubic-bezier(0.19,1,0.22,1)] cursor-default ${
                 mounted
                   ? 'opacity-100 translate-x-0'
-                  : 'opacity-0 -translate-x-4'
+                  : 'opacity-0 -translate-x-5'
               }`}
-              style={{ transitionDelay: `${540 + idx * 90}ms` }}
+              style={{ transitionDelay: `${500 + idx * 85}ms` }}
             >
-              <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-[#C9A84C] flex items-center justify-center text-[#C9A84C] flex-shrink-0 bg-black/30">
-                <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[3]" />
+              {/* Gold Ring with Ambient Breathing Pulse & Smooth Scale on Touch/Hover */}
+              <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-[#C9A84C] flex items-center justify-center text-[#C9A84C] flex-shrink-0 bg-black/40 animate-gold-ring-breathe group-hover/item:scale-110 group-hover/item:border-[#E8CE7B] transition-transform duration-300">
+                {/* SVG Checkmark with physical Stroke Draw Animation on load */}
+                <svg
+                  className="w-3 h-3 sm:w-3.5 sm:h-3.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#C9A84C"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline
+                    points="20 6 9 17 4 12"
+                    style={{
+                      strokeDasharray: 24,
+                      strokeDashoffset: mounted ? 0 : 24,
+                      transition: `stroke-dashoffset 500ms ease-out ${600 + idx * 85}ms`,
+                    }}
+                  />
+                </svg>
               </div>
-              <span className="text-xs sm:text-sm font-medium text-neutral-100 tracking-wide">
+
+              {/* Point Label with subtle tactile nudge on hover */}
+              <span className="text-xs sm:text-sm font-medium text-neutral-100 tracking-wide group-hover/item:translate-x-1 transition-transform duration-250">
                 {pt}
               </span>
             </div>
           ))}
         </div>
 
-        {/* Action Buttons with smooth scale & rise entrance */}
+        {/* Action Buttons: Primary with Living Ambient Halo + Glass Shine Streak Sweep */}
         <div
-          className={`w-full max-w-[290px] sm:max-w-xs space-y-3 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          className={`w-full max-w-[290px] sm:max-w-xs space-y-3 transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
             mounted
               ? 'opacity-100 translate-y-0 scale-100'
               : 'opacity-0 translate-y-5 scale-95'
           }`}
-          style={{ transitionDelay: '920ms' }}
+          style={{ transitionDelay: '880ms' }}
         >
-          {/* Button 1: Solid Maroon Pill Button */}
+          {/* Button 1: Solid Maroon Pill Button with Living Halo Glow and Light Sheen */}
           <a
             href="#categories"
-            className="btn-tactile w-full inline-block py-3 sm:py-3.5 px-6 rounded-full bg-[#6B1A2A] hover:bg-[#521320] text-white font-bold text-xs sm:text-sm tracking-wide shadow-lg hover:shadow-xl text-center"
+            className="group relative w-full inline-flex items-center justify-center gap-2 py-3 sm:py-3.5 px-6 rounded-full bg-[#6B1A2A] hover:bg-[#521320] text-white font-bold text-xs sm:text-sm tracking-wide overflow-hidden animate-gold-halo active:scale-98 transition-transform duration-150"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
-            Shop Wholesale
+            {/* Periodic Diagonal Glass Shine Sweep that glides across every 5.5s */}
+            <span
+              className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-white/35 to-transparent pointer-events-none animate-glass-shine"
+            ></span>
+
+            <span className="relative z-10">Shop Wholesale</span>
+            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C9A84C] relative z-10 group-hover:translate-x-1 transition-transform duration-250 ease-out" />
           </a>
 
-          {/* Button 2: Transparent with White Outline Pill Button */}
+          {/* Button 2: Transparent White Outline with Frosted Glass Blur */}
           <Link
             href="/collections/all"
-            className="btn-tactile w-full inline-block py-3 sm:py-3.5 px-6 rounded-full bg-transparent hover:bg-white/10 text-white font-bold text-xs sm:text-sm tracking-wide border border-white text-center"
+            className="w-full inline-block py-3 sm:py-3.5 px-6 rounded-full bg-black/20 hover:bg-white/15 text-white font-bold text-xs sm:text-sm tracking-wide border border-white/80 hover:border-white backdrop-blur-sm active:scale-98 transition-all duration-250 text-center"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
             View Catalog
@@ -137,33 +189,81 @@ export default function HeroBanner() {
           className={`text-[10px] sm:text-[11px] text-neutral-300 mt-5 sm:mt-6 font-normal transition-all duration-700 ${
             mounted ? 'opacity-100' : 'opacity-0'
           }`}
-          style={{ transitionDelay: '1050ms' }}
+          style={{ transitionDelay: '1000ms' }}
         >
           Trusted by 10,000+ Retailers Across 50+ Countries
         </p>
       </div>
 
-      {/* Bottom Trust Statistics Bar matching Krishaz with slide-up entrance */}
+      {/* Bottom Trust Statistics Bar with Staggered 3-Column Entrance & Vertical Dividers */}
       <div
-        className={`relative z-10 w-full bg-[#150408]/95 border-t border-[#C9A84C]/30 py-3.5 sm:py-5 transition-all duration-800 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        className={`relative z-10 w-full bg-[#150408]/95 border-t border-[#C9A84C]/30 py-3.5 sm:py-5 transition-all duration-800 ease-[cubic-bezier(0.19,1,0.22,1)] ${
           mounted
             ? 'opacity-100 translate-y-0'
             : 'opacity-0 translate-y-6'
         }`}
-        style={{ transitionDelay: '1150ms' }}
+        style={{ transitionDelay: '1080ms' }}
       >
-        <div className="max-w-4xl mx-auto px-2 sm:px-4 flex items-center justify-around text-center divide-x divide-[#C9A84C]/30">
-          <div className="px-2 sm:px-6">
-            <span className="font-bold text-sm sm:text-2xl text-white block tracking-tight">27+ Years</span>
-            <span className="text-[8px] sm:text-xs uppercase tracking-widest text-[#EAE3D8] font-medium block mt-0.5">EXPERIENCE</span>
+        <div className="max-w-4xl mx-auto px-2 sm:px-4 flex items-center justify-around text-center">
+          {/* Column 1: 27+ Years Experience */}
+          <div
+            className={`px-2 sm:px-6 flex-1 transition-all duration-600 ease-[cubic-bezier(0.19,1,0.22,1)] ${
+              mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
+            }`}
+            style={{ transitionDelay: '1100ms' }}
+          >
+            <span className="font-bold text-sm sm:text-2xl text-transparent bg-clip-text bg-gradient-to-b from-white via-[#FFF8EC] to-[#EAE3D8] block tracking-tight drop-shadow-sm">
+              27+ Years
+            </span>
+            <span className="text-[8px] sm:text-xs uppercase tracking-widest text-[#EAE3D8] font-medium block mt-0.5">
+              EXPERIENCE
+            </span>
           </div>
-          <div className="px-2 sm:px-6">
-            <span className="font-bold text-sm sm:text-2xl text-white block tracking-tight">90,000+</span>
-            <span className="text-[8px] sm:text-xs uppercase tracking-widest text-[#EAE3D8] font-medium block mt-0.5">ORDERS DISPATCHED</span>
+
+          {/* Vertical Divider 1 that expands vertically */}
+          <div
+            className={`w-[1px] h-8 sm:h-10 bg-[#C9A84C]/40 transition-transform duration-700 ease-out origin-center ${
+              mounted ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0'
+            }`}
+            style={{ transitionDelay: '1180ms' }}
+          ></div>
+
+          {/* Column 2: 90,000+ Orders Dispatched */}
+          <div
+            className={`px-2 sm:px-6 flex-1 transition-all duration-600 ease-[cubic-bezier(0.19,1,0.22,1)] ${
+              mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
+            }`}
+            style={{ transitionDelay: '1180ms' }}
+          >
+            <span className="font-bold text-sm sm:text-2xl text-transparent bg-clip-text bg-gradient-to-b from-white via-[#FFF8EC] to-[#EAE3D8] block tracking-tight drop-shadow-sm">
+              90,000+
+            </span>
+            <span className="text-[8px] sm:text-xs uppercase tracking-widest text-[#EAE3D8] font-medium block mt-0.5">
+              ORDERS DISPATCHED
+            </span>
           </div>
-          <div className="px-2 sm:px-6">
-            <span className="font-bold text-sm sm:text-2xl text-white block tracking-tight">10,000+</span>
-            <span className="text-[8px] sm:text-xs uppercase tracking-widest text-[#EAE3D8] font-medium block mt-0.5">RETAILERS SERVED</span>
+
+          {/* Vertical Divider 2 that expands vertically */}
+          <div
+            className={`w-[1px] h-8 sm:h-10 bg-[#C9A84C]/40 transition-transform duration-700 ease-out origin-center ${
+              mounted ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0'
+            }`}
+            style={{ transitionDelay: '1240ms' }}
+          ></div>
+
+          {/* Column 3: 10,000+ Retailers Served */}
+          <div
+            className={`px-2 sm:px-6 flex-1 transition-all duration-600 ease-[cubic-bezier(0.19,1,0.22,1)] ${
+              mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
+            }`}
+            style={{ transitionDelay: '1260ms' }}
+          >
+            <span className="font-bold text-sm sm:text-2xl text-transparent bg-clip-text bg-gradient-to-b from-white via-[#FFF8EC] to-[#EAE3D8] block tracking-tight drop-shadow-sm">
+              10,000+
+            </span>
+            <span className="text-[8px] sm:text-xs uppercase tracking-widest text-[#EAE3D8] font-medium block mt-0.5">
+              RETAILERS SERVED
+            </span>
           </div>
         </div>
       </div>
