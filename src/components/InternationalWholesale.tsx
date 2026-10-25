@@ -1,7 +1,8 @@
 'use client'
 
 import React, { useState } from 'react'
-import { ArrowRight, Globe, ShieldCheck, PackageCheck, ChevronRight } from 'lucide-react'
+import Link from 'next/link'
+import { Globe, ShieldCheck, PackageCheck, ChevronRight } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export default function InternationalWholesale() {
@@ -10,51 +11,51 @@ export default function InternationalWholesale() {
   const countries = [
     {
       country: 'United States',
+      slug: 'united-states',
       flag: 'https://flagcdn.com/w80/us.png',
       popular: true,
-      queryUrl: 'https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20am%20from%20USA%20and%20want%20to%20order%20jewellery%20with%20doorstep%20shipping.',
     },
     {
       country: 'United Kingdom',
+      slug: 'united-kingdom',
       flag: 'https://flagcdn.com/w80/gb.png',
       popular: false,
-      queryUrl: 'https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20am%20from%20UK%20and%20want%20to%20order%20jewellery.',
     },
     {
       country: 'Bangladesh',
+      slug: 'bangladesh',
       flag: 'https://flagcdn.com/w80/bd.png',
       popular: false,
-      queryUrl: 'https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20am%20from%20Bangladesh%20and%20want%20to%20inquire%20about%20cargo%20delivery.',
     },
     {
       country: 'Canada',
+      slug: 'canada',
       flag: 'https://flagcdn.com/w80/ca.png',
       popular: false,
-      queryUrl: 'https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20am%20from%20Canada%20and%20want%20to%20order%20jewellery.',
     },
     {
       country: 'Dubai (Emirates)',
+      slug: 'dubai',
       flag: 'https://flagcdn.com/w80/ae.png',
       popular: false,
-      queryUrl: 'https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20am%20from%20Dubai%20and%20want%20express%20shipping.',
     },
     {
       country: 'Malaysia',
+      slug: 'malaysia',
       flag: 'https://flagcdn.com/w80/my.png',
       popular: false,
-      queryUrl: 'https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20am%20from%20Malaysia%20and%20want%20wholesale%20rates.',
     },
     {
       country: 'Australia',
+      slug: 'australia',
       flag: 'https://flagcdn.com/w80/au.png',
       popular: false,
-      queryUrl: 'https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20am%20from%20Australia%20and%20want%20wholesale%20rates.',
     },
     {
       country: 'Singapore',
+      slug: 'singapore',
       flag: 'https://flagcdn.com/w80/sg.png',
       popular: false,
-      queryUrl: 'https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20am%20from%20Singapore%20and%20want%20wholesale%20rates.',
     },
   ]
 
@@ -62,7 +63,7 @@ export default function InternationalWholesale() {
 
   return (
     <section id="international" className="py-10 md:py-16 bg-[#FAF8F5]">
-      <div className="max-w-2xl mx-auto px-3.5 sm:px-6 text-center">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
         {/* Section Heading & Subtitle */}
         <ScrollReveal direction="up" distance={20} duration={650}>
           <h2
@@ -86,8 +87,8 @@ export default function InternationalWholesale() {
           </p>
         </ScrollReveal>
 
-        {/* Stacked Country Cards with Staggered ScrollReveal */}
-        <div className="space-y-2.5 sm:space-y-3">
+        {/* Stacked Country Cards - Enhanced Height, Distinct Luxury Borders, Country Name Only */}
+        <div className="space-y-3.5 sm:space-y-4">
           {displayed.map((c, idx) => (
             <ScrollReveal
               key={c.country}
@@ -96,44 +97,33 @@ export default function InternationalWholesale() {
               duration={550}
               delay={Math.min(idx * 50, 250)}
             >
-              <a
-                href={c.queryUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between p-3 sm:p-4 bg-white rounded-xl sm:rounded-2xl border border-neutral-200/80 shadow-[0_2px_8px_rgba(0,0,0,0.03)] card-hover-lift hover:border-[#C9A84C]/60 group text-left active:scale-[0.99]"
+              <Link
+                href={`/international/${c.slug}`}
+                className="flex items-center justify-between p-4 sm:py-5 sm:px-6 bg-white rounded-2xl border-2 border-[#E5DAC1] hover:border-[#6B1A2A] shadow-[0_3px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(107,26,42,0.1)] transition-all duration-300 group text-left active:scale-[0.99] select-none"
                 style={{ WebkitTapHighlightColor: 'transparent' }}
               >
-                <div className="flex items-center gap-3 sm:gap-3.5">
-                  {/* Flag Image */}
-                  <div className="w-8 h-5 sm:w-10 sm:h-7 rounded overflow-hidden shadow-sm flex-shrink-0 border border-neutral-200">
+                <div className="flex items-center gap-3.5 sm:gap-4">
+                  {/* Flag Image with crisp outline & shadow */}
+                  <div className="w-10 h-6 sm:w-12 sm:h-7 rounded-md overflow-hidden shadow-xs flex-shrink-0 border border-neutral-300">
                     <img
                       src={c.flag}
                       alt={`${c.country} Flag`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />
                   </div>
 
-                  <div>
-                    <h3 className="text-xs sm:text-sm font-semibold text-neutral-900 group-hover:text-[#6B1A2A] transition-colors flex items-center gap-1.5">
-                      {c.country}
-                      {c.popular && (
-                        <span className="text-[9px] bg-[#FAF5E8] text-[#9A7E2E] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider border border-[#C9A84C]/30">
-                          Popular
-                        </span>
-                      )}
-                    </h3>
-                    <p className="text-[10px] sm:text-xs text-neutral-500 font-normal mt-0.5">
-                      Express Air Cargo &bull; Doorstep Delivery
-                    </p>
-                  </div>
+                  {/* Country Name Only */}
+                  <span className="text-sm sm:text-base md:text-[17px] font-bold text-neutral-900 group-hover:text-[#6B1A2A] transition-colors leading-none tracking-tight">
+                    {c.country}
+                  </span>
                 </div>
 
-                {/* Arrow Button */}
-                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-neutral-100 group-hover:bg-[#6B1A2A] text-neutral-600 group-hover:text-white flex items-center justify-center transition-all flex-shrink-0 ml-2">
-                  <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                {/* Refined Circular Arrow Button */}
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#FAF5E8] group-hover:bg-[#6B1A2A] text-[#6B1A2A] group-hover:text-white flex items-center justify-center transition-all duration-300 flex-shrink-0 border border-[#C9A84C]/40 group-hover:border-[#6B1A2A] shadow-xs">
+                  <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-0.5 transition-transform duration-300" />
                 </div>
-              </a>
+              </Link>
             </ScrollReveal>
           ))}
         </div>
@@ -142,22 +132,22 @@ export default function InternationalWholesale() {
         {!showAll && (
           <button
             onClick={() => setShowAll(true)}
-            className="mt-5 text-xs font-semibold text-[#6B1A2A] hover:text-[#521320] flex items-center gap-1 mx-auto underline decoration-[#C9A84C] underline-offset-4"
+            className="mt-6 text-xs sm:text-sm font-semibold text-[#6B1A2A] hover:text-[#521320] flex items-center gap-1.5 mx-auto underline decoration-[#C9A84C] underline-offset-4 active:scale-98 transition-transform"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
             <span>View All 50+ Countries</span>
-            <ChevronRight className="w-3.5 h-3.5" />
+            <ChevronRight className="w-4 h-4" />
           </button>
         )}
 
-        {/* Maroon Trust Bar matching Krishaz screenshot */}
+        {/* Maroon Trust Bar */}
         <ScrollReveal direction="up" distance={22} delay={150} duration={650}>
-          <div className="mt-8 sm:mt-10 bg-[#6B1A2A] rounded-xl sm:rounded-2xl p-4 sm:p-5 text-white shadow-md">
+          <div className="mt-8 sm:mt-10 bg-[#6B1A2A] rounded-2xl p-4 sm:p-5 text-white shadow-md border border-[#8C2337]">
             <div className="grid grid-cols-3 gap-2 text-center divide-x divide-white/20">
               <div className="px-1 sm:px-2">
                 <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-[#C9A84C] mx-auto mb-1" />
                 <span className="text-[10px] sm:text-xs font-bold block">50+ Countries</span>
-                <span className="text-[8px] sm:text-[10px] text-white/70 block">Exported</span>
+                <span className="text-[8px] sm:text-[10px] text-white/70 block">Direct Export</span>
               </div>
               <div className="px-1 sm:px-2">
                 <PackageCheck className="w-4 h-4 sm:w-5 sm:h-5 text-[#C9A84C] mx-auto mb-1" />
