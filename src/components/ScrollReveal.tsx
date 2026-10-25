@@ -17,9 +17,9 @@ export default function ScrollReveal({
   className = '',
   delay = 0,
   direction = 'up',
-  distance = 26,
-  duration = 650,
-  threshold = 0.08,
+  distance = 22,
+  duration = 800,
+  threshold = 0.12,
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
@@ -37,15 +37,17 @@ export default function ScrollReveal({
       return
     }
 
-    // Check if element is already within viewport on mount
+    // Only reveal on mount if element is clearly in the upper half of initial screen
     const rect = el.getBoundingClientRect()
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
+    const isAboveTheFold = rect.top < window.innerHeight * 0.55 && rect.bottom > 0
+    if (isAboveTheFold) {
       const timer = setTimeout(() => {
         setIsVisible(true)
-      }, delay || 50)
+      }, delay || 60)
       return () => clearTimeout(timer)
     }
 
+    // Otherwise, trigger strictly when the user scrolls to it
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -55,7 +57,8 @@ export default function ScrollReveal({
       },
       {
         threshold: threshold,
-        rootMargin: '0px 0px -40px 0px',
+        // Negative bottom margin ensures element is well within viewport before revealing
+        rootMargin: '0px 0px -75px 0px',
       }
     )
 
@@ -87,7 +90,7 @@ export default function ScrollReveal({
       style={{
         opacity: isVisible ? 1 : 0,
         transform: getTransform(),
-        transition: `opacity ${duration}ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms, transform ${duration}ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms`,
+        transition: `opacity ${duration}ms cubic-bezier(0.22, 1, 0.36, 1) ${delay}ms, transform ${duration}ms cubic-bezier(0.22, 1, 0.36, 1) ${delay}ms`,
         willChange: 'opacity, transform',
       }}
     >

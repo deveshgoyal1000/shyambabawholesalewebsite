@@ -1,9 +1,12 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export default function ManufacturerComparison() {
+  const tableRef = useRef<HTMLDivElement>(null)
+  const [tableInView, setTableInView] = useState(false)
+
   const rows = [
     {
       feature: 'Manufacturer (Not Trader)',
@@ -42,17 +45,46 @@ export default function ManufacturerComparison() {
     },
   ]
 
+  useEffect(() => {
+    const el = tableRef.current
+    if (!el) return
+
+    if (
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    ) {
+      setTableInView(true)
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTableInView(true)
+          observer.unobserve(el)
+        }
+      },
+      {
+        threshold: 0.15,
+        rootMargin: '0px 0px -70px 0px',
+      }
+    )
+
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section className="py-10 md:py-16 bg-[#FAF8F5]">
       <div className="max-w-2xl mx-auto px-3.5 sm:px-6">
-        {/* Heading */}
-        <ScrollReveal direction="up" distance={20} duration={650}>
+        {/* Section Heading & Subtitle */}
+        <ScrollReveal direction="up" distance={20} duration={800}>
           <div className="text-center mb-6 sm:mb-8">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
               className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#6B1A2A] tracking-[0.5px] leading-tight"
             >
-              Shyambaba vs Other Supplier
+              ShyamBabaWholesale vs Other Suppliers
             </h2>
 
             {/* Gold Accent Divider Bar matching Krishaz */}
@@ -70,41 +102,82 @@ export default function ManufacturerComparison() {
           </div>
         </ScrollReveal>
 
-        {/* Comparison Table Card matching Krishaz exactly */}
-        <ScrollReveal direction="up" distance={24} delay={100} duration={650}>
-          <div className="bg-white rounded-xl border border-[#C9A84C] overflow-hidden shadow-[0_4px_16px_rgba(107,26,42,0.06)]">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="border-b-2 border-[#C9A84C] bg-[#FAF8F5]/80">
-                  <th className="py-3 px-3 sm:px-4 text-left font-bold text-[11px] sm:text-xs text-[#2C2C2C] uppercase tracking-wider">
-                    Features
-                  </th>
-                  <th className="py-3 px-2 sm:px-4 text-center font-bold text-[11px] sm:text-xs text-[#6B1A2A] uppercase tracking-wider bg-[#FAF5E8]/60 border-x border-[#C9A84C]/40">
-                    <span className="flex items-center justify-center gap-1">
-                      <span>Shyambaba</span>
-                      <span className="text-[#C9A84C] text-sm">👑</span>
-                    </span>
-                  </th>
-                  <th className="py-3 px-2 sm:px-4 text-center font-bold text-[11px] sm:text-xs text-neutral-500 uppercase tracking-wider">
-                    Other Suppliers
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-[#EAE3D8]">
-                {rows.map((row, idx) => (
-                  <tr
-                    key={row.feature}
-                    className={`transition-colors ${
-                      idx % 2 === 1 ? 'bg-[#FCFAF7]' : 'bg-white'
-                    }`}
-                  >
-                    <td className="py-3 px-3 sm:px-4 text-xs sm:text-sm font-medium text-[#2C2C2C]">
-                      {row.feature}
-                    </td>
-                    <td className="py-3 px-2 sm:px-4 text-center bg-[#FAF5E8]/40 border-x border-[#C9A84C]/30">
-                      <div className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#6B1A2A]/10 text-[#6B1A2A]">
+        {/* Comparison Table Card with line-by-line staggered reveal */}
+        <div
+          ref={tableRef}
+          className="bg-white rounded-2xl border-2 border-[#C9A84C]/60 overflow-hidden shadow-[0_6px_24px_rgba(107,26,42,0.06)] transition-all duration-700"
+          style={{
+            opacity: tableInView ? 1 : 0,
+            transform: tableInView ? 'translate3d(0, 0, 0)' : 'translate3d(0, 20px, 0)',
+            transition: 'opacity 750ms cubic-bezier(0.22, 1, 0.36, 1), transform 750ms cubic-bezier(0.22, 1, 0.36, 1)',
+          }}
+        >
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="border-b-2 border-[#C9A84C] bg-[#FAF8F5]">
+                <th className="py-3.5 px-3 sm:px-5 text-left font-bold text-[11px] sm:text-xs text-[#2C2C2C] uppercase tracking-wider">
+                  Features
+                </th>
+                <th className="py-3.5 px-2 sm:px-4 text-center font-bold text-[11px] sm:text-xs text-[#6B1A2A] uppercase tracking-wider bg-[#FAF5E8] border-x-2 border-[#C9A84C]/50">
+                  <span className="font-extrabold text-[#6B1A2A] text-xs sm:text-sm tracking-tight block">
+                    ShyamBabaWholesale
+                  </span>
+                </th>
+                <th className="py-3.5 px-2 sm:px-4 text-center font-bold text-[11px] sm:text-xs text-neutral-500 uppercase tracking-wider">
+                  Other Suppliers
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[#EAE3D8]">
+              {rows.map((row, idx) => (
+                <tr
+                  key={row.feature}
+                  className={`transition-all ${
+                    idx % 2 === 1 ? 'bg-[#FCFAF7]' : 'bg-white'
+                  }`}
+                  style={{
+                    opacity: tableInView ? 1 : 0,
+                    transform: tableInView ? 'translate3d(0, 0, 0)' : 'translate3d(0, 16px, 0)',
+                    transition: `opacity 750ms cubic-bezier(0.22, 1, 0.36, 1) ${idx * 140}ms, transform 750ms cubic-bezier(0.22, 1, 0.36, 1) ${idx * 140}ms`,
+                    willChange: 'opacity, transform',
+                  }}
+                >
+                  <td className="py-3.5 px-3 sm:px-5 text-xs sm:text-sm font-semibold text-[#2C2C2C]">
+                    {row.feature}
+                  </td>
+                  <td className="py-3.5 px-2 sm:px-4 text-center bg-[#FAF5E8]/60 border-x-2 border-[#C9A84C]/40">
+                    <div
+                      className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#6B1A2A]/10 text-[#6B1A2A]"
+                      style={{
+                        transform: tableInView ? 'scale(1)' : 'scale(0.8)',
+                        transition: `transform 600ms cubic-bezier(0.22, 1, 0.36, 1) ${idx * 140 + 100}ms`,
+                      }}
+                    >
+                      <svg
+                        className="w-3.5 h-3.5 stroke-[3]"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    </div>
+                  </td>
+                  <td className="py-3.5 px-2 sm:px-4 text-center">
+                    {row.others ? (
+                      <div
+                        className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-neutral-100 text-neutral-500"
+                        style={{
+                          transform: tableInView ? 'scale(1)' : 'scale(0.8)',
+                          transition: `transform 600ms cubic-bezier(0.22, 1, 0.36, 1) ${idx * 140 + 100}ms`,
+                        }}
+                      >
                         <svg
-                          className="w-3.5 h-3.5 stroke-[3]"
+                          className="w-3.5 h-3.5 stroke-[2.5]"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -116,47 +189,37 @@ export default function ManufacturerComparison() {
                           />
                         </svg>
                       </div>
-                    </td>
-                    <td className="py-3 px-2 sm:px-4 text-center">
-                      {row.others ? (
-                        <div className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-neutral-100 text-neutral-500">
-                          <svg
-                            className="w-3.5 h-3.5 stroke-[2.5]"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                        </div>
-                      ) : (
-                        <div className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-red-50 text-red-500">
-                          <svg
-                            className="w-3.5 h-3.5 stroke-[3]"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M6 18L18 6M6 6l12 12"
-                            />
-                          </svg>
-                        </div>
-                      )}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                    ) : (
+                      <div
+                        className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-red-50 text-red-500"
+                        style={{
+                          transform: tableInView ? 'scale(1)' : 'scale(0.8)',
+                          transition: `transform 600ms cubic-bezier(0.22, 1, 0.36, 1) ${idx * 140 + 100}ms`,
+                        }}
+                      >
+                        <svg
+                          className="w-3.5 h-3.5 stroke-[3]"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                      </div>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
-          {/* CTA Button below Table */}
+        {/* CTA Button below Table */}
+        <ScrollReveal direction="up" distance={16} delay={200} duration={750}>
           <div className="mt-7 text-center">
             <a
               href="https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20partner%20with%20your%20factory%20for%20wholesale%20supply."
