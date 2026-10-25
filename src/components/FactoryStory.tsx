@@ -11,7 +11,7 @@ export default function FactoryStory() {
     <section id="about" className="py-10 md:py-16 bg-[#FAF8F5]">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
         {/* Main Heading */}
-        <ScrollReveal>
+        <ScrollReveal direction="up" distance={20} duration={650}>
           <h2
             style={{ fontFamily: 'Georgia, serif' }}
             className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#6B1A2A] leading-tight mb-2 tracking-[0.5px]"
@@ -34,8 +34,8 @@ export default function FactoryStory() {
           </p>
         </ScrollReveal>
 
-        {/* 3 Circular Badges */}
-        <ScrollReveal delay={100}>
+        {/* 3 Circular Badges with ScrollReveal */}
+        <ScrollReveal direction="up" distance={20} delay={100} duration={650}>
           <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-7 max-w-lg mx-auto">
             {/* Badge 1 */}
             <div className="flex flex-col items-center text-center space-y-2 group">
@@ -69,8 +69,8 @@ export default function FactoryStory() {
           </div>
         </ScrollReveal>
 
-        {/* Video Card Container */}
-        <ScrollReveal delay={150}>
+        {/* Video Card Container with ScrollReveal */}
+        <ScrollReveal direction="up" distance={24} delay={180} duration={650}>
           <div className="relative rounded-2xl overflow-hidden border border-neutral-200/90 shadow-md group">
             {/* Background Thumbnail Image */}
             <div className="relative aspect-[16/9] w-full bg-neutral-900">

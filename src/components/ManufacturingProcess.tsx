@@ -41,7 +41,7 @@ export default function ManufacturingProcess() {
     <section className="py-10 md:py-16 bg-[#FAF8F5]">
       <div className="max-w-4xl mx-auto px-3.5 sm:px-6 lg:px-8">
         {/* Section Heading matching Krishaz exactly */}
-        <ScrollReveal>
+        <ScrollReveal direction="up" distance={20} duration={650}>
           <div className="text-center mb-6 sm:mb-9">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
@@ -65,14 +65,17 @@ export default function ManufacturingProcess() {
           </div>
         </ScrollReveal>
 
-        {/* 5 Step Cards matching Krishaz layout */}
-        <ScrollReveal delay={100}>
-          <div className="max-w-xl mx-auto space-y-3 sm:space-y-4">
-            {steps.map((step) => (
-              <div
-                key={step.num}
-                className="flex items-center gap-3.5 sm:gap-4 p-3 sm:p-4 bg-white rounded-xl sm:rounded-2xl border border-neutral-200/90 shadow-[0_2px_8px_rgba(0,0,0,0.03)] card-hover-lift group"
-              >
+        {/* 5 Step Cards with Staggered ScrollReveal */}
+        <div className="max-w-xl mx-auto space-y-3 sm:space-y-4">
+          {steps.map((step, idx) => (
+            <ScrollReveal
+              key={step.num}
+              direction="up"
+              distance={22}
+              duration={550}
+              delay={idx * 70}
+            >
+              <div className="flex items-center gap-3.5 sm:gap-4 p-3 sm:p-4 bg-white rounded-xl sm:rounded-2xl border border-neutral-200/90 shadow-[0_2px_8px_rgba(0,0,0,0.03)] card-hover-lift group">
                 {/* Step Image */}
                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-[#FAF8F5] border border-neutral-200 flex-shrink-0">
                   <img
@@ -98,9 +101,9 @@ export default function ManufacturingProcess() {
                   </p>
                 </div>
               </div>
-            ))}
-          </div>
-        </ScrollReveal>
+            </ScrollReveal>
+          ))}
+        </div>
       </div>
     </section>
   )

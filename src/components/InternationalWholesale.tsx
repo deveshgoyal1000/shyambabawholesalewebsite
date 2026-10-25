@@ -64,7 +64,7 @@ export default function InternationalWholesale() {
     <section id="international" className="py-10 md:py-16 bg-[#FAF8F5]">
       <div className="max-w-2xl mx-auto px-3.5 sm:px-6 text-center">
         {/* Section Heading & Subtitle */}
-        <ScrollReveal>
+        <ScrollReveal direction="up" distance={20} duration={650}>
           <h2
             style={{ fontFamily: 'Georgia, serif' }}
             className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#6B1A2A] tracking-[0.5px] leading-tight text-center"
@@ -86,12 +86,17 @@ export default function InternationalWholesale() {
           </p>
         </ScrollReveal>
 
-        {/* Stacked Country Cards */}
-        <ScrollReveal delay={100}>
-          <div className="space-y-2.5 sm:space-y-3">
-            {displayed.map((c) => (
+        {/* Stacked Country Cards with Staggered ScrollReveal */}
+        <div className="space-y-2.5 sm:space-y-3">
+          {displayed.map((c, idx) => (
+            <ScrollReveal
+              key={c.country}
+              direction="up"
+              distance={20}
+              duration={550}
+              delay={Math.min(idx * 50, 250)}
+            >
               <a
-                key={c.country}
                 href={c.queryUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -129,24 +134,24 @@ export default function InternationalWholesale() {
                   <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
               </a>
-            ))}
-          </div>
+            </ScrollReveal>
+          ))}
+        </div>
 
-          {/* View More / Less Button */}
-          {!showAll && (
-            <button
-              onClick={() => setShowAll(true)}
-              className="mt-5 text-xs font-semibold text-[#6B1A2A] hover:text-[#521320] flex items-center gap-1 mx-auto underline decoration-[#C9A84C] underline-offset-4"
-              style={{ WebkitTapHighlightColor: 'transparent' }}
-            >
-              <span>View All 50+ Countries</span>
-              <ChevronRight className="w-3.5 h-3.5" />
-            </button>
-          )}
-        </ScrollReveal>
+        {/* View More / Less Button */}
+        {!showAll && (
+          <button
+            onClick={() => setShowAll(true)}
+            className="mt-5 text-xs font-semibold text-[#6B1A2A] hover:text-[#521320] flex items-center gap-1 mx-auto underline decoration-[#C9A84C] underline-offset-4"
+            style={{ WebkitTapHighlightColor: 'transparent' }}
+          >
+            <span>View All 50+ Countries</span>
+            <ChevronRight className="w-3.5 h-3.5" />
+          </button>
+        )}
 
         {/* Maroon Trust Bar matching Krishaz screenshot */}
-        <ScrollReveal delay={150}>
+        <ScrollReveal direction="up" distance={22} delay={150} duration={650}>
           <div className="mt-8 sm:mt-10 bg-[#6B1A2A] rounded-xl sm:rounded-2xl p-4 sm:p-5 text-white shadow-md">
             <div className="grid grid-cols-3 gap-2 text-center divide-x divide-white/20">
               <div className="px-1 sm:px-2">

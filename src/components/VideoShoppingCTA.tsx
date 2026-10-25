@@ -9,7 +9,7 @@ export default function VideoShoppingCTA() {
     <section className="py-8 bg-[#FAF8F5]">
       <div className="max-w-xl mx-auto px-4 sm:px-6">
         {/* Yellow/Gold-tinted Card matching Krishaz exactly */}
-        <ScrollReveal>
+        <ScrollReveal direction="up" distance={24} duration={650}>
           <div className="bg-[#F5ECD7] rounded-xl sm:rounded-2xl border-2 border-[#C9A84C] p-6 sm:p-9 text-center shadow-[0_4px_16px_rgba(0,0,0,0.06)] card-hover-lift group">
             {/* Gold Camera Icon */}
             <div className="w-12 h-12 mx-auto mb-3.5 rounded-xl flex items-center justify-center text-[#C9A84C] group-hover:scale-105 transition-transform duration-300">

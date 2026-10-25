@@ -53,7 +53,7 @@ export default function FAQSection() {
     <section id="faq" className="py-10 md:py-16 bg-[#FAF8F5]">
       <div className="max-w-2xl mx-auto px-3.5 sm:px-6">
         {/* Section Heading & Subtitle */}
-        <ScrollReveal>
+        <ScrollReveal direction="up" distance={20} duration={650}>
           <div className="text-center mb-6 sm:mb-9">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
@@ -77,8 +77,8 @@ export default function FAQSection() {
           </div>
         </ScrollReveal>
 
-        {/* Accordion List */}
-        <ScrollReveal delay={100}>
+        {/* Accordion List with ScrollReveal */}
+        <ScrollReveal direction="up" distance={24} delay={100} duration={650}>
           <div className="space-y-3">
             {faqs.map((faq, idx) => (
               <div

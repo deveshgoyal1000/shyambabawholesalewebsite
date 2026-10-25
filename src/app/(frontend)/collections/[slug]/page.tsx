@@ -102,8 +102,8 @@ export default async function CollectionPage({
             </div>
           </div>
 
-          {/* Collection Title Banner */}
-          <ScrollReveal>
+          {/* Collection Title Banner with ScrollReveal */}
+          <ScrollReveal direction="up" distance={20} duration={650}>
             <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
               <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#9A7E2E] block mb-1">
                 Jaipur Manufacturer Catalogue
@@ -151,15 +151,21 @@ export default async function CollectionPage({
             })}
           </div>
 
-          {/* Products Grid: 2 columns on mobile for luxury catalogue look */}
+          {/* Products Grid: 2 columns on mobile with staggered ScrollReveal per card */}
           {products.length > 0 ? (
-            <ScrollReveal delay={100}>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5">
-                {products.map((p) => (
-                  <ProductCard key={p.id} product={p} />
-                ))}
-              </div>
-            </ScrollReveal>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5">
+              {products.map((p, idx) => (
+                <ScrollReveal
+                  key={p.id}
+                  direction="up"
+                  distance={22}
+                  duration={550}
+                  delay={Math.min(idx * 50, 300)}
+                >
+                  <ProductCard product={p} />
+                </ScrollReveal>
+              ))}
+            </div>
           ) : (
             <div className="text-center py-16 bg-white rounded-2xl border border-gold/30 p-8 shadow-sm">
               <p className="text-charcoal/70 text-sm">No products found in this category yet.</p>

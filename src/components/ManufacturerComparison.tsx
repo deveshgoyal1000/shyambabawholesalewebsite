@@ -46,7 +46,7 @@ export default function ManufacturerComparison() {
     <section className="py-10 md:py-16 bg-[#FAF8F5]">
       <div className="max-w-2xl mx-auto px-3.5 sm:px-6">
         {/* Heading */}
-        <ScrollReveal>
+        <ScrollReveal direction="up" distance={20} duration={650}>
           <div className="text-center mb-6 sm:mb-8">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
@@ -71,7 +71,7 @@ export default function ManufacturerComparison() {
         </ScrollReveal>
 
         {/* Comparison Table Card matching Krishaz exactly */}
-        <ScrollReveal delay={100}>
+        <ScrollReveal direction="up" distance={24} delay={100} duration={650}>
           <div className="bg-white rounded-xl border border-[#C9A84C] overflow-hidden shadow-[0_4px_16px_rgba(107,26,42,0.06)]">
             <table className="w-full border-collapse">
               <thead>

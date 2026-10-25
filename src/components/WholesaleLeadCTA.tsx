@@ -9,7 +9,7 @@ export default function WholesaleLeadCTA() {
     <section className="w-full bg-[#FAF8F5]">
       {/* 1. Maroon Banner matching Krishaz exactly */}
       <div className="bg-[#6B1A2A] text-white py-12 sm:py-16 px-4 sm:px-8 text-center">
-        <ScrollReveal>
+        <ScrollReveal direction="up" distance={20} duration={650}>
           <div className="max-w-2xl mx-auto">
             {/* Headline */}
             <h2
@@ -66,7 +66,7 @@ export default function WholesaleLeadCTA() {
       </div>
 
       {/* 2. On-Model Jewellery Photo matching Krishaz */}
-      <ScrollReveal delay={100}>
+      <ScrollReveal direction="up" distance={24} delay={100} duration={650}>
         <div className="w-full max-w-4xl mx-auto overflow-hidden bg-[#FAF8F5]">
           <img
             src="/images/cta/model_jewellery_perfect.png"

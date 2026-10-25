@@ -30,7 +30,7 @@ export default function GallerySection() {
     <section className="py-10 md:py-14 bg-[#FAF8F5]">
       <div className="max-w-2xl lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading & Subtitle */}
-        <ScrollReveal>
+        <ScrollReveal direction="up" distance={20} duration={650}>
           <div className="text-center mb-6 sm:mb-8">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
@@ -54,14 +54,18 @@ export default function GallerySection() {
           </div>
         </ScrollReveal>
 
-        {/* Gallery Cards Container with smooth mobile scroll snap */}
-        <ScrollReveal delay={100}>
-          <div className="flex sm:grid sm:grid-cols-3 gap-3.5 sm:gap-6 overflow-x-auto pb-4 scrollbar-none snap-x touch-pan-x">
-            {galleryItems.map((item) => (
-              <div
-                key={item.id}
-                className="flex-shrink-0 w-64 sm:w-auto snap-center relative rounded-2xl sm:rounded-3xl p-1 bg-white border-2 border-[#D4AF37]/50 shadow-[0_2px_12px_rgba(0,0,0,0.04)] card-hover-lift group"
-              >
+        {/* Gallery Cards Container with smooth mobile scroll snap and staggered reveal */}
+        <div className="flex sm:grid sm:grid-cols-3 gap-3.5 sm:gap-6 overflow-x-auto pb-4 scrollbar-none snap-x touch-pan-x">
+          {galleryItems.map((item, idx) => (
+            <ScrollReveal
+              key={item.id}
+              direction="up"
+              distance={24}
+              duration={650}
+              delay={idx * 100}
+              className="flex-shrink-0 w-64 sm:w-auto snap-center"
+            >
+              <div className="relative rounded-2xl sm:rounded-3xl p-1 bg-white border-2 border-[#D4AF37]/50 shadow-[0_2px_12px_rgba(0,0,0,0.04)] card-hover-lift group">
                 {/* 9:16 Vertical Video Aspect Ratio */}
                 <div className="relative aspect-[9/16] rounded-xl sm:rounded-2xl overflow-hidden bg-black/10">
                   <img
@@ -96,9 +100,9 @@ export default function GallerySection() {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </ScrollReveal>
+            </ScrollReveal>
+          ))}
+        </div>
       </div>
     </section>
   )

@@ -57,7 +57,7 @@ export default function Testimonials() {
     <section className="py-10 md:py-16 bg-[#FAF8F5]">
       <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
         {/* Section Heading & Subtitle */}
-        <ScrollReveal>
+        <ScrollReveal direction="up" distance={20} duration={650}>
           <div className="text-center mb-6 sm:mb-9">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
@@ -82,7 +82,7 @@ export default function Testimonials() {
         </ScrollReveal>
 
         {/* Carousel Wrapper */}
-        <ScrollReveal delay={100}>
+        <ScrollReveal direction="up" distance={24} delay={100} duration={650}>
           <div className="relative max-w-5xl mx-auto">
             {/* Navigation Buttons (Desktop) */}
             <button

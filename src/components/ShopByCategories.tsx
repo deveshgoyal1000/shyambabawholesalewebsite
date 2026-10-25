@@ -52,7 +52,7 @@ export default function ShopByCategories() {
     <section id="categories" className="py-10 md:py-16 bg-[#FAF8F5]">
       <div className="max-w-2xl lg:max-w-6xl mx-auto px-3.5 sm:px-6">
         {/* Section Heading & Subtitle matching Krishaz Wholesale exactly */}
-        <ScrollReveal>
+        <ScrollReveal direction="up" distance={20} duration={650}>
           <div className="text-center mb-6 sm:mb-9">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
@@ -76,12 +76,17 @@ export default function ShopByCategories() {
           </div>
         </ScrollReveal>
 
-        {/* Categories Grid matching Krishaz (2 cols mobile, 4 cols desktop) with Card Lift */}
-        <ScrollReveal delay={100}>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5">
-            {categories.map((cat) => (
+        {/* Categories Grid: Staggered individual ScrollReveal cards for high-end feel */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5">
+          {categories.map((cat, idx) => (
+            <ScrollReveal
+              key={cat.slug}
+              direction="up"
+              distance={24}
+              duration={600}
+              delay={Math.min(idx * 60, 360)}
+            >
               <Link
-                key={cat.slug}
                 href={`/collections/${cat.slug}`}
                 className="group block rounded-xl overflow-hidden bg-white border border-[#EAE3D8] hover:border-[#C9A84C] shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(201,168,76,0.22)] active:scale-[0.98] card-hover-lift"
                 style={{ WebkitTapHighlightColor: 'transparent' }}
@@ -96,10 +101,7 @@ export default function ShopByCategories() {
                   />
                 </div>
 
-                {/* Category Name Line Box matching Krishaz exactly:
-                    border-top: 2px solid #C9A84C
-                    padding: 13px-15px (mobile) to 18px-20px (desktop)
-                    min-height: 50px (mobile) to 58px (desktop) */}
+                {/* Category Name Line Box matching Krishaz */}
                 <div className="px-3.5 py-3 sm:px-5 sm:py-4 bg-white border-t-2 border-[#C9A84C] flex items-center justify-between min-h-[48px] sm:min-h-[58px]">
                   <span
                     style={{
@@ -115,20 +117,22 @@ export default function ShopByCategories() {
                   </span>
                 </div>
               </Link>
-            ))}
+            </ScrollReveal>
+          ))}
+        </div>
+
+        {/* "View Full Catalog" Maroon Pill Button with ScrollReveal */}
+        <ScrollReveal direction="up" distance={16} delay={200} duration={600}>
+          <div className="mt-8 sm:mt-12 text-center">
+            <Link
+              href="/collections/all"
+              className="btn-tactile inline-flex items-center justify-center py-3 sm:py-3.5 px-8 sm:px-10 rounded-full bg-[#6B1A2A] hover:bg-[#521320] text-white font-semibold text-xs sm:text-sm tracking-wider uppercase shadow-md hover:shadow-lg"
+              style={{ WebkitTapHighlightColor: 'transparent' }}
+            >
+              View Full Catalog &rarr;
+            </Link>
           </div>
         </ScrollReveal>
-
-        {/* "View Full Catalog" Maroon Pill Button matching Krishaz */}
-        <div className="mt-8 sm:mt-12 text-center">
-          <Link
-            href="/collections/all"
-            className="btn-tactile inline-flex items-center justify-center py-3 sm:py-3.5 px-8 sm:px-10 rounded-full bg-[#6B1A2A] hover:bg-[#521320] text-white font-semibold text-xs sm:text-sm tracking-wider uppercase shadow-md hover:shadow-lg"
-            style={{ WebkitTapHighlightColor: 'transparent' }}
-          >
-            View Full Catalog &rarr;
-          </Link>
-        </div>
       </div>
     </section>
   )
