@@ -38,7 +38,7 @@ export default function VideoShoppingCTA() {
             {/* "Book Now →" Button */}
             <div>
               <a
-                href="https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20would%20like%20to%20Book%20a%20Live%20Video%20Call%20shopping%20session%20now."
+                href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20would%20like%20to%20Book%20a%20Live%20Video%20Call%20shopping%20session%20now."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-tactile inline-flex items-center justify-center gap-2 py-3 sm:py-3.5 px-8 rounded-full bg-[#6B1A2A] hover:bg-[#521320] text-white font-semibold text-xs sm:text-sm tracking-wide shadow-md w-full max-w-[280px]"

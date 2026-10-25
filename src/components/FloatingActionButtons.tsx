@@ -12,7 +12,7 @@ export default function FloatingActionButtons() {
           <span className="absolute w-full h-full rounded-full border-2 border-[#800020] opacity-40 animate-ping pointer-events-none scale-105 duration-1000"></span>
 
           <a
-            href="https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20would%20like%20to%20Book%20a%20Video%20Call%20shopping%20session."
+            href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20would%20like%20to%20Book%20a%20Video%20Call%20shopping%20session."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-tactile relative inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3.5 rounded-full text-white font-semibold text-xs sm:text-sm tracking-wide select-none"
@@ -53,7 +53,7 @@ export default function FloatingActionButtons() {
           <span className="absolute w-full h-full rounded-full bg-[#25D366] opacity-30 animate-ping pointer-events-none scale-110 duration-1000"></span>
 
           <a
-            href="https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20inquire%20about%20wholesale%20jewellery%20catalogue."
+            href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20inquire%20about%20wholesale%20jewellery%20catalogue."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-tactile relative w-[52px] h-[52px] sm:w-[62px] sm:h-[62px] bg-[#25D366] hover:bg-[#20ba59] active:scale-95 text-white rounded-full flex items-center justify-center select-none"

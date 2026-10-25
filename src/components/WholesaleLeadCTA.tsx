@@ -35,7 +35,7 @@ export default function WholesaleLeadCTA() {
               </a>
 
               <a
-                href="https://wa.me/919876543210?text=Hello%20Shyambaba%20Wholesale%2C%20I%20want%20to%20contact%20you%20regarding%20wholesale%20partnership."
+                href="https://wa.me/919680865791?text=Hello%20Shyambaba%20Wholesale%2C%20I%20want%20to%20contact%20you%20regarding%20wholesale%20partnership."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-tactile block w-full bg-transparent hover:bg-white/10 text-white font-semibold text-xs sm:text-sm py-3 sm:py-3.5 px-6 rounded-full border border-white text-center font-sans"
@@ -88,21 +88,12 @@ export default function WholesaleLeadCTA() {
         <p className="text-xs sm:text-sm text-neutral-700 font-medium font-sans">
           Whatsapp:{' '}
           <a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/919680865791"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#6B1A2A] font-semibold hover:underline transition-colors"
           >
-            +91 98765 43210
-          </a>
-          {' '}/{' '}
-          <a
-            href="https://wa.me/917742126346"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#6B1A2A] font-semibold hover:underline transition-colors"
-          >
-            +91 77421 26346
+            +91 96808 65791
           </a>
         </p>
       </div>

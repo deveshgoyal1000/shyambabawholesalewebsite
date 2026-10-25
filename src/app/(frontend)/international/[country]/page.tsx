@@ -51,11 +51,11 @@ export default async function CountryWholesalePage({ params }: PageProps) {
     (c) => c.slug !== country.slug
   )
 
-  const whatsappUrl = `https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20am%20a%20jewellery%20retailer%20from%20${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20am%20a%20jewellery%20retailer%20from%20${encodeURIComponent(
     country.country
   )}%20and%20want%20to%20order%20wholesale%20with%20doorstep%20shipping.`
 
-  const videoCallUrl = `https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20am%20from%20${encodeURIComponent(
+  const videoCallUrl = `https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20am%20from%20${encodeURIComponent(
     country.country
   )}%20and%20would%20like%20to%20book%20a%20live%20video%20call%20showroom%20inspection.`
 

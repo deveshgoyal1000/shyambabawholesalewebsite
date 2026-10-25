@@ -80,7 +80,7 @@ export default async function ProductDetailPage({
   const whatsappMessage = encodeURIComponent(
     `Hi Shyambaba Wholesale Jewellery,\n\nI want to place a wholesale inquiry for:\n• Product Code: ${product.productCode}\n• Product Name: ${product.name}\n\nPlease share wholesale pricing slab, minimum order quantities, and live inventory availability.`
   )
-  const whatsappUrl = `https://wa.me/919876543210?text=${whatsappMessage}`
+  const whatsappUrl = `https://wa.me/919680865791?text=${whatsappMessage}`
 
   return (
     <div className="min-h-screen flex flex-col bg-cream text-charcoal">
@@ -181,7 +181,7 @@ export default async function ProductDetailPage({
                   </a>
 
                   <a
-                    href={`https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20see%20Product%20${product.productCode}%20live%20on%20Video%20Call.`}
+                    href={`https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20see%20Product%20${product.productCode}%20live%20on%20Video%20Call.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-tactile w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white hover:bg-[#FAF8F5] text-[#6B1A2A] border border-[#6B1A2A]/40 font-bold rounded-xl text-xs shadow-sm"

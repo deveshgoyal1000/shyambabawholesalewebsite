@@ -222,7 +222,7 @@ export default function ManufacturerComparison() {
         <ScrollReveal direction="up" distance={16} delay={200} duration={750}>
           <div className="mt-7 text-center">
             <a
-              href="https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20partner%20with%20your%20factory%20for%20wholesale%20supply."
+              href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20partner%20with%20your%20factory%20for%20wholesale%20supply."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-tactile inline-block py-3 sm:py-3.5 px-8 rounded-full bg-[#6B1A2A] hover:bg-[#521320] text-white font-semibold text-xs sm:text-sm tracking-wide shadow-md w-full max-w-[280px]"

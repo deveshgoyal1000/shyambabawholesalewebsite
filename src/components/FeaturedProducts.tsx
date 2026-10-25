@@ -87,7 +87,7 @@ export default function FeaturedProducts({ initialProducts }: { initialProducts:
           </div>
 
           <a
-            href="https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20please%20send%20me%20your%20complete%205000%2B%20design%20PDF%20catalogue%20with%20codes."
+            href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20please%20send%20me%20your%20complete%205000%2B%20design%20PDF%20catalogue%20with%20codes."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-tactile flex-shrink-0 inline-flex items-center gap-2 px-6 py-3.5 bg-whatsapp text-white font-bold rounded-xl shadow-lg hover:bg-green-600 text-sm"

@@ -27,8 +27,8 @@ export default function Footer() {
                 <Phone className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
                 <div>
                   <span className="text-white/60 block text-[11px]">Call Our Factory:</span>
-                  <a href="tel:+919876543210" className="text-white hover:text-gold font-semibold">
-                    +91 98765 43210 / +91 77421 26346
+                  <a href="tel:+919680865791" className="text-white hover:text-gold font-semibold">
+                    +91 96808 65791
                   </a>
                 </div>
               </li>
@@ -37,12 +37,12 @@ export default function Footer() {
                 <div>
                   <span className="text-white/60 block text-[11px]">WhatsApp Wholesale Desk:</span>
                   <a
-                    href="https://wa.me/919876543210"
+                    href="https://wa.me/919680865791"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-whatsapp hover:underline font-semibold"
                   >
-                    +91 98765 43210 (Instant Reply)
+                    +91 96808 65791 (Instant Reply)
                   </a>
                 </div>
               </li>

@@ -39,7 +39,7 @@ export const SiteSettings: GlobalConfig = {
           type: 'text',
           label: 'WhatsApp Number',
           admin: {
-            description: 'With country code, e.g. +919876543210',
+            description: 'With country code, e.g. +919680865791',
           },
         },
         {

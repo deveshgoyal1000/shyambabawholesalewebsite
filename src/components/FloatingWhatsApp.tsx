@@ -12,7 +12,7 @@ export default function FloatingWhatsApp() {
       </div>
 
       <a
-        href="https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20inquire%20about%20wholesale%20jewellery%20catalogue%20and%20rates."
+        href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20inquire%20about%20wholesale%20jewellery%20catalogue%20and%20rates."
         target="_blank"
         rel="noopener noreferrer"
         className="relative w-14 h-14 bg-whatsapp hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-2xl transition-all transform hover:scale-110 border-2 border-white"

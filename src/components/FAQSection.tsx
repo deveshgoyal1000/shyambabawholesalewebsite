@@ -125,7 +125,7 @@ export default function FAQSection() {
               </span>
             </div>
             <a
-              href="https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20have%20a%20question%20regarding%20wholesale%20orders."
+              href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20have%20a%20question%20regarding%20wholesale%20orders."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-tactile inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold tracking-wide shadow"

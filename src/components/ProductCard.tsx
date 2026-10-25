@@ -32,7 +32,7 @@ export default function ProductCard({ product }: { product: ProductData }) {
   const whatsappMessage = encodeURIComponent(
     `Hi Shyambaba Wholesale Jewellery,\n\nI am interested in placing a wholesale inquiry for:\n• Product Code: ${product.productCode}\n• Product Name: ${product.name}\n\nPlease share wholesale pricing, minimum order quantity, and video/catalogue.`
   )
-  const whatsappUrl = `https://wa.me/919876543210?text=${whatsappMessage}`
+  const whatsappUrl = `https://wa.me/919680865791?text=${whatsappMessage}`
 
   const defaultImage =
     product.image ||

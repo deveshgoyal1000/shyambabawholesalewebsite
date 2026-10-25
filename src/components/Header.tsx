@@ -245,7 +245,7 @@ export default function Header() {
           {/* Drawer Footer Actions */}
           <div className="mt-8 pt-6 border-t border-neutral-200 space-y-3">
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919680865791"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-tactile w-full py-3 px-4 bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.985] text-white rounded-xl flex items-center justify-center gap-2 font-bold text-xs uppercase tracking-wider shadow"
@@ -254,11 +254,11 @@ export default function Header() {
               WhatsApp Direct Order
             </a>
             <a
-              href="tel:+919876543210"
+              href="tel:+919680865791"
               className="btn-tactile w-full py-2.5 px-4 border border-[#6B1A2A] text-[#6B1A2A] hover:bg-[#6B1A2A]/5 active:scale-[0.985] rounded-xl flex items-center justify-center gap-2 font-semibold text-xs"
             >
               <Phone className="w-4 h-4" />
-              Call +91 98765 43210
+              Call +91 96808 65791
             </a>
           </div>
         </div>

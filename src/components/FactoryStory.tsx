@@ -84,7 +84,7 @@ export default function FactoryStory() {
               {/* Play Button Overlay */}
               <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-colors">
                 <a
-                  href="https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20watch%20your%20factory%20manufacturing%20videos."
+                  href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20watch%20your%20factory%20manufacturing%20videos."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#6B1A2A] text-white flex items-center justify-center shadow-xl group-hover:scale-110 active:scale-95 transition-all"

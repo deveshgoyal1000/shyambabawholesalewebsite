@@ -710,7 +710,7 @@ export interface SiteSetting {
   favicon?: (number | null) | Media;
   phone?: string | null;
   /**
-   * With country code, e.g. +919876543210
+   * With country code, e.g. +919680865791
    */
   whatsappNumber?: string | null;
   email?: string | null;

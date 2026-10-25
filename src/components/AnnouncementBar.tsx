@@ -18,7 +18,7 @@ export default function AnnouncementBar() {
         <div className="hidden xl:flex items-center space-x-4 text-[#FAF8F5]/80 text-[11px]">
           <span className="flex items-center gap-1.5">
             <Phone className="w-3.5 h-3.5 text-[#C9A84C]" />
-            +91 98765 43210 / +91 77421 26346
+            +91 96808 65791
           </span>
           <span className="text-[#C9A84C]/40">|</span>
           <span className="flex items-center gap-1.5">
@@ -59,7 +59,7 @@ export default function AnnouncementBar() {
             </select>
           </div>
           <a
-            href="https://wa.me/919876543210?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20book%20a%20video%20call%20for%20wholesale%20selection"
+            href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20book%20a%20video%20call%20for%20wholesale%20selection"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#C9A84C] transition-colors duration-200 font-medium flex items-center gap-1 text-[#C9A84C]"
