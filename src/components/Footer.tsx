@@ -8,7 +8,6 @@ import {
   Mail,
   MapPin,
   Clock,
-  Crown,
   Heart
 } from 'lucide-react'
 
@@ -176,7 +175,6 @@ export default function Footer() {
           {/* Column 4: Brand Mission & Social */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <Crown className="w-5 h-5 text-gold" />
               <span className="font-serif font-bold text-xl text-white">
                 Shyambaba Wholesale
               </span>

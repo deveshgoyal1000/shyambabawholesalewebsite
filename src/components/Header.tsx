@@ -7,7 +7,6 @@ import {
   X,
   Search,
   ShoppingBag,
-  Crown,
   ChevronDown,
   Video,
   MessageCircle,
@@ -78,13 +77,9 @@ export default function Header() {
           <div className="flex-1 flex justify-center text-center">
             <Link
               href="/"
-              className="inline-flex flex-col items-center group select-none"
+              className="inline-flex flex-col items-center group select-none py-1"
               style={{ WebkitTapHighlightColor: 'transparent' }}
             >
-              {/* Crown Motif with subtle scale on hover */}
-              <div className="flex items-center justify-center text-[#6B1A2A] mb-0.5 transition-transform duration-300 group-hover:scale-105">
-                <Crown className="w-5 h-5 sm:w-6 sm:h-6 text-[#6B1A2A]" />
-              </div>
               {/* Brand Name in Georgia Serif */}
               <span
                 style={{ fontFamily: 'Georgia, serif' }}
@@ -93,7 +88,7 @@ export default function Header() {
                 Shyambaba
               </span>
               {/* Wholesale Tagline */}
-              <span className="text-[8px] sm:text-[9px] tracking-[0.35em] font-semibold text-neutral-600 uppercase mt-0.5">
+              <span className="text-[8px] sm:text-[9px] tracking-[0.35em] font-semibold text-neutral-600 uppercase mt-1">
                 WHOLESALE
               </span>
             </Link>
