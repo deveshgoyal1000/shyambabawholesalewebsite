@@ -30,17 +30,13 @@ export default function Footer() {
 
       {/* Main Footer Content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-10 sm:pb-12">
-        {/* Brand Logo Card (White Square with SSB Jewellery Monogram) */}
-        <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-xl shadow-md p-2 flex flex-col items-center justify-center text-center">
-          <span
-            style={{ fontFamily: 'Georgia, serif' }}
-            className="text-2xl sm:text-3xl font-bold text-neutral-900 tracking-tight leading-none"
-          >
-            SSB
-          </span>
-          <span className="text-[7px] sm:text-[8px] font-bold tracking-[0.22em] text-neutral-600 uppercase mt-0.5">
-            JEWELLERY
-          </span>
+        {/* Brand Logo Card (White Square with Official Logo) */}
+        <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-xl shadow-md p-2 flex items-center justify-center overflow-hidden">
+          <img
+            src="/images/logo.png"
+            alt="Shyam Baba Jewellery Logo"
+            className="w-full h-full object-contain"
+          />
         </div>
 
         {/* Tagline below logo */}

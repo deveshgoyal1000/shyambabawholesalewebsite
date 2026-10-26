@@ -36,7 +36,7 @@ export default function ManufacturerComparison() {
     {
       feature: 'Bulk Discounts',
       shyambaba: true,
-      others: false,
+      others: true,
     },
     {
       feature: 'Low Investment *High Returns',
