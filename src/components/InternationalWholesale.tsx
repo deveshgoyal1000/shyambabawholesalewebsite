@@ -99,7 +99,8 @@ export default function InternationalWholesale() {
             >
               <Link
                 href={`/international/${c.slug}`}
-                className="flex items-center justify-between p-4 sm:py-5 sm:px-6 bg-white rounded-2xl border-2 border-[#E5DAC1] hover:border-[#195799] shadow-[0_3px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(25, 87, 153,0.1)] transition-all duration-300 group text-left active:scale-[0.99] select-none"
+                scroll={false}
+                className="flex items-center justify-between p-4 sm:py-5 sm:px-6 bg-white rounded-2xl border-2 border-[#E5DAC1] hover:border-[#195799] shadow-[0_3px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(25, 87, 153,0.1)] transition-all duration-300 group text-left active:scale-[0.98] active:bg-[#FAF5E8] select-none"
                 style={{ WebkitTapHighlightColor: 'transparent' }}
               >
                 <div className="flex items-center gap-3.5 sm:gap-4">
