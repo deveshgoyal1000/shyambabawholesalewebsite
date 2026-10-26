@@ -87,7 +87,7 @@ export default function Testimonials() {
           <div className="text-center mb-7 sm:mb-10">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight mb-2 sm:mb-2.5"
+              className="text-[28px] sm:text-[36px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight mb-2 sm:mb-2.5"
             >
               What Our Retailers Say
             </h2>
@@ -97,7 +97,7 @@ export default function Testimonials() {
                 fontFamily:
                   '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
               }}
-              className="text-[13px] sm:text-[14px] text-[#2C2C2C] font-normal text-center"
+              className="text-[15px] sm:text-[16px] text-[#2C2C2C] font-normal text-center"
             >
               Trusted by 10,000+ Retailers Across India &amp; Worldwide
             </p>
@@ -137,7 +137,7 @@ export default function Testimonials() {
               {reviews.map((r) => (
                 <div
                   key={r.id}
-                  className="testimonial-card flex-shrink-0 w-[84vw] max-w-[320px] sm:w-[335px] snap-center bg-white rounded-2xl p-6 sm:p-7 border border-[#E5DAC1] shadow-[0_2px_12px_rgba(0,0,0,0.03)] card-hover-lift flex flex-col justify-between"
+                  className="testimonial-card flex-shrink-0 w-[86vw] max-w-[340px] sm:w-[350px] snap-center bg-white rounded-2xl p-6 sm:p-7 border border-[#E5DAC1] shadow-[0_2px_12px_rgba(0,0,0,0.03)] card-hover-lift flex flex-col justify-between"
                 >
                   <div>
                     {/* Top Row: Google "G" Logo & Pale Quotation Mark Motif */}
@@ -179,22 +179,22 @@ export default function Testimonials() {
                     {/* 5 Gold Stars */}
                     <div className="flex items-center gap-1 mb-4 text-[#C9A84C]">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current stroke-none" />
+                        <Star key={i} className="w-4 h-4 fill-current stroke-none" />
                       ))}
                     </div>
 
                     {/* Review Quote Body in Italic */}
-                    <p className="text-[12.5px] sm:text-[13.5px] text-[#4A4A4A] font-normal leading-[1.65] italic mb-6">
+                    <p className="text-[14px] sm:text-[14.5px] text-[#4A4A4A] font-normal leading-[1.65] italic mb-6">
                       {r.text}
                     </p>
                   </div>
 
                   {/* Reviewer Details matching Krishaz: Reddish-Maroon Bold Name + Sub-label */}
                   <div className="pt-2">
-                    <span className="font-bold text-xs sm:text-sm text-[#195799] block leading-tight">
+                    <span className="font-bold text-sm sm:text-base text-[#195799] block leading-tight">
                       {r.author}
                     </span>
-                    <span className="text-[11px] sm:text-xs text-neutral-500 font-normal block mt-0.5">
+                    <span className="text-xs sm:text-sm text-neutral-500 font-normal block mt-0.5">
                       {r.location}
                     </span>
                   </div>
@@ -207,10 +207,10 @@ export default function Testimonials() {
               <button
                 onClick={() => scroll('left')}
                 disabled={activeIdx === 0}
-                className="w-8 h-8 rounded-full bg-white border border-[#C9A84C]/50 text-[#195799] disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-xs active:scale-95 transition-all"
+                className="w-9 h-9 rounded-full bg-white border border-[#C9A84C]/50 text-[#195799] disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-xs active:scale-95 transition-all"
                 aria-label="Previous review"
               >
-                <ChevronLeft className="w-4 h-4" />
+                <ChevronLeft className="w-4.5 h-4.5" />
               </button>
 
               {/* Indicator Pills */}
@@ -220,8 +220,8 @@ export default function Testimonials() {
                     key={i}
                     onClick={() => scrollToIdx(i)}
                     aria-label={`Go to review ${i + 1}`}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${
-                      activeIdx === i ? 'w-6 bg-[#C9A84C]' : 'w-2 bg-neutral-300'
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      activeIdx === i ? 'w-7 bg-[#C9A84C]' : 'w-2 bg-neutral-300'
                     }`}
                   />
                 ))}
@@ -230,10 +230,10 @@ export default function Testimonials() {
               <button
                 onClick={() => scroll('right')}
                 disabled={activeIdx === reviews.length - 1}
-                className="w-8 h-8 rounded-full bg-white border border-[#C9A84C]/50 text-[#195799] disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-xs active:scale-95 transition-all"
+                className="w-9 h-9 rounded-full bg-white border border-[#C9A84C]/50 text-[#195799] disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-xs active:scale-95 transition-all"
                 aria-label="Next review"
               >
-                <ChevronRight className="w-4 h-4" />
+                <ChevronRight className="w-4.5 h-4.5" />
               </button>
             </div>
           </div>

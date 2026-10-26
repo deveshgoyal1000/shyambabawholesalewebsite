@@ -31,7 +31,7 @@ export default function Footer() {
       {/* Main Footer Content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-10 sm:pb-12">
         {/* Brand Logo Card (White Square with Official Logo) */}
-        <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-xl shadow-md p-2 flex items-center justify-center overflow-hidden">
+        <div className="w-22 h-22 sm:w-24 sm:h-24 bg-white rounded-xl shadow-md p-2 flex items-center justify-center overflow-hidden">
           <img
             src="/images/logo.png"
             alt="Shyam Baba Jewellery Logo"
@@ -40,16 +40,16 @@ export default function Footer() {
         </div>
 
         {/* Tagline below logo */}
-        <p className="text-white font-bold text-sm sm:text-base tracking-wide mt-4 mb-8">
+        <p className="text-white font-bold text-[15px] sm:text-base tracking-wide mt-4 mb-8">
           Style In Bulk, Profit In Every Piece
         </p>
 
         {/* 4 Navigation / Info Columns */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-8 text-xs sm:text-sm">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-8 text-[13.5px] sm:text-sm">
           {/* Column 1: Company */}
           <div>
-            <h4 className="font-bold text-sm sm:text-base text-white mb-3">Company</h4>
-            <ul className="space-y-2 text-white/90">
+            <h4 className="font-bold text-[15.5px] sm:text-base text-white mb-3">Company</h4>
+            <ul className="space-y-2.5 text-white/90">
               <li>
                 <Link href="/#faq" className="hover:text-white hover:underline transition-colors">
                   Return Policy
@@ -70,8 +70,8 @@ export default function Footer() {
 
           {/* Column 2: About Us */}
           <div>
-            <h4 className="font-bold text-sm sm:text-base text-white mb-3">About Us</h4>
-            <ul className="space-y-2 text-white/90">
+            <h4 className="font-bold text-[15.5px] sm:text-base text-white mb-3">About Us</h4>
+            <ul className="space-y-2.5 text-white/90">
               <li>
                 <Link href="/#about" className="hover:text-white hover:underline transition-colors">
                   About Us
@@ -97,8 +97,8 @@ export default function Footer() {
 
           {/* Column 3: Get Help */}
           <div>
-            <h4 className="font-bold text-sm sm:text-base text-white mb-3">Get Help</h4>
-            <ul className="space-y-2 text-white/90">
+            <h4 className="font-bold text-[15.5px] sm:text-base text-white mb-3">Get Help</h4>
+            <ul className="space-y-2.5 text-white/90">
               <li>
                 <Link href="/#faq" className="hover:text-white hover:underline transition-colors">
                   Shipping Rates
@@ -109,8 +109,8 @@ export default function Footer() {
 
           {/* Column 4: Contact Info with Pin */}
           <div>
-            <h4 className="font-bold text-sm sm:text-base text-white mb-3">Contact Info</h4>
-            <div className="space-y-1 text-white/90 leading-relaxed text-xs sm:text-sm">
+            <h4 className="font-bold text-[15.5px] sm:text-base text-white mb-3">Contact Info</h4>
+            <div className="space-y-1.5 text-white/90 leading-relaxed text-[13.5px] sm:text-sm">
               <p>Address: Shop no,</p>
               <p>206, Johari Bazar Rd,</p>
               <div className="flex items-start gap-1.5 mt-0.5">
@@ -126,7 +126,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright centered */}
-        <div className="border-t border-white/20 mt-10 pt-6 text-center text-xs text-white/90">
+        <div className="border-t border-white/20 mt-10 pt-6 text-center text-xs sm:text-sm text-white/90">
           &copy; 2025 Shyambabawholesale
         </div>
       </div>

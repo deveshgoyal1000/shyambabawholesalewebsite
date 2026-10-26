@@ -57,23 +57,23 @@ export default function GallerySection() {
       <div className="max-w-2xl lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading & Subtitle */}
         <ScrollReveal direction="up" distance={20} duration={800}>
-          <div className="text-center mb-6 sm:mb-8">
+          <div className="text-center mb-7 sm:mb-9">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight"
+              className="text-[28px] sm:text-[36px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight"
             >
               Explore Shyambaba&apos;s Gallery
             </h2>
 
             {/* Gold Accent Divider Bar matching Krishaz */}
-            <div className="w-[60px] sm:w-[80px] h-[2px] bg-[#C9A84C] mx-auto my-2.5 sm:my-3.5"></div>
+            <div className="w-[64px] sm:w-[80px] h-[2px] bg-[#C9A84C] mx-auto my-3 sm:my-3.5"></div>
 
             <p
               style={{
                 fontFamily:
                   '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
               }}
-              className="text-[13px] sm:text-[14px] text-[#2C2C2C] font-normal text-center"
+              className="text-[15px] sm:text-[16px] text-[#2C2C2C] font-normal text-center"
             >
               The Art Of Adornment
             </p>
@@ -124,7 +124,7 @@ export default function GallerySection() {
 
                   {/* Bottom Video Title */}
                   <div className="absolute bottom-3 left-3 right-3 text-white text-center pointer-events-none">
-                    <span className="text-xs sm:text-sm font-medium tracking-wide drop-shadow">
+                    <span className="text-sm sm:text-base font-semibold tracking-wide drop-shadow">
                       {item.title}
                     </span>
                   </div>
@@ -140,20 +140,20 @@ export default function GallerySection() {
           <button
             onClick={() => scrollToIdx(Math.max(0, activeIdx - 1))}
             disabled={activeIdx === 0}
-            className="w-8 h-8 rounded-full bg-white border border-[#C9A84C]/50 text-[#195799] disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-xs active:scale-95 transition-all"
+            className="w-9 h-9 rounded-full bg-white border border-[#C9A84C]/50 text-[#195799] disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-xs active:scale-95 transition-all"
             aria-label="Previous video"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
-            <ChevronLeft className="w-4 h-4" />
+            <ChevronLeft className="w-4.5 h-4.5" />
           </button>
 
           {/* Indicator Navigation Pills */}
-          <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full border border-[#E5DAC1] shadow-xs">
+          <div className="flex items-center gap-1.5 bg-white px-3.5 py-2 rounded-full border border-[#E5DAC1] shadow-xs">
             {galleryItems.map((_, i) => (
               <button
                 key={i}
                 onClick={() => scrollToIdx(i)}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
+                className={`h-2 rounded-full transition-all duration-300 ${
                   activeIdx === i
                     ? 'w-6 bg-[#195799]'
                     : 'w-2 bg-[#D4AF37]/40 hover:bg-[#D4AF37]'
@@ -168,11 +168,11 @@ export default function GallerySection() {
           <button
             onClick={() => scrollToIdx(Math.min(galleryItems.length - 1, activeIdx + 1))}
             disabled={activeIdx === galleryItems.length - 1}
-            className="w-8 h-8 rounded-full bg-white border border-[#C9A84C]/50 text-[#195799] disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-xs active:scale-95 transition-all"
+            className="w-9 h-9 rounded-full bg-white border border-[#C9A84C]/50 text-[#195799] disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-xs active:scale-95 transition-all"
             aria-label="Next video"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
-            <ChevronRight className="w-4 h-4" />
+            <ChevronRight className="w-4.5 h-4.5" />
           </button>
         </div>
       </div>

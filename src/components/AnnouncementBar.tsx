@@ -13,7 +13,7 @@ export default function AnnouncementBar() {
         paddingTop: 'max(0.65rem, env(safe-area-inset-top))',
       }}
     >
-      <div className="max-w-7xl mx-auto px-3.5 sm:px-4 py-2.5 sm:py-2.5 flex items-center justify-between gap-2 min-h-[44px] sm:min-h-[40px]">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-4 py-2.5 flex items-center justify-between gap-2 min-h-[46px] sm:min-h-[40px]">
         {/* Left: Contact & Working Hours (Desktop Only) */}
         <div className="hidden xl:flex items-center space-x-4 text-[#FAF8F5]/80 text-[11px]">
           <span className="flex items-center gap-1.5">
@@ -30,7 +30,7 @@ export default function AnnouncementBar() {
         {/* Center: Main Wholesale Announcement Ticker (Full prominent red panel on mobile) */}
         <div className="flex-1 flex items-center justify-center gap-2 text-center overflow-hidden">
           <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C9A84C] animate-pulse flex-shrink-0" />
-          <span className="tracking-wide text-[12px] sm:text-xs font-medium truncate sm:overflow-visible leading-normal">
+          <span className="tracking-wide text-[13px] sm:text-xs font-medium truncate sm:overflow-visible leading-normal">
             <strong className="text-[#C9A84C] font-bold uppercase tracking-wider">Low MOV ₹3,000/-</strong>
             <span className="mx-1.5 sm:mx-2 text-[#C9A84C]/50">•</span>
             <span>Worldwide B2B Export</span>

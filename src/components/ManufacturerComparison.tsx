@@ -79,23 +79,23 @@ export default function ManufacturerComparison() {
       <div className="max-w-2xl mx-auto px-3.5 sm:px-6">
         {/* Section Heading & Subtitle */}
         <ScrollReveal direction="up" distance={20} duration={800}>
-          <div className="text-center mb-6 sm:mb-8">
+          <div className="text-center mb-7 sm:mb-9">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight"
+              className="text-[28px] sm:text-[36px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight"
             >
               ShyamBabaWholesale vs Other Suppliers
             </h2>
 
             {/* Gold Accent Divider Bar matching Krishaz */}
-            <div className="w-[60px] sm:w-[80px] h-[2px] bg-[#C9A84C] mx-auto my-2.5 sm:my-3.5"></div>
+            <div className="w-[64px] sm:w-[80px] h-[2px] bg-[#C9A84C] mx-auto my-3 sm:my-3.5"></div>
 
             <p
               style={{
                 fontFamily:
                   '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
               }}
-              className="text-[13px] sm:text-[14px] text-[#2C2C2C] font-normal"
+              className="text-[15px] sm:text-[16px] text-[#2C2C2C] font-normal leading-relaxed"
             >
               Why 10,000+ Retailers Choose Direct Manufacturing
             </p>
@@ -115,15 +115,15 @@ export default function ManufacturerComparison() {
           <table className="w-full border-collapse">
             <thead>
               <tr className="border-b-2 border-[#C9A84C] bg-[#FAF8F5]">
-                <th className="py-3.5 px-3 sm:px-5 text-left font-bold text-[11px] sm:text-xs text-[#2C2C2C] uppercase tracking-wider">
+                <th className="py-4 px-3 sm:px-5 text-left font-bold text-[12.5px] sm:text-xs text-[#2C2C2C] uppercase tracking-wider">
                   Features
                 </th>
-                <th className="py-3.5 px-2 sm:px-4 text-center font-bold text-[11px] sm:text-xs text-[#195799] uppercase tracking-wider bg-[#FAF5E8] border-x-2 border-[#C9A84C]/50">
-                  <span className="font-extrabold text-[#195799] text-xs sm:text-sm tracking-tight block">
+                <th className="py-4 px-2 sm:px-4 text-center font-bold text-[12px] sm:text-xs text-[#195799] uppercase tracking-wider bg-[#FAF5E8] border-x-2 border-[#C9A84C]/50">
+                  <span className="font-extrabold text-[#195799] text-[13.5px] sm:text-sm tracking-tight block">
                     ShyamBabaWholesale
                   </span>
                 </th>
-                <th className="py-3.5 px-2 sm:px-4 text-center font-bold text-[11px] sm:text-xs text-neutral-500 uppercase tracking-wider">
+                <th className="py-4 px-2 sm:px-4 text-center font-bold text-[12px] sm:text-xs text-neutral-500 uppercase tracking-wider">
                   Other Suppliers
                 </th>
               </tr>
@@ -142,19 +142,19 @@ export default function ManufacturerComparison() {
                     willChange: 'opacity, transform',
                   }}
                 >
-                  <td className="py-3.5 px-3 sm:px-5 text-xs sm:text-sm font-semibold text-[#2C2C2C]">
+                  <td className="py-4 px-3 sm:px-5 text-[14px] sm:text-sm font-semibold text-[#2C2C2C]">
                     {row.feature}
                   </td>
-                  <td className="py-3.5 px-2 sm:px-4 text-center bg-[#FAF5E8]/60 border-x-2 border-[#C9A84C]/40">
+                  <td className="py-4 px-2 sm:px-4 text-center bg-[#FAF5E8]/60 border-x-2 border-[#C9A84C]/40">
                     <div
-                      className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-emerald-100 text-emerald-600 border border-emerald-300 shadow-2xs"
+                      className="inline-flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-emerald-100 text-emerald-600 border border-emerald-300 shadow-2xs"
                       style={{
                         transform: tableInView ? 'scale(1)' : 'scale(0.8)',
                         transition: `transform 600ms cubic-bezier(0.22, 1, 0.36, 1) ${idx * 140 + 100}ms`,
                       }}
                     >
                       <svg
-                        className="w-3.5 h-3.5 stroke-[3]"
+                        className="w-4 h-4 stroke-[3]"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -167,17 +167,17 @@ export default function ManufacturerComparison() {
                       </svg>
                     </div>
                   </td>
-                  <td className="py-3.5 px-2 sm:px-4 text-center">
+                  <td className="py-4 px-2 sm:px-4 text-center">
                     {row.others ? (
                       <div
-                        className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-emerald-100 text-emerald-600 border border-emerald-300 shadow-2xs"
+                        className="inline-flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-emerald-100 text-emerald-600 border border-emerald-300 shadow-2xs"
                         style={{
                           transform: tableInView ? 'scale(1)' : 'scale(0.8)',
                           transition: `transform 600ms cubic-bezier(0.22, 1, 0.36, 1) ${idx * 140 + 100}ms`,
                         }}
                       >
                         <svg
-                          className="w-3.5 h-3.5 stroke-[2.5]"
+                          className="w-4 h-4 stroke-[3]"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -191,14 +191,14 @@ export default function ManufacturerComparison() {
                       </div>
                     ) : (
                       <div
-                        className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-rose-100 text-rose-600 border border-rose-300 shadow-2xs"
+                        className="inline-flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-rose-100 text-rose-600 border border-rose-300 shadow-2xs"
                         style={{
                           transform: tableInView ? 'scale(1)' : 'scale(0.8)',
                           transition: `transform 600ms cubic-bezier(0.22, 1, 0.36, 1) ${idx * 140 + 100}ms`,
                         }}
                       >
                         <svg
-                          className="w-3.5 h-3.5 stroke-[3]"
+                          className="w-4 h-4 stroke-[3]"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"

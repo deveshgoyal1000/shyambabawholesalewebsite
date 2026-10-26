@@ -15,10 +15,10 @@ export default function FloatingActionButtons() {
             href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20would%20like%20to%20Book%20a%20Video%20Call%20shopping%20session."
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-tactile relative inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3.5 rounded-full text-white font-semibold text-xs sm:text-sm tracking-wide select-none"
+            className="btn-tactile relative inline-flex items-center gap-2 px-4.5 sm:px-6 py-3 sm:py-3.5 rounded-full text-white font-semibold text-[13.5px] sm:text-sm tracking-wide select-none"
             style={{
               background: 'linear-gradient(145deg, #2b74c2, #103b6a, #0c2b4e)',
-              border: '1px solid rgba(192, 0, 60, 0.8)',
+              border: '1px solid rgba(25, 87, 153, 0.8)',
               boxShadow:
                 '0 8px 20px rgba(25, 87, 153, 0.45), 0 4px 10px rgba(212, 175, 55, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.25)',
               WebkitTapHighlightColor: 'transparent',
@@ -27,7 +27,7 @@ export default function FloatingActionButtons() {
           >
             {/* Crisp Video Camera SVG */}
             <svg
-              className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0"
+              className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-white flex-shrink-0"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="none"
@@ -56,7 +56,7 @@ export default function FloatingActionButtons() {
             href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20inquire%20about%20wholesale%20jewellery%20catalogue."
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-tactile relative w-[52px] h-[52px] sm:w-[62px] sm:h-[62px] bg-[#25D366] hover:bg-[#20ba59] active:scale-95 text-white rounded-full flex items-center justify-center select-none"
+            className="btn-tactile relative w-[54px] h-[54px] sm:w-[62px] sm:h-[62px] bg-[#25D366] hover:bg-[#20ba59] active:scale-95 text-white rounded-full flex items-center justify-center select-none"
             style={{
               boxShadow:
                 '0 4px 16px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(37, 211, 102, 0.45)',

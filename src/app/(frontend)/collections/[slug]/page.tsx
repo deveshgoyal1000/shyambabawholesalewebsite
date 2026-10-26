@@ -105,12 +105,12 @@ export default async function CollectionPage({
           {/* Collection Title Banner with ScrollReveal */}
           <ScrollReveal direction="up" distance={20} duration={650}>
             <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
-              <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#9A7E2E] block mb-1">
+              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-[#9A7E2E] block mb-1">
                 Jaipur Manufacturer Catalogue
               </span>
               <h1
                 style={{ fontFamily: 'Georgia, serif' }}
-                className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight"
+                className="text-[28px] sm:text-[36px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight"
               >
                 {categoryTitle}
               </h1>
@@ -123,7 +123,7 @@ export default async function CollectionPage({
                   fontFamily:
                     '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 }}
-                className="text-[13px] sm:text-[14px] text-[#2C2C2C] font-normal"
+                className="text-[15px] sm:text-[16px] text-[#2C2C2C] font-normal"
               >
                 Low MOV ₹3,000/- &bull; Unique Product Codes &bull; Instant WhatsApp Bulk Inquiries
               </p>
@@ -138,7 +138,7 @@ export default async function CollectionPage({
                 <Link
                   key={cat.slug}
                   href={`/collections/${cat.slug}`}
-                  className={`btn-tactile px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs font-semibold whitespace-nowrap border ${
+                  className={`btn-tactile px-4 py-2 rounded-full text-[13px] sm:text-xs font-semibold whitespace-nowrap border ${
                     isActive
                       ? 'bg-[#195799] text-white border-[#195799] shadow-sm'
                       : 'bg-white text-neutral-700 border-neutral-200 hover:border-[#C9A84C] hover:text-[#195799]'

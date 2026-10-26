@@ -55,8 +55,8 @@ export default async function CountryWholesalePage({ params }: PageProps) {
 
           {/* 1. Country Header - Simple, Natural & Authentic */}
           <div className="text-center mb-6 sm:mb-8">
-            <div className="inline-flex items-center justify-center gap-2 mb-2">
-              <div className="w-6 h-4 rounded-xs overflow-hidden border border-neutral-300 shadow-2xs">
+            <div className="inline-flex items-center justify-center gap-2.5 mb-2">
+              <div className="w-7 h-5 rounded-xs overflow-hidden border border-neutral-300 shadow-2xs">
                 <img
                   src={country.flag}
                   alt={`${country.country} Flag`}
@@ -65,7 +65,7 @@ export default async function CountryWholesalePage({ params }: PageProps) {
               </div>
               <h1
                 style={{ fontFamily: 'Georgia, serif' }}
-                className="text-2xl sm:text-3xl md:text-4xl font-normal text-[#121212] tracking-tight"
+                className="text-[26px] sm:text-3xl md:text-4xl font-normal text-[#121212] tracking-tight"
               >
                 Wholesale Jewellery for {country.country}
               </h1>
@@ -74,7 +74,7 @@ export default async function CountryWholesalePage({ params }: PageProps) {
             {/* Gold Accent Divider Bar */}
             <div className="w-16 h-[2px] bg-[#C9A84C] mx-auto my-2.5"></div>
 
-            <p className="text-xs sm:text-sm text-[#4A4A4A] max-w-lg mx-auto">
+            <p className="text-[14px] sm:text-base text-[#4A4A4A] max-w-lg mx-auto">
               Direct factory supply from our Jaipur manufacturing unit to your shop or boutique in {country.country}.
             </p>
           </div>
@@ -92,14 +92,14 @@ export default async function CountryWholesalePage({ params }: PageProps) {
           <div className="bg-white rounded-2xl border border-[#E5DAC1] p-5 sm:p-7 mb-8 shadow-xs">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-lg sm:text-xl font-normal text-[#121212] mb-3.5"
+              className="text-xl sm:text-2xl font-normal text-[#121212] mb-3.5"
             >
               How Ordering Works
             </h2>
 
-            <div className="space-y-3.5 text-xs sm:text-sm text-[#3A3A3A] leading-relaxed">
+            <div className="space-y-3.5 text-[13.5px] sm:text-sm text-[#3A3A3A] leading-relaxed">
               <div className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-[#FAF5E8] border border-[#C9A84C]/60 text-[#195799] font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span className="w-7 h-7 rounded-full bg-[#FAF5E8] border border-[#C9A84C]/60 text-[#195799] font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
                   1
                 </span>
                 <div>
@@ -108,7 +108,7 @@ export default async function CountryWholesalePage({ params }: PageProps) {
               </div>
 
               <div className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-[#FAF5E8] border border-[#C9A84C]/60 text-[#195799] font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span className="w-7 h-7 rounded-full bg-[#FAF5E8] border border-[#C9A84C]/60 text-[#195799] font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
                   2
                 </span>
                 <div>
@@ -117,7 +117,7 @@ export default async function CountryWholesalePage({ params }: PageProps) {
               </div>
 
               <div className="flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-[#FAF5E8] border border-[#C9A84C]/60 text-[#195799] font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span className="w-7 h-7 rounded-full bg-[#FAF5E8] border border-[#C9A84C]/60 text-[#195799] font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
                   3
                 </span>
                 <div>
@@ -127,21 +127,21 @@ export default async function CountryWholesalePage({ params }: PageProps) {
             </div>
 
             {/* Local Context Note */}
-            <p className="mt-4 pt-3.5 border-t border-neutral-100 text-xs text-neutral-500 leading-relaxed">
+            <p className="mt-4 pt-3.5 border-t border-neutral-100 text-[13px] sm:text-xs text-neutral-500 leading-relaxed">
               {country.overviewText}
             </p>
 
             {/* Clean Quick Stats Row */}
             <div className="mt-4 pt-3.5 border-t border-neutral-100 grid grid-cols-3 gap-2 text-center">
-              <div className="p-2 bg-[#FAF8F5] rounded-xl">
+              <div className="p-2.5 bg-[#FAF8F5] rounded-xl">
                 <span className="text-[10px] text-neutral-500 block uppercase tracking-wider font-medium">Min. Order</span>
                 <span className="text-xs sm:text-sm font-bold text-[#195799]">{country.minOrderValue}</span>
               </div>
-              <div className="p-2 bg-[#FAF8F5] rounded-xl">
+              <div className="p-2.5 bg-[#FAF8F5] rounded-xl">
                 <span className="text-[10px] text-neutral-500 block uppercase tracking-wider font-medium">Delivery</span>
                 <span className="text-xs sm:text-sm font-bold text-[#195799]">{country.deliveryTime}</span>
               </div>
-              <div className="p-2 bg-[#FAF8F5] rounded-xl">
+              <div className="p-2.5 bg-[#FAF8F5] rounded-xl">
                 <span className="text-[10px] text-neutral-500 block uppercase tracking-wider font-medium">Courier</span>
                 <span className="text-xs sm:text-sm font-bold text-[#195799]">{country.courierPartner}</span>
               </div>
@@ -156,7 +156,7 @@ export default async function CountryWholesalePage({ params }: PageProps) {
             >
               Order for {country.country}
             </h3>
-            <p className="text-xs sm:text-sm text-neutral-600 mb-5 max-w-md mx-auto">
+            <p className="text-[14px] sm:text-sm text-neutral-600 mb-5 max-w-md mx-auto">
               Message us directly on WhatsApp to get the latest catalogue, check live prices, and book a video call.
             </p>
 
@@ -165,9 +165,9 @@ export default async function CountryWholesalePage({ params }: PageProps) {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#25D366] hover:bg-[#20ba59] active:scale-98 text-white font-semibold text-xs tracking-wide shadow-xs transition-transform"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] active:scale-98 text-white font-bold text-sm tracking-wide shadow-xs transition-transform"
               >
-                <MessageCircle className="w-4 h-4 fill-current" />
+                <MessageCircle className="w-4.5 h-4.5 fill-current" />
                 <span>WhatsApp (+91 96808 65791)</span>
               </a>
 
@@ -175,9 +175,9 @@ export default async function CountryWholesalePage({ params }: PageProps) {
                 href={videoCallUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-neutral-50 active:scale-98 text-[#195799] border border-[#195799]/40 font-semibold text-xs transition-all shadow-xs"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white hover:bg-neutral-50 active:scale-98 text-[#195799] border border-[#195799]/40 font-bold text-sm transition-all shadow-xs"
               >
-                <Video className="w-4 h-4 text-[#C9A84C]" />
+                <Video className="w-4.5 h-4.5 text-[#C9A84C]" />
                 <span>Book Live Video Call</span>
               </a>
             </div>
