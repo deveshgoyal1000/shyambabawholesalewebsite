@@ -1,11 +1,12 @@
 'use client'
 
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export default function Testimonials() {
   const scrollRef = useRef<HTMLDivElement>(null)
+  const [activeIdx, setActiveIdx] = useState(0)
 
   const reviews = [
     {
@@ -46,11 +47,36 @@ export default function Testimonials() {
     },
   ]
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      const offset = direction === 'left' ? -320 : 320
-      scrollRef.current.scrollBy({ left: offset, behavior: 'smooth' })
+  const scrollToIdx = (idx: number) => {
+    if (!scrollRef.current) return
+    const container = scrollRef.current
+    const cards = container.querySelectorAll('.testimonial-card')
+    if (cards[idx]) {
+      (cards[idx] as HTMLElement).scrollIntoView({
+        behavior: 'smooth',
+        inline: 'center',
+        block: 'nearest',
+      })
+      setActiveIdx(idx)
     }
+  }
+
+  const scroll = (direction: 'left' | 'right') => {
+    const next =
+      direction === 'left'
+        ? Math.max(0, activeIdx - 1)
+        : Math.min(reviews.length - 1, activeIdx + 1)
+    scrollToIdx(next)
+  }
+
+  const handleScroll = () => {
+    if (!scrollRef.current) return
+    const container = scrollRef.current
+    const scrollLeft = container.scrollLeft
+    const card = container.querySelector('.testimonial-card') as HTMLElement
+    const cardWidth = card ? card.offsetWidth + 16 : 300
+    const newIdx = Math.round(scrollLeft / cardWidth)
+    setActiveIdx(Math.min(Math.max(newIdx, 0), reviews.length - 1))
   }
 
   return (
@@ -81,7 +107,7 @@ export default function Testimonials() {
         {/* Carousel Wrapper */}
         <ScrollReveal direction="up" distance={22} delay={100} duration={800}>
           <div className="relative max-w-5xl mx-auto">
-            {/* Desktop Navigation Arrows */}
+            {/* Desktop Side Navigation Arrows */}
             <button
               onClick={() => scroll('left')}
               className="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-md border border-[#C9A84C]/40 text-[#195799] items-center justify-center hover:bg-[#195799] hover:text-white transition-all active:scale-95"
@@ -97,15 +123,21 @@ export default function Testimonials() {
               <ChevronRight className="w-5 h-5" />
             </button>
 
-            {/* Testimonials Swipe Container: touch-pan-y allows seamless vertical scrolling */}
+            {/* Testimonials Swipe Container: unlocked horizontal movement with CSS snap */}
             <div
               ref={scrollRef}
-              className="flex gap-4 sm:gap-6 overflow-x-auto pb-4 scrollbar-none touch-pan-y overscroll-x-contain"
+              onScroll={handleScroll}
+              className="flex gap-4 sm:gap-6 overflow-x-auto overflow-y-hidden pb-4 scrollbar-none snap-x snap-mandatory"
+              style={{
+                WebkitOverflowScrolling: 'touch',
+                overscrollBehaviorX: 'contain',
+                touchAction: 'pan-x pan-y',
+              }}
             >
               {reviews.map((r) => (
                 <div
                   key={r.id}
-                  className="flex-shrink-0 w-[285px] sm:w-[335px] bg-white rounded-2xl p-6 sm:p-7 border border-[#E5DAC1] shadow-[0_2px_12px_rgba(0,0,0,0.03)] card-hover-lift flex flex-col justify-between select-none"
+                  className="testimonial-card flex-shrink-0 w-[84vw] max-w-[320px] sm:w-[335px] snap-center bg-white rounded-2xl p-6 sm:p-7 border border-[#E5DAC1] shadow-[0_2px_12px_rgba(0,0,0,0.03)] card-hover-lift flex flex-col justify-between"
                 >
                   <div>
                     {/* Top Row: Google "G" Logo & Pale Quotation Mark Motif */}
@@ -168,6 +200,41 @@ export default function Testimonials() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Mobile Navigation Arrows & Indicators Bar */}
+            <div className="flex items-center justify-between mt-3 px-2 md:hidden">
+              <button
+                onClick={() => scroll('left')}
+                disabled={activeIdx === 0}
+                className="w-8 h-8 rounded-full bg-white border border-[#C9A84C]/50 text-[#195799] disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-xs active:scale-95 transition-all"
+                aria-label="Previous review"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+
+              {/* Indicator Pills */}
+              <div className="flex items-center gap-1.5">
+                {reviews.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => scrollToIdx(i)}
+                    aria-label={`Go to review ${i + 1}`}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${
+                      activeIdx === i ? 'w-6 bg-[#C9A84C]' : 'w-2 bg-neutral-300'
+                    }`}
+                  />
+                ))}
+              </div>
+
+              <button
+                onClick={() => scroll('right')}
+                disabled={activeIdx === reviews.length - 1}
+                className="w-8 h-8 rounded-full bg-white border border-[#C9A84C]/50 text-[#195799] disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-xs active:scale-95 transition-all"
+                aria-label="Next review"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
             </div>
           </div>
         </ScrollReveal>

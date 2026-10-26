@@ -147,7 +147,7 @@ export default function ManufacturerComparison() {
                   </td>
                   <td className="py-3.5 px-2 sm:px-4 text-center bg-[#FAF5E8]/60 border-x-2 border-[#C9A84C]/40">
                     <div
-                      className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#195799]/10 text-[#195799]"
+                      className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-emerald-100 text-emerald-600 border border-emerald-300 shadow-2xs"
                       style={{
                         transform: tableInView ? 'scale(1)' : 'scale(0.8)',
                         transition: `transform 600ms cubic-bezier(0.22, 1, 0.36, 1) ${idx * 140 + 100}ms`,
@@ -170,7 +170,7 @@ export default function ManufacturerComparison() {
                   <td className="py-3.5 px-2 sm:px-4 text-center">
                     {row.others ? (
                       <div
-                        className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-neutral-100 text-neutral-500"
+                        className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-emerald-100 text-emerald-600 border border-emerald-300 shadow-2xs"
                         style={{
                           transform: tableInView ? 'scale(1)' : 'scale(0.8)',
                           transition: `transform 600ms cubic-bezier(0.22, 1, 0.36, 1) ${idx * 140 + 100}ms`,
@@ -191,7 +191,7 @@ export default function ManufacturerComparison() {
                       </div>
                     ) : (
                       <div
-                        className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-red-50 text-red-500"
+                        className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-rose-100 text-rose-600 border border-rose-300 shadow-2xs"
                         style={{
                           transform: tableInView ? 'scale(1)' : 'scale(0.8)',
                           transition: `transform 600ms cubic-bezier(0.22, 1, 0.36, 1) ${idx * 140 + 100}ms`,
