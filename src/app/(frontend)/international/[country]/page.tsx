@@ -65,7 +65,7 @@ export default async function CountryWholesalePage({ params }: PageProps) {
               </div>
               <h1
                 style={{ fontFamily: 'Georgia, serif' }}
-                className="text-2xl sm:text-3xl md:text-4xl font-normal text-[#195799] tracking-tight"
+                className="text-2xl sm:text-3xl md:text-4xl font-normal text-[#121212] tracking-tight"
               >
                 Wholesale Jewellery for {country.country}
               </h1>
@@ -92,7 +92,7 @@ export default async function CountryWholesalePage({ params }: PageProps) {
           <div className="bg-white rounded-2xl border border-[#E5DAC1] p-5 sm:p-7 mb-8 shadow-xs">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-lg sm:text-xl font-normal text-[#195799] mb-3.5"
+              className="text-lg sm:text-xl font-normal text-[#121212] mb-3.5"
             >
               How Ordering Works
             </h2>
@@ -152,7 +152,7 @@ export default async function CountryWholesalePage({ params }: PageProps) {
           <div className="bg-[#FAF5E8] rounded-2xl border border-[#C9A84C]/60 p-5 sm:p-7 text-center">
             <h3
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-xl sm:text-2xl font-normal text-[#195799] mb-1.5"
+              className="text-xl sm:text-2xl font-normal text-[#121212] mb-1.5"
             >
               Order for {country.country}
             </h3>

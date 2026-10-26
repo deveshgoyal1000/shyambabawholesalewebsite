@@ -14,7 +14,7 @@ export default function FactoryStory() {
         <ScrollReveal direction="up" distance={20} duration={650}>
           <h2
             style={{ fontFamily: 'Georgia, serif' }}
-            className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#195799] leading-tight mb-2 tracking-[0.5px]"
+            className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] leading-tight mb-2 tracking-[0.5px]"
           >
             We Don&apos;t Source. We Are<br />Manufacture.
           </h2>

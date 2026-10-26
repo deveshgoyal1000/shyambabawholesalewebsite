@@ -19,7 +19,7 @@ export default function VideoShoppingCTA() {
             {/* Heading in Georgia Serif */}
             <h3
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-2xl sm:text-3xl font-bold text-[#195799] mb-1.5 tracking-normal leading-tight"
+              className="text-2xl sm:text-3xl font-bold text-[#121212] mb-1.5 tracking-normal leading-tight"
             >
               Book a Live Video Call
             </h3>

@@ -56,7 +56,7 @@ export default function ShopByCategories() {
           <div className="text-center mb-6 sm:mb-9">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-[#195799] text-[26px] sm:text-[34px] md:text-[42px] font-normal tracking-[0.5px] leading-tight"
+              className="text-[#121212] text-[26px] sm:text-[34px] md:text-[42px] font-normal tracking-[0.5px] leading-tight"
             >
               Shop By Categories
             </h2>

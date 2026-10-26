@@ -147,7 +147,7 @@ export default async function ProductDetailPage({
                 {/* Title */}
                 <h1
                   style={{ fontFamily: 'Georgia, serif' }}
-                  className="text-3xl sm:text-[36px] font-normal text-[#195799] leading-tight"
+                  className="text-3xl sm:text-[36px] font-normal text-[#121212] leading-tight"
                 >
                   {product.name}
                 </h1>
@@ -195,7 +195,7 @@ export default async function ProductDetailPage({
                 <div className="pt-4 border-t border-[#EAE3D8]">
                   <h3
                     style={{ fontFamily: 'Georgia, serif' }}
-                    className="text-lg font-normal text-[#195799] mb-3"
+                    className="text-lg font-normal text-[#121212] mb-3"
                   >
                     Product Specifications
                   </h3>
@@ -210,7 +210,7 @@ export default async function ProductDetailPage({
                     ]).map((spec: any, idx: number) => (
                       <div key={idx} className="flex p-3 bg-white even:bg-[#FAF8F5]/60">
                         <span className="w-1/3 font-semibold text-[#2C2C2C]/70">{spec.label}</span>
-                        <span className="w-2/3 font-bold text-[#195799]">{spec.value}</span>
+                        <span className="w-2/3 font-bold text-[#121212]">{spec.value}</span>
                       </div>
                     ))}
                   </div>

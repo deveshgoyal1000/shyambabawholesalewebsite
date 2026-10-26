@@ -61,7 +61,7 @@ export default function Testimonials() {
           <div className="text-center mb-7 sm:mb-10">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#195799] tracking-[0.5px] leading-tight mb-2 sm:mb-2.5"
+              className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight mb-2 sm:mb-2.5"
             >
               What Our Retailers Say
             </h2>

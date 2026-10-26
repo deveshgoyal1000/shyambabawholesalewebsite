@@ -6,9 +6,6 @@ import {
   Menu,
   X,
   Search,
-  ShoppingBag,
-  ChevronDown,
-  Video,
   MessageCircle,
   Phone
 } from 'lucide-react'
@@ -62,7 +59,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Left: Mobile Hamburger Menu Button */}
-          <div className="flex items-center">
+          <div className="flex items-center w-12 sm:w-16">
             <button
               onClick={() => setMobileMenuOpen(true)}
               className="p-2 -ml-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
@@ -73,46 +70,32 @@ export default function Header() {
             </button>
           </div>
 
-          {/* Center: Brand Logo */}
+          {/* Center: Brand Name 'ShyamBabaWholesale' matching Screenshot 2 */}
           <div className="flex-1 flex justify-center text-center">
             <Link
               href="/"
-              className="inline-flex flex-col items-center group select-none py-1"
+              className="inline-flex items-center select-none py-1 group"
               style={{ WebkitTapHighlightColor: 'transparent' }}
             >
-              {/* Brand Name in Georgia Serif */}
               <span
-                style={{ fontFamily: 'Georgia, serif' }}
-                className="text-[20px] sm:text-2xl lg:text-3xl font-bold tracking-tight text-[#1A1A1A] uppercase leading-none group-hover:text-[#195799] transition-colors duration-200"
+                style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
+                className="text-[20px] sm:text-[26px] md:text-[32px] font-normal tracking-tight text-[#111111] leading-none group-hover:text-[#195799] transition-colors duration-200"
               >
-                Shyambaba
-              </span>
-              {/* Wholesale Tagline */}
-              <span className="text-[8px] sm:text-[9px] tracking-[0.35em] font-semibold text-neutral-600 uppercase mt-1">
-                WHOLESALE
+                ShyamBabaWholesale
               </span>
             </Link>
           </div>
 
-          {/* Right: Search & Shopping Bag Icons */}
-          <div className="flex items-center gap-0.5 sm:gap-2">
+          {/* Right: Search only (Cart & Wishlist removed) */}
+          <div className="flex items-center justify-end w-12 sm:w-16">
             <button
               onClick={() => setSearchOpen(!searchOpen)}
-              className="p-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
+              className="p-2 -mr-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
               style={{ WebkitTapHighlightColor: 'transparent' }}
               aria-label="Search"
             >
               <Search className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.8]" />
             </button>
-
-            <Link
-              href="/collections/all"
-              className="p-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 relative focus-visible:outline-none rounded-lg"
-              style={{ WebkitTapHighlightColor: 'transparent' }}
-              aria-label="Cart / Catalogue"
-            >
-              <ShoppingBag className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.8]" />
-            </Link>
           </div>
         </div>
 

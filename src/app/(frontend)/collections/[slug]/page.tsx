@@ -110,7 +110,7 @@ export default async function CollectionPage({
               </span>
               <h1
                 style={{ fontFamily: 'Georgia, serif' }}
-                className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#195799] tracking-[0.5px] leading-tight"
+                className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight"
               >
                 {categoryTitle}
               </h1>
