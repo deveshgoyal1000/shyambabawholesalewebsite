@@ -1,13 +1,11 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import { Globe, ShieldCheck, PackageCheck, ChevronRight } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export default function InternationalWholesale() {
-  const [showAll, setShowAll] = useState(false)
-
   const countries = [
     {
       country: 'United States',
@@ -59,7 +57,7 @@ export default function InternationalWholesale() {
     },
   ]
 
-  const displayed = showAll ? countries : countries.slice(0, 5)
+  const displayed = countries.slice(0, 5)
 
   return (
     <section id="international" className="py-10 md:py-16 bg-[#FAF8F5]">
@@ -129,17 +127,12 @@ export default function InternationalWholesale() {
           ))}
         </div>
 
-        {/* View More / Less Button */}
-        {!showAll && (
-          <button
-            onClick={() => setShowAll(true)}
-            className="mt-6 text-xs sm:text-sm font-semibold text-[#195799] hover:text-[#124378] flex items-center gap-1.5 mx-auto underline decoration-[#C9A84C] underline-offset-4 active:scale-98 transition-transform"
-            style={{ WebkitTapHighlightColor: 'transparent' }}
-          >
-            <span>View All 50+ Countries</span>
-            <ChevronRight className="w-4 h-4" />
-          </button>
-        )}
+        {/* Non-touchable 50+ Countries Indicator */}
+        <div className="mt-5 text-center pointer-events-none select-none">
+          <span className="text-xs sm:text-sm font-semibold text-[#195799] tracking-wide inline-flex items-center gap-1.5">
+            50+ Countries
+          </span>
+        </div>
 
         {/* Maroon Trust Bar */}
         <ScrollReveal direction="up" distance={22} delay={150} duration={650}>
