@@ -58,18 +58,18 @@ export default function Header() {
         paddingTop: 'env(safe-area-inset-top, 0px)',
       }}
     >
-      {/* Top Main Navigation Bar - Tall, airy, luxury layout matching Krishaz */}
+      {/* Top Main Navigation Bar - Extra tall, airy, luxury layout matching Krishaz */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 sm:h-24">
+        <div className="flex items-center justify-between h-[88px] sm:h-28 md:h-32">
           {/* Left: Mobile Hamburger Menu Button */}
-          <div className="flex items-center w-12 sm:w-16">
+          <div className="flex items-center w-14 sm:w-20">
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="p-2.5 -ml-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
+              className="p-3 -ml-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
               style={{ WebkitTapHighlightColor: 'transparent' }}
               aria-label="Open navigation menu"
             >
-              <Menu className="w-6 h-6 sm:w-7 sm:h-7 stroke-[1.8]" />
+              <Menu className="w-7 h-7 sm:w-8 sm:h-8 stroke-[1.8]" />
             </button>
           </div>
 
@@ -82,7 +82,7 @@ export default function Header() {
             >
               <span
                 style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
-                className="text-[26px] sm:text-[32px] md:text-[38px] font-normal tracking-tight text-[#111111] leading-none group-hover:text-[#195799] transition-colors duration-200 whitespace-nowrap"
+                className="text-[28px] xs:text-[32px] sm:text-[38px] md:text-[44px] font-normal tracking-tight text-[#111111] leading-none group-hover:text-[#195799] transition-colors duration-200 whitespace-nowrap"
               >
                 ShyamBabaWholesale
               </span>
@@ -90,14 +90,14 @@ export default function Header() {
           </div>
 
           {/* Right: Search only (Cart & Wishlist removed) */}
-          <div className="flex items-center justify-end w-12 sm:w-16">
+          <div className="flex items-center justify-end w-14 sm:w-20">
             <button
               onClick={() => setSearchOpen(!searchOpen)}
-              className="p-2.5 -mr-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
+              className="p-3 -mr-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
               style={{ WebkitTapHighlightColor: 'transparent' }}
               aria-label="Search"
             >
-              <Search className="w-5.5 h-5.5 sm:w-6.5 sm:h-6.5 stroke-[1.8]" />
+              <Search className="w-6.5 h-6.5 sm:w-7.5 sm:h-7.5 stroke-[1.8]" />
             </button>
           </div>
         </div>
