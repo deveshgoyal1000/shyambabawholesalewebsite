@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import AnnouncementBar from '@/components/AnnouncementBar'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -9,7 +8,7 @@ import {
   internationalCountries,
   getCountryBySlug,
 } from '@/data/internationalCountries'
-import { MessageCircle, Video, ArrowRight } from 'lucide-react'
+import { MessageCircle, Video } from 'lucide-react'
 
 interface PageProps {
   params: Promise<{
@@ -149,58 +148,7 @@ export default async function CountryWholesalePage({ params }: PageProps) {
             </div>
           </div>
 
-          {/* 4. Popular Designs for this Country - Real Category Cards */}
-          <div className="mb-8">
-            <div className="flex items-center justify-between mb-3.5">
-              <div>
-                <h2
-                  style={{ fontFamily: 'Georgia, serif' }}
-                  className="text-lg sm:text-xl font-normal text-[#195799]"
-                >
-                  Popular Designs for {country.country}
-                </h2>
-                <p className="text-xs text-neutral-500">
-                  Styles most frequently ordered by retailers in your region.
-                </p>
-              </div>
-              <Link
-                href="/#categories"
-                className="text-xs font-semibold text-[#195799] hover:text-[#124378] flex items-center gap-1"
-              >
-                <span>View All</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-              {country.popularCategories.map((cat) => (
-                <Link
-                  key={cat.slug}
-                  href={`/collections/${cat.slug}`}
-                  className="group block bg-white rounded-xl border border-[#E5DAC1] hover:border-[#195799] transition-all overflow-hidden shadow-2xs hover:shadow-sm"
-                >
-                  <div className="aspect-square w-full overflow-hidden bg-neutral-100">
-                    <img
-                      src={cat.image}
-                      alt={cat.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="p-2.5 text-center bg-white">
-                    <span className="text-xs font-semibold text-neutral-800 group-hover:text-[#195799] transition-colors block truncate">
-                      {cat.title}
-                    </span>
-                    <span className="text-[10px] text-[#C9A84C] font-medium block mt-0.5">
-                      Explore &rarr;
-                    </span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* 5. Clean, Warm Human WhatsApp Action */}
+          {/* Clean, Warm Human WhatsApp Action */}
           <div className="bg-[#FAF5E8] rounded-2xl border border-[#C9A84C]/60 p-5 sm:p-7 text-center">
             <h3
               style={{ fontFamily: 'Georgia, serif' }}

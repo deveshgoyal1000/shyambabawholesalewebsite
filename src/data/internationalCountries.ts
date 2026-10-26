@@ -1,9 +1,3 @@
-export interface PopularCategoryItem {
-  title: string
-  slug: string
-  image: string
-}
-
 export interface CountryWholesaleInfo {
   slug: string
   country: string
@@ -15,7 +9,6 @@ export interface CountryWholesaleInfo {
   videoUrl: string
   videoPoster: string
   overviewText: string
-  popularCategories: PopularCategoryItem[]
 }
 
 export const internationalCountries: Record<string, CountryWholesaleInfo> = {
@@ -30,12 +23,6 @@ export const internationalCountries: Record<string, CountryWholesaleInfo> = {
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-jeweler-crafting-a-ring-41584-large.mp4',
     videoPoster: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=1200&auto=format&fit=crop',
     overviewText: 'Supplying Indian jewellery boutiques, flea-market sellers, and online Etsy & Shopify stores across California, Texas, New York, New Jersey, and Illinois. Shipped with full commercial invoices for duty-free US clearance on orders under $800.',
-    popularCategories: [
-      { title: 'Kundan', slug: 'kundan-earrings', image: '/images/categories/cat-kundan.jpg' },
-      { title: 'Anti Tarnish', slug: 'anti-tarnish', image: '/images/categories/cat-anti-tarnish.jpg' },
-      { title: 'Rajwadi', slug: 'rajwadi', image: '/images/categories/cat-rajwadi.jpg' },
-      { title: 'Premium Earrings', slug: 'premium-earrings', image: '/images/categories/cat-premium-earrings.jpg' },
-    ],
   },
 
   'united-kingdom': {
@@ -49,12 +36,6 @@ export const internationalCountries: Record<string, CountryWholesaleInfo> = {
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-jeweler-crafting-a-ring-41584-large.mp4',
     videoPoster: 'https://images.unsplash.com/photo-1611591475870-0f2d80d21051?q=80&w=1200&auto=format&fit=crop',
     overviewText: 'Supplying South Asian bridal boutiques and high street retailers across London (Southall, Wembley), Leicester, Birmingham, and Manchester with skin-safe, nickel-free brass jewellery.',
-    popularCategories: [
-      { title: 'Kundan', slug: 'kundan-earrings', image: '/images/categories/cat-kundan.jpg' },
-      { title: 'Rajwadi', slug: 'rajwadi', image: '/images/categories/cat-rajwadi.jpg' },
-      { title: 'Ear-Chain', slug: 'ear-chain', image: '/images/categories/cat-ear-chain.jpg' },
-      { title: 'Silver Earrings', slug: 'silver-earrings', image: '/images/categories/cat-silver-earrings.jpg' },
-    ],
   },
 
   'bangladesh': {
@@ -68,12 +49,6 @@ export const internationalCountries: Record<string, CountryWholesaleInfo> = {
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-jeweler-crafting-a-ring-41584-large.mp4',
     videoPoster: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1200&auto=format&fit=crop',
     overviewText: 'Serving jewellery retailers in Gausia Market, New Market Dhaka, Sylhet, and Chittagong with popular matte gold bridal jewellery and lightweight daily wear jhumkis.',
-    popularCategories: [
-      { title: 'Rajwadi', slug: 'rajwadi', image: '/images/categories/cat-rajwadi.jpg' },
-      { title: 'Premium Earrings', slug: 'premium-earrings', image: '/images/categories/cat-premium-earrings.jpg' },
-      { title: 'Kundan', slug: 'kundan-earrings', image: '/images/categories/cat-kundan.jpg' },
-      { title: 'Studs', slug: 'studs', image: '/images/categories/cat-studs.jpg' },
-    ],
   },
 
   'canada': {
@@ -87,12 +62,6 @@ export const internationalCountries: Record<string, CountryWholesaleInfo> = {
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-jeweler-crafting-a-ring-41584-large.mp4',
     videoPoster: 'https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?q=80&w=1200&auto=format&fit=crop',
     overviewText: 'Delivering to Indian jewellery retailers and bridal stylists across the Greater Toronto Area (Brampton, Mississauga), Surrey (BC), Calgary, and Edmonton.',
-    popularCategories: [
-      { title: 'Kundan', slug: 'kundan-earrings', image: '/images/categories/cat-kundan.jpg' },
-      { title: 'Anti Tarnish', slug: 'anti-tarnish', image: '/images/categories/cat-anti-tarnish.jpg' },
-      { title: 'Ear-Chain', slug: 'ear-chain', image: '/images/categories/cat-ear-chain.jpg' },
-      { title: 'New Arrivals', slug: 'new-arrivals', image: '/images/categories/cat-new-arrivals.jpg' },
-    ],
   },
 
   'dubai': {
@@ -106,12 +75,6 @@ export const internationalCountries: Record<string, CountryWholesaleInfo> = {
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-jeweler-crafting-a-ring-41584-large.mp4',
     videoPoster: 'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?q=80&w=1200&auto=format&fit=crop',
     overviewText: 'Frequent direct flight shipments to Indian jewellery boutiques in Deira Gold Souk, Bur Dubai, Meena Bazaar, and Sharjah with authentic 22K gold look plating.',
-    popularCategories: [
-      { title: 'Rajwadi', slug: 'rajwadi', image: '/images/categories/cat-rajwadi.jpg' },
-      { title: 'Kundan', slug: 'kundan-earrings', image: '/images/categories/cat-kundan.jpg' },
-      { title: 'Premium Earrings', slug: 'premium-earrings', image: '/images/categories/cat-premium-earrings.jpg' },
-      { title: 'Studs', slug: 'studs', image: '/images/categories/cat-studs.jpg' },
-    ],
   },
 
   'malaysia': {
@@ -125,12 +88,6 @@ export const internationalCountries: Record<string, CountryWholesaleInfo> = {
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-jeweler-crafting-a-ring-41584-large.mp4',
     videoPoster: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1200&auto=format&fit=crop',
     overviewText: 'Exporting traditional temple jewellery, antique jhumkis, and South Indian bridal designs to Little India boutiques in Brickfields, Klang, and Penang.',
-    popularCategories: [
-      { title: 'Rajwadi', slug: 'rajwadi', image: '/images/categories/cat-rajwadi.jpg' },
-      { title: 'Ear-Chain', slug: 'ear-chain', image: '/images/categories/cat-ear-chain.jpg' },
-      { title: 'Silver Earrings', slug: 'silver-earrings', image: '/images/categories/cat-silver-earrings.jpg' },
-      { title: 'Kundan', slug: 'kundan-earrings', image: '/images/categories/cat-kundan.jpg' },
-    ],
   },
 
   'australia': {
@@ -144,12 +101,6 @@ export const internationalCountries: Record<string, CountryWholesaleInfo> = {
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-jeweler-crafting-a-ring-41584-large.mp4',
     videoPoster: 'https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?q=80&w=1200&auto=format&fit=crop',
     overviewText: 'Serving boutique owners and exhibition sellers across Sydney (Harris Park, Parramatta), Melbourne, and Brisbane with lead-free, nickel-free brass jewellery. Duty-free threshold under $1,000 AUD.',
-    popularCategories: [
-      { title: 'Anti Tarnish', slug: 'anti-tarnish', image: '/images/categories/cat-anti-tarnish.jpg' },
-      { title: 'Kundan', slug: 'kundan-earrings', image: '/images/categories/cat-kundan.jpg' },
-      { title: 'Studs', slug: 'studs', image: '/images/categories/cat-studs.jpg' },
-      { title: 'Premium Earrings', slug: 'premium-earrings', image: '/images/categories/cat-premium-earrings.jpg' },
-    ],
   },
 
   'singapore': {
@@ -163,12 +114,6 @@ export const internationalCountries: Record<string, CountryWholesaleInfo> = {
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-jeweler-crafting-a-ring-41584-large.mp4',
     videoPoster: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=1200&auto=format&fit=crop',
     overviewText: 'Supplying retail boutiques in Little India Serangoon Road and online stores in Singapore with quick 3 to 5-day delivery and low MOV ₹3,000 to test fast trends.',
-    popularCategories: [
-      { title: 'Anti Tarnish', slug: 'anti-tarnish', image: '/images/categories/cat-anti-tarnish.jpg' },
-      { title: 'Kundan', slug: 'kundan-earrings', image: '/images/categories/cat-kundan.jpg' },
-      { title: 'Premium Earrings', slug: 'premium-earrings', image: '/images/categories/cat-premium-earrings.jpg' },
-      { title: 'Silver Earrings', slug: 'silver-earrings', image: '/images/categories/cat-silver-earrings.jpg' },
-    ],
   },
 }
 
@@ -195,11 +140,5 @@ export function getCountryBySlug(slug: string): CountryWholesaleInfo {
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-jeweler-crafting-a-ring-41584-large.mp4',
     videoPoster: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=1200&auto=format&fit=crop',
     overviewText: `Direct Jaipur manufacturer export to retail jewellers, online boutiques, and bridal stylists in ${cleanName}. Every piece is inspected via live video call before dispatch.`,
-    popularCategories: [
-      { title: 'Kundan', slug: 'kundan-earrings', image: '/images/categories/cat-kundan.jpg' },
-      { title: 'Anti Tarnish', slug: 'anti-tarnish', image: '/images/categories/cat-anti-tarnish.jpg' },
-      { title: 'Rajwadi', slug: 'rajwadi', image: '/images/categories/cat-rajwadi.jpg' },
-      { title: 'Premium Earrings', slug: 'premium-earrings', image: '/images/categories/cat-premium-earrings.jpg' },
-    ],
   }
 }
