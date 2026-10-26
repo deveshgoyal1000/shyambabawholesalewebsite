@@ -100,18 +100,29 @@ export default function ShopByCategories() {
                   />
                 </div>
 
-                {/* Category Name Line Box - Increased height, spacious padding and large typography matching user request */}
-                <div className="px-4 py-4 sm:px-5 sm:py-5 md:py-6 bg-white border-t border-neutral-100 flex items-center justify-between min-h-[66px] sm:min-h-[76px] md:min-h-[82px]">
-                  <span
-                    style={{
-                      fontFamily:
-                        '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-                    }}
-                    className="text-[#121212] font-semibold text-[16px] sm:text-[17.5px] md:text-[19px] leading-tight group-hover:text-[#195799] transition-colors duration-200 truncate"
-                  >
-                    {cat.title}
-                  </span>
-                  <span className="text-[#C9A84C] text-[20px] sm:text-[22px] md:text-[24px] font-normal group-hover:translate-x-1.5 transition-transform duration-200 ease-out ml-2 shrink-0">
+                {/* Category Name Line Box - Multi-line wrap with Earrings on new line on mobile */}
+                <div className="px-3.5 py-3.5 sm:px-5 sm:py-5 md:py-6 bg-white border-t border-neutral-100 flex items-center justify-between min-h-[70px] sm:min-h-[76px] md:min-h-[82px]">
+                  <div className="flex-1 min-w-0 pr-1.5">
+                    <span
+                      style={{
+                        fontFamily:
+                          '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                      }}
+                      className="block text-[#121212] font-semibold text-[15px] sm:text-[17px] md:text-[18.5px] leading-tight sm:leading-snug group-hover:text-[#195799] transition-colors duration-200"
+                    >
+                      {cat.title.endsWith('Earrings') ? (
+                        <>
+                          <span className="block">{cat.title.replace(/\s*Earrings$/, '')}</span>
+                          <span className="block sm:inline sm:ml-1 text-[14px] sm:text-[17px] md:text-[18.5px]">
+                            Earrings
+                          </span>
+                        </>
+                      ) : (
+                        <span className="block">{cat.title}</span>
+                      )}
+                    </span>
+                  </div>
+                  <span className="text-[#C9A84C] text-[20px] sm:text-[22px] md:text-[24px] font-normal group-hover:translate-x-1.5 transition-transform duration-200 ease-out ml-1 shrink-0">
                     &rarr;
                   </span>
                 </div>

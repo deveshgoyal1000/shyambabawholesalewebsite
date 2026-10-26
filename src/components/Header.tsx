@@ -6,13 +6,8 @@ import {
   Menu,
   X,
   Search,
-  ShoppingBag,
-  User,
-  ChevronRight,
   ChevronLeft,
   MessageCircle,
-  Phone,
-  Video
 } from 'lucide-react'
 
 export default function Header() {
@@ -227,8 +222,8 @@ export default function Header() {
               </Link>
             </div>
 
-            {/* Right: Search & Shopping Bag Icons matching Screenshot */}
-            <div className="flex items-center gap-1 -mr-2">
+            {/* Right: Search Icon */}
+            <div className="flex items-center -mr-2">
               <button
                 onClick={() => {
                   setMobileMenuOpen(false)
@@ -240,15 +235,6 @@ export default function Header() {
               >
                 <Search className="w-5 h-5 stroke-[1.8]" />
               </button>
-              <Link
-                href="/collections/all"
-                onClick={() => setMobileMenuOpen(false)}
-                className="p-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform"
-                style={{ WebkitTapHighlightColor: 'transparent' }}
-                aria-label="View catalogue bag"
-              >
-                <ShoppingBag className="w-5 h-5 stroke-[1.8]" />
-              </Link>
             </div>
           </div>
 
@@ -383,23 +369,14 @@ export default function Header() {
                   </li>
                 </ul>
 
-                {/* Bottom Section - Exact match to Screenshot (Log in + User Icon) */}
-                <div className="mt-6 pt-6 border-t border-neutral-100 px-6 sm:px-8 space-y-4">
-                  <Link
-                    href="/admin"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center gap-3 text-[15px] text-[#121212] hover:text-[#195799] transition-colors py-1"
-                  >
-                    <User className="w-5 h-5 stroke-[1.8] text-neutral-600" />
-                    <span>Log in</span>
-                  </Link>
-
+                {/* Bottom Section - Direct WhatsApp Support */}
+                <div className="mt-6 pt-6 border-t border-neutral-100 px-6 sm:px-8">
                   {/* Direct Contact Button */}
                   <a
                     href="https://wa.me/919680865791"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-3 px-4 bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.985] text-white rounded-full flex items-center justify-center gap-2 font-semibold text-[13px] shadow-sm transition-all"
+                    className="w-full py-3.5 px-4 bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.985] text-white rounded-full flex items-center justify-center gap-2 font-semibold text-[13.5px] shadow-sm transition-all"
                   >
                     <MessageCircle className="w-4 h-4 fill-white" />
                     <span>WhatsApp Order Support</span>
