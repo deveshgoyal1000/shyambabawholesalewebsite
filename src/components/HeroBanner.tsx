@@ -24,18 +24,29 @@ export default function HeroBanner() {
 
   return (
     <section className="relative min-h-[580px] sm:min-h-[640px] flex flex-col justify-between text-center text-white overflow-hidden select-none">
-      {/* 1. Full-bleed background photography with Continuous Cinema Drift (Living Animation) */}
+      {/* 1. Full-bleed background photography: Krishaz mobile hero background on mobile, desktop hero background on larger screens */}
+      {/* Mobile Hero Background (Exact Krishaz Wholesale mobile background image) */}
       <div
-        className={`absolute inset-0 bg-cover bg-center will-change-transform ${
-          mounted ? 'animate-cinema-drift opacity-100' : 'scale-110 opacity-70'
+        className={`absolute inset-0 bg-cover bg-center will-change-transform sm:hidden ${
+          mounted ? 'animate-cinema-drift opacity-100' : 'scale-105 opacity-70'
         } transition-opacity duration-1000`}
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1600&auto=format&fit=crop')`,
+          backgroundImage: `url('/images/hero/hero-mobile-krishaz.jpg')`,
         }}
       ></div>
 
-      {/* 2. Dark warm vignette overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/75 to-black/90 pointer-events-none"></div>
+      {/* Desktop Hero Background */}
+      <div
+        className={`absolute inset-0 bg-cover bg-center will-change-transform hidden sm:block ${
+          mounted ? 'animate-cinema-drift opacity-100' : 'scale-105 opacity-70'
+        } transition-opacity duration-1000`}
+        style={{
+          backgroundImage: `url('/images/hero/hero-desktop-krishaz.png')`,
+        }}
+      ></div>
+
+      {/* 2. Warm vignette overlay: subtle on mobile to showcase the warm bronze jewellery tones like Krishaz, deeper on desktop */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/50 to-black/85 sm:from-black/85 sm:via-black/75 sm:to-black/90 pointer-events-none"></div>
 
       {/* 3. Ambient Living Gold Light Ray (Breathes gently behind content while user stays on site) */}
       <div
