@@ -61,24 +61,24 @@ export default function HeroBanner() {
       <div className="relative z-10 max-w-xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-10 flex flex-col items-center flex-1 justify-center">
         {/* Pre-heading: India's Trusted (Clean, elegant serif matching Krishaz) */}
         <div
-          className={`flex flex-col items-center mb-1.5 sm:mb-2 transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
+          className={`flex flex-col items-center mb-2 sm:mb-2.5 transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
             mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
           style={{ transitionDelay: '100ms' }}
         >
           <span
             style={{ fontFamily: 'Georgia, serif' }}
-            className="text-[20px] sm:text-[24px] font-normal text-[#FAF8F5] tracking-wide"
+            className="text-[22px] sm:text-[26px] md:text-[28px] font-normal text-[#FAF8F5] tracking-wide"
           >
             India&apos;s Trusted
           </span>
         </div>
 
         {/* Main Headline: Two-line Serif matching Krishaz */}
-        <div className="mb-3 sm:mb-4">
+        <div className="mb-3.5 sm:mb-4.5">
           <h1
             style={{ fontFamily: 'Georgia, serif', transitionDelay: '240ms' }}
-            className={`text-[28px] sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.22] transition-all duration-800 ease-[cubic-bezier(0.19,1,0.22,1)] ${
+            className={`text-[32px] sm:text-[44px] md:text-5xl lg:text-[56px] font-bold tracking-tight text-white leading-[1.2] transition-all duration-800 ease-[cubic-bezier(0.19,1,0.22,1)] ${
               mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
@@ -90,7 +90,7 @@ export default function HeroBanner() {
 
         {/* Subtitle with generous size matching Krishaz */}
         <p
-          className={`text-[14px] sm:text-[16px] text-[#FAF8F5]/90 max-w-sm sm:max-w-md mx-auto mb-6 sm:mb-8 font-normal leading-relaxed transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
+          className={`text-[16px] sm:text-[18px] md:text-[19px] text-[#FAF8F5]/95 max-w-md sm:max-w-lg mx-auto mb-7 sm:mb-9 font-normal leading-relaxed transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
             mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
           style={{ transitionDelay: '380ms' }}
@@ -99,32 +99,32 @@ export default function HeroBanner() {
           {' '}Across 50+ Countries.
         </p>
 
-        {/* 4 Feature Points with Clean Circular Icons matching Krishaz */}
-        <div className="space-y-3 sm:space-y-3.5 mb-7 sm:mb-8 w-full max-w-[270px] sm:max-w-xs text-left mx-auto">
+        {/* 4 Feature Points with Clean Circular Icons - Bigger & More Prominent */}
+        <div className="space-y-3.5 sm:space-y-4 mb-8 sm:mb-9 w-full max-w-[320px] sm:max-w-sm text-left mx-auto">
           {points.map((pt, idx) => (
             <div
               key={pt}
-              className={`flex items-center gap-3 transition-all duration-600 ease-[cubic-bezier(0.19,1,0.22,1)] cursor-default ${
+              className={`flex items-center gap-3.5 transition-all duration-600 ease-[cubic-bezier(0.19,1,0.22,1)] cursor-default ${
                 mounted ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'
               }`}
               style={{ transitionDelay: `${450 + idx * 80}ms` }}
             >
-              {/* Circular Gold Icon matching Krishaz: 32px diameter, gold border */}
-              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-[#C9A84C] flex items-center justify-center text-[#C9A84C] flex-shrink-0 bg-black/25">
-                <Check className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-[#C9A84C] stroke-[2.2]" />
+              {/* Circular Gold Icon: 34-36px diameter, prominent check */}
+              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border-[1.5px] border-[#C9A84C] flex items-center justify-center text-[#C9A84C] flex-shrink-0 bg-black/35 shadow-sm">
+                <Check className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-[#C9A84C] stroke-[2.4]" />
               </div>
 
-              {/* Point Label matching Krishaz: 15px on mobile, 16px on desktop */}
-              <span className="text-[15px] sm:text-[16px] font-medium text-white tracking-wide">
+              {/* Point Label: 17px on mobile, 18-19px on desktop */}
+              <span className="text-[17px] sm:text-[19px] font-semibold text-white tracking-wide">
                 {pt}
               </span>
             </div>
           ))}
         </div>
 
-        {/* Action Buttons matching Krishaz: Full-width stacked pills */}
+        {/* Action Buttons: Full-width stacked pills - Bigger size & generous padding */}
         <div
-          className={`w-full max-w-[290px] sm:max-w-xs space-y-3 transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
+          className={`w-full max-w-[340px] sm:max-w-[380px] space-y-3.5 sm:space-y-4 transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
             mounted
               ? 'opacity-100 translate-y-0 scale-100'
               : 'opacity-0 translate-y-5 scale-95'
@@ -134,7 +134,7 @@ export default function HeroBanner() {
           {/* Button 1: Solid Royal Blue Pill Button */}
           <a
             href="#categories"
-            className="w-full inline-block py-3.5 px-6 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-bold text-sm sm:text-base tracking-wide shadow-md active:scale-98 transition-transform duration-150 text-center"
+            className="w-full inline-flex items-center justify-center py-4 sm:py-4.5 px-8 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-bold text-[16px] sm:text-[18px] tracking-wide shadow-lg active:scale-98 transition-all duration-200 text-center"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
             Shop Wholesale
@@ -143,7 +143,7 @@ export default function HeroBanner() {
           {/* Button 2: Transparent White Outline Pill */}
           <Link
             href="/collections/all"
-            className="w-full inline-block py-3.5 px-6 rounded-full bg-transparent hover:bg-white/10 text-white font-bold text-sm sm:text-base tracking-wide border border-white/80 active:scale-98 transition-all duration-200 text-center"
+            className="w-full inline-flex items-center justify-center py-4 sm:py-4.5 px-8 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-[16px] sm:text-[18px] tracking-wide border-2 border-white/90 active:scale-98 transition-all duration-200 text-center backdrop-blur-xs"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
             View Catalog
@@ -152,7 +152,7 @@ export default function HeroBanner() {
 
         {/* Bottom Social Proof matching Krishaz */}
         <p
-          className={`text-[12px] sm:text-[13px] text-[#FAF8F5]/85 mt-6 sm:mt-7 font-normal transition-all duration-700 ${
+          className={`text-[13px] sm:text-[14px] text-[#FAF8F5]/90 mt-7 sm:mt-8 font-normal transition-all duration-700 ${
             mounted ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ transitionDelay: '950ms' }}

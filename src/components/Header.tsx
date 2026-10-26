@@ -6,12 +6,18 @@ import {
   Menu,
   X,
   Search,
+  ShoppingBag,
+  User,
+  ChevronRight,
+  ChevronLeft,
   MessageCircle,
-  Phone
+  Phone,
+  Video
 } from 'lucide-react'
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [activeSubmenu, setActiveSubmenu] = useState<'more-products' | 'international' | null>(null)
   const [searchOpen, setSearchOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -29,6 +35,7 @@ export default function Header() {
       document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = 'unset'
+      setActiveSubmenu(null)
     }
     return () => {
       document.body.style.overflow = 'unset'
@@ -45,6 +52,28 @@ export default function Header() {
     { name: 'Anti Tarnish', href: '/collections/anti-tarnish' },
     { name: 'Bangles', href: '/collections/bangles' },
     { name: 'Necklaces', href: '/collections/necklaces' },
+  ]
+
+  const moreProductsList = [
+    { name: 'All Wholesale Jewellery', href: '/collections/all' },
+    { name: 'Studs & Tops', href: '/collections/studs' },
+    { name: 'Kundan & Jadau', href: '/collections/kundan-earrings' },
+    { name: 'Anti-Tarnish Collection', href: '/collections/anti-tarnish' },
+    { name: 'Bangles & Kadas', href: '/collections/bangles' },
+    { name: 'Necklaces & Sets', href: '/collections/necklaces' },
+    { name: 'New Arrivals (This Week)', href: '/collections/new-arrivals' },
+  ]
+
+  const internationalList = [
+    { name: '50+ Countries Overview', href: '/#international' },
+    { name: 'United States (USA)', href: '/international/united-states' },
+    { name: 'United Kingdom (UK)', href: '/international/united-kingdom' },
+    { name: 'Canada', href: '/international/canada' },
+    { name: 'Australia', href: '/international/australia' },
+    { name: 'United Arab Emirates (UAE)', href: '/international/united-arab-emirates' },
+    { name: 'Germany & EU', href: '/international/germany' },
+    { name: 'Singapore', href: '/international/singapore' },
+    { name: 'Malaysia', href: '/international/malaysia' },
   ]
 
   return (
@@ -89,7 +118,7 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Right: Search only (Cart & Wishlist removed) */}
+          {/* Right: Search button */}
           <div className="flex items-center justify-end w-14 sm:w-20">
             <button
               onClick={() => setSearchOpen(!searchOpen)}
@@ -120,11 +149,11 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Desktop Navigation Row matching Inspector: Assistant, 14px, #121212, font-weight: 400 */}
+      {/* Desktop Navigation Row matching Krishaz: Assistant, 14px, #121212, font-weight: 400 */}
       <nav className="hidden lg:block border-t border-neutral-100 bg-[#FAF8F5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ul
-            style={{ fontFamily: "'Assistant', sans-serif" }}
+            style={{ fontFamily: "'Assistant', -apple-system, sans-serif" }}
             className="flex items-center justify-between text-[14px] font-normal text-[#121212] py-2.5"
           >
             {navLinks.map((item) => (
@@ -156,96 +185,300 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* Mobile Drawer Menu with smooth slide-in transition */}
+      {/* Mobile Drawer Menu - EXACT Shopify Dawn / Krishaz Theme Layout & Animations */}
       <div
-        className={`fixed inset-0 z-50 bg-black/60 backdrop-blur-sm lg:hidden transition-opacity duration-300 ${
+        className={`fixed inset-0 z-50 bg-black/45 backdrop-blur-[1px] lg:hidden transition-opacity duration-300 ease-out ${
           mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         onClick={() => setMobileMenuOpen(false)}
       >
         <div
-          className={`w-4/5 max-w-sm h-full bg-[#FAF8F5] p-6 overflow-y-auto shadow-2xl transition-transform duration-300 ease-out ${
+          className={`w-[85%] max-w-[360px] h-full bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
             mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Drawer Header */}
-          <div className="flex items-center justify-between pb-4 border-b border-neutral-200 mb-6">
-            <span style={{ fontFamily: 'Georgia, serif' }} className="text-xl font-bold text-[#195799]">Menu</span>
+          {/* Top Bar of Drawer - Matches Screenshot: Close 'X' on left, Logo in center, Search & Bag on right */}
+          <div className="flex items-center justify-between px-4 sm:px-6 h-[72px] sm:h-20 border-b border-[#ECE6DC] bg-white flex-shrink-0">
+            {/* Left: Close X button */}
             <button
               onClick={() => setMobileMenuOpen(false)}
-              className="p-1.5 text-neutral-800 hover:text-[#195799] active:scale-95 transition-all rounded-lg"
+              className="p-2 -ml-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform rounded-lg focus-visible:outline-none"
               style={{ WebkitTapHighlightColor: 'transparent' }}
               aria-label="Close menu"
             >
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6 stroke-[1.8]" />
             </button>
+
+            {/* Center: Brand Name matching Header */}
+            <div className="flex-1 flex justify-center text-center px-1">
+              <Link
+                href="/"
+                onClick={() => setMobileMenuOpen(false)}
+                className="select-none py-1"
+                style={{ WebkitTapHighlightColor: 'transparent' }}
+              >
+                <span
+                  style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
+                  className="text-[20px] sm:text-[22px] font-normal tracking-tight text-[#111111] leading-none"
+                >
+                  ShyamBabaWholesale
+                </span>
+              </Link>
+            </div>
+
+            {/* Right: Search & Shopping Bag Icons matching Screenshot */}
+            <div className="flex items-center gap-1 -mr-2">
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false)
+                  setSearchOpen(true)
+                }}
+                className="p-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform"
+                style={{ WebkitTapHighlightColor: 'transparent' }}
+                aria-label="Search catalogue"
+              >
+                <Search className="w-5 h-5 stroke-[1.8]" />
+              </button>
+              <Link
+                href="/collections/all"
+                onClick={() => setMobileMenuOpen(false)}
+                className="p-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform"
+                style={{ WebkitTapHighlightColor: 'transparent' }}
+                aria-label="View catalogue bag"
+              >
+                <ShoppingBag className="w-5 h-5 stroke-[1.8]" />
+              </Link>
+            </div>
           </div>
 
-          {/* Menu Links matching Inspector: Assistant, 14px, #121212, 400 */}
-          <ul
-            style={{ fontFamily: "'Assistant', sans-serif" }}
-            className="space-y-3.5 text-[14px] font-normal text-[#121212]"
-          >
-            {navLinks.map((item) => (
-              <li key={item.name}>
-                <Link
-                  href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block py-1 text-[#121212] hover:text-[#195799] transition-colors border-b border-neutral-100"
+          {/* Drawer Body with Shopify Two-Level Sliding Navigation */}
+          <div className="relative flex-1 overflow-hidden">
+            {/* 1. Main Menu Level */}
+            <div
+              className={`absolute inset-0 overflow-y-auto pb-8 transition-transform duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
+                activeSubmenu ? '-translate-x-full pointer-events-none' : 'translate-x-0'
+              }`}
+            >
+              <nav
+                style={{ fontFamily: "'Assistant', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}
+                className="py-2"
+              >
+                <ul className="text-[16px] sm:text-[17px] font-normal text-[#121212]">
+                  {/* Primary Categories from Screenshot */}
+                  <li>
+                    <Link
+                      href="/collections/earrings"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                    >
+                      All Earrings
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/collections/silver-earrings"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                    >
+                      Silver Earrings
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/collections/premium-earrings"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                    >
+                      Premium Earrings
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/collections/rajwadi"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                    >
+                      Rajwadi
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/collections/ear-chain"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                    >
+                      Ear-chain
+                    </Link>
+                  </li>
+
+                  {/* More Products with Slide-in Chevron matching Screenshot */}
+                  <li>
+                    <button
+                      onClick={() => setActiveSubmenu('more-products')}
+                      className="w-full flex items-center justify-between py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors text-left focus-visible:outline-none"
+                      style={{ WebkitTapHighlightColor: 'transparent' }}
+                    >
+                      <span>More Products</span>
+                      <span className="text-neutral-500 font-normal text-[17px]">&rarr;</span>
+                    </button>
+                  </li>
+
+                  {/* International Buyers with Slide-in Chevron matching Screenshot */}
+                  <li>
+                    <button
+                      onClick={() => setActiveSubmenu('international')}
+                      className="w-full flex items-center justify-between py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors text-left focus-visible:outline-none"
+                      style={{ WebkitTapHighlightColor: 'transparent' }}
+                    >
+                      <span>International Buyers</span>
+                      <span className="text-neutral-500 font-normal text-[17px]">&rarr;</span>
+                    </button>
+                  </li>
+
+                  {/* Book Video Call matching Screenshot */}
+                  <li>
+                    <a
+                      href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20book%20a%20live%20video%20call%20for%20wholesale%20selection"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="flex items-center justify-between py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                    >
+                      <span>Book Video Call</span>
+                    </a>
+                  </li>
+
+                  {/* FAQs matching Screenshot */}
+                  <li>
+                    <Link
+                      href="/#faq"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                    >
+                      FAQs
+                    </Link>
+                  </li>
+
+                  {/* Resources matching Screenshot */}
+                  <li>
+                    <Link
+                      href="/#about"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                    >
+                      Resources
+                    </Link>
+                  </li>
+
+                  {/* About us matching Screenshot */}
+                  <li>
+                    <Link
+                      href="/#about"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                    >
+                      About us
+                    </Link>
+                  </li>
+                </ul>
+
+                {/* Bottom Section - Exact match to Screenshot (Log in + User Icon) */}
+                <div className="mt-6 pt-6 border-t border-neutral-100 px-6 sm:px-8 space-y-4">
+                  <Link
+                    href="/admin"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center gap-3 text-[15px] text-[#121212] hover:text-[#195799] transition-colors py-1"
+                  >
+                    <User className="w-5 h-5 stroke-[1.8] text-neutral-600" />
+                    <span>Log in</span>
+                  </Link>
+
+                  {/* Direct Contact Button */}
+                  <a
+                    href="https://wa.me/919680865791"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-3 px-4 bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.985] text-white rounded-full flex items-center justify-center gap-2 font-semibold text-[13px] shadow-sm transition-all"
+                  >
+                    <MessageCircle className="w-4 h-4 fill-white" />
+                    <span>WhatsApp Order Support</span>
+                  </a>
+                </div>
+              </nav>
+            </div>
+
+            {/* 2. Submenu Level: More Products (Shopify Dawn Slide-in Animation) */}
+            <div
+              className={`absolute inset-0 overflow-y-auto pb-8 bg-white transition-transform duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
+                activeSubmenu === 'more-products' ? 'translate-x-0' : 'translate-x-full pointer-events-none'
+              }`}
+            >
+              <div className="py-2">
+                {/* Back Button matching Shopify Dawn */}
+                <button
+                  onClick={() => setActiveSubmenu(null)}
+                  className="w-full flex items-center gap-2.5 py-4 px-6 sm:px-8 text-[15px] font-semibold text-[#121212] border-b border-neutral-100 hover:text-[#195799] hover:bg-neutral-50 transition-colors focus-visible:outline-none"
+                  style={{ WebkitTapHighlightColor: 'transparent' }}
                 >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
+                  <ChevronLeft className="w-5 h-5 stroke-[2]" />
+                  <span>More Products</span>
+                </button>
 
-            <li className="pt-2">
-              <Link
-                href="/#international"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block py-1 text-[#195799] font-semibold border-b border-neutral-100"
-              >
-                International Buyers 🌍
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#faq"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block py-1 text-[#121212] hover:text-[#195799] transition-colors border-b border-neutral-100"
-              >
-                Wholesale FAQs
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#about"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block py-1 text-[#121212] hover:text-[#195799] transition-colors border-b border-neutral-100"
-              >
-                About Our Jaipur Factory
-              </Link>
-            </li>
-          </ul>
+                <ul
+                  style={{ fontFamily: "'Assistant', -apple-system, sans-serif" }}
+                  className="text-[16px] font-normal text-[#121212] py-2"
+                >
+                  {moreProductsList.map((item) => (
+                    <li key={item.name}>
+                      <Link
+                        href={item.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block py-3 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
 
-          {/* Drawer Footer Actions */}
-          <div className="mt-8 pt-6 border-t border-neutral-200 space-y-3">
-            <a
-              href="https://wa.me/919680865791"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-tactile w-full py-3 px-4 bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.985] text-white rounded-xl flex items-center justify-center gap-2 font-bold text-xs uppercase tracking-wider shadow"
+            {/* 3. Submenu Level: International Buyers (Shopify Dawn Slide-in Animation) */}
+            <div
+              className={`absolute inset-0 overflow-y-auto pb-8 bg-white transition-transform duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
+                activeSubmenu === 'international' ? 'translate-x-0' : 'translate-x-full pointer-events-none'
+              }`}
             >
-              <MessageCircle className="w-4 h-4 fill-white" />
-              WhatsApp Direct Order
-            </a>
-            <a
-              href="tel:+919680865791"
-              className="btn-tactile w-full py-2.5 px-4 border border-[#195799] text-[#195799] hover:bg-[#195799]/5 active:scale-[0.985] rounded-xl flex items-center justify-center gap-2 font-semibold text-xs"
-            >
-              <Phone className="w-4 h-4" />
-              Call +91 96808 65791
-            </a>
+              <div className="py-2">
+                {/* Back Button matching Shopify Dawn */}
+                <button
+                  onClick={() => setActiveSubmenu(null)}
+                  className="w-full flex items-center gap-2.5 py-4 px-6 sm:px-8 text-[15px] font-semibold text-[#121212] border-b border-neutral-100 hover:text-[#195799] hover:bg-neutral-50 transition-colors focus-visible:outline-none"
+                  style={{ WebkitTapHighlightColor: 'transparent' }}
+                >
+                  <ChevronLeft className="w-5 h-5 stroke-[2]" />
+                  <span>International Buyers</span>
+                </button>
+
+                <ul
+                  style={{ fontFamily: "'Assistant', -apple-system, sans-serif" }}
+                  className="text-[16px] font-normal text-[#121212] py-2"
+                >
+                  {internationalList.map((item) => (
+                    <li key={item.name}>
+                      <Link
+                        href={item.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block py-3 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

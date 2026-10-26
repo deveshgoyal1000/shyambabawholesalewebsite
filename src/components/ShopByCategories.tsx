@@ -61,15 +61,12 @@ export default function ShopByCategories() {
               Shop By Categories
             </h2>
 
-            {/* Gold Accent Divider Bar matching Krishaz */}
-            <div className="w-[60px] sm:w-[80px] h-[2px] bg-[#C9A84C] mx-auto my-2.5 sm:my-3.5"></div>
-
             <p
               style={{
                 fontFamily:
                   '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
               }}
-              className="text-[#2C2C2C] text-[14px] sm:text-[15px] font-normal text-center leading-relaxed"
+              className="text-[#2C2C2C] text-[14px] sm:text-[16px] font-normal text-center leading-relaxed mt-2.5 sm:mt-3"
             >
               Explore our premium brass jewellery collections
             </p>
@@ -103,18 +100,18 @@ export default function ShopByCategories() {
                   />
                 </div>
 
-                {/* Category Name Line Box matching Krishaz */}
-                <div className="px-3.5 py-3 sm:px-5 sm:py-4 bg-white border-t-2 border-[#C9A84C] flex items-center justify-between min-h-[52px] sm:min-h-[58px]">
+                {/* Category Name Line Box - Increased height, spacious padding and large typography matching user request */}
+                <div className="px-4 py-4 sm:px-5 sm:py-5 md:py-6 bg-white border-t border-neutral-100 flex items-center justify-between min-h-[66px] sm:min-h-[76px] md:min-h-[82px]">
                   <span
                     style={{
                       fontFamily:
                         '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     }}
-                    className="text-[#2C2C2C] font-semibold text-[15px] sm:text-[16px] md:text-[17px] leading-tight group-hover:text-[#195799] transition-colors duration-250 truncate"
+                    className="text-[#121212] font-semibold text-[16px] sm:text-[17.5px] md:text-[19px] leading-tight group-hover:text-[#195799] transition-colors duration-200 truncate"
                   >
                     {cat.title}
                   </span>
-                  <span className="text-[#C9A84C] text-[18px] sm:text-[20px] font-normal group-hover:translate-x-1.5 transition-transform duration-250 ease-out ml-1.5 shrink-0">
+                  <span className="text-[#C9A84C] text-[20px] sm:text-[22px] md:text-[24px] font-normal group-hover:translate-x-1.5 transition-transform duration-200 ease-out ml-2 shrink-0">
                     &rarr;
                   </span>
                 </div>
