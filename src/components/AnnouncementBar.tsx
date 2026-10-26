@@ -18,6 +18,7 @@ export default function AnnouncementBar() {
   const [activeIdx, setActiveIdx] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
+  const touchStartX = useRef<number | null>(null)
 
   const announcements = [
     {
@@ -80,7 +81,7 @@ export default function AnnouncementBar() {
     setTimeout(() => {
       setActiveIdx(nextIdx)
       setIsTransitioning(false)
-    }, 220)
+    }, 200)
   }
 
   const goNext = (e?: React.MouseEvent) => {
@@ -95,21 +96,41 @@ export default function AnnouncementBar() {
     triggerSlide((activeIdx - 1 + announcements.length) % announcements.length)
   }
 
+  // Touch swipe support for mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX
+  }
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return
+    const diff = touchStartX.current - e.changedTouches[0].clientX
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) goNext()
+      else goPrev()
+    }
+    touchStartX.current = null
+  }
+
   const current = announcements[activeIdx]
 
   return (
     <div
-      className="relative bg-gradient-to-r from-[#113a66] via-[#195799] to-[#113a66] text-[#FAF8F5] border-b border-[#C9A84C]/40 select-none w-full overflow-hidden shadow-xs"
+      className="relative bg-gradient-to-r from-[#113a66] via-[#195799] to-[#113a66] text-[#FAF8F5] select-none w-full overflow-hidden shadow-xs"
       style={{
         paddingTop: 'max(0.35rem, env(safe-area-inset-top))',
       }}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
       {/* Subtle Ambient Shimmer Highlight Overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(201,168,76,0.12),transparent)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(201,168,76,0.14),transparent)] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-2.5 sm:px-4 py-2 sm:py-2.5 flex items-center justify-between gap-1 sm:gap-4 min-h-[42px] sm:min-h-[40px] relative z-10">
+      {/* Luxury Gold Shimmer Accent Line at Bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#C9A84C]/50 to-transparent pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 py-2 sm:py-2.5 flex items-center justify-between gap-1 sm:gap-4 min-h-[46px] sm:min-h-[42px] relative z-10">
         {/* Left: Contact Info & Hours (Desktop Only) */}
         <div className="hidden xl:flex items-center space-x-3 text-[#FAF8F5]/85 text-[11px] shrink-0 font-sans">
           <a
@@ -132,7 +153,7 @@ export default function AnnouncementBar() {
           <button
             onClick={goPrev}
             aria-label="Previous announcement"
-            className="w-6 h-6 rounded-full flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 active:scale-90 transition-all shrink-0"
+            className="w-7 h-7 rounded-full flex items-center justify-center text-white/70 hover:text-white bg-white/10 hover:bg-white/20 active:scale-90 transition-all shrink-0"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
             <ChevronLeft className="w-3.5 h-3.5" />
@@ -143,21 +164,21 @@ export default function AnnouncementBar() {
             href={current.href}
             target={current.isExternal ? '_blank' : undefined}
             rel={current.isExternal ? 'noopener noreferrer' : undefined}
-            className={`group inline-flex items-center justify-center gap-1.5 sm:gap-2 text-center text-xs px-1 sm:px-2 py-0.5 rounded-full hover:bg-white/5 transition-all duration-200 overflow-hidden max-w-[85vw] sm:max-w-none ${
+            className={`group inline-flex items-center justify-center gap-1.5 sm:gap-2 text-center text-xs px-2 py-1 rounded-full hover:bg-white/10 transition-all duration-200 overflow-hidden max-w-[84vw] sm:max-w-none ${
               isTransitioning
                 ? 'opacity-0 -translate-y-1 scale-[0.98]'
                 : 'opacity-100 translate-y-0 scale-100'
             }`}
             style={{
               transitionProperty: 'opacity, transform',
-              transitionDuration: '220ms',
+              transitionDuration: '200ms',
               transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
               WebkitTapHighlightColor: 'transparent',
             }}
           >
             {/* Category / Pillar Tag Badge */}
             <span
-              className={`text-[9px] sm:text-[10px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded-sm shrink-0 shadow-2xs ${current.badgeClass}`}
+              className={`text-[9.5px] sm:text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shrink-0 shadow-2xs ${current.badgeClass}`}
             >
               {current.badge}
             </span>
@@ -168,20 +189,20 @@ export default function AnnouncementBar() {
             />
 
             {/* Headline Highlight */}
-            <strong className="text-[#C9A84C] font-bold tracking-tight text-[11.5px] sm:text-[12.5px] shrink-0">
+            <strong className="text-[#C9A84C] font-bold tracking-tight text-[12.5px] sm:text-[13px] shrink-0">
               {current.highlight}
             </strong>
 
-            {/* Bullet separator (hidden on very small screens if overflowing) */}
+            {/* Bullet separator */}
             <span className="hidden xs:inline text-[#C9A84C]/50 text-xs shrink-0">•</span>
 
             {/* Subtext description */}
-            <span className="hidden sm:inline text-white/90 text-xs font-normal truncate max-w-[260px] md:max-w-none">
+            <span className="hidden sm:inline text-white/90 text-xs font-normal truncate max-w-[280px] md:max-w-none">
               {current.text}
             </span>
 
             {/* Subtle Link Chevron */}
-            <span className="text-white/40 group-hover:text-white group-hover:translate-x-0.5 transition-all text-[11px] shrink-0">
+            <span className="text-white/50 group-hover:text-white group-hover:translate-x-0.5 transition-all text-[12px] shrink-0">
               &rarr;
             </span>
           </a>
@@ -190,7 +211,7 @@ export default function AnnouncementBar() {
           <button
             onClick={goNext}
             aria-label="Next announcement"
-            className="w-6 h-6 rounded-full flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 active:scale-90 transition-all shrink-0"
+            className="w-7 h-7 rounded-full flex items-center justify-center text-white/70 hover:text-white bg-white/10 hover:bg-white/20 active:scale-90 transition-all shrink-0"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
             <ChevronRight className="w-3.5 h-3.5" />

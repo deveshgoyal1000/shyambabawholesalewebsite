@@ -57,9 +57,9 @@ export default function Header() {
     >
       {/* Top Main Navigation Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between h-[68px] sm:h-20">
           {/* Left: Mobile Hamburger Menu Button */}
-          <div className="flex items-center w-12 sm:w-16">
+          <div className="flex items-center w-10 sm:w-16">
             <button
               onClick={() => setMobileMenuOpen(true)}
               className="p-2 -ml-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
@@ -71,7 +71,7 @@ export default function Header() {
           </div>
 
           {/* Center: Brand Name 'ShyamBabaWholesale' matching Screenshot 2 */}
-          <div className="flex-1 flex justify-center text-center">
+          <div className="flex-1 flex justify-center text-center px-1">
             <Link
               href="/"
               className="inline-flex items-center select-none py-1 group"
@@ -79,7 +79,7 @@ export default function Header() {
             >
               <span
                 style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
-                className="text-[20px] sm:text-[26px] md:text-[32px] font-normal tracking-tight text-[#111111] leading-none group-hover:text-[#195799] transition-colors duration-200"
+                className="text-[24px] sm:text-[29px] md:text-[34px] font-medium tracking-[-0.015em] text-[#111111] leading-none group-hover:text-[#195799] transition-colors duration-200 whitespace-nowrap"
               >
                 ShyamBabaWholesale
               </span>
@@ -87,7 +87,7 @@ export default function Header() {
           </div>
 
           {/* Right: Search only (Cart & Wishlist removed) */}
-          <div className="flex items-center justify-end w-12 sm:w-16">
+          <div className="flex items-center justify-end w-10 sm:w-16">
             <button
               onClick={() => setSearchOpen(!searchOpen)}
               className="p-2 -mr-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
