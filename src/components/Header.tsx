@@ -54,23 +54,26 @@ export default function Header() {
           ? 'bg-white/95 backdrop-blur-md shadow-[0_4px_16px_rgba(0,0,0,0.06)] border-b border-[#EAE3D8]'
           : 'bg-white border-b border-[#EAE3D8]/80'
       }`}
+      style={{
+        paddingTop: 'env(safe-area-inset-top, 0px)',
+      }}
     >
-      {/* Top Main Navigation Bar */}
+      {/* Top Main Navigation Bar - Tall, airy, luxury layout matching Krishaz */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-[68px] sm:h-20">
+        <div className="flex items-center justify-between h-20 sm:h-24">
           {/* Left: Mobile Hamburger Menu Button */}
-          <div className="flex items-center w-10 sm:w-16">
+          <div className="flex items-center w-12 sm:w-16">
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="p-2 -ml-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
+              className="p-2.5 -ml-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
               style={{ WebkitTapHighlightColor: 'transparent' }}
               aria-label="Open navigation menu"
             >
-              <Menu className="w-6 h-6 stroke-[1.8]" />
+              <Menu className="w-6 h-6 sm:w-7 sm:h-7 stroke-[1.8]" />
             </button>
           </div>
 
-          {/* Center: Brand Name 'ShyamBabaWholesale' matching Screenshot 2 */}
+          {/* Center: Brand Name 'ShyamBabaWholesale' matching Screenshot */}
           <div className="flex-1 flex justify-center text-center px-1">
             <Link
               href="/"
@@ -79,7 +82,7 @@ export default function Header() {
             >
               <span
                 style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
-                className="text-[24px] sm:text-[29px] md:text-[34px] font-medium tracking-[-0.015em] text-[#111111] leading-none group-hover:text-[#195799] transition-colors duration-200 whitespace-nowrap"
+                className="text-[26px] sm:text-[32px] md:text-[38px] font-normal tracking-tight text-[#111111] leading-none group-hover:text-[#195799] transition-colors duration-200 whitespace-nowrap"
               >
                 ShyamBabaWholesale
               </span>
@@ -87,14 +90,14 @@ export default function Header() {
           </div>
 
           {/* Right: Search only (Cart & Wishlist removed) */}
-          <div className="flex items-center justify-end w-10 sm:w-16">
+          <div className="flex items-center justify-end w-12 sm:w-16">
             <button
               onClick={() => setSearchOpen(!searchOpen)}
-              className="p-2 -mr-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
+              className="p-2.5 -mr-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
               style={{ WebkitTapHighlightColor: 'transparent' }}
               aria-label="Search"
             >
-              <Search className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.8]" />
+              <Search className="w-5.5 h-5.5 sm:w-6.5 sm:h-6.5 stroke-[1.8]" />
             </button>
           </div>
         </div>
