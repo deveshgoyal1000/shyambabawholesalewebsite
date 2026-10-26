@@ -60,7 +60,7 @@ export default function GallerySection() {
           <div className="text-center mb-6 sm:mb-8">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#6B1A2A] tracking-[0.5px] leading-tight"
+              className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#195799] tracking-[0.5px] leading-tight"
             >
               Explore Shyambaba&apos;s Gallery
             </h2>
@@ -117,7 +117,7 @@ export default function GallerySection() {
 
                   {/* Center Play Button Overlay */}
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/90 text-[#6B1A2A] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/90 text-[#195799] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                       <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" />
                     </div>
                   </div>
@@ -140,7 +140,7 @@ export default function GallerySection() {
           <button
             onClick={() => scrollToIdx(Math.max(0, activeIdx - 1))}
             disabled={activeIdx === 0}
-            className="w-8 h-8 rounded-full bg-white border border-[#C9A84C]/50 text-[#6B1A2A] disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-xs active:scale-95 transition-all"
+            className="w-8 h-8 rounded-full bg-white border border-[#C9A84C]/50 text-[#195799] disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-xs active:scale-95 transition-all"
             aria-label="Previous video"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
@@ -155,7 +155,7 @@ export default function GallerySection() {
                 onClick={() => scrollToIdx(i)}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
                   activeIdx === i
-                    ? 'w-6 bg-[#6B1A2A]'
+                    ? 'w-6 bg-[#195799]'
                     : 'w-2 bg-[#D4AF37]/40 hover:bg-[#D4AF37]'
                 }`}
                 aria-label={`Go to video ${i + 1}`}
@@ -168,7 +168,7 @@ export default function GallerySection() {
           <button
             onClick={() => scrollToIdx(Math.min(galleryItems.length - 1, activeIdx + 1))}
             disabled={activeIdx === galleryItems.length - 1}
-            className="w-8 h-8 rounded-full bg-white border border-[#C9A84C]/50 text-[#6B1A2A] disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-xs active:scale-95 transition-all"
+            className="w-8 h-8 rounded-full bg-white border border-[#C9A84C]/50 text-[#195799] disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-xs active:scale-95 transition-all"
             aria-label="Next video"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >

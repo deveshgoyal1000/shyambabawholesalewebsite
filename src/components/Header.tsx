@@ -65,7 +65,7 @@ export default function Header() {
           <div className="flex items-center">
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="p-2 -ml-2 text-[#121212] hover:text-[#6B1A2A] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
+              className="p-2 -ml-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
               style={{ WebkitTapHighlightColor: 'transparent' }}
               aria-label="Open navigation menu"
             >
@@ -83,7 +83,7 @@ export default function Header() {
               {/* Brand Name in Georgia Serif */}
               <span
                 style={{ fontFamily: 'Georgia, serif' }}
-                className="text-[20px] sm:text-2xl lg:text-3xl font-bold tracking-tight text-[#1A1A1A] uppercase leading-none group-hover:text-[#6B1A2A] transition-colors duration-200"
+                className="text-[20px] sm:text-2xl lg:text-3xl font-bold tracking-tight text-[#1A1A1A] uppercase leading-none group-hover:text-[#195799] transition-colors duration-200"
               >
                 Shyambaba
               </span>
@@ -98,7 +98,7 @@ export default function Header() {
           <div className="flex items-center gap-0.5 sm:gap-2">
             <button
               onClick={() => setSearchOpen(!searchOpen)}
-              className="p-2 text-[#121212] hover:text-[#6B1A2A] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
+              className="p-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
               style={{ WebkitTapHighlightColor: 'transparent' }}
               aria-label="Search"
             >
@@ -107,7 +107,7 @@ export default function Header() {
 
             <Link
               href="/collections/all"
-              className="p-2 text-[#121212] hover:text-[#6B1A2A] active:scale-95 transition-transform duration-150 relative focus-visible:outline-none rounded-lg"
+              className="p-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 relative focus-visible:outline-none rounded-lg"
               style={{ WebkitTapHighlightColor: 'transparent' }}
               aria-label="Cart / Catalogue"
             >
@@ -126,7 +126,7 @@ export default function Header() {
             <input
               type="text"
               placeholder="Search Product Code (e.g. ER-4272, ER-001)..."
-              className="w-full pl-10 pr-4 py-2 text-xs sm:text-sm bg-neutral-50 border border-neutral-300 rounded-full focus:outline-none focus:border-[#6B1A2A] focus:ring-1 focus:ring-[#6B1A2A]"
+              className="w-full pl-10 pr-4 py-2 text-xs sm:text-sm bg-neutral-50 border border-neutral-300 rounded-full focus:outline-none focus:border-[#195799] focus:ring-1 focus:ring-[#195799]"
               autoFocus={searchOpen}
             />
             <Search className="w-4 h-4 text-neutral-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
@@ -145,24 +145,24 @@ export default function Header() {
               <li key={item.name}>
                 <Link
                   href={item.href}
-                  className="nav-link-indicator text-[#121212] hover:text-[#6B1A2A] transition-colors py-1 inline-block"
+                  className="nav-link-indicator text-[#121212] hover:text-[#195799] transition-colors py-1 inline-block"
                 >
                   {item.name}
                 </Link>
               </li>
             ))}
             <li>
-              <Link href="/#international" className="nav-link-indicator text-[#6B1A2A] font-semibold hover:text-[#521320] transition-colors py-1 inline-block">
+              <Link href="/#international" className="nav-link-indicator text-[#195799] font-semibold hover:text-[#124378] transition-colors py-1 inline-block">
                 International Buyers
               </Link>
             </li>
             <li>
-              <Link href="/#faq" className="nav-link-indicator text-[#121212] hover:text-[#6B1A2A] transition-colors py-1 inline-block">
+              <Link href="/#faq" className="nav-link-indicator text-[#121212] hover:text-[#195799] transition-colors py-1 inline-block">
                 FAQs
               </Link>
             </li>
             <li>
-              <Link href="/#about" className="nav-link-indicator text-[#121212] hover:text-[#6B1A2A] transition-colors py-1 inline-block">
+              <Link href="/#about" className="nav-link-indicator text-[#121212] hover:text-[#195799] transition-colors py-1 inline-block">
                 About Us
               </Link>
             </li>
@@ -185,10 +185,10 @@ export default function Header() {
         >
           {/* Drawer Header */}
           <div className="flex items-center justify-between pb-4 border-b border-neutral-200 mb-6">
-            <span style={{ fontFamily: 'Georgia, serif' }} className="text-xl font-bold text-[#6B1A2A]">Menu</span>
+            <span style={{ fontFamily: 'Georgia, serif' }} className="text-xl font-bold text-[#195799]">Menu</span>
             <button
               onClick={() => setMobileMenuOpen(false)}
-              className="p-1.5 text-neutral-800 hover:text-[#6B1A2A] active:scale-95 transition-all rounded-lg"
+              className="p-1.5 text-neutral-800 hover:text-[#195799] active:scale-95 transition-all rounded-lg"
               style={{ WebkitTapHighlightColor: 'transparent' }}
               aria-label="Close menu"
             >
@@ -206,7 +206,7 @@ export default function Header() {
                 <Link
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block py-1 text-[#121212] hover:text-[#6B1A2A] transition-colors border-b border-neutral-100"
+                  className="block py-1 text-[#121212] hover:text-[#195799] transition-colors border-b border-neutral-100"
                 >
                   {item.name}
                 </Link>
@@ -217,7 +217,7 @@ export default function Header() {
               <Link
                 href="/#international"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-1 text-[#6B1A2A] font-semibold border-b border-neutral-100"
+                className="block py-1 text-[#195799] font-semibold border-b border-neutral-100"
               >
                 International Buyers 🌍
               </Link>
@@ -226,7 +226,7 @@ export default function Header() {
               <Link
                 href="/#faq"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-1 text-[#121212] hover:text-[#6B1A2A] transition-colors border-b border-neutral-100"
+                className="block py-1 text-[#121212] hover:text-[#195799] transition-colors border-b border-neutral-100"
               >
                 Wholesale FAQs
               </Link>
@@ -235,7 +235,7 @@ export default function Header() {
               <Link
                 href="/#about"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-1 text-[#121212] hover:text-[#6B1A2A] transition-colors border-b border-neutral-100"
+                className="block py-1 text-[#121212] hover:text-[#195799] transition-colors border-b border-neutral-100"
               >
                 About Our Jaipur Factory
               </Link>
@@ -255,7 +255,7 @@ export default function Header() {
             </a>
             <a
               href="tel:+919680865791"
-              className="btn-tactile w-full py-2.5 px-4 border border-[#6B1A2A] text-[#6B1A2A] hover:bg-[#6B1A2A]/5 active:scale-[0.985] rounded-xl flex items-center justify-center gap-2 font-semibold text-xs"
+              className="btn-tactile w-full py-2.5 px-4 border border-[#195799] text-[#195799] hover:bg-[#195799]/5 active:scale-[0.985] rounded-xl flex items-center justify-center gap-2 font-semibold text-xs"
             >
               <Phone className="w-4 h-4" />
               Call +91 96808 65791

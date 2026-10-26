@@ -14,7 +14,7 @@ export default function FactoryStory() {
         <ScrollReveal direction="up" distance={20} duration={650}>
           <h2
             style={{ fontFamily: 'Georgia, serif' }}
-            className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#6B1A2A] leading-tight mb-2 tracking-[0.5px]"
+            className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#195799] leading-tight mb-2 tracking-[0.5px]"
           >
             We Don&apos;t Source. We Are<br />Manufacture.
           </h2>
@@ -87,7 +87,7 @@ export default function FactoryStory() {
                   href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20watch%20your%20factory%20manufacturing%20videos."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#6B1A2A] text-white flex items-center justify-center shadow-xl group-hover:scale-110 active:scale-95 transition-all"
+                  className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#195799] text-white flex items-center justify-center shadow-xl group-hover:scale-110 active:scale-95 transition-all"
                   aria-label="Play Factory Video"
                   style={{ WebkitTapHighlightColor: 'transparent' }}
                 >

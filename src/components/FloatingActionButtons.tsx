@@ -9,7 +9,7 @@ export default function FloatingActionButtons() {
       <div className="fixed bottom-5 sm:bottom-7 left-4 sm:left-6 z-50">
         <div className="relative inline-flex items-center justify-center">
           {/* Subtle radiating pulse rings */}
-          <span className="absolute w-full h-full rounded-full border-2 border-[#800020] opacity-40 animate-ping pointer-events-none scale-105 duration-1000"></span>
+          <span className="absolute w-full h-full rounded-full border-2 border-[#103b6a] opacity-40 animate-ping pointer-events-none scale-105 duration-1000"></span>
 
           <a
             href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20would%20like%20to%20Book%20a%20Video%20Call%20shopping%20session."
@@ -17,10 +17,10 @@ export default function FloatingActionButtons() {
             rel="noopener noreferrer"
             className="btn-tactile relative inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3.5 rounded-full text-white font-semibold text-xs sm:text-sm tracking-wide select-none"
             style={{
-              background: 'linear-gradient(145deg, #c0003c, #800020, #4d0013)',
+              background: 'linear-gradient(145deg, #2b74c2, #103b6a, #0c2b4e)',
               border: '1px solid rgba(192, 0, 60, 0.8)',
               boxShadow:
-                '0 8px 20px rgba(128, 0, 32, 0.45), 0 4px 10px rgba(212, 175, 55, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.25)',
+                '0 8px 20px rgba(25, 87, 153, 0.45), 0 4px 10px rgba(212, 175, 55, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.25)',
               WebkitTapHighlightColor: 'transparent',
             }}
             aria-label="Book a Video Call"

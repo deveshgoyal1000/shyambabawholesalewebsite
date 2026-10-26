@@ -68,7 +68,7 @@ export default function InternationalWholesale() {
         <ScrollReveal direction="up" distance={20} duration={650}>
           <h2
             style={{ fontFamily: 'Georgia, serif' }}
-            className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#6B1A2A] tracking-[0.5px] leading-tight text-center"
+            className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#195799] tracking-[0.5px] leading-tight text-center"
           >
             We Serve Retailers Worldwide
           </h2>
@@ -99,7 +99,7 @@ export default function InternationalWholesale() {
             >
               <Link
                 href={`/international/${c.slug}`}
-                className="flex items-center justify-between p-4 sm:py-5 sm:px-6 bg-white rounded-2xl border-2 border-[#E5DAC1] hover:border-[#6B1A2A] shadow-[0_3px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(107,26,42,0.1)] transition-all duration-300 group text-left active:scale-[0.99] select-none"
+                className="flex items-center justify-between p-4 sm:py-5 sm:px-6 bg-white rounded-2xl border-2 border-[#E5DAC1] hover:border-[#195799] shadow-[0_3px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(25, 87, 153,0.1)] transition-all duration-300 group text-left active:scale-[0.99] select-none"
                 style={{ WebkitTapHighlightColor: 'transparent' }}
               >
                 <div className="flex items-center gap-3.5 sm:gap-4">
@@ -114,13 +114,13 @@ export default function InternationalWholesale() {
                   </div>
 
                   {/* Country Name Only */}
-                  <span className="text-sm sm:text-base md:text-[17px] font-bold text-neutral-900 group-hover:text-[#6B1A2A] transition-colors leading-none tracking-tight">
+                  <span className="text-sm sm:text-base md:text-[17px] font-bold text-neutral-900 group-hover:text-[#195799] transition-colors leading-none tracking-tight">
                     {c.country}
                   </span>
                 </div>
 
                 {/* Refined Circular Arrow Button */}
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#FAF5E8] group-hover:bg-[#6B1A2A] text-[#6B1A2A] group-hover:text-white flex items-center justify-center transition-all duration-300 flex-shrink-0 border border-[#C9A84C]/40 group-hover:border-[#6B1A2A] shadow-xs">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#FAF5E8] group-hover:bg-[#195799] text-[#195799] group-hover:text-white flex items-center justify-center transition-all duration-300 flex-shrink-0 border border-[#C9A84C]/40 group-hover:border-[#195799] shadow-xs">
                   <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-0.5 transition-transform duration-300" />
                 </div>
               </Link>
@@ -132,7 +132,7 @@ export default function InternationalWholesale() {
         {!showAll && (
           <button
             onClick={() => setShowAll(true)}
-            className="mt-6 text-xs sm:text-sm font-semibold text-[#6B1A2A] hover:text-[#521320] flex items-center gap-1.5 mx-auto underline decoration-[#C9A84C] underline-offset-4 active:scale-98 transition-transform"
+            className="mt-6 text-xs sm:text-sm font-semibold text-[#195799] hover:text-[#124378] flex items-center gap-1.5 mx-auto underline decoration-[#C9A84C] underline-offset-4 active:scale-98 transition-transform"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
             <span>View All 50+ Countries</span>
@@ -142,7 +142,7 @@ export default function InternationalWholesale() {
 
         {/* Maroon Trust Bar */}
         <ScrollReveal direction="up" distance={22} delay={150} duration={650}>
-          <div className="mt-8 sm:mt-10 bg-[#6B1A2A] rounded-2xl p-4 sm:p-5 text-white shadow-md border border-[#8C2337]">
+          <div className="mt-8 sm:mt-10 bg-[#195799] rounded-2xl p-4 sm:p-5 text-white shadow-md border border-[#103b6a]">
             <div className="grid grid-cols-3 gap-2 text-center divide-x divide-white/20">
               <div className="px-1 sm:px-2">
                 <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-[#C9A84C] mx-auto mb-1" />

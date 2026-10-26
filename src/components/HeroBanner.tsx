@@ -42,7 +42,7 @@ export default function HeroBanner() {
         className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[500px] h-[340px] sm:h-[500px] rounded-full pointer-events-none animate-light-breathe"
         style={{
           background:
-            'radial-gradient(circle, rgba(201, 168, 76, 0.22) 0%, rgba(107, 26, 42, 0.12) 50%, transparent 75%)',
+            'radial-gradient(circle, rgba(201, 168, 76, 0.22) 0%, rgba(25, 87, 153, 0.12) 50%, transparent 75%)',
           filter: 'blur(45px)',
         }}
       ></div>
@@ -162,7 +162,7 @@ export default function HeroBanner() {
           {/* Button 1: Solid Maroon Pill Button with Living Halo Glow and Light Sheen */}
           <a
             href="#categories"
-            className="group relative w-full inline-flex items-center justify-center gap-2 py-3 sm:py-3.5 px-6 rounded-full bg-[#6B1A2A] hover:bg-[#521320] text-white font-bold text-xs sm:text-sm tracking-wide overflow-hidden animate-gold-halo active:scale-98 transition-transform duration-150"
+            className="group relative w-full inline-flex items-center justify-center gap-2 py-3 sm:py-3.5 px-6 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-bold text-xs sm:text-sm tracking-wide overflow-hidden animate-gold-halo active:scale-98 transition-transform duration-150"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
             {/* Periodic Diagonal Glass Shine Sweep that glides across every 5.5s */}

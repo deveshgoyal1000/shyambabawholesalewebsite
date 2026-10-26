@@ -8,7 +8,7 @@ export default function WholesaleLeadCTA() {
   return (
     <section className="w-full bg-[#FAF8F5]">
       {/* 1. Maroon Banner matching Krishaz exactly */}
-      <div className="bg-[#6B1A2A] text-white py-12 sm:py-16 px-4 sm:px-8 text-center">
+      <div className="bg-[#195799] text-white py-12 sm:py-16 px-4 sm:px-8 text-center">
         <ScrollReveal direction="up" distance={20} duration={650}>
           <div className="max-w-2xl mx-auto">
             {/* Headline */}
@@ -91,7 +91,7 @@ export default function WholesaleLeadCTA() {
             href="https://wa.me/919680865791"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#6B1A2A] font-semibold hover:underline transition-colors"
+            className="text-[#195799] font-semibold hover:underline transition-colors"
           >
             +91 96808 65791
           </a>

@@ -7,8 +7,8 @@
 :root {
   --primary-gold: #c9a84c;
   --primary-gold-dark: #9a7e2e;
-  --primary-maroon: #6b1a2a;
-  --primary-maroon-dark: #521320;
+  --primary-maroon: #195799;
+  --primary-maroon-dark: #124378;
   --bg-cream: #faf8f5;
   --bg-cream-card: #ffffff;
   --border-cream: #eae3d8;
@@ -67,7 +67,7 @@ h1, h2, h3, h4, .font-serif {
 
 .card-hover-lift:hover {
   transform: translateY(-3.5px);
-  box-shadow: 0 14px 28px -6px rgba(107, 26, 42, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.025);
+  box-shadow: 0 14px 28px -6px rgba(25, 87, 153, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.025);
 }
 
 /* Tactile button press feedback */
@@ -120,7 +120,7 @@ h1, h2, h3, h4, .font-serif {
   bottom: -2px;
   width: 0;
   height: 1.5px;
-  background-color: #6b1a2a;
+  background-color: #195799;
   transition: width 280ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 .nav-link-indicator:hover::after {
@@ -171,10 +171,10 @@ h1, h2, h3, h4, .font-serif {
 
 @keyframes goldHaloPulse {
   0%, 100% {
-    box-shadow: 0 6px 20px rgba(107, 26, 42, 0.45), 0 0 0 1px rgba(201, 168, 76, 0.35);
+    box-shadow: 0 6px 20px rgba(25, 87, 153, 0.45), 0 0 0 1px rgba(201, 168, 76, 0.35);
   }
   50% {
-    box-shadow: 0 8px 30px rgba(107, 26, 42, 0.65), 0 0 16px 3px rgba(201, 168, 76, 0.55);
+    box-shadow: 0 8px 30px rgba(25, 87, 153, 0.65), 0 0 16px 3px rgba(201, 168, 76, 0.55);
   }
 }
 

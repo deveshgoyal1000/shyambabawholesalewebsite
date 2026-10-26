@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const viewport: Viewport = {
-  themeColor: '#6B1A2A',
+  themeColor: '#195799',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   other: {
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'black-translucent',
-    'theme-color': '#6B1A2A',
+    'theme-color': '#195799',
   },
 }
 
@@ -23,8 +23,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta name="theme-color" content="#6B1A2A" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="#6B1A2A" />
+        <meta name="theme-color" content="#195799" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#195799" />
       </head>
       <body suppressHydrationWarning className="bg-cream text-charcoal antialiased">
         {children}

@@ -116,7 +116,7 @@ export default async function ProductDetailPage({
 
                 {/* Badges */}
                 <div className="absolute top-4 left-4 flex flex-col gap-1.5">
-                  <span className="px-3 py-1 rounded bg-[#6B1A2A] text-white text-xs font-bold uppercase tracking-wider shadow">
+                  <span className="px-3 py-1 rounded bg-[#195799] text-white text-xs font-bold uppercase tracking-wider shadow">
                     Jaipur Factory Direct
                   </span>
                   <span className="px-3 py-1 rounded bg-green-700 text-white text-xs font-semibold shadow">
@@ -139,7 +139,7 @@ export default async function ProductDetailPage({
             <div className="lg:col-span-6 flex flex-col justify-between space-y-6">
               <div className="space-y-4">
                 {/* Product Code Badge */}
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#C9A84C]/50 text-[#6B1A2A] font-mono text-sm font-bold">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#C9A84C]/50 text-[#195799] font-mono text-sm font-bold">
                   <Tag className="w-4 h-4 text-[#C9A84C]" />
                   <span>UNIQUE CODE: {product.productCode}</span>
                 </div>
@@ -147,7 +147,7 @@ export default async function ProductDetailPage({
                 {/* Title */}
                 <h1
                   style={{ fontFamily: 'Georgia, serif' }}
-                  className="text-3xl sm:text-[36px] font-normal text-[#6B1A2A] leading-tight"
+                  className="text-3xl sm:text-[36px] font-normal text-[#195799] leading-tight"
                 >
                   {product.name}
                 </h1>
@@ -155,7 +155,7 @@ export default async function ProductDetailPage({
                 {/* Wholesale Pricing Policy Notice (NO PRICE SHOWN) */}
                 <div className="p-4 bg-[#FAF8F5] rounded-xl border border-[#EAE3D8] space-y-1">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs uppercase font-bold text-[#6B1A2A] tracking-wider">
+                    <span className="text-xs uppercase font-bold text-[#195799] tracking-wider">
                       Wholesale Pricing Slab:
                     </span>
                     <span className="text-xs font-bold text-[#9A7E2E]">
@@ -184,9 +184,9 @@ export default async function ProductDetailPage({
                     href={`https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20see%20Product%20${product.productCode}%20live%20on%20Video%20Call.`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-tactile w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white hover:bg-[#FAF8F5] text-[#6B1A2A] border border-[#6B1A2A]/40 font-bold rounded-xl text-xs shadow-sm"
+                    className="btn-tactile w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white hover:bg-[#FAF8F5] text-[#195799] border border-[#195799]/40 font-bold rounded-xl text-xs shadow-sm"
                   >
-                    <Video className="w-4 h-4 text-[#6B1A2A]" />
+                    <Video className="w-4 h-4 text-[#195799]" />
                     <span>Book Video Call to View This Piece Live</span>
                   </a>
                 </div>
@@ -195,7 +195,7 @@ export default async function ProductDetailPage({
                 <div className="pt-4 border-t border-[#EAE3D8]">
                   <h3
                     style={{ fontFamily: 'Georgia, serif' }}
-                    className="text-lg font-normal text-[#6B1A2A] mb-3"
+                    className="text-lg font-normal text-[#195799] mb-3"
                   >
                     Product Specifications
                   </h3>
@@ -210,7 +210,7 @@ export default async function ProductDetailPage({
                     ]).map((spec: any, idx: number) => (
                       <div key={idx} className="flex p-3 bg-white even:bg-[#FAF8F5]/60">
                         <span className="w-1/3 font-semibold text-[#2C2C2C]/70">{spec.label}</span>
-                        <span className="w-2/3 font-bold text-[#6B1A2A]">{spec.value}</span>
+                        <span className="w-2/3 font-bold text-[#195799]">{spec.value}</span>
                       </div>
                     ))}
                   </div>

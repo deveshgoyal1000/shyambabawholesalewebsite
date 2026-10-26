@@ -110,7 +110,7 @@ export default async function CollectionPage({
               </span>
               <h1
                 style={{ fontFamily: 'Georgia, serif' }}
-                className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#6B1A2A] tracking-[0.5px] leading-tight"
+                className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#195799] tracking-[0.5px] leading-tight"
               >
                 {categoryTitle}
               </h1>
@@ -140,8 +140,8 @@ export default async function CollectionPage({
                   href={`/collections/${cat.slug}`}
                   className={`btn-tactile px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs font-semibold whitespace-nowrap border ${
                     isActive
-                      ? 'bg-[#6B1A2A] text-white border-[#6B1A2A] shadow-sm'
-                      : 'bg-white text-neutral-700 border-neutral-200 hover:border-[#C9A84C] hover:text-[#6B1A2A]'
+                      ? 'bg-[#195799] text-white border-[#195799] shadow-sm'
+                      : 'bg-white text-neutral-700 border-neutral-200 hover:border-[#C9A84C] hover:text-[#195799]'
                   }`}
                   style={{ WebkitTapHighlightColor: 'transparent' }}
                 >
@@ -171,7 +171,7 @@ export default async function CollectionPage({
               <p className="text-charcoal/70 text-sm">No products found in this category yet.</p>
               <Link
                 href="/admin"
-                className="btn-tactile mt-4 inline-block px-4 py-2 bg-[#6B1A2A] text-white font-bold text-xs rounded-lg"
+                className="btn-tactile mt-4 inline-block px-4 py-2 bg-[#195799] text-white font-bold text-xs rounded-lg"
               >
                 + Add Products in CMS Admin
               </Link>

@@ -79,7 +79,7 @@ export default function ProductCard({ product }: { product: ProductData }) {
             </span>
           )}
           {product.isFeatured && (
-            <span className="px-2 py-0.5 rounded-full bg-[#6B1A2A] text-white text-[9px] sm:text-[10px] font-bold uppercase tracking-wider shadow-sm">
+            <span className="px-2 py-0.5 rounded-full bg-[#195799] text-white text-[9px] sm:text-[10px] font-bold uppercase tracking-wider shadow-sm">
               Hot
             </span>
           )}
@@ -109,7 +109,7 @@ export default function ProductCard({ product }: { product: ProductData }) {
           href={`/products/${product.slug}`}
           className="absolute inset-0 hidden sm:flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
         >
-          <span className="px-4 py-2 bg-white/95 text-[#6B1A2A] hover:bg-[#6B1A2A] hover:text-white font-bold text-xs rounded-full shadow-lg border border-[#C9A84C]/40 flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition-all duration-[360ms] ease-[cubic-bezier(0.22,1,0.36,1)]">
+          <span className="px-4 py-2 bg-white/95 text-[#195799] hover:bg-[#195799] hover:text-white font-bold text-xs rounded-full shadow-lg border border-[#C9A84C]/40 flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition-all duration-[360ms] ease-[cubic-bezier(0.22,1,0.36,1)]">
             <Eye className="w-3.5 h-3.5" />
             View Full Specs
           </span>
@@ -124,9 +124,9 @@ export default function ProductCard({ product }: { product: ProductData }) {
         <div>
           {/* Prominent Product Code Display Bar */}
           <div className="flex items-center justify-between text-xs pb-1 sm:pb-1.5 border-b border-[#F5EFE6]">
-            <span className="text-[10px] sm:text-[11px] font-bold text-[#6B1A2A] uppercase tracking-wider flex items-center gap-1">
+            <span className="text-[10px] sm:text-[11px] font-bold text-[#195799] uppercase tracking-wider flex items-center gap-1">
               <span className="text-[#9A7E2E]">Code:</span>
-              <span className="bg-[#C9A84C]/15 text-[#6B1A2A] px-1 py-0.5 rounded font-mono font-bold">
+              <span className="bg-[#C9A84C]/15 text-[#195799] px-1 py-0.5 rounded font-mono font-bold">
                 {product.productCode}
               </span>
             </span>
@@ -137,7 +137,7 @@ export default function ProductCard({ product }: { product: ProductData }) {
 
           {/* Product Title */}
           <Link href={`/products/${product.slug}`} className="block mt-1.5 sm:mt-2">
-            <h4 className="font-serif font-bold text-xs sm:text-sm md:text-base text-[#121212] group-hover:text-[#6B1A2A] transition-colors duration-200 line-clamp-2 leading-snug">
+            <h4 className="font-serif font-bold text-xs sm:text-sm md:text-base text-[#121212] group-hover:text-[#195799] transition-colors duration-200 line-clamp-2 leading-snug">
               {product.name}
             </h4>
           </Link>

@@ -19,7 +19,7 @@ export default function VideoShoppingCTA() {
             {/* Heading in Georgia Serif */}
             <h3
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-2xl sm:text-3xl font-bold text-[#6B1A2A] mb-1.5 tracking-normal leading-tight"
+              className="text-2xl sm:text-3xl font-bold text-[#195799] mb-1.5 tracking-normal leading-tight"
             >
               Book a Live Video Call
             </h3>
@@ -41,7 +41,7 @@ export default function VideoShoppingCTA() {
                 href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20would%20like%20to%20Book%20a%20Live%20Video%20Call%20shopping%20session%20now."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-tactile inline-flex items-center justify-center gap-2 py-3 sm:py-3.5 px-8 rounded-full bg-[#6B1A2A] hover:bg-[#521320] text-white font-semibold text-xs sm:text-sm tracking-wide shadow-md w-full max-w-[280px]"
+                className="btn-tactile inline-flex items-center justify-center gap-2 py-3 sm:py-3.5 px-8 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-semibold text-xs sm:text-sm tracking-wide shadow-md w-full max-w-[280px]"
                 style={{ WebkitTapHighlightColor: 'transparent' }}
               >
                 <Video className="w-4 h-4" />

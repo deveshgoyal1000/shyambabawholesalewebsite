@@ -8,7 +8,7 @@ export default function AnnouncementBar() {
 
   return (
     <div
-      className="bg-[#6B1A2A] text-[#FAF8F5] font-medium border-b border-[#C9A84C]/35 select-none w-full"
+      className="bg-[#195799] text-[#FAF8F5] font-medium border-b border-[#C9A84C]/35 select-none w-full"
       style={{
         paddingTop: 'max(0.65rem, env(safe-area-inset-top))',
       }}
@@ -43,19 +43,19 @@ export default function AnnouncementBar() {
 
         {/* Right: Currency Selector (Desktop / Tablet Only) */}
         <div className="hidden md:flex items-center space-x-3 text-[#FAF8F5]/90 text-[11px]">
-          <div className="flex items-center gap-1 bg-[#521320]/80 px-2.5 py-1 rounded border border-[#C9A84C]/30">
+          <div className="flex items-center gap-1 bg-[#124378]/80 px-2.5 py-1 rounded border border-[#C9A84C]/30">
             <Globe className="w-3 h-3 text-[#C9A84C]" />
             <select
               value={currency}
               onChange={(e) => setCurrency(e.target.value)}
               className="bg-transparent text-white focus:outline-none cursor-pointer text-[11px]"
             >
-              <option value="INR" className="bg-[#6B1A2A] text-white">🇮🇳 INR (₹)</option>
-              <option value="USD" className="bg-[#6B1A2A] text-white">🇺🇸 USD ($)</option>
-              <option value="GBP" className="bg-[#6B1A2A] text-white">🇬🇧 GBP (£)</option>
-              <option value="AED" className="bg-[#6B1A2A] text-white">🇦🇪 AED (د.إ)</option>
-              <option value="CAD" className="bg-[#6B1A2A] text-white">🇨🇦 CAD ($)</option>
-              <option value="MYR" className="bg-[#6B1A2A] text-white">🇲🇾 MYR (RM)</option>
+              <option value="INR" className="bg-[#195799] text-white">🇮🇳 INR (₹)</option>
+              <option value="USD" className="bg-[#195799] text-white">🇺🇸 USD ($)</option>
+              <option value="GBP" className="bg-[#195799] text-white">🇬🇧 GBP (£)</option>
+              <option value="AED" className="bg-[#195799] text-white">🇦🇪 AED (د.إ)</option>
+              <option value="CAD" className="bg-[#195799] text-white">🇨🇦 CAD ($)</option>
+              <option value="MYR" className="bg-[#195799] text-white">🇲🇾 MYR (RM)</option>
             </select>
           </div>
           <a

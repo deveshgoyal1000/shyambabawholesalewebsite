@@ -61,7 +61,7 @@ export default function Testimonials() {
           <div className="text-center mb-7 sm:mb-10">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#6B1A2A] tracking-[0.5px] leading-tight mb-2 sm:mb-2.5"
+              className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#195799] tracking-[0.5px] leading-tight mb-2 sm:mb-2.5"
             >
               What Our Retailers Say
             </h2>
@@ -84,14 +84,14 @@ export default function Testimonials() {
             {/* Desktop Navigation Arrows */}
             <button
               onClick={() => scroll('left')}
-              className="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-md border border-[#C9A84C]/40 text-[#6B1A2A] items-center justify-center hover:bg-[#6B1A2A] hover:text-white transition-all active:scale-95"
+              className="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-md border border-[#C9A84C]/40 text-[#195799] items-center justify-center hover:bg-[#195799] hover:text-white transition-all active:scale-95"
               aria-label="Previous review"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={() => scroll('right')}
-              className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-md border border-[#C9A84C]/40 text-[#6B1A2A] items-center justify-center hover:bg-[#6B1A2A] hover:text-white transition-all active:scale-95"
+              className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-md border border-[#C9A84C]/40 text-[#195799] items-center justify-center hover:bg-[#195799] hover:text-white transition-all active:scale-95"
               aria-label="Next review"
             >
               <ChevronRight className="w-5 h-5" />
@@ -159,7 +159,7 @@ export default function Testimonials() {
 
                   {/* Reviewer Details matching Krishaz: Reddish-Maroon Bold Name + Sub-label */}
                   <div className="pt-2">
-                    <span className="font-bold text-xs sm:text-sm text-[#6B1A2A] block leading-tight">
+                    <span className="font-bold text-xs sm:text-sm text-[#195799] block leading-tight">
                       {r.author}
                     </span>
                     <span className="text-[11px] sm:text-xs text-neutral-500 font-normal block mt-0.5">

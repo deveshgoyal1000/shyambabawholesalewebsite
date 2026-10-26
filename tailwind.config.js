@@ -15,10 +15,10 @@ export default {
           soft: '#F8F3E6',
         },
         maroon: {
-          DEFAULT: '#6B1A2A',
-          dark: '#4A101C',
+          DEFAULT: '#195799',
+          dark: '#0f3764',
           light: '#8E283C',
-          wine: '#800020',
+          wine: '#103b6a',
         },
         cream: {
           DEFAULT: '#FDF8F3',
@@ -37,7 +37,7 @@ export default {
         sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        'luxury': '0 10px 30px -10px rgba(107, 26, 42, 0.1)',
+        'luxury': '0 10px 30px -10px rgba(25, 87, 153, 0.1)',
         'luxury-hover': '0 20px 40px -15px rgba(201, 168, 76, 0.25)',
       },
     },

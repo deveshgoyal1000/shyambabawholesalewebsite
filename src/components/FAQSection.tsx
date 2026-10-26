@@ -57,7 +57,7 @@ export default function FAQSection() {
           <div className="text-center mb-6 sm:mb-9">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#6B1A2A] tracking-[0.5px] leading-tight"
+              className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#195799] tracking-[0.5px] leading-tight"
             >
               Frequently Asked Questions
             </h2>
@@ -92,7 +92,7 @@ export default function FAQSection() {
                   aria-expanded={openIndex === idx}
                 >
                   <span className="leading-snug">{faq.question}</span>
-                  <div className="w-6 h-6 rounded-full bg-[#FAF5E8] flex items-center justify-center text-[#6B1A2A] flex-shrink-0 transition-transform duration-200">
+                  <div className="w-6 h-6 rounded-full bg-[#FAF5E8] flex items-center justify-center text-[#195799] flex-shrink-0 transition-transform duration-200">
                     {openIndex === idx ? (
                       <Minus className="w-3.5 h-3.5" />
                     ) : (

@@ -82,7 +82,7 @@ export default function ManufacturerComparison() {
           <div className="text-center mb-6 sm:mb-8">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#6B1A2A] tracking-[0.5px] leading-tight"
+              className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#195799] tracking-[0.5px] leading-tight"
             >
               ShyamBabaWholesale vs Other Suppliers
             </h2>
@@ -105,7 +105,7 @@ export default function ManufacturerComparison() {
         {/* Comparison Table Card with line-by-line staggered reveal */}
         <div
           ref={tableRef}
-          className="bg-white rounded-2xl border-2 border-[#C9A84C]/60 overflow-hidden shadow-[0_6px_24px_rgba(107,26,42,0.06)] transition-all duration-700"
+          className="bg-white rounded-2xl border-2 border-[#C9A84C]/60 overflow-hidden shadow-[0_6px_24px_rgba(25, 87, 153,0.06)] transition-all duration-700"
           style={{
             opacity: tableInView ? 1 : 0,
             transform: tableInView ? 'translate3d(0, 0, 0)' : 'translate3d(0, 20px, 0)',
@@ -118,8 +118,8 @@ export default function ManufacturerComparison() {
                 <th className="py-3.5 px-3 sm:px-5 text-left font-bold text-[11px] sm:text-xs text-[#2C2C2C] uppercase tracking-wider">
                   Features
                 </th>
-                <th className="py-3.5 px-2 sm:px-4 text-center font-bold text-[11px] sm:text-xs text-[#6B1A2A] uppercase tracking-wider bg-[#FAF5E8] border-x-2 border-[#C9A84C]/50">
-                  <span className="font-extrabold text-[#6B1A2A] text-xs sm:text-sm tracking-tight block">
+                <th className="py-3.5 px-2 sm:px-4 text-center font-bold text-[11px] sm:text-xs text-[#195799] uppercase tracking-wider bg-[#FAF5E8] border-x-2 border-[#C9A84C]/50">
+                  <span className="font-extrabold text-[#195799] text-xs sm:text-sm tracking-tight block">
                     ShyamBabaWholesale
                   </span>
                 </th>
@@ -147,7 +147,7 @@ export default function ManufacturerComparison() {
                   </td>
                   <td className="py-3.5 px-2 sm:px-4 text-center bg-[#FAF5E8]/60 border-x-2 border-[#C9A84C]/40">
                     <div
-                      className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#6B1A2A]/10 text-[#6B1A2A]"
+                      className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#195799]/10 text-[#195799]"
                       style={{
                         transform: tableInView ? 'scale(1)' : 'scale(0.8)',
                         transition: `transform 600ms cubic-bezier(0.22, 1, 0.36, 1) ${idx * 140 + 100}ms`,
@@ -225,7 +225,7 @@ export default function ManufacturerComparison() {
               href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20partner%20with%20your%20factory%20for%20wholesale%20supply."
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-tactile inline-block py-3 sm:py-3.5 px-8 rounded-full bg-[#6B1A2A] hover:bg-[#521320] text-white font-semibold text-xs sm:text-sm tracking-wide shadow-md w-full max-w-[280px]"
+              className="btn-tactile inline-block py-3 sm:py-3.5 px-8 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-semibold text-xs sm:text-sm tracking-wide shadow-md w-full max-w-[280px]"
               style={{ WebkitTapHighlightColor: 'transparent' }}
             >
               Start Growing With Us &rarr;

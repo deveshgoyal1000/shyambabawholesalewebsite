@@ -62,14 +62,14 @@ export default async function CountryWholesalePage({ params }: PageProps) {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#6B1A2A]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#195799]">
                 Direct Export to {country.country}
               </span>
             </div>
 
             <h1
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-2xl sm:text-4xl font-normal text-[#6B1A2A] tracking-[0.5px] leading-tight mb-2"
+              className="text-2xl sm:text-4xl font-normal text-[#195799] tracking-[0.5px] leading-tight mb-2"
             >
               Wholesale Brass Jewellery Export to {country.country}
             </h1>
@@ -128,7 +128,7 @@ export default async function CountryWholesalePage({ params }: PageProps) {
           </div>
 
           {/* Direct WhatsApp Call to Action Box */}
-          <div className="rounded-2xl p-6 sm:p-7 bg-[#6B1A2A] text-white shadow-lg text-center space-y-3.5">
+          <div className="rounded-2xl p-6 sm:p-7 bg-[#195799] text-white shadow-lg text-center space-y-3.5">
             <h3
               style={{ fontFamily: 'Georgia, serif' }}
               className="text-xl sm:text-2xl font-normal text-white"

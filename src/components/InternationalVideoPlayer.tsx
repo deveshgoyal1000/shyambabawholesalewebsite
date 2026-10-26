@@ -87,7 +87,7 @@ export default function InternationalVideoPlayer({
         <button
           onClick={togglePlay}
           aria-label={isPlaying ? 'Pause video' : 'Play video'}
-          className={`absolute inset-0 m-auto w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#6B1A2A]/90 hover:bg-[#6B1A2A] text-white flex items-center justify-center shadow-2xl transition-all duration-300 border-2 border-[#C9A84C] active:scale-95 z-20 ${
+          className={`absolute inset-0 m-auto w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#195799]/90 hover:bg-[#195799] text-white flex items-center justify-center shadow-2xl transition-all duration-300 border-2 border-[#C9A84C] active:scale-95 z-20 ${
             isPlaying ? 'opacity-0 hover:opacity-100' : 'opacity-100 scale-100'
           }`}
           style={{ WebkitTapHighlightColor: 'transparent' }}

@@ -56,7 +56,7 @@ export default function ShopByCategories() {
           <div className="text-center mb-6 sm:mb-9">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-[#6B1A2A] text-[26px] sm:text-[34px] md:text-[42px] font-normal tracking-[0.5px] leading-tight"
+              className="text-[#195799] text-[26px] sm:text-[34px] md:text-[42px] font-normal tracking-[0.5px] leading-tight"
             >
               Shop By Categories
             </h2>
@@ -108,7 +108,7 @@ export default function ShopByCategories() {
                       fontFamily:
                         '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     }}
-                    className="text-[#2C2C2C] font-semibold text-[14px] sm:text-[16px] md:text-[17px] leading-tight group-hover:text-[#6B1A2A] transition-colors duration-250 truncate"
+                    className="text-[#2C2C2C] font-semibold text-[14px] sm:text-[16px] md:text-[17px] leading-tight group-hover:text-[#195799] transition-colors duration-250 truncate"
                   >
                     {cat.title}
                   </span>
@@ -126,7 +126,7 @@ export default function ShopByCategories() {
           <div className="mt-8 sm:mt-12 text-center">
             <Link
               href="/collections/all"
-              className="btn-tactile inline-flex items-center justify-center py-3 sm:py-3.5 px-8 sm:px-10 rounded-full bg-[#6B1A2A] hover:bg-[#521320] text-white font-semibold text-xs sm:text-sm tracking-wider uppercase shadow-md hover:shadow-lg"
+              className="btn-tactile inline-flex items-center justify-center py-3 sm:py-3.5 px-8 sm:px-10 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-semibold text-xs sm:text-sm tracking-wider uppercase shadow-md hover:shadow-lg"
               style={{ WebkitTapHighlightColor: 'transparent' }}
             >
               View Full Catalog &rarr;
