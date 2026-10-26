@@ -225,7 +225,7 @@ export default function ManufacturerComparison() {
               href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20partner%20with%20your%20factory%20for%20wholesale%20supply."
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-tactile inline-block py-3 sm:py-3.5 px-8 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-semibold text-xs sm:text-sm tracking-wide shadow-md w-full max-w-[280px]"
+              className="btn-tactile w-full inline-flex items-center justify-center py-4 sm:py-4.5 px-8 sm:px-12 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-bold text-[15px] sm:text-[17px] tracking-wide shadow-lg hover:shadow-xl active:scale-[0.985] transition-all text-center"
               style={{ WebkitTapHighlightColor: 'transparent' }}
             >
               Start Growing With Us &rarr;

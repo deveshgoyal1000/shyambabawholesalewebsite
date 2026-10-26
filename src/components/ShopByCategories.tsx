@@ -131,12 +131,12 @@ export default function ShopByCategories() {
           ))}
         </div>
 
-        {/* "View Full Catalog" Pill Button with ScrollReveal */}
+        {/* "View Full Catalog" Pill Button - Expanded width matching the two categories' end points */}
         <ScrollReveal direction="up" distance={18} delay={100} duration={800} threshold={0.15}>
-          <div className="mt-8 sm:mt-12 text-center">
+          <div className="mt-8 sm:mt-12 text-center w-full">
             <Link
               href="/collections/all"
-              className="btn-tactile inline-flex items-center justify-center py-3.5 px-8 sm:px-10 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-semibold text-[13px] sm:text-sm tracking-wider uppercase shadow-md hover:shadow-lg"
+              className="btn-tactile w-full sm:w-auto inline-flex items-center justify-center py-4 sm:py-4.5 px-8 sm:px-14 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-bold text-[15px] sm:text-[16px] tracking-wider uppercase shadow-lg hover:shadow-xl active:scale-[0.98] transition-all text-center"
               style={{ WebkitTapHighlightColor: 'transparent' }}
             >
               View Full Catalog &rarr;
