@@ -130,7 +130,7 @@ export default async function ProductDetailPage({
               </div>
 
               {/* Notice */}
-              <p className="text-xs text-center text-charcoal/70">
+              <p className="text-[11px] text-center text-charcoal/60">
                 🔍 High-resolution photography under studio daylight. Actual finish matches 100%.
               </p>
             </div>
@@ -147,22 +147,22 @@ export default async function ProductDetailPage({
                 {/* Title */}
                 <h1
                   style={{ fontFamily: 'Georgia, serif' }}
-                  className="text-2xl sm:text-3xl md:text-[36px] font-normal text-[#121212] leading-tight"
+                  className="text-3xl sm:text-[36px] font-normal text-[#121212] leading-tight"
                 >
                   {product.name}
                 </h1>
 
                 {/* Wholesale Pricing Policy Notice (NO PRICE SHOWN) */}
-                <div className="p-4 sm:p-5 bg-[#FAF8F5] rounded-xl border border-[#EAE3D8] space-y-1.5">
+                <div className="p-4 bg-[#FAF8F5] rounded-xl border border-[#EAE3D8] space-y-1">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs sm:text-sm uppercase font-bold text-[#195799] tracking-wider">
+                    <span className="text-xs uppercase font-bold text-[#195799] tracking-wider">
                       Wholesale Pricing Slab:
                     </span>
-                    <span className="text-xs sm:text-sm font-bold text-[#9A7E2E]">
+                    <span className="text-xs font-bold text-[#9A7E2E]">
                       Locked for B2B Retailers
                     </span>
                   </div>
-                  <p className="text-[13px] sm:text-xs text-[#2C2C2C] leading-relaxed">
+                  <p className="text-xs text-[#2C2C2C] leading-relaxed">
                     To protect our reseller and boutique partners, prices are not publicly displayed. 
                     Quote <strong>Code: {product.productCode}</strong> on WhatsApp for instant volume pricing.
                   </p>
@@ -174,7 +174,7 @@ export default async function ProductDetailPage({
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-tactile w-full inline-flex items-center justify-center gap-3 px-6 py-4 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold rounded-xl shadow-md hover:shadow-lg text-sm sm:text-base tracking-wide"
+                    className="btn-tactile w-full inline-flex items-center justify-center gap-3 px-6 py-4 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold rounded-xl shadow-md hover:shadow-lg text-sm uppercase tracking-wider"
                   >
                     <MessageCircle className="w-5 h-5 fill-white" />
                     <span>Inquire Price on WhatsApp ({product.productCode})</span>
@@ -184,7 +184,7 @@ export default async function ProductDetailPage({
                     href={`https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20see%20Product%20${product.productCode}%20live%20on%20Video%20Call.`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-tactile w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white hover:bg-[#FAF8F5] text-[#195799] border border-[#195799]/40 font-bold rounded-xl text-xs sm:text-sm shadow-sm"
+                    className="btn-tactile w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white hover:bg-[#FAF8F5] text-[#195799] border border-[#195799]/40 font-bold rounded-xl text-xs shadow-sm"
                   >
                     <Video className="w-4 h-4 text-[#195799]" />
                     <span>Book Video Call to View This Piece Live</span>
@@ -199,7 +199,7 @@ export default async function ProductDetailPage({
                   >
                     Product Specifications
                   </h3>
-                  <div className="divide-y divide-[#EAE3D8] rounded-xl border border-[#EAE3D8] overflow-hidden text-[13px] sm:text-xs">
+                  <div className="divide-y divide-[#EAE3D8] rounded-xl border border-[#EAE3D8] overflow-hidden text-xs">
                     {(product.specifications || [
                       { label: 'Base Metal', value: 'Virgin Brass (Nickel & Lead Safe)' },
                       { label: 'Plating', value: '22K Micro Gold Plating + Anti-Tarnish Seal' },
@@ -208,7 +208,7 @@ export default async function ProductDetailPage({
                       { label: 'Minimum Order Qty', value: '12 Pairs / Box' },
                       { label: 'Packaging', value: 'Individual Poly Zip + Master 5-Ply Carton' },
                     ]).map((spec: any, idx: number) => (
-                      <div key={idx} className="flex p-3 sm:p-3.5 bg-white even:bg-[#FAF8F5]/60">
+                      <div key={idx} className="flex p-3 bg-white even:bg-[#FAF8F5]/60">
                         <span className="w-1/3 font-semibold text-[#2C2C2C]/70">{spec.label}</span>
                         <span className="w-2/3 font-bold text-[#121212]">{spec.value}</span>
                       </div>
@@ -217,13 +217,13 @@ export default async function ProductDetailPage({
                 </div>
 
                 {/* Factory Commitments */}
-                <div className="grid grid-cols-2 gap-3 pt-3 text-xs text-[#2C2C2C]">
-                  <div className="flex items-center gap-2 p-3 bg-[#FAF8F5] rounded-lg border border-[#EAE3D8]">
-                    <Truck className="w-4.5 h-4.5 text-[#9A7E2E] flex-shrink-0" />
+                <div className="grid grid-cols-2 gap-3 pt-3 text-[11px] text-[#2C2C2C]">
+                  <div className="flex items-center gap-2 p-2.5 bg-[#FAF8F5] rounded-lg border border-[#EAE3D8]">
+                    <Truck className="w-4 h-4 text-[#9A7E2E] flex-shrink-0" />
                     <span>24h Dispatch with Tracking</span>
                   </div>
-                  <div className="flex items-center gap-2 p-3 bg-[#FAF8F5] rounded-lg border border-[#EAE3D8]">
-                    <ShieldCheck className="w-4.5 h-4.5 text-[#9A7E2E] flex-shrink-0" />
+                  <div className="flex items-center gap-2 p-2.5 bg-[#FAF8F5] rounded-lg border border-[#EAE3D8]">
+                    <ShieldCheck className="w-4 h-4 text-[#9A7E2E] flex-shrink-0" />
                     <span>Zero Breakage Export Packaging</span>
                   </div>
                 </div>

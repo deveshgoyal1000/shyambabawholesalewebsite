@@ -120,30 +120,30 @@ export default function ProductCard({ product }: { product: ProductData }) {
       <div className="h-[2px] bg-[#C9A84C] w-full"></div>
 
       {/* Product Content Details */}
-      <div className="p-3.5 sm:p-4 flex-1 flex flex-col justify-between space-y-2 sm:space-y-3 bg-white">
+      <div className="p-3 sm:p-4 flex-1 flex flex-col justify-between space-y-2 sm:space-y-3 bg-white">
         <div>
           {/* Prominent Product Code Display Bar */}
           <div className="flex items-center justify-between text-xs pb-1 sm:pb-1.5 border-b border-[#F5EFE6]">
-            <span className="text-[11px] sm:text-xs font-bold text-[#195799] uppercase tracking-wider flex items-center gap-1">
+            <span className="text-[10px] sm:text-[11px] font-bold text-[#195799] uppercase tracking-wider flex items-center gap-1">
               <span className="text-[#9A7E2E]">Code:</span>
               <span className="bg-[#C9A84C]/15 text-[#195799] px-1 py-0.5 rounded font-mono font-bold">
                 {product.productCode}
               </span>
             </span>
-            <span className="text-[10px] sm:text-[10.5px] text-green-700 bg-green-50 px-1.5 py-0.5 rounded-full font-semibold border border-green-200/80">
+            <span className="text-[9px] sm:text-[10px] text-green-700 bg-green-50 px-1.5 py-0.5 rounded-full font-semibold border border-green-200/80">
               ● In Stock
             </span>
           </div>
 
           {/* Product Title */}
           <Link href={`/products/${product.slug}`} className="block mt-1.5 sm:mt-2">
-            <h4 className="font-serif font-bold text-[13.5px] sm:text-sm md:text-base text-[#121212] group-hover:text-[#195799] transition-colors duration-200 line-clamp-2 leading-snug">
+            <h4 className="font-serif font-bold text-xs sm:text-sm md:text-base text-[#121212] group-hover:text-[#195799] transition-colors duration-200 line-clamp-2 leading-snug">
               {product.name}
             </h4>
           </Link>
 
           {/* Specifications Preview (Metal / Plating / Pack) */}
-          <div className="mt-1.5 sm:mt-2 text-[11px] sm:text-xs text-neutral-600 space-y-0.5 sm:space-y-1">
+          <div className="mt-1.5 sm:mt-2 text-[10px] sm:text-[11px] text-neutral-600 space-y-0.5 sm:space-y-1">
             <div className="flex items-center justify-between">
               <span className="text-neutral-400">Metal:</span>
               <span className="font-medium text-neutral-800 truncate">Brass</span>
@@ -156,12 +156,12 @@ export default function ProductCard({ product }: { product: ProductData }) {
         </div>
 
         {/* Action Button: Inquire on WhatsApp (NO PRICE SHOWN) */}
-        <div className="pt-2">
+        <div className="pt-1.5 sm:pt-2">
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-tactile w-full inline-flex items-center justify-center gap-1.5 px-3 py-2.5 sm:py-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs sm:text-xs rounded-xl shadow-sm hover:shadow"
+            className="btn-tactile w-full inline-flex items-center justify-center gap-1.5 px-2.5 sm:px-3.5 py-2 sm:py-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-[11px] sm:text-xs rounded-lg sm:rounded-xl shadow-sm hover:shadow"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
             <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-white" />

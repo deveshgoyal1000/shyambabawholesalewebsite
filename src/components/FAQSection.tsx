@@ -57,7 +57,7 @@ export default function FAQSection() {
           <div className="text-center mb-6 sm:mb-9">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-[28px] sm:text-[36px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight"
+              className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight"
             >
               Frequently Asked Questions
             </h2>
@@ -70,7 +70,7 @@ export default function FAQSection() {
                 fontFamily:
                   '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
               }}
-              className="text-[15px] sm:text-[16px] text-[#2C2C2C] font-normal"
+              className="text-[13px] sm:text-[14px] text-[#2C2C2C] font-normal"
             >
               Everything You Need to Know About Ordering Wholesale
             </p>
@@ -87,16 +87,16 @@ export default function FAQSection() {
               >
                 <button
                   onClick={() => toggle(idx)}
-                  className="w-full text-left p-4.5 sm:p-5 flex items-center justify-between gap-3 font-semibold text-[15px] sm:text-[16px] text-neutral-900 focus:outline-none"
+                  className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-3 font-semibold text-xs sm:text-sm text-neutral-900 focus:outline-none"
                   style={{ WebkitTapHighlightColor: 'transparent' }}
                   aria-expanded={openIndex === idx}
                 >
                   <span className="leading-snug">{faq.question}</span>
-                  <div className="w-7 h-7 rounded-full bg-[#FAF5E8] flex items-center justify-center text-[#195799] flex-shrink-0 transition-transform duration-200">
+                  <div className="w-6 h-6 rounded-full bg-[#FAF5E8] flex items-center justify-center text-[#195799] flex-shrink-0 transition-transform duration-200">
                     {openIndex === idx ? (
-                      <Minus className="w-4 h-4" />
+                      <Minus className="w-3.5 h-3.5" />
                     ) : (
-                      <Plus className="w-4 h-4" />
+                      <Plus className="w-3.5 h-3.5" />
                     )}
                   </div>
                 </button>
@@ -106,7 +106,7 @@ export default function FAQSection() {
                     openIndex === idx ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <div className="px-4.5 pb-4.5 sm:px-5 sm:pb-5 pt-1 text-neutral-700 text-[14px] sm:text-[14.5px] font-normal leading-relaxed whitespace-pre-line border-t border-neutral-100">
+                  <div className="px-4 pb-4 sm:px-5 sm:pb-5 pt-1 text-neutral-600 text-xs sm:text-sm font-normal leading-relaxed whitespace-pre-line border-t border-neutral-100">
                     {faq.answer}
                   </div>
                 </div>
@@ -115,12 +115,12 @@ export default function FAQSection() {
           </div>
 
           {/* Bottom WhatsApp Contact Strip */}
-          <div className="mt-8 text-center bg-white rounded-xl p-4.5 sm:p-5 border border-neutral-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="mt-8 text-center bg-white rounded-xl p-4 sm:p-5 border border-neutral-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="text-left">
-              <span className="text-sm sm:text-base font-bold text-neutral-900 block">
+              <span className="text-xs sm:text-sm font-semibold text-neutral-900 block">
                 Have more questions?
               </span>
-              <span className="text-[12.5px] sm:text-xs text-neutral-500 block mt-0.5">
+              <span className="text-[11px] sm:text-xs text-neutral-500 block">
                 Our Jaipur wholesale desk is available 10:30 AM to 7:30 PM IST.
               </span>
             </div>
@@ -128,7 +128,7 @@ export default function FAQSection() {
               href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20have%20a%20question%20regarding%20wholesale%20orders."
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-tactile inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs sm:text-sm font-bold tracking-wide shadow"
+              className="btn-tactile inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold tracking-wide shadow"
               style={{ WebkitTapHighlightColor: 'transparent' }}
             >
               <MessageCircle className="w-4 h-4 fill-white" />

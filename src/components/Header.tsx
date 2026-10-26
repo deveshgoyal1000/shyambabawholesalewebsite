@@ -62,7 +62,7 @@ export default function Header() {
           <div className="flex items-center w-12 sm:w-16">
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="p-2.5 -ml-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
+              className="p-2 -ml-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
               style={{ WebkitTapHighlightColor: 'transparent' }}
               aria-label="Open navigation menu"
             >
@@ -79,7 +79,7 @@ export default function Header() {
             >
               <span
                 style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
-                className="text-[21px] sm:text-[26px] md:text-[32px] font-normal tracking-tight text-[#111111] leading-none group-hover:text-[#195799] transition-colors duration-200"
+                className="text-[20px] sm:text-[26px] md:text-[32px] font-normal tracking-tight text-[#111111] leading-none group-hover:text-[#195799] transition-colors duration-200"
               >
                 ShyamBabaWholesale
               </span>
@@ -90,7 +90,7 @@ export default function Header() {
           <div className="flex items-center justify-end w-12 sm:w-16">
             <button
               onClick={() => setSearchOpen(!searchOpen)}
-              className="p-2.5 -mr-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
+              className="p-2 -mr-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
               style={{ WebkitTapHighlightColor: 'transparent' }}
               aria-label="Search"
             >
@@ -182,14 +182,14 @@ export default function Header() {
           {/* Menu Links matching Inspector: Assistant, 14px, #121212, 400 */}
           <ul
             style={{ fontFamily: "'Assistant', sans-serif" }}
-            className="space-y-4 text-[16px] font-normal text-[#121212]"
+            className="space-y-3.5 text-[14px] font-normal text-[#121212]"
           >
             {navLinks.map((item) => (
               <li key={item.name}>
                 <Link
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block py-1.5 text-[#121212] hover:text-[#195799] transition-colors border-b border-neutral-100"
+                  className="block py-1 text-[#121212] hover:text-[#195799] transition-colors border-b border-neutral-100"
                 >
                   {item.name}
                 </Link>
@@ -200,7 +200,7 @@ export default function Header() {
               <Link
                 href="/#international"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-1.5 text-[#195799] font-bold border-b border-neutral-100"
+                className="block py-1 text-[#195799] font-semibold border-b border-neutral-100"
               >
                 International Buyers 🌍
               </Link>
@@ -209,7 +209,7 @@ export default function Header() {
               <Link
                 href="/#faq"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-1.5 text-[#121212] hover:text-[#195799] transition-colors border-b border-neutral-100"
+                className="block py-1 text-[#121212] hover:text-[#195799] transition-colors border-b border-neutral-100"
               >
                 Wholesale FAQs
               </Link>
@@ -218,7 +218,7 @@ export default function Header() {
               <Link
                 href="/#about"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-1.5 text-[#121212] hover:text-[#195799] transition-colors border-b border-neutral-100"
+                className="block py-1 text-[#121212] hover:text-[#195799] transition-colors border-b border-neutral-100"
               >
                 About Our Jaipur Factory
               </Link>
@@ -231,16 +231,16 @@ export default function Header() {
               href="https://wa.me/919680865791"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-tactile w-full py-3.5 px-4 bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.985] text-white rounded-xl flex items-center justify-center gap-2 font-bold text-sm tracking-wide shadow"
+              className="btn-tactile w-full py-3 px-4 bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.985] text-white rounded-xl flex items-center justify-center gap-2 font-bold text-xs uppercase tracking-wider shadow"
             >
-              <MessageCircle className="w-4.5 h-4.5 fill-white" />
+              <MessageCircle className="w-4 h-4 fill-white" />
               WhatsApp Direct Order
             </a>
             <a
               href="tel:+919680865791"
-              className="btn-tactile w-full py-3 px-4 border border-[#195799] text-[#195799] hover:bg-[#195799]/5 active:scale-[0.985] rounded-xl flex items-center justify-center gap-2 font-semibold text-sm"
+              className="btn-tactile w-full py-2.5 px-4 border border-[#195799] text-[#195799] hover:bg-[#195799]/5 active:scale-[0.985] rounded-xl flex items-center justify-center gap-2 font-semibold text-xs"
             >
-              <Phone className="w-4.5 h-4.5" />
+              <Phone className="w-4 h-4" />
               Call +91 96808 65791
             </a>
           </div>

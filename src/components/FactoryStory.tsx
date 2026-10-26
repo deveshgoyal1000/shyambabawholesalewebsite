@@ -14,13 +14,13 @@ export default function FactoryStory() {
         <ScrollReveal direction="up" distance={20} duration={650}>
           <h2
             style={{ fontFamily: 'Georgia, serif' }}
-            className="text-[28px] sm:text-[36px] md:text-[42px] font-normal text-[#121212] leading-tight mb-2 tracking-[0.5px]"
+            className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] leading-tight mb-2 tracking-[0.5px]"
           >
             We Don&apos;t Source. We Are<br />Manufacture.
           </h2>
 
           {/* Gold Accent Divider Bar matching Krishaz */}
-          <div className="w-[64px] sm:w-[80px] h-[2px] bg-[#C9A84C] mx-auto my-3 sm:my-3.5"></div>
+          <div className="w-[60px] sm:w-[80px] h-[2px] bg-[#C9A84C] mx-auto my-2.5 sm:my-3.5"></div>
 
           {/* Subtitle */}
           <p
@@ -28,7 +28,7 @@ export default function FactoryStory() {
               fontFamily:
                 '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
             }}
-            className="text-[15px] sm:text-[16px] text-[#2C2C2C] max-w-lg mx-auto mb-8 font-normal leading-relaxed"
+            className="text-[13px] sm:text-[14px] text-[#2C2C2C] max-w-lg mx-auto mb-7 font-normal leading-relaxed"
           >
             From our manufacturing unit in Jaipur, every piece is designed, crafted and quality-checked by our skilled artisans.
           </p>
@@ -36,33 +36,33 @@ export default function FactoryStory() {
 
         {/* 3 Circular Badges with ScrollReveal */}
         <ScrollReveal direction="up" distance={20} delay={100} duration={650}>
-          <div className="grid grid-cols-3 gap-2.5 sm:gap-4 mb-8 max-w-lg mx-auto">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-7 max-w-lg mx-auto">
             {/* Badge 1 */}
             <div className="flex flex-col items-center text-center space-y-2 group">
-              <div className="w-13 h-13 sm:w-15 sm:h-15 rounded-full border border-[#C9A84C] flex items-center justify-center text-[#C9A84C] bg-white shadow-sm transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:shadow-md">
-                <Building2 className="w-6 h-6 stroke-[1.5]" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-[#C9A84C] flex items-center justify-center text-[#C9A84C] bg-white shadow-sm transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:shadow-md">
+                <Building2 className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.5]" />
               </div>
-              <span className="text-[12.5px] sm:text-xs font-semibold text-neutral-800 leading-tight">
+              <span className="text-[11px] sm:text-xs font-medium text-neutral-700 leading-tight">
                 In-house<br />Manufacturing
               </span>
             </div>
 
             {/* Badge 2 */}
             <div className="flex flex-col items-center text-center space-y-2 group">
-              <div className="w-13 h-13 sm:w-15 sm:h-15 rounded-full border border-[#C9A84C] flex items-center justify-center text-[#C9A84C] bg-white shadow-sm transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:shadow-md">
-                <Users2 className="w-6 h-6 stroke-[1.5]" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-[#C9A84C] flex items-center justify-center text-[#C9A84C] bg-white shadow-sm transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:shadow-md">
+                <Users2 className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.5]" />
               </div>
-              <span className="text-[12.5px] sm:text-xs font-semibold text-neutral-800 leading-tight">
+              <span className="text-[11px] sm:text-xs font-medium text-neutral-700 leading-tight">
                 Skilled<br />Artisans
               </span>
             </div>
 
             {/* Badge 3 */}
             <div className="flex flex-col items-center text-center space-y-2 group">
-              <div className="w-13 h-13 sm:w-15 sm:h-15 rounded-full border border-[#C9A84C] flex items-center justify-center text-[#C9A84C] bg-white shadow-sm transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:shadow-md">
-                <Award className="w-6 h-6 stroke-[1.5]" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-[#C9A84C] flex items-center justify-center text-[#C9A84C] bg-white shadow-sm transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:shadow-md">
+                <Award className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.5]" />
               </div>
-              <span className="text-[12.5px] sm:text-xs font-semibold text-neutral-800 leading-tight">
+              <span className="text-[11px] sm:text-xs font-medium text-neutral-700 leading-tight">
                 100% Quality<br />Inspection
               </span>
             </div>

@@ -42,23 +42,23 @@ export default function ManufacturingProcess() {
       <div className="max-w-4xl mx-auto px-3.5 sm:px-6 lg:px-8">
         {/* Section Heading matching Krishaz exactly */}
         <ScrollReveal direction="up" distance={20} duration={650}>
-          <div className="text-center mb-7 sm:mb-9">
+          <div className="text-center mb-6 sm:mb-9">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-[28px] sm:text-[36px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight"
+              className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight"
             >
               From Sketch To Stunning Jewellery
             </h2>
 
             {/* Gold Accent Divider Bar matching Krishaz */}
-            <div className="w-[64px] sm:w-[80px] h-[2px] bg-[#C9A84C] mx-auto my-3 sm:my-3.5"></div>
+            <div className="w-[60px] sm:w-[80px] h-[2px] bg-[#C9A84C] mx-auto my-2.5 sm:my-3.5"></div>
 
             <p
               style={{
                 fontFamily:
                   '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
               }}
-              className="text-[15px] sm:text-[16px] text-[#2C2C2C] font-normal leading-relaxed"
+              className="text-[13px] sm:text-[14px] text-[#2C2C2C] font-normal"
             >
               Our 5-Step Precision Manufacturing Pipeline
             </p>
@@ -66,7 +66,7 @@ export default function ManufacturingProcess() {
         </ScrollReveal>
 
         {/* 5 Step Cards with Staggered ScrollReveal */}
-        <div className="max-w-xl mx-auto space-y-3.5 sm:space-y-4">
+        <div className="max-w-xl mx-auto space-y-3 sm:space-y-4">
           {steps.map((step, idx) => (
             <ScrollReveal
               key={step.num}
@@ -75,9 +75,9 @@ export default function ManufacturingProcess() {
               duration={550}
               delay={idx * 70}
             >
-              <div className="flex items-center gap-3.5 sm:gap-4 p-3.5 sm:p-4 bg-white rounded-xl sm:rounded-2xl border border-neutral-200/90 shadow-[0_2px_8px_rgba(0,0,0,0.03)] card-hover-lift group">
+              <div className="flex items-center gap-3.5 sm:gap-4 p-3 sm:p-4 bg-white rounded-xl sm:rounded-2xl border border-neutral-200/90 shadow-[0_2px_8px_rgba(0,0,0,0.03)] card-hover-lift group">
                 {/* Step Image */}
-                <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-[#FAF8F5] border border-neutral-200 flex-shrink-0">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-[#FAF8F5] border border-neutral-200 flex-shrink-0">
                   <img
                     src={step.image}
                     alt={step.title}
@@ -89,14 +89,14 @@ export default function ManufacturingProcess() {
                 {/* Step Info */}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="w-5.5 h-5.5 sm:w-6 sm:h-6 rounded-full bg-[#195799] text-white text-[11px] sm:text-xs font-bold flex items-center justify-center flex-shrink-0">
+                    <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#195799] text-white text-[10px] sm:text-xs font-bold flex items-center justify-center flex-shrink-0">
                       {step.num}
                     </span>
-                    <h3 className="font-bold text-[14.5px] sm:text-base text-neutral-900 group-hover:text-[#195799] transition-colors truncate">
+                    <h3 className="font-semibold text-xs sm:text-sm text-neutral-900 group-hover:text-[#195799] transition-colors truncate">
                       {step.title}
                     </h3>
                   </div>
-                  <p className="text-[12.5px] sm:text-xs text-neutral-600 font-normal leading-relaxed">
+                  <p className="text-[11px] sm:text-xs text-neutral-600 font-normal leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
