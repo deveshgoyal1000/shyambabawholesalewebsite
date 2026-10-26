@@ -10,6 +10,7 @@ interface ScrollRevealProps {
   distance?: number
   duration?: number
   threshold?: number
+  rootMargin?: string
 }
 
 export default function ScrollReveal({
@@ -18,8 +19,9 @@ export default function ScrollReveal({
   delay = 0,
   direction = 'up',
   distance = 22,
-  duration = 800,
-  threshold = 0.12,
+  duration = 850,
+  threshold = 0.15,
+  rootMargin = '0px 0px -75px 0px',
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
@@ -39,7 +41,7 @@ export default function ScrollReveal({
 
     // Only reveal on mount if element is clearly in the upper half of initial screen
     const rect = el.getBoundingClientRect()
-    const isAboveTheFold = rect.top < window.innerHeight * 0.55 && rect.bottom > 0
+    const isAboveTheFold = rect.top < window.innerHeight * 0.5 && rect.bottom > 0
     if (isAboveTheFold) {
       const timer = setTimeout(() => {
         setIsVisible(true)
@@ -57,15 +59,14 @@ export default function ScrollReveal({
       },
       {
         threshold: threshold,
-        // Negative bottom margin ensures element is well within viewport before revealing
-        rootMargin: '0px 0px -75px 0px',
+        rootMargin: rootMargin,
       }
     )
 
     observer.observe(el)
 
     return () => observer.disconnect()
-  }, [delay, threshold])
+  }, [delay, threshold, rootMargin])
 
   const getTransform = () => {
     if (isVisible) return 'translate3d(0, 0, 0)'

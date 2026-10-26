@@ -52,7 +52,7 @@ export default function ShopByCategories() {
     <section id="categories" className="py-10 md:py-16 bg-[#FAF8F5]">
       <div className="max-w-2xl lg:max-w-6xl mx-auto px-3.5 sm:px-6">
         {/* Section Heading & Subtitle matching Krishaz Wholesale exactly */}
-        <ScrollReveal direction="up" distance={20} duration={650}>
+        <ScrollReveal direction="up" distance={20} duration={850} threshold={0.15}>
           <div className="text-center mb-6 sm:mb-9">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
@@ -76,15 +76,17 @@ export default function ShopByCategories() {
           </div>
         </ScrollReveal>
 
-        {/* Categories Grid: Staggered individual ScrollReveal cards for high-end feel */}
+        {/* Categories Grid: Triggers strictly when each row scrolls into active view on mobile */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5">
           {categories.map((cat, idx) => (
             <ScrollReveal
               key={cat.slug}
               direction="up"
-              distance={24}
-              duration={600}
-              delay={Math.min(idx * 60, 360)}
+              distance={20}
+              duration={850}
+              delay={(idx % 2) * 80}
+              threshold={0.18}
+              rootMargin="0px 0px -60px 0px"
             >
               <Link
                 href={`/collections/${cat.slug}`}
@@ -121,8 +123,8 @@ export default function ShopByCategories() {
           ))}
         </div>
 
-        {/* "View Full Catalog" Maroon Pill Button with ScrollReveal */}
-        <ScrollReveal direction="up" distance={16} delay={200} duration={600}>
+        {/* "View Full Catalog" Pill Button with ScrollReveal */}
+        <ScrollReveal direction="up" distance={18} delay={100} duration={800} threshold={0.15}>
           <div className="mt-8 sm:mt-12 text-center">
             <Link
               href="/collections/all"
