@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useRef, useState, useEffect } from 'react'
-import { ChevronLeft, ChevronRight, Star, CheckCircle2 } from 'lucide-react'
+import { Star, CheckCircle2 } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export default function Testimonials() {
@@ -141,28 +141,12 @@ export default function Testimonials() {
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
-            {/* Desktop Side Navigation Floating Arrows */}
-            <button
-              onClick={scrollPrev}
-              className="hidden lg:flex absolute -left-6 top-[45%] -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-lg border-2 border-[#D8CEBF] text-[#121212] hover:bg-[#195799] hover:text-white hover:border-[#195799] items-center justify-center active:scale-95 transition-all duration-200"
-              aria-label="Previous review"
-            >
-              <ChevronLeft className="w-6 h-6 stroke-[2.2]" />
-            </button>
-            <button
-              onClick={scrollNext}
-              className="hidden lg:flex absolute -right-6 top-[45%] -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white shadow-lg border-2 border-[#D8CEBF] text-[#121212] hover:bg-[#195799] hover:text-white hover:border-[#195799] items-center justify-center active:scale-95 transition-all duration-200"
-              aria-label="Next review"
-            >
-              <ChevronRight className="w-6 h-6 stroke-[2.2]" />
-            </button>
-
             {/* Testimonials Auto-scroll & Swipe Track */}
             <div
               ref={scrollRef}
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}
-              className="flex gap-4 sm:gap-6 overflow-x-auto overflow-y-hidden py-2 px-1 scrollbar-none snap-x snap-mandatory"
+              className="flex gap-4 sm:gap-6 overflow-x-auto overflow-y-hidden py-3 px-1 scrollbar-none snap-x snap-mandatory"
               style={{
                 WebkitOverflowScrolling: 'touch',
                 overscrollBehaviorX: 'contain',
@@ -172,7 +156,7 @@ export default function Testimonials() {
                 <div
                   key={r.id}
                   onClick={() => scrollToIdx(i)}
-                  className={`testimonial-card flex-shrink-0 w-[84vw] max-w-[335px] sm:w-[350px] md:w-[365px] min-h-[320px] sm:min-h-[340px] snap-center bg-white rounded-2xl p-6 sm:p-7 border-2 transition-all duration-300 flex flex-col justify-between cursor-pointer ${
+                  className={`testimonial-card flex-shrink-0 w-[90vw] max-w-[460px] sm:w-[500px] md:w-[560px] lg:w-[600px] min-h-[220px] sm:min-h-[240px] snap-center bg-white rounded-2xl p-6 sm:p-7 border-2 transition-all duration-300 flex flex-col justify-between cursor-pointer ${
                     activeIdx === i
                       ? 'border-[#195799] shadow-[0_8px_24px_rgba(25,87,153,0.14)] scale-[1.01]'
                       : 'border-[#D8CEBF] shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#C9A84C]'
@@ -254,39 +238,18 @@ export default function Testimonials() {
               ))}
             </div>
 
-            {/* Centralized Modern Navigation Bar below cards (Mobile & Desktop) */}
-            <div className="flex items-center justify-center gap-4 mt-8">
-              {/* Prev Button */}
-              <button
-                onClick={scrollPrev}
-                className="w-10 h-10 rounded-full bg-white border-2 border-[#D8CEBF] text-[#121212] hover:bg-[#195799] hover:text-white hover:border-[#195799] active:scale-95 flex items-center justify-center shadow-sm transition-all duration-200"
-                aria-label="Previous review"
-              >
-                <ChevronLeft className="w-5 h-5 stroke-[2]" />
-              </button>
-
-              {/* Indicator Pills with active pulse */}
-              <div className="flex items-center gap-2 px-1">
-                {reviews.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => scrollToIdx(i)}
-                    aria-label={`Go to review ${i + 1}`}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      activeIdx === i ? 'w-8 bg-[#195799]' : 'w-2 bg-neutral-300 hover:bg-neutral-400'
-                    }`}
-                  />
-                ))}
-              </div>
-
-              {/* Next Button */}
-              <button
-                onClick={scrollNext}
-                className="w-10 h-10 rounded-full bg-white border-2 border-[#D8CEBF] text-[#121212] hover:bg-[#195799] hover:text-white hover:border-[#195799] active:scale-95 flex items-center justify-center shadow-sm transition-all duration-200"
-                aria-label="Next review"
-              >
-                <ChevronRight className="w-5 h-5 stroke-[2]" />
-              </button>
+            {/* Sliding Indicator Dots (Auto-scroll progress) */}
+            <div className="flex items-center justify-center gap-2 mt-7">
+              {reviews.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => scrollToIdx(i)}
+                  aria-label={`Go to review ${i + 1}`}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    activeIdx === i ? 'w-8 bg-[#195799]' : 'w-2 bg-neutral-300 hover:bg-neutral-400'
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </ScrollReveal>
