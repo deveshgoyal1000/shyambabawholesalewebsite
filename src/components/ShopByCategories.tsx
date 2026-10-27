@@ -87,7 +87,7 @@ export default function ShopByCategories() {
             >
               <Link
                 href={`/collections/${cat.slug}`}
-                className="group block rounded-xl overflow-hidden bg-white border border-[#EAE3D8] hover:border-[#C9A84C] shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(201,168,76,0.22)] active:scale-[0.98] card-hover-lift"
+                className="group block rounded-2xl overflow-hidden bg-white border-2 border-[#D4C7B4] hover:border-[#195799] shadow-[0_4px_18px_rgba(0,0,0,0.09)] hover:shadow-[0_8px_24px_rgba(25,87,153,0.18)] active:scale-[0.98] transition-all duration-300 card-hover-lift"
                 style={{ WebkitTapHighlightColor: 'transparent' }}
               >
                 {/* Image Container with 4:5 aspect ratio matching Krishaz (padding-bottom: 125%) */}
@@ -100,8 +100,8 @@ export default function ShopByCategories() {
                   />
                 </div>
 
-                {/* Category Name Line Box - Multi-line wrap with Earrings on new line on mobile */}
-                <div className="px-3.5 py-3.5 sm:px-5 sm:py-5 md:py-6 bg-white border-t border-neutral-100 flex items-center justify-between min-h-[70px] sm:min-h-[76px] md:min-h-[82px]">
+                {/* Category Name Line Box - Crisp visible border, multi-line wrap with Earrings on new line */}
+                <div className="px-3.5 py-3.5 sm:px-5 sm:py-5 md:py-6 bg-white border-t-2 border-[#D4C7B4] flex items-center justify-between min-h-[70px] sm:min-h-[76px] md:min-h-[82px]">
                   <div className="flex-1 min-w-0 pr-1.5">
                     <span
                       style={{
@@ -113,7 +113,7 @@ export default function ShopByCategories() {
                       {cat.title.endsWith('Earrings') ? (
                         <>
                           <span className="block">{cat.title.replace(/\s*Earrings$/, '')}</span>
-                          <span className="block sm:inline sm:ml-1 text-[14px] sm:text-[17px] md:text-[18.5px]">
+                          <span className="block sm:inline sm:ml-1 text-[14px] sm:text-[17px] md:text-[18.5px] text-neutral-700 font-medium">
                             Earrings
                           </span>
                         </>
@@ -122,7 +122,7 @@ export default function ShopByCategories() {
                       )}
                     </span>
                   </div>
-                  <span className="text-[#C9A84C] text-[20px] sm:text-[22px] md:text-[24px] font-normal group-hover:translate-x-1.5 transition-transform duration-200 ease-out ml-1 shrink-0">
+                  <span className="text-[#C9A84C] group-hover:text-[#195799] text-[22px] sm:text-[24px] font-bold group-hover:translate-x-1.5 transition-all duration-200 ml-1.5 shrink-0">
                     &rarr;
                   </span>
                 </div>
