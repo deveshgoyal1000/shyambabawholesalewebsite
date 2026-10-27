@@ -45,25 +45,30 @@ export default function Header() {
   }, [mobileMenuOpen])
 
   const navLinks = [
-    { name: 'All Earrings', href: '/collections/earrings' },
-    { name: 'Silver Earrings', href: '/collections/silver-earrings' },
-    { name: 'Premium Earrings', href: '/collections/premium-earrings' },
-    { name: 'Rajwadi', href: '/collections/rajwadi' },
-    { name: 'Ear-chain', href: '/collections/ear-chain' },
-    { name: 'Kundan Earrings', href: '/collections/kundan-earrings' },
-    { name: 'Anti Tarnish', href: '/collections/anti-tarnish' },
-    { name: 'Bangles', href: '/collections/bangles' },
+    { name: 'Earrings', href: '/collections/earrings' },
     { name: 'Necklaces', href: '/collections/necklaces' },
+    { name: 'Bangles', href: '/collections/bangles' },
+    { name: 'Bracelets', href: '/collections/bracelets' },
+    { name: 'Rings', href: '/collections/rings' },
+    { name: 'Kanchain', href: '/collections/kanchain' },
+    { name: 'Pendants', href: '/collections/kundan-pendants' },
+    { name: 'Tika', href: '/collections/kundan-tika' },
+    { name: 'Mangalsutra', href: '/collections/mangalsutra' },
+    { name: 'Tika Combo', href: '/collections/tika-earrings-combo' },
   ]
 
   const moreProductsList = [
     { name: 'All Wholesale Jewellery', href: '/collections/all' },
-    { name: 'Studs & Tops', href: '/collections/studs' },
-    { name: 'Kundan & Jadau', href: '/collections/kundan-earrings' },
-    { name: 'Anti-Tarnish Collection', href: '/collections/anti-tarnish' },
-    { name: 'Bangles & Kadas', href: '/collections/bangles' },
-    { name: 'Necklaces & Sets', href: '/collections/necklaces' },
-    { name: 'New Arrivals (This Week)', href: '/collections/new-arrivals' },
+    { name: 'Earrings (337 Designs)', href: '/collections/earrings' },
+    { name: 'Necklaces (201 Designs)', href: '/collections/necklaces' },
+    { name: 'Bangles (49 Designs)', href: '/collections/bangles' },
+    { name: 'Bracelets (138 Designs)', href: '/collections/bracelets' },
+    { name: 'Finger Rings (134 Designs)', href: '/collections/rings' },
+    { name: 'Kanchain (11 Designs)', href: '/collections/kanchain' },
+    { name: 'Kundan Pendants (87 Designs)', href: '/collections/kundan-pendants' },
+    { name: 'Kundan Tika (55 Designs)', href: '/collections/kundan-tika' },
+    { name: 'Mangalsutra (30 Designs)', href: '/collections/mangalsutra' },
+    { name: 'Tika & Earrings Combo (19 Designs)', href: '/collections/tika-earrings-combo' },
   ]
 
   const internationalList = [
@@ -264,50 +269,59 @@ export default function Header() {
                     className="py-2"
                   >
                     <ul className="text-[16px] sm:text-[17px] font-normal text-[#121212]">
-                      {/* Primary Categories matching Shopify Dawn exact styling */}
+                      {/* Primary Categories matching real catalogue */}
                       <li>
                         <Link
                           href="/collections/earrings"
                           onClick={() => setMobileMenuOpen(false)}
                           className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
                         >
-                          All Earrings
+                          Earrings (8 Subcategories)
                         </Link>
                       </li>
                       <li>
                         <Link
-                          href="/collections/silver-earrings"
+                          href="/collections/necklaces"
                           onClick={() => setMobileMenuOpen(false)}
                           className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
                         >
-                          Silver Earrings
+                          Necklaces (6 Subcategories)
                         </Link>
                       </li>
                       <li>
                         <Link
-                          href="/collections/premium-earrings"
+                          href="/collections/bangles"
                           onClick={() => setMobileMenuOpen(false)}
                           className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
                         >
-                          Premium Earrings
+                          Bangles (2 Subcategories)
                         </Link>
                       </li>
                       <li>
                         <Link
-                          href="/collections/rajwadi"
+                          href="/collections/bracelets"
                           onClick={() => setMobileMenuOpen(false)}
                           className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
                         >
-                          Rajwadi
+                          Bracelets (3 Subcategories)
                         </Link>
                       </li>
                       <li>
                         <Link
-                          href="/collections/ear-chain"
+                          href="/collections/rings"
                           onClick={() => setMobileMenuOpen(false)}
                           className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
                         >
-                          Ear chain
+                          Finger Rings (2 Subcategories)
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/collections/kanchain"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                        >
+                          Kanchain (Ear Chains)
                         </Link>
                       </li>
 
