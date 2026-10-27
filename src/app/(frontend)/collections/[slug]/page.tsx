@@ -45,12 +45,12 @@ export default async function CollectionPage({
         <AnnouncementBar />
         <Header />
 
-        {/* Title Banner with Background */}
-        <div className="w-full bg-[#F3ECE2] border-b border-[#E2D5C3] py-3.5 sm:py-5 px-4 text-center">
+        {/* Title Banner with Theme Blue Background */}
+        <div className="w-full bg-[#195799] border-b-2 border-[#C9A84C] py-3.5 sm:py-5 px-4 text-center shadow-sm">
           <div className="max-w-7xl mx-auto">
             <h1
               style={{ fontFamily: 'Georgia, serif' }}
-              className="fade-in-stagger text-[20px] sm:text-[26px] md:text-[30px] font-bold text-[#1A1A1A] tracking-wide"
+              className="fade-in-stagger text-[20px] sm:text-[26px] md:text-[30px] font-bold text-white tracking-wide"
             >
               All Categories
             </h1>
@@ -115,12 +115,12 @@ export default async function CollectionPage({
       <AnnouncementBar />
       <Header />
 
-      {/* Title Banner with Background */}
-      <div className="w-full bg-[#F3ECE2] border-b border-[#E2D5C3] py-3.5 sm:py-5 px-4 text-center">
+      {/* Title Banner with Theme Blue Background */}
+      <div className="w-full bg-[#195799] border-b-2 border-[#C9A84C] py-3.5 sm:py-5 px-4 text-center shadow-sm">
         <div className="max-w-7xl mx-auto">
           <h1
             style={{ fontFamily: 'Georgia, serif' }}
-            className="fade-in-stagger text-[20px] sm:text-[26px] md:text-[30px] font-bold text-[#1A1A1A] tracking-wide"
+            className="fade-in-stagger text-[20px] sm:text-[26px] md:text-[30px] font-bold text-white tracking-wide"
           >
             {displayName}
           </h1>
