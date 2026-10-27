@@ -7,74 +7,44 @@ import ScrollReveal from '@/components/ScrollReveal'
 export default function ShopByCategories() {
   const categories = [
     {
-      title: 'Earrings',
-      slug: 'earrings',
-      image: '/images/catalog/earrings/meenakari-earrings/meenakari-earrings-001.jpg',
-      count: '337 Designs',
-      subtitle: '8 Subcategories',
+      title: 'Premium Earrings',
+      slug: 'premium-earrings',
+      image: '/images/categories/cat-premium-earrings.jpg',
     },
     {
-      title: 'Necklaces',
-      slug: 'necklaces',
-      image: '/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-001.jpg',
-      count: '201 Designs',
-      subtitle: '6 Subcategories',
+      title: 'Silver Earrings',
+      slug: 'silver-earrings',
+      image: '/images/categories/cat-silver-earrings.jpg',
     },
     {
-      title: 'Bangles',
-      slug: 'bangles',
-      image: '/images/catalog/bangles/american-diamond-bangles/american-diamond-bangles-001.jpg',
-      count: '49 Designs',
-      subtitle: '2 Subcategories',
+      title: 'Studs',
+      slug: 'studs',
+      image: '/images/categories/cat-studs.jpg',
     },
     {
-      title: 'Bracelets',
-      slug: 'bracelets',
-      image: '/images/catalog/bracelets/diamond-bracelets/diamond-bracelets-001.jpg',
-      count: '138 Designs',
-      subtitle: '3 Subcategories',
+      title: 'Kundan',
+      slug: 'kundan-earrings',
+      image: '/images/categories/cat-kundan.jpg',
     },
     {
-      title: 'Finger Rings',
-      slug: 'rings',
-      image: '/images/catalog/rings/diamond-rings/diamond-rings-001.jpg',
-      count: '134 Designs',
-      subtitle: '2 Subcategories',
+      title: 'Rajwadi',
+      slug: 'rajwadi',
+      image: '/images/categories/cat-rajwadi.jpg',
     },
     {
-      title: 'Kanchain',
-      slug: 'kanchain',
-      image: '/images/catalog/kanchain/kanchain-001.jpg',
-      count: '11 Designs',
-      subtitle: 'Direct Catalogue',
+      title: 'Ear-Chain',
+      slug: 'ear-chain',
+      image: '/images/categories/cat-ear-chain.jpg',
     },
     {
-      title: 'Kundan Pendants',
-      slug: 'kundan-pendants',
-      image: '/images/catalog/kundan-pendants/kundan-pendants-001.jpg',
-      count: '87 Designs',
-      subtitle: 'Direct Catalogue',
+      title: 'Anti Tarnish',
+      slug: 'anti-tarnish',
+      image: '/images/categories/cat-anti-tarnish.jpg',
     },
     {
-      title: 'Kundan Tika',
-      slug: 'kundan-tika',
-      image: '/images/catalog/kundan-tika/kundan-tika-001.jpg',
-      count: '55 Designs',
-      subtitle: 'Direct Catalogue',
-    },
-    {
-      title: 'Mangalsutra',
-      slug: 'mangalsutra',
-      image: '/images/catalog/mangalsutra/mangalsutra-001.jpg',
-      count: '30 Designs',
-      subtitle: 'Direct Catalogue',
-    },
-    {
-      title: 'Tika & Earrings Combo',
-      slug: 'tika-earrings-combo',
-      image: '/images/catalog/tika-earrings-combo/tika-earrings-combo-001.jpg',
-      count: '19 Designs',
-      subtitle: 'Direct Catalogue',
+      title: 'New Arrivals',
+      slug: 'new-arrivals',
+      image: '/images/categories/cat-new-arrivals.jpg',
     },
   ]
 
@@ -98,12 +68,12 @@ export default function ShopByCategories() {
               }}
               className="text-[#2C2C2C] text-[14px] sm:text-[16px] font-normal text-center leading-relaxed mt-2.5 sm:mt-3"
             >
-              Explore our 10 authentic wholesale brass jewellery collections
+              Explore our premium brass jewellery collections
             </p>
           </div>
         </ScrollReveal>
 
-        {/* Categories Grid: 2 columns on mobile, 4 columns on desktop */}
+        {/* Categories Grid: Triggers strictly when each row scrolls into active view on mobile */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3.5 sm:gap-4 md:gap-5">
           {categories.map((cat, idx) => (
             <ScrollReveal
@@ -120,7 +90,7 @@ export default function ShopByCategories() {
                 className="group block rounded-2xl overflow-hidden bg-white border-2 border-[#D4C7B4] hover:border-[#195799] shadow-[0_4px_18px_rgba(0,0,0,0.09)] hover:shadow-[0_8px_24px_rgba(25,87,153,0.18)] active:scale-[0.98] transition-all duration-300 card-hover-lift"
                 style={{ WebkitTapHighlightColor: 'transparent' }}
               >
-                {/* Image Container with 4:5 aspect ratio matching Krishaz */}
+                {/* Image Container with 4:5 aspect ratio matching Krishaz (padding-bottom: 125%) */}
                 <div className="relative aspect-[4/5] overflow-hidden bg-[#F7F4EE]">
                   <img
                     src={cat.image}
@@ -128,29 +98,31 @@ export default function ShopByCategories() {
                     className="w-full h-full object-cover card-img-zoom"
                     loading="lazy"
                   />
-                  {/* Item count tag */}
-                  <div className="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-xs text-white text-[10px] sm:text-xs font-semibold px-2 py-0.5 rounded-full">
-                    {cat.count}
-                  </div>
                 </div>
 
-                {/* Category Name Line Box */}
-                <div className="px-3.5 py-3 sm:px-4 sm:py-4 bg-white border-t-2 border-[#D4C7B4] flex items-center justify-between min-h-[64px] sm:min-h-[70px]">
+                {/* Category Name Line Box - Crisp visible border, multi-line wrap with Earrings on new line */}
+                <div className="px-3.5 py-3.5 sm:px-5 sm:py-5 md:py-6 bg-white border-t-2 border-[#D4C7B4] flex items-center justify-between min-h-[70px] sm:min-h-[76px] md:min-h-[82px]">
                   <div className="flex-1 min-w-0 pr-1.5">
                     <span
                       style={{
                         fontFamily:
                           '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                       }}
-                      className="block text-[#121212] font-semibold text-[14px] sm:text-[16px] leading-tight group-hover:text-[#195799] transition-colors duration-200 truncate"
+                      className="block text-[#121212] font-semibold text-[15px] sm:text-[17px] md:text-[18.5px] leading-tight sm:leading-snug group-hover:text-[#195799] transition-colors duration-200"
                     >
-                      {cat.title}
-                    </span>
-                    <span className="text-[11px] text-neutral-500 block mt-0.5 font-normal">
-                      {cat.subtitle}
+                      {cat.title.endsWith('Earrings') ? (
+                        <>
+                          <span className="block">{cat.title.replace(/\s*Earrings$/, '')}</span>
+                          <span className="block sm:inline sm:ml-1 text-[14px] sm:text-[17px] md:text-[18.5px] text-neutral-700 font-medium">
+                            Earrings
+                          </span>
+                        </>
+                      ) : (
+                        <span className="block">{cat.title}</span>
+                      )}
                     </span>
                   </div>
-                  <span className="text-[#C9A84C] group-hover:text-[#195799] text-[20px] sm:text-[22px] font-bold group-hover:translate-x-1 transition-all duration-200 shrink-0">
+                  <span className="text-[#C9A84C] group-hover:text-[#195799] text-[22px] sm:text-[24px] font-bold group-hover:translate-x-1.5 transition-all duration-200 ml-1.5 shrink-0">
                     &rarr;
                   </span>
                 </div>
@@ -159,7 +131,7 @@ export default function ShopByCategories() {
           ))}
         </div>
 
-        {/* "View Full Catalog" Pill Button */}
+        {/* "View Full Catalog" Pill Button - Expanded width matching the two categories' end points */}
         <ScrollReveal direction="up" distance={18} delay={100} duration={800} threshold={0.15}>
           <div className="mt-8 sm:mt-12 text-center w-full">
             <Link

@@ -75,6 +75,35 @@ export function findCategoryOrSubcategory(slug: string): {
 } | undefined {
   const norm = decodeURIComponent(slug).toLowerCase().trim()
 
+  // Homepage Krishaz shortcuts mapping directly to respective subcategories or direct collections
+  const shortcuts: Record<string, { categorySlug: string; subSlug?: string }> = {
+    'premium-earrings': { categorySlug: 'earrings' },
+    'silver-earrings': { categorySlug: 'earrings', subSlug: 'daily-wear-oxydised-earrings' },
+    'studs': { categorySlug: 'earrings', subSlug: 'kundan-studs' },
+    'kundan-earrings': { categorySlug: 'kundan-pendants' },
+    'kundan': { categorySlug: 'kundan-pendants' },
+    'rajwadi': { categorySlug: 'earrings', subSlug: 'meenakari-earrings' },
+    'ear-chain': { categorySlug: 'kanchain' },
+    'anti-tarnish': { categorySlug: 'earrings', subSlug: 'daily-wear-oxydised-earrings' },
+  }
+
+  if (shortcuts[norm]) {
+    const sc = shortcuts[norm]
+    const cat = getCategoryBySlug(sc.categorySlug)
+    if (cat) {
+      if (sc.subSlug && cat.subcategories) {
+        const sub = cat.subcategories.find((s) => s.slug.toLowerCase() === sc.subSlug)
+        if (sub) {
+          return { type: 'subcategory', category: cat, subcategory: sub }
+        }
+      }
+      if (cat.hasSubcategories) {
+        return { type: 'category-with-subs', category: cat }
+      }
+      return { type: 'category-direct', category: cat }
+    }
+  }
+
   // 1. Check if it's a main category
   const mainCat = slugMap.get(norm)
   if (mainCat) {
