@@ -68,31 +68,14 @@ export default function ScrollReveal({
     return () => observer.disconnect()
   }, [delay, threshold, rootMargin])
 
-  const getTransform = () => {
-    if (isVisible) return 'translate3d(0, 0, 0)'
-    switch (direction) {
-      case 'up':
-        return `translate3d(0, ${distance}px, 0)`
-      case 'down':
-        return `translate3d(0, -${distance}px, 0)`
-      case 'left':
-        return `translate3d(${distance}px, 0, 0)`
-      case 'right':
-        return `translate3d(-${distance}px, 0, 0)`
-      case 'none':
-        return 'translate3d(0, 0, 0)'
-    }
-  }
-
   return (
     <div
       ref={ref}
       className={className}
       style={{
         opacity: isVisible ? 1 : 0,
-        transform: getTransform(),
-        transition: `opacity ${duration}ms cubic-bezier(0.22, 1, 0.36, 1) ${delay}ms, transform ${duration}ms cubic-bezier(0.22, 1, 0.36, 1) ${delay}ms`,
-        willChange: 'opacity, transform',
+        transition: `opacity ${duration}ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms`,
+        willChange: 'opacity',
       }}
     >
       {children}

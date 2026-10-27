@@ -259,18 +259,16 @@ h1, h2, h3, h4, .font-serif {
   will-change: box-shadow, border-color;
 }
 
-/* Scroll entrance animations */
+/* Scroll entrance animations - Pure smooth fade in, no below-to-up translation */
 .reveal-init {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 650ms cubic-bezier(0.16, 1, 0.3, 1),
-              transform 650ms cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  transition: opacity 500ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity;
 }
 
 .reveal-visible {
   opacity: 1 !important;
-  transform: translateY(0) !important;
+  transform: none !important;
 }
 
 /* Respect user preferences for reduced motion */
