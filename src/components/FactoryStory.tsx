@@ -16,7 +16,7 @@ export default function FactoryStory() {
             style={{ fontFamily: 'Georgia, serif' }}
             className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] leading-tight mb-2 tracking-[0.5px]"
           >
-            We Don&apos;t Source. We Are<br />Manufacture.
+            <span className="block">We Don&apos;t Source.</span><span className="block">We Are Manufacture.</span>
           </h2>
 
           {/* Gold Accent Divider Bar matching Krishaz */}

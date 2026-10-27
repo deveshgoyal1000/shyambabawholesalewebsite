@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { ProductImage } from '@/lib/catalog'
-import { X, ZoomIn, ChevronLeft, ChevronRight, MessageCircle, Copy, Check } from 'lucide-react'
+import { X, ZoomIn, ChevronLeft, ChevronRight, Copy, Check } from 'lucide-react'
 
 interface CatalogImageGalleryProps {
   images: ProductImage[]
@@ -157,26 +157,14 @@ export default function CatalogImageGallery({
             </button>
           </div>
 
-          {/* Bottom Info Bar: Counter + WhatsApp Inquiry with exact code */}
+          {/* Bottom Info Bar: Counter Only (WhatsApp enquiry removed as requested) */}
           <div
-            className="w-full max-w-md flex items-center justify-between gap-3 text-white py-2 z-10"
+            className="w-full max-w-md flex items-center justify-center text-white py-2 z-10"
             onClick={(e) => e.stopPropagation()}
           >
-            <span className="text-xs text-neutral-400 font-mono">
-              {lightboxIdx + 1} / {images.length} Designs
+            <span className="text-xs text-neutral-400 font-mono tracking-wider">
+              {lightboxIdx + 1} of {images.length} Designs
             </span>
-
-            <a
-              href={`https://wa.me/919680865791?text=${encodeURIComponent(
-                `Hi ShyamBaba Wholesale, I am inquiring about product code: ${activeImage.code} from the ${categoryName} collection.`
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-[#25D366] hover:bg-[#20ba59] active:scale-95 text-white rounded-full text-xs font-semibold shadow-md transition-all"
-            >
-              <MessageCircle className="w-4 h-4 fill-white" />
-              <span>Inquire Code on WhatsApp</span>
-            </a>
           </div>
         </div>
       )}
