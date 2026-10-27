@@ -1,5 +1,6 @@
 import React from 'react'
 import { notFound } from 'next/navigation'
+import AnnouncementBar from '@/components/AnnouncementBar'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingActionButtons from '@/components/FloatingActionButtons'
@@ -41,6 +42,7 @@ export default async function SubcategoryPage({
 
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF8F5] text-[#121212]">
+      <AnnouncementBar />
       <Header />
 
       <main className="flex-1 py-8 sm:py-12">
