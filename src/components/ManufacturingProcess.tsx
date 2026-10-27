@@ -41,7 +41,7 @@ export default function ManufacturingProcess() {
     <section className="py-10 md:py-16 bg-[#FAF8F5]">
       <div className="max-w-4xl mx-auto px-3.5 sm:px-6 lg:px-8">
         {/* Section Heading matching Krishaz exactly */}
-        <ScrollReveal direction="up" distance={20} duration={650}>
+        <ScrollReveal direction="none" distance={0} duration={650}>
           <div className="text-center mb-6 sm:mb-9">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
@@ -70,8 +70,8 @@ export default function ManufacturingProcess() {
           {steps.map((step, idx) => (
             <ScrollReveal
               key={step.num}
-              direction="up"
-              distance={22}
+              direction="none"
+              distance={0}
               duration={550}
               delay={idx * 70}
             >
@@ -104,6 +104,21 @@ export default function ManufacturingProcess() {
             </ScrollReveal>
           ))}
         </div>
+
+        {/* Visit Our Manufacturing Unit Action Button matching Krishaz Wholesale */}
+        <ScrollReveal direction="none" distance={0} delay={200} duration={650}>
+          <div className="mt-8 text-center max-w-xl mx-auto">
+            <a
+              href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20would%20like%20to%20visit%20your%20manufacturing%20unit%20in%20Jaipur."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-tactile w-full inline-flex items-center justify-center py-4 px-6 rounded-xl sm:rounded-2xl bg-[#80142B] hover:bg-[#681023] text-white font-bold text-[16px] sm:text-[18px] tracking-wide shadow-md hover:shadow-lg active:scale-98 transition-all text-center"
+              style={{ WebkitTapHighlightColor: 'transparent' }}
+            >
+              Visit Our Manufacturing Unit
+            </a>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   )

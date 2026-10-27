@@ -141,24 +141,44 @@ export default function InternationalWholesale() {
           </a>
         </div>
 
-        {/* Maroon Trust Bar */}
-        <ScrollReveal direction="up" distance={22} delay={150} duration={650}>
-          <div className="mt-8 sm:mt-10 bg-[#195799] rounded-2xl p-4 sm:p-5 text-white shadow-md border border-[#103b6a]">
-            <div className="grid grid-cols-3 gap-2 text-center divide-x divide-white/20">
-              <div className="px-1 sm:px-2">
-                <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-[#C9A84C] mx-auto mb-1" />
-                <span className="text-[10px] sm:text-xs font-bold block">50+ Countries</span>
-                <span className="text-[8px] sm:text-[10px] text-white/70 block">Direct Export</span>
+        {/* Vibrant International Trust Bar */}
+        <ScrollReveal direction="none" distance={0} delay={100} duration={600}>
+          <div className="mt-6 sm:mt-9 bg-gradient-to-r from-[#124378] via-[#195799] to-[#124378] rounded-2xl p-4 sm:p-6 text-white shadow-lg border-2 border-[#C9A84C]/45">
+            <div className="grid grid-cols-3 gap-2 text-center divide-x divide-white/25">
+              <div className="px-1 sm:px-3 flex flex-col items-center justify-center">
+                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white/15 border border-white/25 flex items-center justify-center mb-1.5 sm:mb-2 shadow-inner">
+                  <Globe className="w-5 h-5 sm:w-6 sm:h-6 text-[#FFD700]" />
+                </div>
+                <span className="text-[12.5px] sm:text-[15px] font-bold text-white block tracking-tight leading-tight">
+                  50+ Countries
+                </span>
+                <span className="text-[10.5px] sm:text-[12px] font-medium text-white/95 block mt-0.5">
+                  Direct Export
+                </span>
               </div>
-              <div className="px-1 sm:px-2">
-                <PackageCheck className="w-4 h-4 sm:w-5 sm:h-5 text-[#C9A84C] mx-auto mb-1" />
-                <span className="text-[10px] sm:text-xs font-bold block">100% Insured</span>
-                <span className="text-[8px] sm:text-[10px] text-white/70 block">Air Cargo</span>
+
+              <div className="px-1 sm:px-3 flex flex-col items-center justify-center">
+                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white/15 border border-white/25 flex items-center justify-center mb-1.5 sm:mb-2 shadow-inner">
+                  <PackageCheck className="w-5 h-5 sm:w-6 sm:h-6 text-[#FFD700]" />
+                </div>
+                <span className="text-[12.5px] sm:text-[15px] font-bold text-white block tracking-tight leading-tight">
+                  100% Insured
+                </span>
+                <span className="text-[10.5px] sm:text-[12px] font-medium text-white/95 block mt-0.5">
+                  Air Cargo
+                </span>
               </div>
-              <div className="px-1 sm:px-2">
-                <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-[#C9A84C] mx-auto mb-1" />
-                <span className="text-[10px] sm:text-xs font-bold block">Customs Clear</span>
-                <span className="text-[8px] sm:text-[10px] text-white/70 block">Documentation</span>
+
+              <div className="px-1 sm:px-3 flex flex-col items-center justify-center">
+                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white/15 border border-white/25 flex items-center justify-center mb-1.5 sm:mb-2 shadow-inner">
+                  <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-[#FFD700]" />
+                </div>
+                <span className="text-[12.5px] sm:text-[15px] font-bold text-white block tracking-tight leading-tight">
+                  Customs Clear
+                </span>
+                <span className="text-[10.5px] sm:text-[12px] font-medium text-white/95 block mt-0.5">
+                  Documentation
+                </span>
               </div>
             </div>
           </div>
