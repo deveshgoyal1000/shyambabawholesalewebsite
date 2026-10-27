@@ -45,16 +45,20 @@ export default async function SubcategoryPage({
       <AnnouncementBar />
       <Header />
 
-      <main className="flex-1 py-8 sm:py-12">
-        <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
-          {/* One Single Subcategory Name - Clean, No Breadcrumbs, No Extra Blog Text */}
+      {/* Title Banner with Background */}
+      <div className="w-full bg-[#F3ECE2] border-b border-[#E2D5C3] py-3.5 sm:py-5 px-4 text-center">
+        <div className="max-w-7xl mx-auto">
           <h1
             style={{ fontFamily: 'Georgia, serif' }}
-            className="fade-in-stagger text-[26px] sm:text-[34px] md:text-[38px] font-normal text-center text-[#121212] mb-8 sm:mb-10 tracking-[0.3px]"
+            className="fade-in-stagger text-[20px] sm:text-[26px] md:text-[30px] font-bold text-[#1A1A1A] tracking-wide"
           >
             {subcategory.name}
           </h1>
+        </div>
+      </div>
 
+      <main className="flex-1 py-6 sm:py-10">
+        <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
           {/* 2-in-one-row Images Gallery */}
           <CatalogImageGallery
             images={subcategory.images}
