@@ -86,14 +86,14 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-[88px] sm:h-28 md:h-32">
           {/* Left: Mobile Hamburger Menu Button - Refined compact icon */}
-          <div className="flex items-center w-11 sm:w-16">
+          <div className="flex items-center w-9 sm:w-12">
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="p-2 -ml-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
+              className="p-2 -ml-1 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
               style={{ WebkitTapHighlightColor: 'transparent' }}
               aria-label="Open navigation menu"
             >
-              <Menu className="w-5.5 h-5.5 sm:w-6.5 sm:h-6.5 stroke-[1.8]" />
+              <Menu className="w-[19px] h-[19px] sm:w-[22px] sm:h-[22px] stroke-[1.7]" />
             </button>
           </div>
 
@@ -114,14 +114,14 @@ export default function Header() {
           </div>
 
           {/* Right: Search button - Refined compact icon */}
-          <div className="flex items-center justify-end w-11 sm:w-16">
+          <div className="flex items-center justify-end w-9 sm:w-12">
             <button
               onClick={() => setSearchOpen(!searchOpen)}
-              className="p-2 -mr-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
+              className="p-2 -mr-1 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform duration-150 focus-visible:outline-none rounded-lg"
               style={{ WebkitTapHighlightColor: 'transparent' }}
               aria-label="Search"
             >
-              <Search className="w-5.5 h-5.5 sm:w-6.5 sm:h-6.5 stroke-[1.8]" />
+              <Search className="w-[19px] h-[19px] sm:w-[22px] sm:h-[22px] stroke-[1.7]" />
             </button>
           </div>
         </div>
