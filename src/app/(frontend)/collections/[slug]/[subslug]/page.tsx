@@ -48,7 +48,7 @@ export default async function SubcategoryPage({
           {/* One Single Subcategory Name - Clean, No Breadcrumbs, No Extra Blog Text */}
           <h1
             style={{ fontFamily: 'Georgia, serif' }}
-            className="text-[26px] sm:text-[34px] md:text-[38px] font-normal text-center text-[#121212] mb-8 sm:mb-10 tracking-[0.3px]"
+            className="fade-in-stagger text-[26px] sm:text-[34px] md:text-[38px] font-normal text-center text-[#121212] mb-8 sm:mb-10 tracking-[0.3px]"
           >
             {subcategory.name}
           </h1>

@@ -49,8 +49,11 @@ export default function CatalogImageGallery({
           <div
             key={item.id}
             onClick={() => setLightboxIdx(idx)}
-            className="group cursor-pointer bg-white rounded-xl sm:rounded-2xl border border-[#EAE3D8] hover:border-[#195799] shadow-[0_2px_10px_rgba(0,0,0,0.04)] hover:shadow-[0_6px_20px_rgba(25,87,153,0.12)] transition-all duration-200 overflow-hidden flex flex-col justify-between"
-            style={{ WebkitTapHighlightColor: 'transparent' }}
+            className="fade-in-stagger group cursor-pointer bg-white rounded-xl sm:rounded-2xl border border-[#EAE3D8] hover:border-[#195799] shadow-[0_2px_10px_rgba(0,0,0,0.04)] hover:shadow-[0_6px_20px_rgba(25,87,153,0.12)] transition-all duration-200 overflow-hidden flex flex-col justify-between"
+            style={{
+              animationDelay: `${Math.min(idx * 35, 650)}ms`,
+              WebkitTapHighlightColor: 'transparent',
+            }}
           >
             {/* Image Container with 4:5 aspect ratio */}
             <div className="relative aspect-[4/5] bg-[#F7F4EE] overflow-hidden">
@@ -109,7 +112,7 @@ export default function CatalogImageGallery({
           >
             <div>
               <span className="text-xs text-neutral-400 block">
-                {parentCategoryName ? `${parentCategoryName} &bull; ` : ''}
+                {parentCategoryName ? `${parentCategoryName} • ` : ''}
                 {categoryName}
               </span>
               <span className="text-lg sm:text-xl font-bold font-mono text-white tracking-wide">
@@ -155,16 +158,6 @@ export default function CatalogImageGallery({
             >
               <ChevronRight className="w-6 h-6 stroke-[2.2]" />
             </button>
-          </div>
-
-          {/* Bottom Info Bar: Counter Only (WhatsApp enquiry removed as requested) */}
-          <div
-            className="w-full max-w-md flex items-center justify-center text-white py-2 z-10"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <span className="text-xs text-neutral-400 font-mono tracking-wider">
-              {lightboxIdx + 1} of {images.length} Designs
-            </span>
           </div>
         </div>
       )}

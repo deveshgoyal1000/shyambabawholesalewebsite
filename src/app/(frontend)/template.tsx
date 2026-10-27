@@ -10,8 +10,11 @@ export default function RootTemplate({
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    // Instantly ensure top scroll position on page change
+    // Disable automatic browser scroll restoration to prevent bottom-to-up scroll jumps
     if (typeof window !== 'undefined') {
+      if ('scrollRestoration' in window.history) {
+        window.history.scrollRestoration = 'manual'
+      }
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior })
       document.documentElement.scrollTop = 0
       document.body.scrollTop = 0

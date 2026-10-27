@@ -48,18 +48,22 @@ export default async function CollectionPage({
             {/* Single Page Title */}
             <h1
               style={{ fontFamily: 'Georgia, serif' }}
-              className="text-[26px] sm:text-[34px] md:text-[38px] font-normal text-center text-[#121212] mb-8 sm:mb-10"
+              className="fade-in-stagger text-[26px] sm:text-[34px] md:text-[38px] font-normal text-center text-[#121212] mb-8 sm:mb-10"
             >
               All Categories
             </h1>
 
             {/* Grid of Main Categories */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3.5 sm:gap-5">
-              {allCategories.map((cat) => (
+              {allCategories.map((cat, idx) => (
                 <Link
                   key={cat.slug}
                   href={`/collections/${cat.slug}`}
-                  className="group block rounded-2xl overflow-hidden bg-white border-2 border-[#D4C7B4] hover:border-[#195799] shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(25,87,153,0.16)] transition-all duration-300 card-hover-lift"
+                  className="fade-in-stagger group block rounded-2xl overflow-hidden bg-white border-2 border-[#D4C7B4] hover:border-[#195799] shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(25,87,153,0.16)] transition-all duration-300 card-hover-lift"
+                  style={{
+                    animationDelay: `${idx * 45}ms`,
+                    WebkitTapHighlightColor: 'transparent',
+                  }}
                 >
                   <div className="relative aspect-[4/5] overflow-hidden bg-[#F7F4EE]">
                     {cat.coverImage && (
@@ -109,7 +113,7 @@ export default async function CollectionPage({
           {/* One Single Category/Subcategory Name - Clean, No Breadcrumbs, No Extra Blog Text */}
           <h1
             style={{ fontFamily: 'Georgia, serif' }}
-            className="text-[26px] sm:text-[34px] md:text-[38px] font-normal text-center text-[#121212] mb-8 sm:mb-10 tracking-[0.3px]"
+            className="fade-in-stagger text-[26px] sm:text-[34px] md:text-[38px] font-normal text-center text-[#121212] mb-8 sm:mb-10 tracking-[0.3px]"
           >
             {displayName}
           </h1>
@@ -121,8 +125,11 @@ export default async function CollectionPage({
                 <Link
                   key={sub.slug}
                   href={`/collections/${category.slug}/${sub.slug}`}
-                  className="group block rounded-2xl overflow-hidden bg-white border-2 border-[#D4C7B4] hover:border-[#195799] shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(25,87,153,0.16)] transition-all duration-300 card-hover-lift"
-                  style={{ WebkitTapHighlightColor: 'transparent' }}
+                  className="fade-in-stagger group block rounded-2xl overflow-hidden bg-white border-2 border-[#D4C7B4] hover:border-[#195799] shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(25,87,153,0.16)] transition-all duration-300 card-hover-lift"
+                  style={{
+                    animationDelay: `${idx * 45}ms`,
+                    WebkitTapHighlightColor: 'transparent',
+                  }}
                 >
                   {/* Image Container 4:5 aspect ratio */}
                   <div className="relative aspect-[4/5] overflow-hidden bg-[#F7F4EE]">

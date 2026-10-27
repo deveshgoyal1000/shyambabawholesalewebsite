@@ -144,10 +144,8 @@ export default function AnnouncementBar() {
 
           {/* Current Announcement Content */}
           <div
-            className={`flex items-center justify-center gap-2 px-1 transition-all duration-200 ${
-              isTransitioning
-                ? 'opacity-0 -translate-y-1 scale-98'
-                : 'opacity-100 translate-y-0 scale-100'
+            className={`flex items-center justify-center gap-2 px-1 transition-opacity duration-200 ${
+              isTransitioning ? 'opacity-0' : 'opacity-100'
             }`}
           >
             <current.Icon className={`w-4 h-4 ${current.iconColor} flex-shrink-0`} />

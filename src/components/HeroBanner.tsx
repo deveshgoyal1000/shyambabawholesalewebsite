@@ -61,10 +61,10 @@ export default function HeroBanner() {
       <div className="relative z-10 max-w-xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-10 flex flex-col items-center flex-1 justify-center">
         {/* Pre-heading: India's Trusted (Clean, elegant serif matching Krishaz) */}
         <div
-          className={`flex flex-col items-center mb-2 sm:mb-2.5 transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
-            mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          className={`flex flex-col items-center mb-2 sm:mb-2.5 transition-opacity duration-600 ease-[cubic-bezier(0.19,1,0.22,1)] ${
+            mounted ? 'opacity-100' : 'opacity-0'
           }`}
-          style={{ transitionDelay: '100ms' }}
+          style={{ transitionDelay: '80ms' }}
         >
           <span
             style={{ fontFamily: 'Georgia, serif' }}
@@ -77,9 +77,9 @@ export default function HeroBanner() {
         {/* Main Headline: Two-line Serif matching Krishaz */}
         <div className="mb-3.5 sm:mb-4.5">
           <h1
-            style={{ fontFamily: 'Georgia, serif', transitionDelay: '240ms' }}
-            className={`text-[32px] sm:text-[44px] md:text-5xl lg:text-[56px] font-bold tracking-tight text-white leading-[1.2] transition-all duration-800 ease-[cubic-bezier(0.19,1,0.22,1)] ${
-              mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            style={{ fontFamily: 'Georgia, serif', transitionDelay: '200ms' }}
+            className={`text-[32px] sm:text-[44px] md:text-5xl lg:text-[56px] font-bold tracking-tight text-white leading-[1.2] transition-opacity duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
+              mounted ? 'opacity-100' : 'opacity-0'
             }`}
           >
             <span>Brass Jewellery Manufacturer</span>
@@ -90,10 +90,10 @@ export default function HeroBanner() {
 
         {/* Subtitle with generous size matching Krishaz */}
         <p
-          className={`text-[16px] sm:text-[18px] md:text-[19px] text-[#FAF8F5]/95 max-w-md sm:max-w-lg mx-auto mb-7 sm:mb-9 font-normal leading-relaxed transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
-            mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          className={`text-[16px] sm:text-[18px] md:text-[19px] text-[#FAF8F5]/95 max-w-md sm:max-w-lg mx-auto mb-7 sm:mb-9 font-normal leading-relaxed transition-opacity duration-600 ease-[cubic-bezier(0.19,1,0.22,1)] ${
+            mounted ? 'opacity-100' : 'opacity-0'
           }`}
-          style={{ transitionDelay: '380ms' }}
+          style={{ transitionDelay: '320ms' }}
         >
           Supplying 10,000+ Retailers, Boutiques &amp; Resellers<br className="hidden sm:inline" />
           {' '}Across 50+ Countries.
@@ -104,10 +104,10 @@ export default function HeroBanner() {
           {points.map((pt, idx) => (
             <div
               key={pt}
-              className={`flex items-center gap-3.5 transition-all duration-600 ease-[cubic-bezier(0.19,1,0.22,1)] cursor-default ${
-                mounted ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'
+              className={`flex items-center gap-3.5 transition-opacity duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] cursor-default ${
+                mounted ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{ transitionDelay: `${450 + idx * 80}ms` }}
+              style={{ transitionDelay: `${420 + idx * 80}ms` }}
             >
               {/* Circular Gold Icon: 34-36px diameter, prominent check */}
               <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border-[1.5px] border-[#C9A84C] flex items-center justify-center text-[#C9A84C] flex-shrink-0 bg-black/35 shadow-sm">
@@ -124,12 +124,10 @@ export default function HeroBanner() {
 
         {/* Action Buttons: Full-width stacked pills - Bigger size & generous padding */}
         <div
-          className={`w-full max-w-[340px] sm:max-w-[380px] space-y-3.5 sm:space-y-4 transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
-            mounted
-              ? 'opacity-100 translate-y-0 scale-100'
-              : 'opacity-0 translate-y-5 scale-95'
+          className={`w-full max-w-[340px] sm:max-w-[380px] space-y-3.5 sm:space-y-4 transition-opacity duration-600 ease-[cubic-bezier(0.19,1,0.22,1)] ${
+            mounted ? 'opacity-100' : 'opacity-0'
           }`}
-          style={{ transitionDelay: '800ms' }}
+          style={{ transitionDelay: '780ms' }}
         >
           {/* Button 1: Solid Royal Blue Pill Button */}
           <a
@@ -152,10 +150,10 @@ export default function HeroBanner() {
 
         {/* Bottom Social Proof matching Krishaz */}
         <p
-          className={`text-[13px] sm:text-[14px] text-[#FAF8F5]/90 mt-7 sm:mt-8 font-normal transition-all duration-700 ${
+          className={`text-[13px] sm:text-[14px] text-[#FAF8F5]/90 mt-7 sm:mt-8 font-normal transition-opacity duration-600 ${
             mounted ? 'opacity-100' : 'opacity-0'
           }`}
-          style={{ transitionDelay: '950ms' }}
+          style={{ transitionDelay: '920ms' }}
         >
           Trusted by 10,000+ Retailers Across 50+ Countries
         </p>
@@ -163,10 +161,10 @@ export default function HeroBanner() {
 
       {/* Desktop-only Trust Statistics Bar (Hidden on mobile just like Krishaz) */}
       <div
-        className={`hidden sm:block relative z-10 w-full bg-[#150408]/90 border-t border-[#C9A84C]/30 py-4 transition-all duration-800 ease-[cubic-bezier(0.19,1,0.22,1)] ${
-          mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+        className={`hidden sm:block relative z-10 w-full bg-[#150408]/90 border-t border-[#C9A84C]/30 py-4 transition-opacity duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
+          mounted ? 'opacity-100' : 'opacity-0'
         }`}
-        style={{ transitionDelay: '1000ms' }}
+        style={{ transitionDelay: '1020ms' }}
       >
         <div className="max-w-4xl mx-auto px-4 flex items-center justify-around text-center">
           <div className="px-6 flex-1">

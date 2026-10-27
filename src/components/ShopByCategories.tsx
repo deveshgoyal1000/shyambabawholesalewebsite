@@ -78,12 +78,12 @@ export default function ShopByCategories() {
           {categories.map((cat, idx) => (
             <ScrollReveal
               key={cat.slug}
-              direction="up"
-              distance={20}
-              duration={850}
-              delay={(idx % 2) * 80}
-              threshold={0.18}
-              rootMargin="0px 0px -60px 0px"
+              direction="none"
+              distance={0}
+              duration={600}
+              delay={idx * 60}
+              threshold={0.12}
+              rootMargin="0px 0px -40px 0px"
             >
               <Link
                 href={`/collections/${cat.slug}`}
