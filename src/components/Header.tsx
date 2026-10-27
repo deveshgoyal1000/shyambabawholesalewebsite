@@ -1,20 +1,27 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import Link from 'next/link'
 import {
   Menu,
   X,
   Search,
   ChevronLeft,
+  ChevronRight,
   MessageCircle,
 } from 'lucide-react'
 
 export default function Header() {
+  const [mounted, setMounted] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeSubmenu, setActiveSubmenu] = useState<'more-products' | 'international' | null>(null)
   const [searchOpen, setSearchOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -180,285 +187,294 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* Mobile Drawer Menu - EXACT Shopify Dawn / Krishaz Theme Layout & Animations */}
-      <div
-        className={`fixed inset-0 z-50 bg-black/45 backdrop-blur-[1px] lg:hidden transition-opacity duration-300 ease-out ${
-          mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
-        onClick={() => setMobileMenuOpen(false)}
-      >
-        <div
-          className={`w-[85%] max-w-[360px] h-full bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
-            mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
-          }`}
-          onClick={(e) => e.stopPropagation()}
-        >
-          {/* Top Bar of Drawer - Matches Screenshot: Close 'X' on left, Logo in center, Search & Bag on right */}
-          <div className="flex items-center justify-between px-4 sm:px-6 h-[72px] sm:h-20 border-b border-[#ECE6DC] bg-white flex-shrink-0">
-            {/* Left: Close X button */}
-            <button
+      {/* Mobile Drawer Menu - Teleported to document.body to avoid header backdrop-blur trapping bug */}
+      {mounted &&
+        createPortal(
+          <div
+            className={`fixed inset-0 z-[9999] lg:hidden transition-all duration-300 ${
+              mobileMenuOpen ? 'visible pointer-events-auto' : 'invisible pointer-events-none'
+            }`}
+            aria-hidden={!mobileMenuOpen}
+          >
+            {/* Dark Backdrop Overlay */}
+            <div
+              className={`fixed inset-0 bg-black/55 backdrop-blur-[2px] transition-opacity duration-300 ease-out ${
+                mobileMenuOpen ? 'opacity-100' : 'opacity-0'
+              }`}
               onClick={() => setMobileMenuOpen(false)}
-              className="p-2 -ml-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform rounded-lg focus-visible:outline-none"
-              style={{ WebkitTapHighlightColor: 'transparent' }}
-              aria-label="Close menu"
-            >
-              <X className="w-6 h-6 stroke-[1.8]" />
-            </button>
+            />
 
-            {/* Center: Brand Name matching Header */}
-            <div className="flex-1 flex justify-center text-center px-1">
-              <Link
-                href="/"
-                onClick={() => setMobileMenuOpen(false)}
-                className="select-none py-1"
-                style={{ WebkitTapHighlightColor: 'transparent' }}
-              >
-                <span
-                  style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
-                  className="text-[20px] sm:text-[22px] font-normal tracking-tight text-[#111111] leading-none"
-                >
-                  ShyamBabaWholesale
-                </span>
-              </Link>
-            </div>
-
-            {/* Right: Search Icon */}
-            <div className="flex items-center -mr-2">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false)
-                  setSearchOpen(true)
-                }}
-                className="p-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform"
-                style={{ WebkitTapHighlightColor: 'transparent' }}
-                aria-label="Search catalogue"
-              >
-                <Search className="w-5 h-5 stroke-[1.8]" />
-              </button>
-            </div>
-          </div>
-
-          {/* Drawer Body with Shopify Two-Level Sliding Navigation */}
-          <div className="relative flex-1 overflow-hidden">
-            {/* 1. Main Menu Level */}
+            {/* Slide-out Drawer Panel */}
             <div
-              className={`absolute inset-0 overflow-y-auto pb-8 transition-transform duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
-                activeSubmenu ? '-translate-x-full pointer-events-none' : 'translate-x-0'
+              className={`fixed top-0 bottom-0 left-0 w-[85%] max-w-[340px] sm:max-w-[360px] h-full h-[100dvh] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] z-10 ${
+                mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
               }`}
+              style={{
+                paddingTop: 'env(safe-area-inset-top, 0px)',
+                paddingBottom: 'env(safe-area-inset-bottom, 0px)',
+              }}
+              onClick={(e) => e.stopPropagation()}
             >
-              <nav
-                style={{ fontFamily: "'Assistant', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}
-                className="py-2"
-              >
-                <ul className="text-[16px] sm:text-[17px] font-normal text-[#121212]">
-                  {/* Primary Categories from Screenshot */}
-                  <li>
-                    <Link
-                      href="/collections/earrings"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
-                    >
-                      All Earrings
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/collections/silver-earrings"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
-                    >
-                      Silver Earrings
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/collections/premium-earrings"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
-                    >
-                      Premium Earrings
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/collections/rajwadi"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
-                    >
-                      Rajwadi
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/collections/ear-chain"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
-                    >
-                      Ear-chain
-                    </Link>
-                  </li>
-
-                  {/* More Products with Slide-in Chevron matching Screenshot */}
-                  <li>
-                    <button
-                      onClick={() => setActiveSubmenu('more-products')}
-                      className="w-full flex items-center justify-between py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors text-left focus-visible:outline-none"
-                      style={{ WebkitTapHighlightColor: 'transparent' }}
-                    >
-                      <span>More Products</span>
-                      <span className="text-neutral-500 font-normal text-[17px]">&rarr;</span>
-                    </button>
-                  </li>
-
-                  {/* International Buyers with Slide-in Chevron matching Screenshot */}
-                  <li>
-                    <button
-                      onClick={() => setActiveSubmenu('international')}
-                      className="w-full flex items-center justify-between py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors text-left focus-visible:outline-none"
-                      style={{ WebkitTapHighlightColor: 'transparent' }}
-                    >
-                      <span>International Buyers</span>
-                      <span className="text-neutral-500 font-normal text-[17px]">&rarr;</span>
-                    </button>
-                  </li>
-
-                  {/* Book Video Call matching Screenshot */}
-                  <li>
-                    <a
-                      href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20book%20a%20live%20video%20call%20for%20wholesale%20selection"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="flex items-center justify-between py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
-                    >
-                      <span>Book Video Call</span>
-                    </a>
-                  </li>
-
-                  {/* FAQs matching Screenshot */}
-                  <li>
-                    <Link
-                      href="/#faq"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
-                    >
-                      FAQs
-                    </Link>
-                  </li>
-
-                  {/* Resources matching Screenshot */}
-                  <li>
-                    <Link
-                      href="/#about"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
-                    >
-                      Resources
-                    </Link>
-                  </li>
-
-                  {/* About us matching Screenshot */}
-                  <li>
-                    <Link
-                      href="/#about"
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
-                    >
-                      About us
-                    </Link>
-                  </li>
-                </ul>
-
-                {/* Bottom Section - Direct WhatsApp Support */}
-                <div className="mt-6 pt-6 border-t border-neutral-100 px-6 sm:px-8">
-                  {/* Direct Contact Button */}
-                  <a
-                    href="https://wa.me/919680865791"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full py-3.5 px-4 bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.985] text-white rounded-full flex items-center justify-center gap-2 font-semibold text-[13.5px] shadow-sm transition-all"
+              {/* Top Bar of Drawer: Close 'X' on left, Brand in center, empty spacer on right to keep brand centered */}
+              <div className="flex items-center justify-between px-4 sm:px-6 h-[72px] sm:h-20 border-b border-[#ECE6DC] bg-white flex-shrink-0">
+                {/* Left: Close X button */}
+                <div className="flex items-center w-10">
+                  <button
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="p-2 -ml-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform rounded-lg focus-visible:outline-none"
+                    style={{ WebkitTapHighlightColor: 'transparent' }}
+                    aria-label="Close menu"
                   >
-                    <MessageCircle className="w-4 h-4 fill-white" />
-                    <span>WhatsApp Order Support</span>
-                  </a>
+                    <X className="w-6 h-6 stroke-[1.8]" />
+                  </button>
                 </div>
-              </nav>
-            </div>
 
-            {/* 2. Submenu Level: More Products (Shopify Dawn Slide-in Animation) */}
-            <div
-              className={`absolute inset-0 overflow-y-auto pb-8 bg-white transition-transform duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
-                activeSubmenu === 'more-products' ? 'translate-x-0' : 'translate-x-full pointer-events-none'
-              }`}
-            >
-              <div className="py-2">
-                {/* Back Button matching Shopify Dawn */}
-                <button
-                  onClick={() => setActiveSubmenu(null)}
-                  className="w-full flex items-center gap-2.5 py-4 px-6 sm:px-8 text-[15px] font-semibold text-[#121212] border-b border-neutral-100 hover:text-[#195799] hover:bg-neutral-50 transition-colors focus-visible:outline-none"
-                  style={{ WebkitTapHighlightColor: 'transparent' }}
-                >
-                  <ChevronLeft className="w-5 h-5 stroke-[2]" />
-                  <span>More Products</span>
-                </button>
+                {/* Center: Brand Name */}
+                <div className="flex-1 flex justify-center text-center px-1">
+                  <Link
+                    href="/"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="select-none py-1"
+                    style={{ WebkitTapHighlightColor: 'transparent' }}
+                  >
+                    <span
+                      style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
+                      className="text-[20px] sm:text-[22px] font-normal tracking-tight text-[#111111] leading-none"
+                    >
+                      ShyamBabaWholesale
+                    </span>
+                  </Link>
+                </div>
 
-                <ul
-                  style={{ fontFamily: "'Assistant', -apple-system, sans-serif" }}
-                  className="text-[16px] font-normal text-[#121212] py-2"
+                {/* Right: Balanced Empty Spacer (Search icon removed as requested) */}
+                <div className="w-10" aria-hidden="true" />
+              </div>
+
+              {/* Drawer Body with Shopify Two-Level Sliding Navigation */}
+              <div className="relative flex-1 overflow-hidden">
+                {/* 1. Main Menu Level */}
+                <div
+                  className={`absolute inset-0 overflow-y-auto overscroll-contain pb-12 transition-transform duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
+                    activeSubmenu ? '-translate-x-full pointer-events-none' : 'translate-x-0'
+                  }`}
+                  style={{ WebkitOverflowScrolling: 'touch' }}
                 >
-                  {moreProductsList.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="block py-3 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                  <nav
+                    style={{ fontFamily: "'Assistant', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}
+                    className="py-2"
+                  >
+                    <ul className="text-[16px] sm:text-[17px] font-normal text-[#121212]">
+                      {/* Primary Categories matching Shopify Dawn exact styling */}
+                      <li>
+                        <Link
+                          href="/collections/earrings"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                        >
+                          All Earrings
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/collections/silver-earrings"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                        >
+                          Silver Earrings
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/collections/premium-earrings"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                        >
+                          Premium Earrings
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/collections/rajwadi"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                        >
+                          Rajwadi
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/collections/ear-chain"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                        >
+                          Ear chain
+                        </Link>
+                      </li>
+
+                      {/* More Products with Slide-in Chevron matching Shopify Dawn */}
+                      <li>
+                        <button
+                          onClick={() => setActiveSubmenu('more-products')}
+                          className="w-full flex items-center justify-between py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors text-left focus-visible:outline-none"
+                          style={{ WebkitTapHighlightColor: 'transparent' }}
+                        >
+                          <span>More Products</span>
+                          <ChevronRight className="w-4 h-4 text-neutral-400 stroke-[2]" />
+                        </button>
+                      </li>
+
+                      {/* International Buyers with Slide-in Chevron matching Shopify Dawn */}
+                      <li>
+                        <button
+                          onClick={() => setActiveSubmenu('international')}
+                          className="w-full flex items-center justify-between py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors text-left focus-visible:outline-none"
+                          style={{ WebkitTapHighlightColor: 'transparent' }}
+                        >
+                          <span>International Buyers</span>
+                          <ChevronRight className="w-4 h-4 text-neutral-400 stroke-[2]" />
+                        </button>
+                      </li>
+
+                      {/* Book Video Call matching Screenshot */}
+                      <li>
+                        <a
+                          href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20book%20a%20live%20video%20call%20for%20wholesale%20selection"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="flex items-center justify-between py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                        >
+                          <span>Book Video Call</span>
+                        </a>
+                      </li>
+
+                      {/* FAQs matching Screenshot */}
+                      <li>
+                        <Link
+                          href="/#faq"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                        >
+                          FAQs
+                        </Link>
+                      </li>
+
+                      {/* Resources matching Screenshot */}
+                      <li>
+                        <Link
+                          href="/#about"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                        >
+                          Resources
+                        </Link>
+                      </li>
+
+                      {/* About us matching Screenshot */}
+                      <li>
+                        <Link
+                          href="/#about"
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="block py-3.5 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                        >
+                          About us
+                        </Link>
+                      </li>
+                    </ul>
+
+                    {/* Bottom Section - Direct WhatsApp Support */}
+                    <div className="mt-6 pt-6 pb-6 border-t border-neutral-100 px-6 sm:px-8">
+                      <a
+                        href="https://wa.me/919680865791"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full py-3.5 px-4 bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.985] text-white rounded-full flex items-center justify-center gap-2 font-semibold text-[13.5px] shadow-sm transition-all"
                       >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                        <MessageCircle className="w-4 h-4 fill-white" />
+                        <span>WhatsApp Order Support</span>
+                      </a>
+                    </div>
+                  </nav>
+                </div>
+
+                {/* 2. Submenu Level: More Products (Shopify Dawn Slide-in Animation) */}
+                <div
+                  className={`absolute inset-0 overflow-y-auto overscroll-contain pb-12 bg-white transition-transform duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
+                    activeSubmenu === 'more-products' ? 'translate-x-0' : 'translate-x-full pointer-events-none'
+                  }`}
+                  style={{ WebkitOverflowScrolling: 'touch' }}
+                >
+                  <div className="py-2">
+                    {/* Back Button matching Shopify Dawn */}
+                    <button
+                      onClick={() => setActiveSubmenu(null)}
+                      className="w-full flex items-center gap-2.5 py-4 px-6 sm:px-8 text-[15px] font-semibold text-[#121212] border-b border-neutral-100 hover:text-[#195799] hover:bg-neutral-50 transition-colors focus-visible:outline-none"
+                      style={{ WebkitTapHighlightColor: 'transparent' }}
+                    >
+                      <ChevronLeft className="w-5 h-5 stroke-[2]" />
+                      <span>More Products</span>
+                    </button>
+
+                    <ul
+                      style={{ fontFamily: "'Assistant', -apple-system, sans-serif" }}
+                      className="text-[16px] font-normal text-[#121212] py-2"
+                    >
+                      {moreProductsList.map((item) => (
+                        <li key={item.name}>
+                          <Link
+                            href={item.href}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="block py-3 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                {/* 3. Submenu Level: International Buyers (Shopify Dawn Slide-in Animation) */}
+                <div
+                  className={`absolute inset-0 overflow-y-auto overscroll-contain pb-12 bg-white transition-transform duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
+                    activeSubmenu === 'international' ? 'translate-x-0' : 'translate-x-full pointer-events-none'
+                  }`}
+                  style={{ WebkitOverflowScrolling: 'touch' }}
+                >
+                  <div className="py-2">
+                    {/* Back Button matching Shopify Dawn */}
+                    <button
+                      onClick={() => setActiveSubmenu(null)}
+                      className="w-full flex items-center gap-2.5 py-4 px-6 sm:px-8 text-[15px] font-semibold text-[#121212] border-b border-neutral-100 hover:text-[#195799] hover:bg-neutral-50 transition-colors focus-visible:outline-none"
+                      style={{ WebkitTapHighlightColor: 'transparent' }}
+                    >
+                      <ChevronLeft className="w-5 h-5 stroke-[2]" />
+                      <span>International Buyers</span>
+                    </button>
+
+                    <ul
+                      style={{ fontFamily: "'Assistant', -apple-system, sans-serif" }}
+                      className="text-[16px] font-normal text-[#121212] py-2"
+                    >
+                      {internationalList.map((item) => (
+                        <li key={item.name}>
+                          <Link
+                            href={item.href}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="block py-3 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-
-            {/* 3. Submenu Level: International Buyers (Shopify Dawn Slide-in Animation) */}
-            <div
-              className={`absolute inset-0 overflow-y-auto pb-8 bg-white transition-transform duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
-                activeSubmenu === 'international' ? 'translate-x-0' : 'translate-x-full pointer-events-none'
-              }`}
-            >
-              <div className="py-2">
-                {/* Back Button matching Shopify Dawn */}
-                <button
-                  onClick={() => setActiveSubmenu(null)}
-                  className="w-full flex items-center gap-2.5 py-4 px-6 sm:px-8 text-[15px] font-semibold text-[#121212] border-b border-neutral-100 hover:text-[#195799] hover:bg-neutral-50 transition-colors focus-visible:outline-none"
-                  style={{ WebkitTapHighlightColor: 'transparent' }}
-                >
-                  <ChevronLeft className="w-5 h-5 stroke-[2]" />
-                  <span>International Buyers</span>
-                </button>
-
-                <ul
-                  style={{ fontFamily: "'Assistant', -apple-system, sans-serif" }}
-                  className="text-[16px] font-normal text-[#121212] py-2"
-                >
-                  {internationalList.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="block py-3 px-6 sm:px-8 hover:bg-neutral-50 active:bg-neutral-100 transition-colors"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+          </div>,
+          document.body
+        )}
     </header>
   )
 }

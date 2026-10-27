@@ -6,7 +6,7 @@ export default function FloatingActionButtons() {
   return (
     <>
       {/* Floating Bottom Left: Rich Burgundy "Book Video Call" Pill Button matching Krishaz exactly */}
-      <div className="fixed bottom-5 sm:bottom-7 left-4 sm:left-6 z-50">
+      <div className="fixed bottom-5 sm:bottom-7 left-4 sm:left-6 z-30">
         <div className="relative inline-flex items-center justify-center">
           {/* Subtle radiating pulse rings */}
           <span className="absolute w-full h-full rounded-full border-2 border-[#103b6a] opacity-40 animate-ping pointer-events-none scale-105 duration-1000"></span>
@@ -47,7 +47,7 @@ export default function FloatingActionButtons() {
       </div>
 
       {/* Floating Bottom Right: Glowing Green WhatsApp Circular Button matching Krishaz exactly */}
-      <div className="fixed bottom-5 sm:bottom-7 right-4 sm:left-auto sm:right-6 z-50">
+      <div className="fixed bottom-5 sm:bottom-7 right-4 sm:left-auto sm:right-6 z-30">
         <div className="relative inline-flex items-center justify-center">
           {/* Subtle pulse ring */}
           <span className="absolute w-full h-full rounded-full bg-[#25D366] opacity-30 animate-ping pointer-events-none scale-110 duration-1000"></span>
