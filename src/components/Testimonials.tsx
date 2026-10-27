@@ -64,14 +64,15 @@ export default function Testimonials() {
     return () => clearInterval(interval)
   }, [isPaused, reviews.length])
 
-  // Synchronize scroll container whenever activeIdx changes
+  // Synchronize scroll container whenever activeIdx changes (anchored to left corner)
   useEffect(() => {
     if (!scrollRef.current) return
     const container = scrollRef.current
     const cards = container.querySelectorAll<HTMLElement>('.testimonial-card')
     if (cards[activeIdx]) {
       const card = cards[activeIdx]
-      const scrollPos = card.offsetLeft - (container.offsetWidth - card.offsetWidth) / 2
+      const firstCardOffset = cards[0]?.offsetLeft || 0
+      const scrollPos = card.offsetLeft - firstCardOffset
       container.scrollTo({
         left: scrollPos,
         behavior: 'smooth',
@@ -135,18 +136,18 @@ export default function Testimonials() {
         </ScrollReveal>
 
         {/* Carousel Wrapper */}
-        <ScrollReveal direction="up" distance={22} delay={100} duration={800}>
+        <ScrollReveal direction="none" distance={0} delay={100} duration={600}>
           <div
-            className="relative max-w-6xl mx-auto"
+            className="relative w-full max-w-6xl mx-auto"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
-            {/* Testimonials Auto-scroll & Swipe Track */}
+            {/* Testimonials Auto-scroll & Swipe Track - Starts from left corner */}
             <div
               ref={scrollRef}
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}
-              className="flex gap-4 sm:gap-6 overflow-x-auto overflow-y-hidden py-3 px-1 scrollbar-none snap-x snap-mandatory"
+              className="flex gap-3.5 sm:gap-5 md:gap-6 overflow-x-auto overflow-y-hidden py-3 px-1 scrollbar-none snap-x snap-mandatory"
               style={{
                 WebkitOverflowScrolling: 'touch',
                 overscrollBehaviorX: 'contain',
@@ -156,19 +157,23 @@ export default function Testimonials() {
                 <div
                   key={r.id}
                   onClick={() => scrollToIdx(i)}
-                  className={`testimonial-card flex-shrink-0 w-[90vw] max-w-[460px] sm:w-[500px] md:w-[560px] lg:w-[600px] min-h-[220px] sm:min-h-[240px] snap-center bg-white rounded-2xl p-6 sm:p-7 border-2 transition-all duration-300 flex flex-col justify-between cursor-pointer ${
+                  className={`testimonial-card flex-shrink-0 w-[84vw] max-w-[360px] sm:w-[420px] md:w-[460px] lg:w-[480px] snap-start bg-white rounded-2xl p-4 sm:p-5.5 md:p-6 border-2 transition-all duration-300 flex flex-col justify-between cursor-pointer ${
                     activeIdx === i
-                      ? 'border-[#195799] shadow-[0_8px_24px_rgba(25,87,153,0.14)] scale-[1.01]'
+                      ? 'border-[#195799] shadow-[0_8px_24px_rgba(25,87,153,0.14)]'
                       : 'border-[#D8CEBF] shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#C9A84C]'
                   }`}
+                  style={{
+                    aspectRatio: '4 / 3',
+                    WebkitTapHighlightColor: 'transparent',
+                  }}
                 >
-                  <div>
+                  <div className="flex-1 flex flex-col">
                     {/* Top Row: Google "G" Logo + Rating + Quotation Motif */}
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-2">
+                    <div className="flex items-center justify-between mb-2 sm:mb-3">
+                      <div className="flex items-center gap-1.5 sm:gap-2">
                         {/* Official Google "G" Icon */}
                         <svg
-                          className="w-5 h-5 flex-shrink-0"
+                          className="w-4.5 h-4.5 sm:w-5 sm:h-5 flex-shrink-0"
                           viewBox="0 0 24 24"
                           aria-label="Google Review"
                         >
@@ -189,14 +194,14 @@ export default function Testimonials() {
                             d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.27 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"
                           />
                         </svg>
-                        <span className="text-[11px] font-semibold text-neutral-500 uppercase tracking-wider">
+                        <span className="text-[10px] sm:text-[11px] font-semibold text-neutral-500 uppercase tracking-wider">
                           Google Verified
                         </span>
                       </div>
 
                       {/* Soft Quotation Marks SVG */}
                       <svg
-                        className="w-5 h-5 text-[#C9A84C]/50"
+                        className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-[#C9A84C]/50"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -205,31 +210,31 @@ export default function Testimonials() {
                     </div>
 
                     {/* 5 Gold Stars */}
-                    <div className="flex items-center gap-1 mb-3.5 text-[#C9A84C]">
+                    <div className="flex items-center gap-1 mb-2 sm:mb-2.5 text-[#C9A84C]">
                       {[...Array(5)].map((_, starIdx) => (
-                        <Star key={starIdx} className="w-4 h-4 fill-current stroke-none" />
+                        <Star key={starIdx} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current stroke-none" />
                       ))}
                     </div>
 
-                    {/* Review Quote Body with comfortable line-height */}
-                    <p className="text-[13.5px] sm:text-[14.5px] text-[#2C2C2C] font-normal leading-[1.7] italic">
+                    {/* Review Quote Body with comfortable line-height and clamping for 4:3 ratio */}
+                    <p className="text-[12px] sm:text-[13.5px] md:text-[14px] text-[#2C2C2C] font-normal leading-[1.6] italic line-clamp-4 sm:line-clamp-5">
                       &ldquo;{r.text}&rdquo;
                     </p>
                   </div>
 
                   {/* Reviewer Details at bottom with divider */}
-                  <div className="pt-4 mt-4 border-t border-neutral-100 flex items-center justify-between">
-                    <div>
-                      <span className="font-bold text-[14px] sm:text-[15px] text-[#195799] block leading-tight">
+                  <div className="pt-2.5 sm:pt-3.5 mt-2 border-t border-neutral-100 flex items-center justify-between gap-2">
+                    <div className="truncate">
+                      <span className="font-bold text-[13px] sm:text-[14.5px] text-[#195799] block leading-tight truncate">
                         {r.author}
                       </span>
-                      <span className="text-[12px] text-neutral-500 font-normal block mt-0.5">
+                      <span className="text-[11px] sm:text-[12px] text-neutral-500 font-normal block mt-0.5 truncate">
                         {r.location}
                       </span>
                     </div>
 
                     {/* Verified Badge */}
-                    <div className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+                    <div className="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full border border-emerald-200 shrink-0">
                       <CheckCircle2 className="w-3 h-3 text-emerald-600" />
                       <span>{r.tag}</span>
                     </div>
@@ -239,7 +244,7 @@ export default function Testimonials() {
             </div>
 
             {/* Sliding Indicator Dots (Auto-scroll progress) */}
-            <div className="flex items-center justify-center gap-2 mt-7">
+            <div className="flex items-center justify-center gap-2 mt-6 sm:mt-7">
               {reviews.map((_, i) => (
                 <button
                   key={i}
