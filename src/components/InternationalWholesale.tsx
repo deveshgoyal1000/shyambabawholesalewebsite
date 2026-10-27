@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { Globe, ShieldCheck, PackageCheck, ChevronRight, MessageCircle } from 'lucide-react'
+import { Globe, ShieldCheck, PackageCheck, ChevronRight, Plane } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export default function InternationalWholesale() {
@@ -113,7 +113,7 @@ export default function InternationalWholesale() {
                   </div>
 
                   {/* Country Name Only */}
-                  <span className="text-sm sm:text-base md:text-[17px] font-bold text-neutral-900 group-hover:text-[#195799] transition-colors leading-none tracking-tight">
+                  <span className="text-[15px] sm:text-[16px] md:text-[17px] font-bold text-neutral-900 group-hover:text-[#195799] transition-colors leading-none tracking-tight">
                     {c.country}
                   </span>
                 </div>
@@ -133,11 +133,11 @@ export default function InternationalWholesale() {
             href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20am%20an%20international%20buyer%20and%20want%20to%20order%20wholesale%20jewellery%20with%20doorstep%20export%20to%20my%20country."
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-tactile inline-flex items-center justify-center gap-2.5 py-3.5 px-8 sm:py-4 sm:px-10 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-bold text-[14px] sm:text-[15px] tracking-wide shadow-md hover:shadow-lg active:scale-98 transition-all"
+            className="btn-tactile w-full inline-flex items-center justify-center gap-2.5 py-4 sm:py-4.5 px-8 sm:px-12 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-bold text-[15px] sm:text-[17px] tracking-wide shadow-lg hover:shadow-xl active:scale-[0.985] transition-all text-center"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
-            <MessageCircle className="w-4.5 h-4.5 fill-white" />
-            <span>Order from 50+ Countries &rarr;</span>
+            <Plane className="w-5 h-5 text-white shrink-0" />
+            <span>We ship to 50+ countries &rarr;</span>
           </a>
         </div>
 
