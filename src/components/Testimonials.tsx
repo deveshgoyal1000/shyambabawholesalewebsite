@@ -142,12 +142,12 @@ export default function Testimonials() {
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
-            {/* Testimonials Auto-scroll & Swipe Track - Starts from left corner */}
+            {/* Testimonials Auto-scroll & Swipe Track - Exact Krishaz Wholesale shape & side-by-side peek */}
             <div
               ref={scrollRef}
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}
-              className="flex gap-3.5 sm:gap-5 md:gap-6 overflow-x-auto overflow-y-hidden py-3 px-1 scrollbar-none snap-x snap-mandatory"
+              className="flex gap-3.5 sm:gap-5 overflow-x-auto overflow-y-hidden py-3 px-1 scrollbar-none snap-x snap-mandatory"
               style={{
                 WebkitOverflowScrolling: 'touch',
                 overscrollBehaviorX: 'contain',
@@ -157,51 +157,45 @@ export default function Testimonials() {
                 <div
                   key={r.id}
                   onClick={() => scrollToIdx(i)}
-                  className={`testimonial-card flex-shrink-0 w-[84vw] max-w-[360px] sm:w-[420px] md:w-[460px] lg:w-[480px] snap-start bg-white rounded-2xl p-4 sm:p-5.5 md:p-6 border-2 transition-all duration-300 flex flex-col justify-between cursor-pointer ${
+                  className={`testimonial-card flex-shrink-0 w-[70vw] max-w-[285px] sm:w-[320px] md:w-[340px] min-h-[390px] sm:min-h-[420px] snap-start bg-white rounded-2xl p-5 sm:p-6 border transition-all duration-300 flex flex-col justify-between cursor-pointer ${
                     activeIdx === i
-                      ? 'border-[#195799] shadow-[0_8px_24px_rgba(25,87,153,0.14)]'
-                      : 'border-[#D8CEBF] shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:border-[#C9A84C]'
+                      ? 'border-[#195799] shadow-[0_8px_24px_rgba(25,87,153,0.12)]'
+                      : 'border-[#EAE3D8] shadow-[0_4px_16px_rgba(0,0,0,0.05)] hover:border-[#C9A84C]'
                   }`}
                   style={{
-                    aspectRatio: '4 / 3',
                     WebkitTapHighlightColor: 'transparent',
                   }}
                 >
                   <div className="flex-1 flex flex-col">
-                    {/* Top Row: Google "G" Logo + Rating + Quotation Motif */}
-                    <div className="flex items-center justify-between mb-2 sm:mb-3">
-                      <div className="flex items-center gap-1.5 sm:gap-2">
-                        {/* Official Google "G" Icon */}
-                        <svg
-                          className="w-4.5 h-4.5 sm:w-5 sm:h-5 flex-shrink-0"
-                          viewBox="0 0 24 24"
-                          aria-label="Google Review"
-                        >
-                          <path
-                            fill="#4285F4"
-                            d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"
-                          />
-                          <path
-                            fill="#34A853"
-                            d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.27 21.36 7.33 24 12 24z"
-                          />
-                          <path
-                            fill="#FBBC05"
-                            d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"
-                          />
-                          <path
-                            fill="#EA4335"
-                            d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.27 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"
-                          />
-                        </svg>
-                        <span className="text-[10px] sm:text-[11px] font-semibold text-neutral-500 uppercase tracking-wider">
-                          Google Verified
-                        </span>
-                      </div>
+                    {/* Top Row: Google "G" Logo + Quotation Motif matching Krishaz */}
+                    <div className="flex items-center justify-between mb-3.5">
+                      {/* Official Google "G" Icon */}
+                      <svg
+                        className="w-5 h-5 flex-shrink-0"
+                        viewBox="0 0 24 24"
+                        aria-label="Google Review"
+                      >
+                        <path
+                          fill="#4285F4"
+                          d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"
+                        />
+                        <path
+                          fill="#34A853"
+                          d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.27 21.36 7.33 24 12 24z"
+                        />
+                        <path
+                          fill="#FBBC05"
+                          d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"
+                        />
+                        <path
+                          fill="#EA4335"
+                          d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.27 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"
+                        />
+                      </svg>
 
                       {/* Soft Quotation Marks SVG */}
                       <svg
-                        className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-[#C9A84C]/50"
+                        className="w-5 h-5 text-[#C9A84C]/40"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -210,34 +204,26 @@ export default function Testimonials() {
                     </div>
 
                     {/* 5 Gold Stars */}
-                    <div className="flex items-center gap-1 mb-2 sm:mb-2.5 text-[#C9A84C]">
+                    <div className="flex items-center gap-1 mb-4 text-[#C9A84C]">
                       {[...Array(5)].map((_, starIdx) => (
-                        <Star key={starIdx} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current stroke-none" />
+                        <Star key={starIdx} className="w-4 h-4 fill-current stroke-none" />
                       ))}
                     </div>
 
-                    {/* Review Quote Body with comfortable line-height and clamping for 4:3 ratio */}
-                    <p className="text-[12px] sm:text-[13.5px] md:text-[14px] text-[#2C2C2C] font-normal leading-[1.6] italic line-clamp-4 sm:line-clamp-5">
+                    {/* Review Quote Body with comfortable line-height matching Krishaz */}
+                    <p className="text-[13px] sm:text-[14px] md:text-[14.5px] text-[#2C2C2C] font-normal leading-[1.7] italic">
                       &ldquo;{r.text}&rdquo;
                     </p>
                   </div>
 
-                  {/* Reviewer Details at bottom with divider */}
-                  <div className="pt-2.5 sm:pt-3.5 mt-2 border-t border-neutral-100 flex items-center justify-between gap-2">
-                    <div className="truncate">
-                      <span className="font-bold text-[13px] sm:text-[14.5px] text-[#195799] block leading-tight truncate">
-                        {r.author}
-                      </span>
-                      <span className="text-[11px] sm:text-[12px] text-neutral-500 font-normal block mt-0.5 truncate">
-                        {r.location}
-                      </span>
-                    </div>
-
-                    {/* Verified Badge */}
-                    <div className="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full border border-emerald-200 shrink-0">
-                      <CheckCircle2 className="w-3 h-3 text-emerald-600" />
-                      <span>{r.tag}</span>
-                    </div>
+                  {/* Reviewer Details at bottom matching Krishaz Wholesale exactly */}
+                  <div className="pt-4 mt-4">
+                    <span className="font-bold text-[14.5px] sm:text-[15.5px] text-[#195799] block leading-tight">
+                      {r.author}
+                    </span>
+                    <span className="text-[12px] sm:text-[13px] text-neutral-500 font-normal block mt-1">
+                      {r.location}
+                    </span>
                   </div>
                 </div>
               ))}

@@ -109,14 +109,14 @@ export default function FactoryStory() {
           </div>
         </ScrollReveal>
 
-        {/* Visit Our Manufacturing Unit Action Button matching Krishaz Wholesale */}
+        {/* Visit Our Manufacturing Unit Action Button matching Krishaz Wholesale (in Royal Blue) */}
         <ScrollReveal direction="none" distance={0} delay={200} duration={650}>
           <div className="mt-5 sm:mt-6">
             <a
               href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20would%20like%20to%20visit%20your%20manufacturing%20unit%20in%20Jaipur."
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-tactile w-full inline-flex items-center justify-center py-4 px-6 rounded-xl sm:rounded-2xl bg-[#80142B] hover:bg-[#681023] text-white font-bold text-[16px] sm:text-[18px] tracking-wide shadow-md hover:shadow-lg active:scale-98 transition-all text-center"
+              className="btn-tactile w-full inline-flex items-center justify-center py-4 px-6 rounded-xl sm:rounded-2xl bg-[#195799] hover:bg-[#124378] text-white font-bold text-[16px] sm:text-[18px] tracking-wide shadow-md hover:shadow-lg active:scale-98 transition-all text-center"
               style={{ WebkitTapHighlightColor: 'transparent' }}
             >
               Visit Our Manufacturing Unit
