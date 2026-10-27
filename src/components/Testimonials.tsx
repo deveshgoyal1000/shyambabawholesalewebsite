@@ -159,8 +159,8 @@ export default function Testimonials() {
                   onClick={() => scrollToIdx(i)}
                   className={`testimonial-card flex-shrink-0 w-[70vw] max-w-[285px] sm:w-[320px] md:w-[340px] min-h-[390px] sm:min-h-[420px] snap-start bg-white rounded-2xl p-5 sm:p-6 border transition-all duration-300 flex flex-col justify-between cursor-pointer ${
                     activeIdx === i
-                      ? 'border-[#195799] shadow-[0_8px_24px_rgba(25,87,153,0.12)]'
-                      : 'border-[#EAE3D8] shadow-[0_4px_16px_rgba(0,0,0,0.05)] hover:border-[#C9A84C]'
+                      ? 'border-[#D4C7B4] shadow-[0_6px_20px_rgba(0,0,0,0.08)]'
+                      : 'border-[#EAE3D8] shadow-[0_3px_12px_rgba(0,0,0,0.04)] hover:border-[#D4C7B4]'
                   }`}
                   style={{
                     WebkitTapHighlightColor: 'transparent',

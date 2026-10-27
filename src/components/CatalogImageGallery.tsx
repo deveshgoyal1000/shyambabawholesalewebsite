@@ -49,7 +49,7 @@ export default function CatalogImageGallery({
           <div
             key={item.id}
             onClick={() => setLightboxIdx(idx)}
-            className="fade-in-stagger group cursor-pointer bg-white rounded-xl sm:rounded-2xl border border-[#EAE3D8] hover:border-[#195799] shadow-[0_2px_10px_rgba(0,0,0,0.04)] hover:shadow-[0_6px_20px_rgba(25,87,153,0.12)] transition-all duration-200 overflow-hidden flex flex-col justify-between"
+            className="fade-in-stagger group cursor-pointer bg-white rounded-xl sm:rounded-2xl border border-[#EAE3D8] hover:border-[#C9A84C] shadow-[0_2px_10px_rgba(0,0,0,0.04)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.08)] transition-all duration-200 overflow-hidden flex flex-col justify-between"
             style={{
               animationDelay: `${Math.min(idx * 35, 650)}ms`,
               WebkitTapHighlightColor: 'transparent',

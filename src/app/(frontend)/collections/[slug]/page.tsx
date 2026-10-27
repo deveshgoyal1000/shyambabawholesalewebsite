@@ -59,7 +59,7 @@ export default async function CollectionPage({
                 <Link
                   key={cat.slug}
                   href={`/collections/${cat.slug}`}
-                  className="fade-in-stagger group block rounded-2xl overflow-hidden bg-white border-2 border-[#D4C7B4] hover:border-[#195799] shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(25,87,153,0.16)] transition-all duration-300 card-hover-lift"
+                  className="fade-in-stagger group block rounded-2xl overflow-hidden bg-white border-2 border-[#D4C7B4] hover:border-[#C4B7A4] shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 card-hover-lift"
                   style={{
                     animationDelay: `${idx * 45}ms`,
                     WebkitTapHighlightColor: 'transparent',
@@ -78,7 +78,7 @@ export default async function CollectionPage({
                   <div className="p-3.5 sm:p-4 text-center bg-white border-t-2 border-[#D4C7B4]">
                     <h2
                       style={{ fontFamily: 'Georgia, serif' }}
-                      className="text-[15px] sm:text-[17px] font-bold text-[#121212] group-hover:text-[#195799] transition-colors leading-tight"
+                      className="text-[15px] sm:text-[17px] font-bold text-[#121212] transition-colors leading-tight"
                     >
                       {cat.name}
                     </h2>
@@ -125,7 +125,7 @@ export default async function CollectionPage({
                 <Link
                   key={sub.slug}
                   href={`/collections/${category.slug}/${sub.slug}`}
-                  className="fade-in-stagger group block rounded-2xl overflow-hidden bg-white border-2 border-[#D4C7B4] hover:border-[#195799] shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(25,87,153,0.16)] transition-all duration-300 card-hover-lift"
+                  className="fade-in-stagger group block rounded-2xl overflow-hidden bg-white border-2 border-[#D4C7B4] hover:border-[#C4B7A4] shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 card-hover-lift"
                   style={{
                     animationDelay: `${idx * 45}ms`,
                     WebkitTapHighlightColor: 'transparent',
@@ -147,7 +147,7 @@ export default async function CollectionPage({
                   <div className="p-3.5 sm:p-4 text-center bg-white border-t-2 border-[#D4C7B4]">
                     <h2
                       style={{ fontFamily: 'Georgia, serif' }}
-                      className="text-[14px] sm:text-[16px] font-bold text-[#121212] group-hover:text-[#195799] transition-colors leading-tight line-clamp-2"
+                      className="text-[14px] sm:text-[16px] font-bold text-[#121212] transition-colors leading-tight line-clamp-2"
                     >
                       {sub.name}
                     </h2>

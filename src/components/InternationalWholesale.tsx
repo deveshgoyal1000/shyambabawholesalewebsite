@@ -98,7 +98,7 @@ export default function InternationalWholesale() {
               <Link
                 href={`/international/${c.slug}`}
                 scroll={false}
-                className="flex items-center justify-between p-4 sm:py-5 sm:px-6 bg-white rounded-2xl border-2 border-[#E5DAC1] hover:border-[#195799] shadow-[0_3px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(25, 87, 153,0.1)] transition-all duration-300 group text-left active:scale-[0.98] active:bg-[#FAF5E8] select-none"
+                className="flex items-center justify-between p-4 sm:py-5 sm:px-6 bg-white rounded-2xl border-2 border-[#E5DAC1] hover:border-[#C4B7A4] shadow-[0_3px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all duration-300 group text-left active:scale-[0.98] active:bg-[#FAF5E8] select-none"
                 style={{ WebkitTapHighlightColor: 'transparent' }}
               >
                 <div className="flex items-center gap-3.5 sm:gap-4">
@@ -113,13 +113,13 @@ export default function InternationalWholesale() {
                   </div>
 
                   {/* Country Name Only */}
-                  <span className="text-[15px] sm:text-[16px] md:text-[17px] font-bold text-neutral-900 group-hover:text-[#195799] transition-colors leading-none tracking-tight">
+                  <span className="text-[15px] sm:text-[16px] md:text-[17px] font-bold text-neutral-900 leading-none tracking-tight">
                     {c.country}
                   </span>
                 </div>
 
                 {/* Refined Circular Arrow Button */}
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#FAF5E8] group-hover:bg-[#195799] text-[#195799] group-hover:text-white flex items-center justify-center transition-all duration-300 flex-shrink-0 border border-[#C9A84C]/40 group-hover:border-[#195799] shadow-xs">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#FAF5E8] text-[#195799] flex items-center justify-center transition-all duration-300 flex-shrink-0 border border-[#C9A84C]/40 shadow-xs">
                   <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-0.5 transition-transform duration-300" />
                 </div>
               </Link>

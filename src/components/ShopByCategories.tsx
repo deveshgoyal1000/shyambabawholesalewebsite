@@ -87,7 +87,7 @@ export default function ShopByCategories() {
             >
               <Link
                 href={`/collections/${cat.slug}`}
-                className="group block rounded-2xl overflow-hidden bg-white border-2 border-[#D4C7B4] hover:border-[#195799] shadow-[0_4px_18px_rgba(0,0,0,0.09)] hover:shadow-[0_8px_24px_rgba(25,87,153,0.18)] active:scale-[0.98] transition-all duration-300 card-hover-lift"
+                className="group block rounded-2xl overflow-hidden bg-white border-2 border-[#D4C7B4] hover:border-[#C4B7A4] shadow-[0_4px_18px_rgba(0,0,0,0.07)] hover:shadow-[0_10px_28px_rgba(0,0,0,0.12)] active:scale-[0.98] transition-all duration-300 card-hover-lift"
                 style={{ WebkitTapHighlightColor: 'transparent' }}
               >
                 {/* Image Container with 4:5 aspect ratio matching Krishaz (padding-bottom: 125%) */}
@@ -108,7 +108,7 @@ export default function ShopByCategories() {
                         fontFamily:
                           '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                       }}
-                      className="block text-[#121212] font-semibold text-[15px] sm:text-[17px] md:text-[18.5px] leading-tight sm:leading-snug group-hover:text-[#195799] transition-colors duration-200"
+                      className="block text-[#121212] font-semibold text-[15px] sm:text-[17px] md:text-[18.5px] leading-tight sm:leading-snug transition-colors duration-200"
                     >
                       {cat.title.endsWith('Earrings') ? (
                         <>
@@ -122,7 +122,7 @@ export default function ShopByCategories() {
                       )}
                     </span>
                   </div>
-                  <span className="text-[#C9A84C] group-hover:text-[#195799] text-[22px] sm:text-[24px] font-bold group-hover:translate-x-1.5 transition-all duration-200 ml-1.5 shrink-0">
+                  <span className="text-[#C9A84C] group-hover:text-[#9A7E2E] text-[22px] sm:text-[24px] font-bold group-hover:translate-x-1.5 transition-all duration-200 ml-1.5 shrink-0">
                     &rarr;
                   </span>
                 </div>
