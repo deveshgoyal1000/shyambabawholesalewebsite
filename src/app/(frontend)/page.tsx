@@ -136,7 +136,7 @@ async function getPuckData() {
     try {
       const { blobs } = await list({ prefix: 'home-puck.json' })
       if (blobs.length > 0) {
-        const res = await fetch(blobs[0].url, { cache: 'no-store' })
+        const res = await fetch(`${blobs[0].url}?t=${Date.now()}`, { cache: 'no-store' })
         if (res.ok) {
           const json = await res.json()
           if (json && json.content && json.content.length > 0) {

@@ -4,6 +4,9 @@ import { revalidatePath } from 'next/cache'
 import { readFile, writeFile, mkdir } from 'fs/promises'
 import path from 'path'
 
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 const localFilePath = path.join(process.cwd(), 'src', 'data', 'home-puck.json')
 
 export async function GET() {
@@ -13,7 +16,7 @@ export async function GET() {
       try {
         const { blobs } = await list({ prefix: 'home-puck.json' })
         if (blobs.length > 0) {
-          const res = await fetch(blobs[0].url, { cache: 'no-store' })
+          const res = await fetch(`${blobs[0].url}?t=${Date.now()}`, { cache: 'no-store' })
           if (res.ok) {
             const data = await res.json()
             return NextResponse.json({ success: true, data })
