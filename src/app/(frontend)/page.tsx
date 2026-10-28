@@ -1,8 +1,12 @@
 import React from 'react'
 import { Render } from '@measured/puck/rsc'
 import { puckConfig } from '@/puck.config'
+import { list } from '@vercel/blob'
 import { readFile } from 'fs/promises'
 import path from 'path'
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 import AnnouncementBar from '@/components/AnnouncementBar'
 import Header from '@/components/Header'
 import HeroBanner from '@/components/HeroBanner'
@@ -127,6 +131,25 @@ async function getProducts(): Promise<ProductData[]> {
 }
 
 async function getPuckData() {
+  // 1. Try Vercel Blob (Cloud persistence for Vercel production)
+  if (process.env.BLOB_READ_WRITE_TOKEN) {
+    try {
+      const { blobs } = await list({ prefix: 'home-puck.json' })
+      if (blobs.length > 0) {
+        const res = await fetch(blobs[0].url, { cache: 'no-store' })
+        if (res.ok) {
+          const json = await res.json()
+          if (json && json.content && json.content.length > 0) {
+            return json
+          }
+        }
+      }
+    } catch (blobErr) {
+      console.warn('Error reading from Vercel Blob:', blobErr)
+    }
+  }
+
+  // 2. Try local file (Local dev)
   try {
     const dataFilePath = path.join(process.cwd(), 'src', 'data', 'home-puck.json')
     const raw = await readFile(dataFilePath, 'utf-8')
