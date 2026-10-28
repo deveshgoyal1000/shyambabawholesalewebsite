@@ -13,6 +13,7 @@
     "postinstall": "node scripts/patch-payload.js"
   },
   "dependencies": {
+    "@measured/puck": "^0.20.2",
     "@payloadcms/db-sqlite": "3.92.0",
     "@payloadcms/next": "3.92.0",
     "@payloadcms/richtext-lexical": "3.92.0",
