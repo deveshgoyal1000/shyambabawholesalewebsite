@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { put, list } from '@vercel/blob'
+import { revalidatePath } from 'next/cache'
 import { readFile, writeFile, mkdir } from 'fs/promises'
 import path from 'path'
 
@@ -43,10 +44,10 @@ export async function POST(request: NextRequest) {
         await put('home-puck.json', jsonString, {
           access: 'public',
           addRandomSuffix: false,
+          allowOverwrite: true,
         })
       } catch (blobErr: any) {
         console.error('Error saving to Vercel Blob:', blobErr)
-        // continue to try local save
       }
     }
 
@@ -57,6 +58,13 @@ export async function POST(request: NextRequest) {
       await writeFile(localFilePath, jsonString, 'utf-8')
     } catch (fsErr) {
       // Ignored in read-only environments like Vercel Lambda
+    }
+
+    // 3. Purge Vercel cache for the homepage immediately
+    try {
+      revalidatePath('/', 'layout')
+    } catch (revErr) {
+      console.warn('revalidatePath error:', revErr)
     }
 
     return NextResponse.json({ success: true })
