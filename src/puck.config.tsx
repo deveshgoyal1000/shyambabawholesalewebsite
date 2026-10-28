@@ -14,7 +14,7 @@ import {
 } from 'lucide-react'
 import ImageUploadField from '@/components/puck/ImageUploadField'
 import Header from '@/components/Header'
-import ShopByCategories from '@/components/ShopByCategories'
+import ShopByCategories, { CategoryItem, DEFAULT_CATEGORIES } from '@/components/ShopByCategories'
 import GallerySection from '@/components/GallerySection'
 import InternationalWholesale from '@/components/InternationalWholesale'
 import ManufacturerComparison from '@/components/ManufacturerComparison'
@@ -51,6 +51,7 @@ export type ComponentProps = {
   ShopByCategoriesBlock: {
     heading: string
     subheading: string
+    categories: CategoryItem[]
   }
   GallerySectionBlock: {
     heading: string
@@ -282,16 +283,44 @@ export const puckConfig: Config<ComponentProps> = {
 
     // 3. Shop by Categories
     ShopByCategoriesBlock: {
-      label: '3. Shop by Categories (12 Categories Grid)',
+      label: '3. Shop by Categories (Detailed Grid)',
       fields: {
         heading: { type: 'text', label: 'Section Heading' },
         subheading: { type: 'text', label: 'Subheading' },
+        categories: {
+          type: 'array',
+          label: 'Categories (Edit Names, Images & Links)',
+          getItemSummary: (item: any, idx?: number) =>
+            item?.title || `Category ${(idx ?? 0) + 1}`,
+          defaultItemProps: {
+            title: 'New Category',
+            slug: 'new-category',
+            image: '/images/categories/cat-premium-earrings.jpg',
+          },
+          arrayFields: {
+            title: { type: 'text', label: 'Category Name (e.g. Kundan, Studs)' },
+            slug: { type: 'text', label: 'Collection URL or Slug (e.g. kundan-earrings)' },
+            image: {
+              type: 'custom',
+              render: ({ value, onChange }) => (
+                <ImageUploadField label="Category Image" value={value} onChange={onChange} />
+              ),
+            },
+          },
+        },
       },
       defaultProps: {
-        heading: 'Shop by Category',
-        subheading: 'Jaipur Handcrafted Brass Jewellery Direct from Manufacturer',
+        heading: 'Shop By Categories',
+        subheading: 'Explore our premium brass jewellery collections',
+        categories: DEFAULT_CATEGORIES,
       },
-      render: () => <ShopByCategories />,
+      render: ({ heading, subheading, categories }) => (
+        <ShopByCategories
+          heading={heading}
+          subheading={subheading}
+          categories={categories}
+        />
+      ),
     },
 
     // 4. Trending Gallery Section

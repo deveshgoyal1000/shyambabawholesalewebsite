@@ -4,49 +4,68 @@ import React from 'react'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
 
-export default function ShopByCategories() {
-  const categories = [
-    {
-      title: 'Premium Earrings',
-      slug: 'premium-earrings',
-      image: '/images/categories/cat-premium-earrings.jpg',
-    },
-    {
-      title: 'Silver Earrings',
-      slug: 'silver-earrings',
-      image: '/images/categories/cat-silver-earrings.jpg',
-    },
-    {
-      title: 'Studs',
-      slug: 'studs',
-      image: '/images/categories/cat-studs.jpg',
-    },
-    {
-      title: 'Kundan',
-      slug: 'kundan-earrings',
-      image: '/images/categories/cat-kundan.jpg',
-    },
-    {
-      title: 'Rajwadi',
-      slug: 'rajwadi',
-      image: '/images/categories/cat-rajwadi.jpg',
-    },
-    {
-      title: 'Ear-Chain',
-      slug: 'ear-chain',
-      image: '/images/categories/cat-ear-chain.jpg',
-    },
-    {
-      title: 'Anti Tarnish',
-      slug: 'anti-tarnish',
-      image: '/images/categories/cat-anti-tarnish.jpg',
-    },
-    {
-      title: 'New Arrivals',
-      slug: 'new-arrivals',
-      image: '/images/categories/cat-new-arrivals.jpg',
-    },
-  ]
+export interface CategoryItem {
+  title: string
+  slug: string
+  image: string
+}
+
+export const DEFAULT_CATEGORIES: CategoryItem[] = [
+  {
+    title: 'Premium Earrings',
+    slug: 'premium-earrings',
+    image: '/images/categories/cat-premium-earrings.jpg',
+  },
+  {
+    title: 'Silver Earrings',
+    slug: 'silver-earrings',
+    image: '/images/categories/cat-silver-earrings.jpg',
+  },
+  {
+    title: 'Studs',
+    slug: 'studs',
+    image: '/images/categories/cat-studs.jpg',
+  },
+  {
+    title: 'Kundan',
+    slug: 'kundan-earrings',
+    image: '/images/categories/cat-kundan.jpg',
+  },
+  {
+    title: 'Rajwadi',
+    slug: 'rajwadi',
+    image: '/images/categories/cat-rajwadi.jpg',
+  },
+  {
+    title: 'Ear-Chain',
+    slug: 'ear-chain',
+    image: '/images/categories/cat-ear-chain.jpg',
+  },
+  {
+    title: 'Anti Tarnish',
+    slug: 'anti-tarnish',
+    image: '/images/categories/cat-anti-tarnish.jpg',
+  },
+  {
+    title: 'New Arrivals',
+    slug: 'new-arrivals',
+    image: '/images/categories/cat-new-arrivals.jpg',
+  },
+]
+
+export interface ShopByCategoriesProps {
+  heading?: string
+  subheading?: string
+  categories?: CategoryItem[]
+}
+
+export default function ShopByCategories({
+  heading = 'Shop By Categories',
+  subheading = 'Explore our premium brass jewellery collections',
+  categories = DEFAULT_CATEGORIES,
+}: ShopByCategoriesProps) {
+  const displayCategories =
+    categories && categories.length > 0 ? categories : DEFAULT_CATEGORIES
 
   return (
     <section id="categories" className="py-10 md:py-16 bg-[#FAF8F5]">
@@ -58,7 +77,7 @@ export default function ShopByCategories() {
               style={{ fontFamily: 'Georgia, serif' }}
               className="text-[#121212] text-[28px] sm:text-[34px] md:text-[42px] font-normal tracking-[0.5px] leading-tight"
             >
-              Shop By Categories
+              {heading || 'Shop By Categories'}
             </h2>
 
             <p
@@ -68,67 +87,73 @@ export default function ShopByCategories() {
               }}
               className="text-[#2C2C2C] text-[14px] sm:text-[16px] font-normal text-center leading-relaxed mt-2.5 sm:mt-3"
             >
-              Explore our premium brass jewellery collections
+              {subheading || 'Explore our premium brass jewellery collections'}
             </p>
           </div>
         </ScrollReveal>
 
         {/* Categories Grid: Triggers strictly when each row scrolls into active view on mobile */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3.5 sm:gap-4 md:gap-5">
-          {categories.map((cat, idx) => (
-            <ScrollReveal
-              key={cat.slug}
-              direction="none"
-              distance={0}
-              duration={600}
-              delay={idx * 60}
-              threshold={0.12}
-              rootMargin="0px 0px -40px 0px"
-            >
-              <Link
-                href={`/collections/${cat.slug}`}
-                className="group block rounded-2xl overflow-hidden bg-white border-2 border-[#D4C7B4] hover:border-[#C4B7A4] shadow-[0_4px_18px_rgba(0,0,0,0.07)] hover:shadow-[0_10px_28px_rgba(0,0,0,0.12)] active:scale-[0.98] transition-all duration-300 card-hover-lift"
-                style={{ WebkitTapHighlightColor: 'transparent' }}
-              >
-                {/* Image Container with 4:5 aspect ratio matching Krishaz (padding-bottom: 125%) */}
-                <div className="relative aspect-[4/5] overflow-hidden bg-[#F7F4EE]">
-                  <img
-                    src={cat.image}
-                    alt={cat.title}
-                    className="w-full h-full object-cover card-img-zoom"
-                    loading="lazy"
-                  />
-                </div>
+          {displayCategories.map((cat, idx) => {
+            const href = cat.slug?.startsWith('http') || cat.slug?.startsWith('/')
+              ? cat.slug
+              : `/collections/${cat.slug || ''}`
 
-                {/* Category Name Line Box - Crisp visible border, multi-line wrap with Earrings on new line */}
-                <div className="px-3.5 py-3.5 sm:px-5 sm:py-5 md:py-6 bg-white border-t-2 border-[#D4C7B4] flex items-center justify-between min-h-[70px] sm:min-h-[76px] md:min-h-[82px]">
-                  <div className="flex-1 min-w-0 pr-1.5">
-                    <span
-                      style={{
-                        fontFamily:
-                          '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-                      }}
-                      className="block text-[#121212] font-semibold text-[15px] sm:text-[17px] md:text-[18.5px] leading-tight sm:leading-snug transition-colors duration-200"
-                    >
-                      {cat.title.endsWith('Earrings') ? (
-                        <>
-                          <span className="block">{cat.title.replace(/\s*Earrings$/, '')}</span>
-                          <span className="block sm:inline sm:ml-1 text-[14px] sm:text-[17px] md:text-[18.5px] text-neutral-700 font-medium">
-                            Earrings
-                          </span>
-                        </>
-                      ) : (
-                        <span className="block">{cat.title}</span>
-                      )}
+            return (
+              <ScrollReveal
+                key={cat.slug || idx}
+                direction="none"
+                distance={0}
+                duration={600}
+                delay={idx * 60}
+                threshold={0.12}
+                rootMargin="0px 0px -40px 0px"
+              >
+                <Link
+                  href={href}
+                  className="group block rounded-2xl overflow-hidden bg-white border-2 border-[#D4C7B4] hover:border-[#C4B7A4] shadow-[0_4px_18px_rgba(0,0,0,0.07)] hover:shadow-[0_10px_28px_rgba(0,0,0,0.12)] active:scale-[0.98] transition-all duration-300 card-hover-lift"
+                  style={{ WebkitTapHighlightColor: 'transparent' }}
+                >
+                  {/* Image Container with 4:5 aspect ratio matching Krishaz (padding-bottom: 125%) */}
+                  <div className="relative aspect-[4/5] overflow-hidden bg-[#F7F4EE]">
+                    <img
+                      src={cat.image || '/images/categories/cat-premium-earrings.jpg'}
+                      alt={cat.title || 'Category'}
+                      className="w-full h-full object-cover card-img-zoom"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  {/* Category Name Line Box - Crisp visible border, multi-line wrap with Earrings on new line */}
+                  <div className="px-3.5 py-3.5 sm:px-5 sm:py-5 md:py-6 bg-white border-t-2 border-[#D4C7B4] flex items-center justify-between min-h-[70px] sm:min-h-[76px] md:min-h-[82px]">
+                    <div className="flex-1 min-w-0 pr-1.5">
+                      <span
+                        style={{
+                          fontFamily:
+                            '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                        }}
+                        className="block text-[#121212] font-semibold text-[15px] sm:text-[17px] md:text-[18.5px] leading-tight sm:leading-snug transition-colors duration-200"
+                      >
+                        {cat.title && cat.title.endsWith('Earrings') ? (
+                          <>
+                            <span className="block">{cat.title.replace(/\s*Earrings$/, '')}</span>
+                            <span className="block sm:inline sm:ml-1 text-[14px] sm:text-[17px] md:text-[18.5px] text-neutral-700 font-medium">
+                              Earrings
+                            </span>
+                          </>
+                        ) : (
+                          <span className="block">{cat.title || 'Category'}</span>
+                        )}
+                      </span>
+                    </div>
+                    <span className="text-[#C9A84C] group-hover:text-[#9A7E2E] text-[22px] sm:text-[24px] font-bold group-hover:translate-x-1.5 transition-all duration-200 ml-1.5 shrink-0">
+                      &rarr;
                     </span>
                   </div>
-                  <span className="text-[#C9A84C] group-hover:text-[#9A7E2E] text-[22px] sm:text-[24px] font-bold group-hover:translate-x-1.5 transition-all duration-200 ml-1.5 shrink-0">
-                    &rarr;
-                  </span>
-                </div>
-              </Link>
-            </ScrollReveal>
-          ))}
+                </Link>
+              </ScrollReveal>
+            )
+          })}
         </div>
 
         {/* "View Full Catalog" Pill Button - Expanded width matching the two categories' end points */}

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { Puck, type Data } from '@measured/puck'
 import '@measured/puck/puck.css'
 import { puckConfig, type ComponentProps } from '@/puck.config'
+import { DEFAULT_CATEGORIES } from '@/components/ShopByCategories'
 
 const defaultHomeData: Data<ComponentProps> = {
   content: [
@@ -45,8 +46,9 @@ const defaultHomeData: Data<ComponentProps> = {
       type: 'ShopByCategoriesBlock',
       props: {
         id: 'categories-block',
-        heading: 'Shop by Category',
-        subheading: 'Jaipur Handcrafted Brass Jewellery Direct from Manufacturer',
+        heading: 'Shop By Categories',
+        subheading: 'Explore our premium brass jewellery collections',
+        categories: DEFAULT_CATEGORIES,
       },
     },
     {
@@ -153,7 +155,24 @@ export default function EditorPage() {
         const res = await fetch('/api/editor')
         const json = await res.json()
         if (json.success && json.data && json.data.content?.length > 0) {
-          setData(json.data)
+          const patchedContent = json.data.content.map((block: any) => {
+            if (block.type === 'ShopByCategoriesBlock') {
+              if (!block.props.categories || block.props.categories.length === 0) {
+                return {
+                  ...block,
+                  props: {
+                    ...block.props,
+                    categories: DEFAULT_CATEGORIES,
+                  },
+                }
+              }
+            }
+            return block
+          })
+          setData({
+            ...json.data,
+            content: patchedContent,
+          })
         }
       } catch (err) {
         console.error('Failed to load editor data:', err)

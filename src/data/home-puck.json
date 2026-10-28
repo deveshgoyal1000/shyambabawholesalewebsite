@@ -1,0 +1,176 @@
+{
+  "root": {
+    "props": {
+      "title": "Shyambaba Wholesale Home"
+    }
+  },
+  "content": [
+    {
+      "type": "AnnouncementBarBlock",
+      "props": {
+        "id": "announcement-block",
+        "highlight": "Low MOV ₹3,000 / $50",
+        "subtext": "Direct Jaipur Manufacturer Wholesale Pricing",
+        "phoneNumber": "+91 96808 65791"
+      }
+    },
+    {
+      "type": "HeaderBlock",
+      "props": {
+        "id": "header-block",
+        "brandName": "ShyamBabaWholesale"
+      }
+    },
+    {
+      "type": "HeroBannerBlock",
+      "props": {
+        "id": "hero-block",
+        "preheading": "India's Trusted",
+        "headlineLine1": "Brass Jewellery Manufacturer",
+        "headlineLine2": "and Exporters",
+        "subtitle": "Supplying 10,000+ Retailers Across 50+ Countries.",
+        "point1": "Premium Brass Earrings",
+        "point2": "Video Call Available",
+        "point3": "Worldwide Shipping",
+        "point4": "500+ Unique Designs",
+        "button1Text": "Shop Wholesale",
+        "button2Text": "View Catalog",
+        "bgImageMobile": "/images/hero/hero-mobile-krishaz.jpg",
+        "bgImageDesktop": "/images/hero/hero-desktop-krishaz.png"
+      }
+    },
+    {
+      "type": "ShopByCategoriesBlock",
+      "props": {
+        "id": "categories-block",
+        "heading": "Shop By Categories",
+        "subheading": "Explore our premium brass jewellery collections",
+        "categories": [
+          {
+            "title": "Premium Earrings",
+            "slug": "premium-earrings",
+            "image": "/images/categories/cat-premium-earrings.jpg"
+          },
+          {
+            "title": "Silver Earrings",
+            "slug": "silver-earrings",
+            "image": "/images/categories/cat-silver-earrings.jpg"
+          },
+          {
+            "title": "Studs",
+            "slug": "studs",
+            "image": "/images/categories/cat-studs.jpg"
+          },
+          {
+            "title": "Kundan",
+            "slug": "kundan-earrings",
+            "image": "/images/categories/cat-kundan.jpg"
+          },
+          {
+            "title": "Rajwadi",
+            "slug": "rajwadi",
+            "image": "/images/categories/cat-rajwadi.jpg"
+          },
+          {
+            "title": "Ear-Chain",
+            "slug": "ear-chain",
+            "image": "/images/categories/cat-ear-chain.jpg"
+          },
+          {
+            "title": "Anti Tarnish",
+            "slug": "anti-tarnish",
+            "image": "/images/categories/cat-anti-tarnish.jpg"
+          },
+          {
+            "title": "New Arrivals",
+            "slug": "new-arrivals",
+            "image": "/images/categories/cat-new-arrivals.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "type": "GallerySectionBlock",
+      "props": {
+        "id": "gallery-block",
+        "heading": "Trending Wholesale",
+        "subheading": "Factory Finished"
+      }
+    },
+    {
+      "type": "InternationalWholesaleBlock",
+      "props": {
+        "id": "intl-block",
+        "heading": "Worldwide Express Cargo"
+      }
+    },
+    {
+      "type": "ManufacturerComparisonBlock",
+      "props": {
+        "id": "comp-block",
+        "heading": "Direct vs Traders"
+      }
+    },
+    {
+      "type": "FactoryStoryBlock",
+      "props": {
+        "id": "story-block",
+        "headlineLine1": "We Don't Source",
+        "headlineLine2": "We Are Manufacture",
+        "description": "From our manufacturing unit in Jaipur.",
+        "badge1": "In-house",
+        "badge2": "Artisans",
+        "badge3": "100% Quality",
+        "buttonText": "Visit Factory"
+      }
+    },
+    {
+      "type": "ManufacturingProcessBlock",
+      "props": {
+        "id": "proc-block",
+        "heading": "Jaipur Craftsmanship"
+      }
+    },
+    {
+      "type": "VideoShoppingCTABlock",
+      "props": {
+        "id": "video-block",
+        "heading": "Live Video Call",
+        "subheading": "Inspect real shine"
+      }
+    },
+    {
+      "type": "TestimonialsBlock",
+      "props": {
+        "id": "test-block",
+        "heading": "Retailer Testimonials"
+      }
+    },
+    {
+      "type": "FAQSectionBlock",
+      "props": {
+        "id": "faq-block",
+        "heading": "Wholesale FAQ"
+      }
+    },
+    {
+      "type": "WholesaleLeadCTABlock",
+      "props": {
+        "id": "lead-block",
+        "title": "Boost your sales with Shyambaba",
+        "description": "Join thousands of retailers",
+        "button1Text": "Shop Wholesale",
+        "button2Text": "Contact Us"
+      }
+    },
+    {
+      "type": "FooterBlock",
+      "props": {
+        "id": "footer-block",
+        "companyName": "ShyamBaba Wholesale",
+        "tagline": "Jaipur Factory Direct"
+      }
+    }
+  ],
+  "zones": {}
+}
