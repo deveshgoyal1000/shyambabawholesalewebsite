@@ -1,4 +1,8 @@
 import React from 'react'
+import { Render } from '@measured/puck/rsc'
+import { puckConfig } from '@/puck.config'
+import { readFile } from 'fs/promises'
+import path from 'path'
 import AnnouncementBar from '@/components/AnnouncementBar'
 import Header from '@/components/Header'
 import HeroBanner from '@/components/HeroBanner'
@@ -122,7 +126,34 @@ async function getProducts(): Promise<ProductData[]> {
   ]
 }
 
+async function getPuckData() {
+  try {
+    const dataFilePath = path.join(process.cwd(), 'src', 'data', 'home-puck.json')
+    const raw = await readFile(dataFilePath, 'utf-8')
+    const json = JSON.parse(raw)
+    if (json && json.content && json.content.length > 0) {
+      return json
+    }
+  } catch {
+    // Return null to use default fallback layout
+  }
+  return null
+}
+
 export default async function HomePage() {
+  const puckData = await getPuckData()
+
+  if (puckData) {
+    return (
+      <div className="min-h-screen flex flex-col bg-cream text-charcoal">
+        <main className="flex-1">
+          <Render config={puckConfig} data={puckData} />
+        </main>
+        <FloatingActionButtons />
+      </div>
+    )
+  }
+
   const products = await getProducts()
 
   return (
