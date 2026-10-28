@@ -1,40 +1,59 @@
 'use client'
 
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState } from 'react'
 import { Play, ChevronLeft, ChevronRight } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 
-export default function GallerySection() {
+export interface GalleryItem {
+  id?: number | string
+  title: string
+  image: string
+  speedTag?: string
+}
+
+export const DEFAULT_GALLERY_ITEMS: GalleryItem[] = [
+  {
+    id: 1,
+    image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=800&auto=format&fit=crop',
+    speedTag: '1.00',
+    title: 'Factory Showroom Racks',
+  },
+  {
+    id: 2,
+    image: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=800&auto=format&fit=crop',
+    speedTag: '',
+    title: 'Handcrafted Kundan Jhumkis',
+  },
+  {
+    id: 3,
+    image: 'https://images.unsplash.com/photo-1611591475870-0f2d80d21051?q=80&w=800&auto=format&fit=crop',
+    speedTag: '',
+    title: 'Artisan Stone Setting',
+  },
+]
+
+export interface GallerySectionProps {
+  heading?: string
+  subheading?: string
+  items?: GalleryItem[]
+}
+
+export default function GallerySection({
+  heading = "Explore Shyambaba's Gallery",
+  subheading = 'The Art Of Adornment',
+  items = DEFAULT_GALLERY_ITEMS,
+}: GallerySectionProps) {
   const carouselRef = useRef<HTMLDivElement>(null)
   const [activeIdx, setActiveIdx] = useState(0)
 
-  const galleryItems = [
-    {
-      id: 1,
-      image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=800&auto=format&fit=crop',
-      speedTag: '1.00',
-      title: 'Factory Showroom Racks',
-    },
-    {
-      id: 2,
-      image: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=800&auto=format&fit=crop',
-      speedTag: null,
-      title: 'Handcrafted Kundan Jhumkis',
-    },
-    {
-      id: 3,
-      image: 'https://images.unsplash.com/photo-1611591475870-0f2d80d21051?q=80&w=800&auto=format&fit=crop',
-      speedTag: null,
-      title: 'Artisan Stone Setting',
-    },
-  ]
+  const galleryItems = items && items.length > 0 ? items : DEFAULT_GALLERY_ITEMS
 
   const scrollToIdx = (idx: number) => {
     if (!carouselRef.current) return
     const container = carouselRef.current
     const cards = container.querySelectorAll('.gallery-card-item')
     if (cards[idx]) {
-      (cards[idx] as HTMLElement).scrollIntoView({
+      ;(cards[idx] as HTMLElement).scrollIntoView({
         behavior: 'smooth',
         inline: 'center',
         block: 'nearest',
@@ -62,7 +81,7 @@ export default function GallerySection() {
               style={{ fontFamily: 'Georgia, serif' }}
               className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight"
             >
-              Explore Shyambaba&apos;s Gallery
+              {heading || "Explore Shyambaba's Gallery"}
             </h2>
 
             {/* Gold Accent Divider Bar matching Krishaz */}
@@ -75,7 +94,7 @@ export default function GallerySection() {
               }}
               className="text-[13px] sm:text-[14px] text-[#2C2C2C] font-normal text-center"
             >
-              The Art Of Adornment
+              {subheading || 'The Art Of Adornment'}
             </p>
           </div>
         </ScrollReveal>
@@ -92,14 +111,14 @@ export default function GallerySection() {
         >
           {galleryItems.map((item, idx) => (
             <div
-              key={item.id}
+              key={item.id ?? idx}
               className="gallery-card-item flex-shrink-0 w-[78vw] max-w-[275px] sm:w-auto snap-center"
             >
               <div className="relative rounded-2xl sm:rounded-3xl p-1 bg-white border-2 border-[#D4AF37]/50 shadow-[0_2px_12px_rgba(0,0,0,0.04)] card-hover-lift group select-none">
                 {/* 9:16 Vertical Video Aspect Ratio */}
                 <div className="relative aspect-[9/16] rounded-xl sm:rounded-2xl overflow-hidden bg-black/10">
                   <img
-                    src={item.image}
+                    src={item.image || '/images/categories/cat-premium-earrings.jpg'}
                     alt={item.title}
                     className="w-full h-full object-cover card-img-zoom"
                     loading="lazy"
@@ -118,13 +137,13 @@ export default function GallerySection() {
                   {/* Center Play Button Overlay */}
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                     <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/90 text-[#195799] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-current ml-0.5" />
+                      <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-current translate-x-0.5" />
                     </div>
                   </div>
 
-                  {/* Bottom Video Title */}
-                  <div className="absolute bottom-3 left-3 right-3 text-white text-center pointer-events-none">
-                    <span className="text-xs sm:text-sm font-medium tracking-wide drop-shadow">
+                  {/* Bottom Text Line */}
+                  <div className="absolute bottom-3 left-3 right-3 text-white">
+                    <span className="text-xs sm:text-sm font-semibold tracking-wide block truncate">
                       {item.title}
                     </span>
                   </div>
@@ -134,43 +153,35 @@ export default function GallerySection() {
           ))}
         </div>
 
-        {/* Bottom Navigation Bar on Mobile */}
-        <div className="flex sm:hidden items-center justify-center gap-3.5 mt-4 pt-1">
-          {/* Previous Video Arrow */}
+        {/* Carousel Pagination Dots & Arrow Controls for Mobile */}
+        <div className="flex sm:hidden items-center justify-center gap-3 mt-4">
           <button
-            onClick={() => scrollToIdx(Math.max(0, activeIdx - 1))}
+            onClick={() => scrollToIdx(Math.max(activeIdx - 1, 0))}
             disabled={activeIdx === 0}
-            className="w-8 h-8 rounded-full bg-white border border-[#C9A84C]/50 text-[#195799] disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-xs active:scale-95 transition-all"
-            aria-label="Previous video"
-            style={{ WebkitTapHighlightColor: 'transparent' }}
+            className="w-8 h-8 rounded-full border border-neutral-300 flex items-center justify-center text-neutral-600 disabled:opacity-30 disabled:cursor-not-allowed bg-white"
+            aria-label="Previous card"
           >
             <ChevronLeft className="w-4 h-4" />
           </button>
 
-          {/* Indicator Navigation Pills */}
-          <div className="flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full border border-[#E5DAC1] shadow-xs">
-            {galleryItems.map((_, i) => (
+          <div className="flex gap-1.5">
+            {galleryItems.map((_, dotIdx) => (
               <button
-                key={i}
-                onClick={() => scrollToIdx(i)}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  activeIdx === i
-                    ? 'w-6 bg-[#195799]'
-                    : 'w-2 bg-[#D4AF37]/40 hover:bg-[#D4AF37]'
+                key={dotIdx}
+                onClick={() => scrollToIdx(dotIdx)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  activeIdx === dotIdx ? 'w-6 bg-[#195799]' : 'w-2 bg-neutral-300'
                 }`}
-                aria-label={`Go to video ${i + 1}`}
-                style={{ WebkitTapHighlightColor: 'transparent' }}
+                aria-label={`Go to slide ${dotIdx + 1}`}
               />
             ))}
           </div>
 
-          {/* Next Video Arrow */}
           <button
-            onClick={() => scrollToIdx(Math.min(galleryItems.length - 1, activeIdx + 1))}
+            onClick={() => scrollToIdx(Math.min(activeIdx + 1, galleryItems.length - 1))}
             disabled={activeIdx === galleryItems.length - 1}
-            className="w-8 h-8 rounded-full bg-white border border-[#C9A84C]/50 text-[#195799] disabled:opacity-30 disabled:pointer-events-none flex items-center justify-center shadow-xs active:scale-95 transition-all"
-            aria-label="Next video"
-            style={{ WebkitTapHighlightColor: 'transparent' }}
+            className="w-8 h-8 rounded-full border border-neutral-300 flex items-center justify-center text-neutral-600 disabled:opacity-30 disabled:cursor-not-allowed bg-white"
+            aria-label="Next card"
           >
             <ChevronRight className="w-4 h-4" />
           </button>

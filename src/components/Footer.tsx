@@ -4,7 +4,25 @@ import React from 'react'
 import Link from 'next/link'
 import { MapPin } from 'lucide-react'
 
-export default function Footer() {
+export interface FooterProps {
+  logoUrl?: string
+  companyName?: string
+  tagline?: string
+  addressLine1?: string
+  addressLine2?: string
+  addressLine3?: string
+  copyright?: string
+}
+
+export default function Footer({
+  logoUrl = '/images/logo.png',
+  companyName = 'ShyamBaba Wholesale Jewellery',
+  tagline = 'Style In Bulk, Profit In Every Piece',
+  addressLine1 = 'Shop no, 206, Johari Bazar Rd,',
+  addressLine2 = 'Pink City, Jaipur, Rajasthan',
+  addressLine3 = '302003',
+  copyright = '© 2025 Shyambabawholesale. All Rights Reserved.',
+}: FooterProps) {
   return (
     <footer id="contact" className="relative bg-[#195799] text-white">
       {/* Top Wave Transition matching Screenshot 1 */}
@@ -33,15 +51,15 @@ export default function Footer() {
         {/* Brand Logo Card (White Square with Official Logo) */}
         <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-xl shadow-md p-2 flex items-center justify-center overflow-hidden">
           <img
-            src="/images/logo.png"
-            alt="Shyam Baba Jewellery Logo"
+            src={logoUrl || '/images/logo.png'}
+            alt={`${companyName} Logo`}
             className="w-full h-full object-contain"
           />
         </div>
 
         {/* Tagline below logo */}
         <p className="text-white font-bold text-sm sm:text-base tracking-wide mt-4 mb-8">
-          Style In Bulk, Profit In Every Piece
+          {tagline}
         </p>
 
         {/* 4 Navigation / Info Columns */}
@@ -111,14 +129,12 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-sm sm:text-base text-white mb-3">Contact Info</h4>
             <div className="space-y-1 text-white/90 leading-relaxed text-xs sm:text-sm">
-              <p>Address: Shop no,</p>
-              <p>206, Johari Bazar Rd,</p>
+              <p>{addressLine1}</p>
               <div className="flex items-start gap-1.5 mt-0.5">
                 <MapPin className="w-4 h-4 text-[#C9A84C] fill-[#C9A84C] flex-shrink-0 mt-0.5" />
                 <span>
-                  Johri Bazar, Pink City,<br />
-                  Jaipur, Rajasthan<br />
-                  302003
+                  {addressLine2}<br />
+                  {addressLine3}
                 </span>
               </div>
             </div>
@@ -127,7 +143,7 @@ export default function Footer() {
 
         {/* Bottom Copyright centered */}
         <div className="border-t border-white/20 mt-10 pt-6 text-center text-xs text-white/90">
-          &copy; 2025 Shyambabawholesale
+          {copyright}
         </div>
       </div>
     </footer>

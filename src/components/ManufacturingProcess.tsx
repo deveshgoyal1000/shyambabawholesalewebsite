@@ -3,54 +3,73 @@
 import React from 'react'
 import ScrollReveal from '@/components/ScrollReveal'
 
-export default function ManufacturingProcess() {
-  const steps = [
-    {
-      num: 1,
-      title: 'Concept & Sketch',
-      desc: 'We start with your vision and create detailed sketches.',
-      image: '/images/process/step-1-final.png',
-    },
-    {
-      num: 2,
-      title: 'CAD Design',
-      desc: 'Transforming ideas into precise 3D CAD designs.',
-      image: '/images/process/step-2-final.png',
-    },
-    {
-      num: 3,
-      title: 'Sample Checking',
-      desc: 'We craft a sample piece for approval before bulk production.',
-      image: '/images/process/step-3-final.png',
-    },
-    {
-      num: 4,
-      title: 'Quality Check',
-      desc: 'Every piece undergoes rigorous quality inspection.',
-      image: '/images/process/step-4-final.png',
-    },
-    {
-      num: 5,
-      title: 'Order processing',
-      desc: 'Our stunning earrings are ready to deliver.',
-      image: '/images/process/step-5-final.png',
-    },
-  ]
+export interface ProcessStep {
+  num: number | string
+  title: string
+  desc: string
+  image: string
+}
+
+export const DEFAULT_PROCESS_STEPS: ProcessStep[] = [
+  {
+    num: 1,
+    title: 'Concept & Sketch',
+    desc: 'We start with your vision and create detailed sketches.',
+    image: '/images/process/step-1-final.png',
+  },
+  {
+    num: 2,
+    title: 'CAD Design',
+    desc: 'Transforming ideas into precise 3D CAD designs.',
+    image: '/images/process/step-2-final.png',
+  },
+  {
+    num: 3,
+    title: 'Sample Checking',
+    desc: 'We craft a sample piece for approval before bulk production.',
+    image: '/images/process/step-3-final.png',
+  },
+  {
+    num: 4,
+    title: 'Quality Check',
+    desc: 'Every piece undergoes rigorous quality inspection.',
+    image: '/images/process/step-4-final.png',
+  },
+  {
+    num: 5,
+    title: 'Order processing',
+    desc: 'Our stunning earrings are ready to deliver.',
+    image: '/images/process/step-5-final.png',
+  },
+]
+
+export interface ManufacturingProcessProps {
+  heading?: string
+  subheading?: string
+  steps?: ProcessStep[]
+}
+
+export default function ManufacturingProcess({
+  heading = 'From Sketch To Stunning Jewellery',
+  subheading = 'Our 5-Step Precision Manufacturing Pipeline',
+  steps = DEFAULT_PROCESS_STEPS,
+}: ManufacturingProcessProps) {
+  const displaySteps = steps && steps.length > 0 ? steps : DEFAULT_PROCESS_STEPS
 
   return (
     <section className="py-10 md:py-16 bg-[#FAF8F5]">
       <div className="max-w-4xl mx-auto px-3.5 sm:px-6 lg:px-8">
-        {/* Section Heading matching Krishaz exactly */}
+        {/* Section Heading */}
         <ScrollReveal direction="none" distance={0} duration={650}>
           <div className="text-center mb-6 sm:mb-9">
             <h2
               style={{ fontFamily: 'Georgia, serif' }}
               className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight"
             >
-              From Sketch To Stunning Jewellery
+              {heading || 'From Sketch To Stunning Jewellery'}
             </h2>
 
-            {/* Gold Accent Divider Bar matching Krishaz */}
+            {/* Gold Accent Divider Bar */}
             <div className="w-[60px] sm:w-[80px] h-[2px] bg-[#C9A84C] mx-auto my-2.5 sm:my-3.5"></div>
 
             <p
@@ -60,16 +79,16 @@ export default function ManufacturingProcess() {
               }}
               className="text-[13px] sm:text-[14px] text-[#2C2C2C] font-normal"
             >
-              Our 5-Step Precision Manufacturing Pipeline
+              {subheading || 'Our 5-Step Precision Manufacturing Pipeline'}
             </p>
           </div>
         </ScrollReveal>
 
-        {/* 5 Step Cards with Staggered ScrollReveal */}
+        {/* Step Cards with Staggered ScrollReveal */}
         <div className="max-w-xl mx-auto space-y-3 sm:space-y-4">
-          {steps.map((step, idx) => (
+          {displaySteps.map((step, idx) => (
             <ScrollReveal
-              key={step.num}
+              key={step.num ?? idx}
               direction="none"
               distance={0}
               duration={550}
@@ -79,24 +98,24 @@ export default function ManufacturingProcess() {
                 {/* Step Image */}
                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-[#FAF8F5] border border-neutral-200 flex-shrink-0">
                   <img
-                    src={step.image}
+                    src={step.image || '/images/categories/cat-premium-earrings.jpg'}
                     alt={step.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover card-img-zoom"
                     loading="lazy"
                   />
                 </div>
 
-                {/* Step Info */}
+                {/* Step Content */}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#195799] text-white text-[10px] sm:text-xs font-bold flex items-center justify-center flex-shrink-0">
+                    <span className="w-5 h-5 rounded-full bg-[#195799] text-white text-[11px] font-bold flex items-center justify-center shrink-0">
                       {step.num}
                     </span>
-                    <h3 className="font-semibold text-xs sm:text-sm text-neutral-900 group-hover:text-[#195799] transition-colors truncate">
+                    <h3 className="font-bold text-neutral-900 text-sm sm:text-base truncate">
                       {step.title}
                     </h3>
                   </div>
-                  <p className="text-[11px] sm:text-xs text-neutral-600 font-normal leading-relaxed">
+                  <p className="text-neutral-600 text-xs sm:text-sm leading-relaxed line-clamp-2">
                     {step.desc}
                   </p>
                 </div>
@@ -104,21 +123,6 @@ export default function ManufacturingProcess() {
             </ScrollReveal>
           ))}
         </div>
-
-        {/* Visit Our Manufacturing Unit Action Button matching Krishaz Wholesale (in Royal Blue) */}
-        <ScrollReveal direction="none" distance={0} delay={200} duration={650}>
-          <div className="mt-8 text-center max-w-xl mx-auto">
-            <a
-              href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20would%20like%20to%20visit%20your%20manufacturing%20unit%20in%20Jaipur."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-tactile w-full inline-flex items-center justify-center py-4 px-6 rounded-xl sm:rounded-2xl bg-[#195799] hover:bg-[#124378] text-white font-bold text-[16px] sm:text-[18px] tracking-wide shadow-md hover:shadow-lg active:scale-98 transition-all text-center"
-              style={{ WebkitTapHighlightColor: 'transparent' }}
-            >
-              Visit Our Manufacturing Unit
-            </a>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   )

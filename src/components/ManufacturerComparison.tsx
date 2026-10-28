@@ -3,47 +3,69 @@
 import React, { useEffect, useRef, useState } from 'react'
 import ScrollReveal from '@/components/ScrollReveal'
 
-export default function ManufacturerComparison() {
+export interface ComparisonRow {
+  feature: string
+  shyambaba: boolean
+  others: boolean
+}
+
+export const DEFAULT_COMPARISON_ROWS: ComparisonRow[] = [
+  {
+    feature: 'Manufacturer (Not Trader)',
+    shyambaba: true,
+    others: false,
+  },
+  {
+    feature: 'Video Call Selection',
+    shyambaba: true,
+    others: true,
+  },
+  {
+    feature: 'International Shipping',
+    shyambaba: true,
+    others: false,
+  },
+  {
+    feature: 'Custom Designs',
+    shyambaba: true,
+    others: false,
+  },
+  {
+    feature: 'Quality Guarantee',
+    shyambaba: true,
+    others: false,
+  },
+  {
+    feature: 'Bulk Discounts',
+    shyambaba: true,
+    others: true,
+  },
+  {
+    feature: 'Low Investment *High Returns',
+    shyambaba: true,
+    others: false,
+  },
+]
+
+export interface ManufacturerComparisonProps {
+  heading?: string
+  subheading?: string
+  companyName?: string
+  otherName?: string
+  rows?: ComparisonRow[]
+}
+
+export default function ManufacturerComparison({
+  heading = 'ShyamBabaWholesale vs Other Suppliers',
+  subheading = 'Why 10,000+ Retailers Choose Direct Manufacturing',
+  companyName = 'ShyamBabaWholesale',
+  otherName = 'Other Suppliers',
+  rows = DEFAULT_COMPARISON_ROWS,
+}: ManufacturerComparisonProps) {
   const tableRef = useRef<HTMLDivElement>(null)
   const [tableInView, setTableInView] = useState(false)
 
-  const rows = [
-    {
-      feature: 'Manufacturer (Not Trader)',
-      shyambaba: true,
-      others: false,
-    },
-    {
-      feature: 'Video Call Selection',
-      shyambaba: true,
-      others: true,
-    },
-    {
-      feature: 'International Shipping',
-      shyambaba: true,
-      others: false,
-    },
-    {
-      feature: 'Custom Designs',
-      shyambaba: true,
-      others: false,
-    },
-    {
-      feature: 'Quality Guarantee',
-      shyambaba: true,
-      others: false,
-    },
-    {
-      feature: 'Bulk Discounts',
-      shyambaba: true,
-      others: true,
-    },
-    {
-      feature: 'Low Investment *High Returns',
-      shyambaba: true,
-      others: false,
-    },
-  ]
+  const displayRows = rows && rows.length > 0 ? rows : DEFAULT_COMPARISON_ROWS
 
   useEffect(() => {
     const el = tableRef.current
@@ -84,7 +106,7 @@ export default function ManufacturerComparison() {
               style={{ fontFamily: 'Georgia, serif' }}
               className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight"
             >
-              ShyamBabaWholesale vs Other Suppliers
+              {heading || 'ShyamBabaWholesale vs Other Suppliers'}
             </h2>
 
             {/* Gold Accent Divider Bar matching Krishaz */}
@@ -97,141 +119,67 @@ export default function ManufacturerComparison() {
               }}
               className="text-[13px] sm:text-[14px] text-[#2C2C2C] font-normal"
             >
-              Why 10,000+ Retailers Choose Direct Manufacturing
+              {subheading || 'Why 10,000+ Retailers Choose Direct Manufacturing'}
             </p>
           </div>
         </ScrollReveal>
 
-        {/* Comparison Table Card with line-by-line staggered reveal */}
+        {/* Comparison Table */}
         <div
           ref={tableRef}
-          className="bg-white rounded-2xl border-2 border-[#C9A84C]/60 overflow-hidden shadow-[0_6px_24px_rgba(25, 87, 153,0.06)] transition-all duration-700"
-          style={{
-            opacity: tableInView ? 1 : 0,
-            transform: tableInView ? 'translate3d(0, 0, 0)' : 'translate3d(0, 20px, 0)',
-            transition: 'opacity 750ms cubic-bezier(0.22, 1, 0.36, 1), transform 750ms cubic-bezier(0.22, 1, 0.36, 1)',
-          }}
+          className="rounded-2xl border-2 border-[#D4C7B4] overflow-hidden bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)]"
         >
-          <table className="w-full border-collapse">
-            <thead>
-              <tr className="border-b-2 border-[#C9A84C] bg-[#FAF8F5]">
-                <th className="py-3.5 px-3 sm:px-5 text-left font-bold text-[11px] sm:text-xs text-[#2C2C2C] uppercase tracking-wider">
-                  Features
-                </th>
-                <th className="py-3.5 px-2 sm:px-4 text-center font-bold text-[11px] sm:text-xs text-[#195799] uppercase tracking-wider bg-[#FAF5E8] border-x-2 border-[#C9A84C]/50">
-                  <span className="font-extrabold text-[#195799] text-xs sm:text-sm tracking-tight block">
-                    ShyamBabaWholesale
-                  </span>
-                </th>
-                <th className="py-3.5 px-2 sm:px-4 text-center font-bold text-[11px] sm:text-xs text-neutral-500 uppercase tracking-wider">
-                  Other Suppliers
-                </th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-[#EAE3D8]">
-              {rows.map((row, idx) => (
-                <tr
-                  key={row.feature}
-                  className={`transition-all ${
-                    idx % 2 === 1 ? 'bg-[#FCFAF7]' : 'bg-white'
-                  }`}
-                  style={{
-                    opacity: tableInView ? 1 : 0,
-                    transform: tableInView ? 'translate3d(0, 0, 0)' : 'translate3d(0, 16px, 0)',
-                    transition: `opacity 750ms cubic-bezier(0.22, 1, 0.36, 1) ${idx * 140}ms, transform 750ms cubic-bezier(0.22, 1, 0.36, 1) ${idx * 140}ms`,
-                    willChange: 'opacity, transform',
-                  }}
-                >
-                  <td className="py-3.5 px-3 sm:px-5 text-xs sm:text-sm font-semibold text-[#2C2C2C]">
-                    {row.feature}
-                  </td>
-                  <td className="py-3.5 px-2 sm:px-4 text-center bg-[#FAF5E8]/60 border-x-2 border-[#C9A84C]/40">
-                    <div
-                      className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-emerald-100 text-emerald-600 border border-emerald-300 shadow-2xs"
-                      style={{
-                        transform: tableInView ? 'scale(1)' : 'scale(0.8)',
-                        transition: `transform 600ms cubic-bezier(0.22, 1, 0.36, 1) ${idx * 140 + 100}ms`,
-                      }}
-                    >
-                      <svg
-                        className="w-3.5 h-3.5 stroke-[3]"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </div>
-                  </td>
-                  <td className="py-3.5 px-2 sm:px-4 text-center">
-                    {row.others ? (
-                      <div
-                        className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-emerald-100 text-emerald-600 border border-emerald-300 shadow-2xs"
-                        style={{
-                          transform: tableInView ? 'scale(1)' : 'scale(0.8)',
-                          transition: `transform 600ms cubic-bezier(0.22, 1, 0.36, 1) ${idx * 140 + 100}ms`,
-                        }}
-                      >
-                        <svg
-                          className="w-3.5 h-3.5 stroke-[2.5]"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                    ) : (
-                      <div
-                        className="inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-rose-100 text-rose-600 border border-rose-300 shadow-2xs"
-                        style={{
-                          transform: tableInView ? 'scale(1)' : 'scale(0.8)',
-                          transition: `transform 600ms cubic-bezier(0.22, 1, 0.36, 1) ${idx * 140 + 100}ms`,
-                        }}
-                      >
-                        <svg
-                          className="w-3.5 h-3.5 stroke-[3]"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M6 18L18 6M6 6l12 12"
-                          />
-                        </svg>
-                      </div>
-                    )}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        {/* CTA Button below Table */}
-        <ScrollReveal direction="up" distance={16} delay={200} duration={750}>
-          <div className="mt-7 text-center">
-            <a
-              href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20partner%20with%20your%20factory%20for%20wholesale%20supply."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-tactile w-full inline-flex items-center justify-center py-4 sm:py-4.5 px-8 sm:px-12 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-bold text-[15px] sm:text-[17px] tracking-wide shadow-lg hover:shadow-xl active:scale-[0.985] transition-all text-center"
-              style={{ WebkitTapHighlightColor: 'transparent' }}
-            >
-              Start Growing With Us &rarr;
-            </a>
+          {/* Table Header */}
+          <div className="grid grid-cols-12 bg-gradient-to-r from-[#195799] to-[#124378] text-white p-3.5 sm:p-5 items-center font-bold text-xs sm:text-base border-b-2 border-[#C9A84C]">
+            <div className="col-span-6 sm:col-span-6 tracking-wide">
+              Features
+            </div>
+            <div className="col-span-3 sm:col-span-3 text-center text-[#FFD700] tracking-wide">
+              {companyName}
+            </div>
+            <div className="col-span-3 sm:col-span-3 text-center text-white/80 tracking-wide font-medium">
+              {otherName}
+            </div>
           </div>
-        </ScrollReveal>
+
+          {/* Table Rows */}
+          <div className="divide-y divide-[#EAE4DA]">
+            {displayRows.map((row, idx) => (
+              <div
+                key={row.feature ?? idx}
+                className={`grid grid-cols-12 p-3 sm:p-4 items-center text-xs sm:text-sm font-medium transition-colors ${
+                  idx % 2 === 0 ? 'bg-white' : 'bg-[#FAF8F5]'
+                }`}
+              >
+                <div className="col-span-6 text-neutral-800 pr-2">
+                  {row.feature}
+                </div>
+                <div className="col-span-3 flex justify-center items-center">
+                  {row.shyambaba ? (
+                    <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-sm sm:text-base shadow-xs">
+                      ✓
+                    </span>
+                  ) : (
+                    <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-red-100 text-red-500 flex items-center justify-center font-bold text-xs sm:text-sm">
+                      ✕
+                    </span>
+                  )}
+                </div>
+                <div className="col-span-3 flex justify-center items-center">
+                  {row.others ? (
+                    <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-sm sm:text-base">
+                      ✓
+                    </span>
+                  ) : (
+                    <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-red-50 text-red-400 flex items-center justify-center font-bold text-xs sm:text-sm">
+                      ✕
+                    </span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )
