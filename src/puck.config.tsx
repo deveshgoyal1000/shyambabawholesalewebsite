@@ -208,7 +208,27 @@ export const puckConfig: Config<ComponentProps> = {
         button2Text,
         bgImageMobile,
         bgImageDesktop,
-      }) => (
+      }) => {
+        const DEFAULT_POINTS = [
+          'REAL Manufacturer & Wholesaler',
+          '150+ Karigars Crafting Jewellery for Us.',
+          'All Kind off “Designs Under One Roof”.',
+          'Premium-Quality Materials & Stones',
+          '100% Price Guarantee.',
+          'Regular Updates For New Designs .',
+          'Replacement & Repair Guarantee on All Products.',
+          'Fast Shipping Service.',
+        ];
+
+        const rawPoints = [point1, point2, point3, point4, point5, point6, point7, point8].filter(Boolean) as string[];
+        const activePoints = point5 ? rawPoints : DEFAULT_POINTS;
+        const activeSubtitle =
+          subtitle && !subtitle.includes('10,000+')
+            ? subtitle
+            : 'Supplying to BOUTIQUE OWNERS , SHOPKEEPERS, EXHIBITION CUSTOMER, CUSTOMER WITH WEBSITE , B2B .';
+        const activeNote = noteText || '🚫 Note :  EXCEPT (PHOTO BASED RESELLERS ) are not allowed.';
+
+        return (
         <section className="relative min-h-[780px] sm:min-h-[820px] flex flex-col justify-between text-center text-white overflow-hidden select-none">
           {/* Background Images */}
           <div
@@ -241,7 +261,7 @@ export const puckConfig: Config<ComponentProps> = {
           />
 
           <div className="relative z-10 max-w-xl mx-auto px-3 sm:px-6 pt-12 sm:pt-20 pb-10 flex flex-col items-center flex-1 justify-center">
-            {preheading && (
+            {preheading && preheading !== "India's Trusted" && (
               <span
                 style={{ fontFamily: 'Georgia, serif' }}
                 className="text-[19px] sm:text-[24px] text-[#F3EFE6] tracking-wide mb-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]"
@@ -263,7 +283,7 @@ export const puckConfig: Config<ComponentProps> = {
               style={{ maxWidth: '350px' }}
               className="text-[14px] sm:text-[17px] tracking-wide text-[#FAF8F5]/95 mx-auto mb-4 font-normal leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.85)] text-center"
             >
-              {subtitle}
+              {activeSubtitle}
             </p>
 
             {noteText && (
@@ -276,18 +296,16 @@ export const puckConfig: Config<ComponentProps> = {
 
             {/* Check points */}
             <div className="space-y-3 mb-8 w-full max-w-[350px] text-left mx-auto">
-              {[point1, point2, point3, point4, point5, point6, point7, point8]
-                .filter(Boolean)
-                .map((pt) => (
-                  <div key={pt} className="flex items-center gap-3">
-                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-[1.5px] border-[#22c55e] flex items-center justify-center text-[#22c55e] flex-shrink-0 bg-black/50 shadow-[0_0_12px_rgba(34,197,94,0.3)]">
-                      <Check className="w-4 h-4 text-[#22c55e] stroke-[2.8]" />
-                    </div>
-                    <span className="text-[14px] sm:text-[17px] font-semibold text-white tracking-wide drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)] leading-snug flex-1">
-                      {pt}
-                    </span>
+              {activePoints.map((pt) => (
+                <div key={pt} className="flex items-center gap-3">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-[1.5px] border-[#22c55e] flex items-center justify-center text-[#22c55e] flex-shrink-0 bg-black/50 shadow-[0_0_12px_rgba(34,197,94,0.3)]">
+                    <Check className="w-4 h-4 text-[#22c55e] stroke-[2.8]" />
                   </div>
-                ))}
+                  <span className="text-[14px] sm:text-[17px] font-semibold text-white tracking-wide drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)] leading-snug flex-1">
+                    {pt}
+                  </span>
+                </div>
+              ))}
             </div>
 
             {/* Buttons */}
@@ -307,7 +325,8 @@ export const puckConfig: Config<ComponentProps> = {
             </div>
           </div>
         </section>
-      ),
+        );
+      },
     },
 
     // 3. Shop by Categories
