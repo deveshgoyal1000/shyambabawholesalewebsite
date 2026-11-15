@@ -65,7 +65,7 @@ export default function HeroBanner() {
       ></div>
 
       {/* Center Content matching Krishaz Wholesale exactly */}
-      <div className="relative z-10 max-w-xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-10 flex flex-col items-center flex-1 justify-center">
+      <div className="relative z-10 max-w-xl mx-auto px-3 sm:px-6 pt-12 sm:pt-20 pb-10 flex flex-col items-center flex-1 justify-center">
         {/* Pre-heading: India's Trusted (Clean, elegant serif matching Krishaz) */}
         <div
           className={`flex flex-col items-center mb-2 sm:mb-2.5 transition-opacity duration-600 ease-[cubic-bezier(0.19,1,0.22,1)] ${
@@ -84,14 +84,13 @@ export default function HeroBanner() {
         {/* Main Headline: Two-line Serif matching Krishaz */}
         <div className="mb-3.5 sm:mb-4.5">
           <h1
-            style={{ fontFamily: 'Georgia, serif', transitionDelay: '200ms' }}
-            className={`text-[23px] sm:text-[44px] md:text-5xl lg:text-[56px] font-bold tracking-tight text-white leading-[1.2] transition-opacity duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
-              mounted ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <span>Brass Jewellery</span><br /><span>Manufacturer &amp; Exporters</span>
-            
-          </h1>
+              style={{ fontFamily: 'Georgia, serif' }}
+              className="font-bold tracking-tight text-white leading-[1.25] mb-4 mx-auto drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] px-2 text-center"
+            >
+              <span className="block text-[22px] sm:text-[42px]">JAIPUR BIGGEST</span>
+              <span className="block text-[22px] sm:text-[42px]">ARTIFICIAL JEWELLERY</span>
+              <span className="block text-[17px] sm:text-[36px] text-[#FAF8F5] mt-1">MANUFACTURER &amp; WHOLESALER</span>
+            </h1>
         </div>
 
         {/* Subtitle with generous size matching Krishaz */}

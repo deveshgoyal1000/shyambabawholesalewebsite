@@ -35,14 +35,20 @@ export type ComponentProps = {
     brandName: string
   }
   HeroBannerBlock: {
-    preheading: string
+    preheading?: string
     headlineLine1: string
     headlineLine2: string
     subtitle: string
+    noteText?: string
+    pointsTitle?: string
     point1: string
     point2: string
     point3: string
     point4: string
+    point5?: string
+    point6?: string
+    point7?: string
+    point8?: string
     button1Text: string
     button2Text: string
     bgImageMobile: string
@@ -192,12 +198,18 @@ export const puckConfig: Config<ComponentProps> = {
         point2,
         point3,
         point4,
+        point5,
+        point6,
+        point7,
+        point8,
+        noteText,
+        pointsTitle,
         button1Text,
         button2Text,
         bgImageMobile,
         bgImageDesktop,
       }) => (
-        <section className="relative min-h-[640px] sm:min-h-[700px] flex flex-col justify-between text-center text-white overflow-hidden select-none">
+        <section className="relative min-h-[780px] sm:min-h-[820px] flex flex-col justify-between text-center text-white overflow-hidden select-none">
           {/* Background Images */}
           <div
             className="absolute inset-0 bg-cover bg-[position:50%_15%] sm:hidden"
@@ -228,7 +240,7 @@ export const puckConfig: Config<ComponentProps> = {
             }}
           />
 
-          <div className="relative z-10 max-w-xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-10 flex flex-col items-center flex-1 justify-center">
+          <div className="relative z-10 max-w-xl mx-auto px-3 sm:px-6 pt-12 sm:pt-20 pb-10 flex flex-col items-center flex-1 justify-center">
             {preheading && (
               <span
                 style={{ fontFamily: 'Georgia, serif' }}
@@ -239,34 +251,43 @@ export const puckConfig: Config<ComponentProps> = {
             )}
 
             <h1
-              style={{ fontFamily: 'Georgia, serif', maxWidth: '320px' }}
-              className="text-[20px] sm:text-[42px] md:text-[50px] font-bold tracking-tight text-white leading-[1.3] mb-3 mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]"
+              style={{ fontFamily: 'Georgia, serif' }}
+              className="font-bold tracking-tight text-white leading-[1.25] mb-4 mx-auto drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] px-2 text-center"
             >
-              <span className="block">{headlineLine1}</span>
-              {headlineLine2 && (
-                <span className="block mt-0.5">{headlineLine2}</span>
-              )}
+              <span className="block text-[22px] sm:text-[42px]">JAIPUR BIGGEST</span>
+              <span className="block text-[22px] sm:text-[42px]">ARTIFICIAL JEWELLERY</span>
+              <span className="block text-[17px] sm:text-[36px] text-[#FAF8F5] mt-1">MANUFACTURER &amp; WHOLESALER</span>
             </h1>
 
             <p
-              style={{ maxWidth: '250px' }}
-              className="text-[13.5px] sm:text-[17px] text-[#FAF8F5]/90 mx-auto mb-7 font-normal leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.85)] text-center"
+              style={{ maxWidth: '350px' }}
+              className="text-[14px] sm:text-[17px] tracking-wide text-[#FAF8F5]/95 mx-auto mb-4 font-normal leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.85)] text-center"
             >
               {subtitle}
             </p>
 
+            {noteText && (
+              <div className="w-full max-w-[320px] px-3.5 py-1.5 rounded-xl bg-red-950/85 border border-red-500/50 text-red-100 text-[11px] sm:text-[12px] font-medium tracking-wide mb-4.5 shadow-sm mx-auto text-center leading-snug">
+                <span>{noteText}</span>
+              </div>
+            )}
+
+            
+
             {/* Check points */}
-            <div className="space-y-3 mb-8 w-full max-w-[320px] text-left mx-auto">
-              {[point1, point2, point3, point4].filter(Boolean).map((pt) => (
-                <div key={pt} className="flex items-center gap-3">
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-[1.5px] border-[#22c55e] flex items-center justify-center text-[#22c55e] flex-shrink-0 bg-black/50 shadow-[0_0_12px_rgba(34,197,94,0.3)]">
-                    <Check className="w-4 h-4 text-[#22c55e] stroke-[2.8]" />
+            <div className="space-y-3 mb-8 w-full max-w-[350px] text-left mx-auto">
+              {[point1, point2, point3, point4, point5, point6, point7, point8]
+                .filter(Boolean)
+                .map((pt) => (
+                  <div key={pt} className="flex items-center gap-3">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-[1.5px] border-[#22c55e] flex items-center justify-center text-[#22c55e] flex-shrink-0 bg-black/50 shadow-[0_0_12px_rgba(34,197,94,0.3)]">
+                      <Check className="w-4 h-4 text-[#22c55e] stroke-[2.8]" />
+                    </div>
+                    <span className="text-[14px] sm:text-[17px] font-semibold text-white tracking-wide drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)] leading-snug flex-1">
+                      {pt}
+                    </span>
                   </div>
-                  <span className="text-[16px] sm:text-[18px] font-semibold text-white tracking-wide">
-                    {pt}
-                  </span>
-                </div>
-              ))}
+                ))}
             </div>
 
             {/* Buttons */}
