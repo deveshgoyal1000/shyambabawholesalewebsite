@@ -9,39 +9,64 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      question: 'What are the shipping charges & Taxes?',
+      question: 'How do I calculate the price of a product?',
       answer:
-        '• Domestic shipping across India is calculated based on consignment weight and location, with standard express courier options.\n• All domestic orders are GST compliant (3% GST on brass jewellery).\n• For international shipping, rates are calculated dynamically based on package weight via DHL, FedEx, or Aramex express air freight.',
+        'Each jewellery photo in our website/catalog has a unique code.\nTo calculate the price:\n• Multiply the code by the price factor (shared by our team).\n👉 Contact us on WhatsApp (+91 96808 65791) for the calculation number and final price.',
     },
     {
-      question: 'What is the Minimum Order Value (MOV / MOQ)?',
+      question: 'What is the minimum order value?',
       answer:
-        '• Minimum Order Value is ₹3,000/- through the website catalogue directly.\n• Minimum order is ₹10,000/- if you purchase through live video call or factory visit.\n• You can mix and match different product categories (earrings, bangles, necklaces) to reach the minimum value.',
+        '• Domestic (India): ₹10,000\n• International Orders: ₹20,000',
     },
     {
-      question: 'Do you offer Video Call for product selection?',
+      question: 'Do you provide international shipping?',
       answer:
-        'Yes! We offer live personalized video shopping calls on WhatsApp. Our experienced sales coordinators will showcase our latest factory inventory under natural studio lighting, demonstrate stone sparkle and weight, and answer any questions in real-time.',
+        '✅ Yes! We ship jewellery worldwide.\n• Countries we already deliver to: USA, Canada, UK, Italy, UAE, Australia, New Zealand, Netherlands, and many more.\n• Delivery Time: 5–12 business days (varies by country).\n👉 To place an international order, contact us on WhatsApp.',
     },
     {
-      question: 'How long does it take to dispatch the order?',
+      question: 'How are wholesale orders delivered?',
       answer:
-        'Standard catalogue orders are packed and dispatched within 24 hours of payment confirmation. Domestic courier delivery takes 2 to 4 business days. International express delivery via DHL/FedEx takes 4 to 8 business days depending on your country.',
+        '• Domestic (India): DTDC, Skyking, Professional Couriers (or your preferred courier).\n• International: UPS, DTDC, Atlantic International Express (or your preferred courier).',
     },
     {
-      question: 'Do you ship internationally?',
+      question: 'Do you charge extra for courier/shipping?',
       answer:
-        'Yes, we export to over 50+ countries worldwide including USA, UK, Canada, UAE, Malaysia, Singapore, Australia, and Bangladesh. All orders are packed in 5-ply export master cartons with complete commercial invoices and HSN code classification.',
+        'Yes, shipping charges are separate from the order value.\n• Domestic Orders: ₹80–₹100 per kg (depends on city & state)\n• International Orders: Based on parcel weight & dimensions.',
+    },
+    {
+      question: 'Do you provide a GST bill?',
+      answer:
+        'Yes, we issue a GST invoice on all purchases.\n• Share your GST number to claim input credit.\n• GST Rate: 3% on imitation & silver jewellery.',
+    },
+    {
+      question: 'How can I place a wholesale order?',
+      answer:
+        'You can order in 3 simple ways:\n1. Share selected product photos on WhatsApp\n2. Join a live video call to explore our stock\n3. Visit our showroom at Johari Bazaar, Jaipur\n\n📌 Note: The catalog is for reference only. We stock thousands of new designs in Kundan, Polki, Antique, Bridal, Rajwada & Western jewellery.',
+    },
+    {
+      question: 'Do you accept Cash on Delivery (COD)?',
+      answer:
+        '❌ No, COD is not available for wholesale orders.',
     },
     {
       question: 'What payment methods do you accept?',
       answer:
-        'We accept Domestic Bank Transfers (NEFT/RTGS/IMPS), UPI (Google Pay, PhonePe, Paytm), International Wire Transfer (SWIFT), Wise, Remitly, Western Union, and PayPal. All payment details are shared directly by our factory accounts team.',
+        '• In-store: Credit/Debit Cards\n• Online: Bank Transfer (NEFT/RTGS/IMPS), UPI (PhonePe, Paytm, Google Pay)',
     },
     {
-      question: 'Can you manufacture custom designs?',
+      question: 'What types of jewellery do you sell?',
       answer:
-        'Yes! As an in-house Jaipur brass casting manufacturer, we can produce custom designs from your CAD files or hand sketches. Custom mould MOQ is generally 50 to 100 pairs per design. We also provide custom logo branding cards and packaging.',
+        'We specialize in premium imitation jewellery that looks just like real gold & diamonds.\n• Jewellery Types: Necklaces, Earrings, Rings, Bangles, Bracelets, Maang Tikka, Bridal Sets & more\n• Styles: Kundan, Polki, Antique, Diamond Look, Rajwada, Western, Bridal & Semi-Bridal.',
+    },
+    {
+      question: 'Can I track my order online?',
+      answer:
+        'Yes. Once dispatched, we will share a tracking number so you can track your parcel directly on the courier’s website.',
+    },
+    {
+      question: 'What if I receive a damaged or wrong item?',
+      answer:
+        'We ensure 100% customer satisfaction. If you receive a damaged or incorrect product, we will replace or repair it.\n\n⚠️ Important: Please record an unboxing video of the parcel. It is mandatory to process any replacement or claim.',
     },
   ]
 
@@ -62,7 +87,7 @@ export default function FAQSection() {
               Frequently Asked Questions
             </h2>
 
-            {/* Gold Accent Divider Bar matching Krishaz */}
+            {/* Gold Accent Divider Bar */}
             <div className="w-[60px] sm:w-[80px] h-[2px] bg-[#C9A84C] mx-auto my-2.5 sm:my-3.5"></div>
 
             <p
@@ -101,35 +126,31 @@ export default function FAQSection() {
                   </div>
                 </button>
 
-                <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    openIndex === idx ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                  }`}
-                >
-                  <div className="px-4 pb-4 sm:px-5 sm:pb-5 pt-1 text-neutral-600 text-xs sm:text-sm font-normal leading-relaxed whitespace-pre-line border-t border-neutral-100">
+                {openIndex === idx && (
+                  <div className="px-4 pb-4 sm:px-5 sm:pb-5 pt-0 text-xs sm:text-sm text-neutral-600 leading-relaxed border-t border-neutral-100 bg-neutral-50/50 whitespace-pre-line">
                     {faq.answer}
                   </div>
-                </div>
+                )}
               </div>
             ))}
           </div>
 
           {/* Bottom WhatsApp Contact Strip */}
-          <div className="mt-8 text-center bg-white rounded-xl p-4 sm:p-5 border border-neutral-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3">
-            <div className="text-left">
-              <span className="text-xs sm:text-sm font-semibold text-neutral-900 block">
-                Have more questions?
-              </span>
-              <span className="text-[11px] sm:text-xs text-neutral-500 block">
-                Our Jaipur wholesale desk is available 10:30 AM to 7:30 PM IST.
-              </span>
-            </div>
+          <div className="mt-8 text-center bg-white rounded-2xl p-6 border border-neutral-200 shadow-xs">
+            <h3
+              style={{ fontFamily: 'Georgia, serif' }}
+              className="text-base sm:text-lg font-bold text-neutral-900 mb-1"
+            >
+              Still Have Questions?
+            </h3>
+            <p className="text-xs sm:text-sm text-neutral-600 mb-4">
+              Our Jaipur factory wholesale team is available on WhatsApp daily (10 AM - 8 PM IST).
+            </p>
             <a
-              href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20have%20a%20question%20regarding%20wholesale%20orders."
+              href="https://wa.me/919680865791?text=Hello%20Shyambaba%20Wholesale%2C%20I%20have%20a%20question%20regarding%20wholesale%20orders."
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-tactile inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold tracking-wide shadow"
-              style={{ WebkitTapHighlightColor: 'transparent' }}
+              className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs sm:text-sm tracking-wide shadow-md transition-all active:scale-95"
             >
               <MessageCircle className="w-4 h-4 fill-white" />
               <span>Ask on WhatsApp</span>

@@ -225,7 +225,7 @@ export const puckConfig: Config<ComponentProps> = {
         const activeSubtitle =
           subtitle && !subtitle.includes('10,000+')
             ? subtitle
-            : 'Supplying to BOUTIQUE OWNERS , SHOPKEEPERS, EXHIBITION CUSTOMER, CUSTOMER WITH WEBSITE , B2B .';
+            : 'Supplying to Boutique Owners, Shopkeepers, Exhibition Customers, Customer with Website, B2B';
         const activeNote = noteText || '🚫 Note :  EXCEPT (PHOTO BASED RESELLERS ) are not allowed.';
 
         return (
@@ -280,8 +280,8 @@ export const puckConfig: Config<ComponentProps> = {
             </h1>
 
             <p
-              style={{ maxWidth: '350px' }}
-              className="text-[14px] sm:text-[17px] tracking-wide text-[#FAF8F5]/95 mx-auto mb-4 font-normal leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.85)] text-center"
+              style={{ maxWidth: '340px' }}
+              className="text-[12px] sm:text-[14.5px] tracking-wide text-[#FAF8F5]/85 mx-auto mb-3 font-normal leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.85)] text-center"
             >
               {activeSubtitle}
             </p>

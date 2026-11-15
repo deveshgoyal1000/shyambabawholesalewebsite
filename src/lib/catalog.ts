@@ -77,8 +77,10 @@ export function findCategoryOrSubcategory(slug: string): {
 
   // Homepage Krishaz shortcuts mapping directly to respective subcategories or direct collections
   const shortcuts: Record<string, { categorySlug: string; subSlug?: string }> = {
-    'premium-earrings': { categorySlug: 'earrings' },
-    'silver-earrings': { categorySlug: 'earrings', subSlug: 'daily-wear-oxydised-earrings' },
+    'premium-jewellery': { categorySlug: 'premium-jewellery' },
+    'normal-jewellery': { categorySlug: 'normal-jewellery' },
+    'premium-earrings': { categorySlug: 'premium-jewellery' },
+    'silver-earrings': { categorySlug: 'normal-jewellery' },
     'studs': { categorySlug: 'earrings', subSlug: 'kundan-studs' },
     'kundan-earrings': { categorySlug: 'kundan-pendants' },
     'kundan': { categorySlug: 'kundan-pendants' },

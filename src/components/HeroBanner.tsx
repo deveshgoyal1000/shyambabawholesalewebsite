@@ -93,15 +93,19 @@ export default function HeroBanner() {
             </h1>
         </div>
 
-        {/* Subtitle with generous size matching Krishaz */}
+        {/* Subtitle */}
         <p
-          className={`text-[16px] sm:text-[18px] md:text-[19px] text-[#FAF8F5]/95 max-w-md sm:max-w-lg mx-auto mb-7 sm:mb-9 font-normal leading-relaxed transition-opacity duration-600 ease-[cubic-bezier(0.19,1,0.22,1)] ${
+          className={`text-[12px] sm:text-[14.5px] text-[#FAF8F5]/85 max-w-[340px] sm:max-w-md mx-auto mb-3 font-normal leading-relaxed text-center drop-shadow-[0_1px_4px_rgba(0,0,0,0.85)] transition-opacity duration-600 ease-[cubic-bezier(0.19,1,0.22,1)] ${
             mounted ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ transitionDelay: '320ms' }}
         >
-          Supplying 10,000+ Retailers, Boutiques &amp; Resellers<br className="hidden sm:inline" />
-          {' '}Across 50+ Countries.
+          Supplying to Boutique Owners, Shopkeepers, Exhibition Customers, Customer with Website, B2B
+        </p>
+
+        {/* Note */}
+        <p className="text-[10px] sm:text-[11.5px] text-red-200/95 font-medium tracking-tight mb-4 mx-auto text-center whitespace-nowrap drop-shadow-[0_1px_5px_rgba(0,0,0,0.95)]">
+          🚫 Note : EXCEPT (PHOTO BASED RESELLERS ) are not allowed.
         </p>
 
         {/* 4 Feature Points with Clean Circular Icons - Bigger & More Prominent */}

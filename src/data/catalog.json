@@ -1,5 +1,3836 @@
 [
   {
+    "slug": "premium-jewellery",
+    "aliases": [
+      "premium-earrings",
+      "premium-jewellery-category",
+      "premium-jewelry"
+    ],
+    "name": "Premium Jewellery",
+    "description": "Handcrafted luxury brass, bridal chokers, Victorian heritage, and premium designer jewellery.",
+    "hasSubcategories": true,
+    "coverImage": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-001.jpg",
+    "totalItems": 307,
+    "subcategories": [
+      {
+        "slug": "delicate-ethnic-necklace",
+        "name": "Delicate Ethnic Necklaces",
+        "description": "Graceful Minimalist Festive & Everyday Ethnic Necklaces",
+        "parentSlug": "premium-jewellery",
+        "parentName": "Premium Jewellery",
+        "coverImage": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-001.jpg",
+        "itemCount": 56,
+        "images": [
+          {
+            "id": "delicate-ethnic-necklace-1",
+            "code": "SB-05403835",
+            "rawFilename": "05403835-509A-4FC3-A1A1-7721ECDCFD55.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-001.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-2",
+            "code": "SB-062ED2AE",
+            "rawFilename": "062ED2AE-A40D-4019-9215-0A519A021D5A.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-002.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-3",
+            "code": "SB-0B9603AF",
+            "rawFilename": "0B9603AF-9BA9-47F2-A389-1AA4CE21485B.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-003.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-4",
+            "code": "SB-0FF452C8",
+            "rawFilename": "0FF452C8-568B-4F78-9C14-46815A6431C0.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-004.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-5",
+            "code": "SB-10EBA56B",
+            "rawFilename": "10EBA56B-BCDD-47F7-8A1F-AD2454350A67.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-005.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-6",
+            "code": "SB-127DD05E",
+            "rawFilename": "127DD05E-5091-4FCC-B657-C73DFBF2E513.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-006.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-7",
+            "code": "SB-16333E75",
+            "rawFilename": "16333E75-8572-4F54-BBF0-5267D17BCE9F.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-007.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-8",
+            "code": "SB-168DA446",
+            "rawFilename": "168DA446-6BFB-46F0-B48A-6F0087D75349.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-008.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-9",
+            "code": "SB-1F141C3B",
+            "rawFilename": "1F141C3B-2C55-4FAC-A041-F843A9043E59.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-009.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-10",
+            "code": "SB-1F662F67",
+            "rawFilename": "1F662F67-3EF8-4FA6-90B6-9B9D19D19986.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-010.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-11",
+            "code": "SB-23698137",
+            "rawFilename": "23698137-457D-49AE-9955-4EF82493882B.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-011.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-12",
+            "code": "SB-25D289B2",
+            "rawFilename": "25D289B2-459D-4270-A947-AF96C216BC69.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-012.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-13",
+            "code": "SB-28F89965",
+            "rawFilename": "28F89965-3E76-45CE-B0CD-A8963B368FE3.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-013.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-14",
+            "code": "SB-2B99200A",
+            "rawFilename": "2B99200A-434C-449D-AAB1-25F98860EA93.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-014.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-15",
+            "code": "SB-2E774B88",
+            "rawFilename": "2E774B88-E678-4AAD-AC0D-6CF69258D0AE.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-015.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-16",
+            "code": "SB-328AE3A7",
+            "rawFilename": "328AE3A7-F406-470D-8B74-059CC083DD3A.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-016.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-17",
+            "code": "SB-344EDED7",
+            "rawFilename": "344EDED7-3245-466E-9AB0-61C9A5DEF357.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-017.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-18",
+            "code": "SB-35D35486",
+            "rawFilename": "35D35486-0921-49ED-BC41-B79965E4F29D.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-018.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-19",
+            "code": "SB-49328E5C",
+            "rawFilename": "49328E5C-D625-46DF-8DF4-40A07EE3FBCF.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-019.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-20",
+            "code": "SB-50571353",
+            "rawFilename": "50571353-E921-48B8-8298-2DF04CA60B2E.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-020.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-21",
+            "code": "SB-56695A12",
+            "rawFilename": "56695A12-FA9D-4D7C-A208-926BBFE46495.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-021.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-22",
+            "code": "SB-5C4EF3EE",
+            "rawFilename": "5C4EF3EE-6993-4DF7-8388-DF6BE12A2ED8.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-022.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-23",
+            "code": "SB-624176E3",
+            "rawFilename": "624176E3-1D7F-46D6-A6D4-6A9B98E943F6.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-023.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-24",
+            "code": "SB-6626D7EF",
+            "rawFilename": "6626D7EF-FB16-4683-88AE-12335F2BE17C.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-024.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-25",
+            "code": "SB-6823DDDF",
+            "rawFilename": "6823DDDF-30A2-410C-B780-4292DD1327AD.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-025.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-26",
+            "code": "SB-696DA898",
+            "rawFilename": "696DA898-5270-4AF9-A3D3-75408CF28E09.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-026.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-27",
+            "code": "SB-6E95D092",
+            "rawFilename": "6E95D092-9FD1-4358-8E64-1D87BD5AEE4D.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-027.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-28",
+            "code": "SB-7313FA5C",
+            "rawFilename": "7313FA5C-9392-4FB7-9D05-D5C5C02A3442.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-028.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-29",
+            "code": "SB-74B5F782",
+            "rawFilename": "74B5F782-A70B-452E-AFAB-816AB5424913.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-029.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-30",
+            "code": "SB-8E6E2E60",
+            "rawFilename": "8E6E2E60-30DB-4F7C-9EF7-AEDF9916DF99.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-030.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-31",
+            "code": "SB-953A3BBF",
+            "rawFilename": "953A3BBF-2F7F-4409-97BB-71EA114459BD.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-031.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-32",
+            "code": "SB-A38B3BD5",
+            "rawFilename": "A38B3BD5-FEBE-4101-BCD5-ABE4AC447027.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-032.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-33",
+            "code": "SB-A5B2CE64",
+            "rawFilename": "A5B2CE64-F45B-4A0D-A5AD-AFC0EC6FEF80.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-033.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-34",
+            "code": "SB-A5E18FA3",
+            "rawFilename": "A5E18FA3-DBB1-4D27-985E-4DB0E9574D70.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-034.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-35",
+            "code": "SB-A7638787",
+            "rawFilename": "A7638787-B579-4FC3-A050-068200A1E7C7.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-035.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-36",
+            "code": "SB-A93CFB7F",
+            "rawFilename": "A93CFB7F-A05E-4BE2-BA71-67BC92443575.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-036.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-37",
+            "code": "SB-B4B2BC8E",
+            "rawFilename": "B4B2BC8E-5D20-45B0-A12C-4746649541CA.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-037.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-38",
+            "code": "SB-B4C3AB89",
+            "rawFilename": "B4C3AB89-8228-4F4C-8204-5E0DA44C0448.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-038.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-39",
+            "code": "SB-BD7B84EB",
+            "rawFilename": "BD7B84EB-E32C-4513-A623-E2CCB29C64C9.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-039.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-40",
+            "code": "SB-C9663187",
+            "rawFilename": "C9663187-AAB4-4F22-9FFF-3650BFBB43CF.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-040.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-41",
+            "code": "SB-CB1FA930",
+            "rawFilename": "CB1FA930-00FE-4763-97BF-C10B7659038B.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-041.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-42",
+            "code": "SB-CD0E4399",
+            "rawFilename": "CD0E4399-E66B-482C-BD1A-13E90D849090.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-042.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-43",
+            "code": "SB-CE10D475",
+            "rawFilename": "CE10D475-EE9F-47C1-887F-A2D36FE027C5.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-043.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-44",
+            "code": "SB-CE6E2548",
+            "rawFilename": "CE6E2548-ECEC-431B-A23E-CFF358AB497A.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-044.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-45",
+            "code": "SB-D76937CB",
+            "rawFilename": "D76937CB-2329-4513-9E42-F31BFF64C313.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-045.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-46",
+            "code": "SB-DCC9493E",
+            "rawFilename": "DCC9493E-BEC0-4D4E-BDC5-AFB07DC73923.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-046.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-47",
+            "code": "SB-DD4F7EFD",
+            "rawFilename": "DD4F7EFD-FBD7-4EEE-B150-C12AAD8E6A25.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-047.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-48",
+            "code": "SB-E2A2D9EF",
+            "rawFilename": "E2A2D9EF-EDCE-416E-8F73-BE09B2CE9F12.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-048.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-49",
+            "code": "SB-E3D8594B",
+            "rawFilename": "E3D8594B-B6C0-43DF-B494-C8310FE6B3B5.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-049.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-50",
+            "code": "SB-E53ACEF3",
+            "rawFilename": "E53ACEF3-5FAF-4EAD-BFD4-1EA238059616.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-050.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-51",
+            "code": "SB-E6524201",
+            "rawFilename": "E6524201-A639-4389-AA24-8E0435E63C6F.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-051.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-52",
+            "code": "SB-E8AD4EE9",
+            "rawFilename": "E8AD4EE9-4C51-471C-ABFD-F3C38FE18644.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-052.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-53",
+            "code": "SB-EA78ED25",
+            "rawFilename": "EA78ED25-F82E-43F8-856C-45E4CF04F3C1.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-053.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-54",
+            "code": "SB-F36C2455",
+            "rawFilename": "F36C2455-C88C-4D28-B74C-CC43153CB7E2.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-054.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-55",
+            "code": "SB-F70AC9AE",
+            "rawFilename": "F70AC9AE-9061-4637-B927-A1CD69D62AA2.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-055.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-56",
+            "code": "SB-FD493344",
+            "rawFilename": "FD493344-13F1-4518-85B0-A7A91B4603C4.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-056.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "kundan-choker",
+        "name": "Kundan Chokers",
+        "description": "Heavy Bridal and High-Neck Kundan Choker Sets",
+        "parentSlug": "premium-jewellery",
+        "parentName": "Premium Jewellery",
+        "coverImage": "/images/catalog/necklaces/kundan-choker/kundan-choker-001.jpg",
+        "itemCount": 26,
+        "images": [
+          {
+            "id": "kundan-choker-1",
+            "code": "SB-01E02AB3",
+            "rawFilename": "01E02AB3-BD4E-4157-BEF5-B7C2F7E20E88.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-001.jpg"
+          },
+          {
+            "id": "kundan-choker-2",
+            "code": "SB-088AE405",
+            "rawFilename": "088AE405-DBF3-4A3B-AEBA-CC31DE41E924.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-002.jpg"
+          },
+          {
+            "id": "kundan-choker-3",
+            "code": "SB-25C6972D",
+            "rawFilename": "25C6972D-5048-4F3D-998B-67BD1A50FD14.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-003.jpg"
+          },
+          {
+            "id": "kundan-choker-4",
+            "code": "SB-2EFCBC85",
+            "rawFilename": "2EFCBC85-B43E-43DA-9D1B-0C8276568989.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-004.jpg"
+          },
+          {
+            "id": "kundan-choker-5",
+            "code": "SB-4192DFA6",
+            "rawFilename": "4192DFA6-5E85-4A3B-A290-ACD95A7C29BE.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-005.jpg"
+          },
+          {
+            "id": "kundan-choker-6",
+            "code": "SB-5597BCF4",
+            "rawFilename": "5597BCF4-D047-419B-B59F-93D1AD955275.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-006.jpg"
+          },
+          {
+            "id": "kundan-choker-7",
+            "code": "SB-5E4C5228",
+            "rawFilename": "5E4C5228-23CE-4DB8-BF32-D6E24C95E221.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-007.jpg"
+          },
+          {
+            "id": "kundan-choker-8",
+            "code": "SB-5E958591",
+            "rawFilename": "5E958591-574D-4B86-B71F-EBF85C2D83C4.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-008.jpg"
+          },
+          {
+            "id": "kundan-choker-9",
+            "code": "SB-6613C4F6",
+            "rawFilename": "6613C4F6-0A4E-44F7-B039-6705670E2262.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-009.jpg"
+          },
+          {
+            "id": "kundan-choker-10",
+            "code": "SB-67E1CEB4",
+            "rawFilename": "67E1CEB4-435A-4C74-9097-1231AB6B37F9.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-010.jpg"
+          },
+          {
+            "id": "kundan-choker-11",
+            "code": "SB-6B0DB495",
+            "rawFilename": "6B0DB495-8195-43C9-9CFC-D98DF76DFE7B.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-011.jpg"
+          },
+          {
+            "id": "kundan-choker-12",
+            "code": "SB-77443A35",
+            "rawFilename": "77443A35-E54D-41C7-9350-A594C5D45FCC.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-012.jpg"
+          },
+          {
+            "id": "kundan-choker-13",
+            "code": "SB-8A7A391F",
+            "rawFilename": "8A7A391F-742B-41DB-AD51-373102560BB3.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-013.jpg"
+          },
+          {
+            "id": "kundan-choker-14",
+            "code": "SB-997DB7E4",
+            "rawFilename": "997DB7E4-4974-4D2D-8546-5446C10B7DBB.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-014.jpg"
+          },
+          {
+            "id": "kundan-choker-15",
+            "code": "SB-9AB89E31",
+            "rawFilename": "9AB89E31-1931-40DD-B7C4-538A5E6D2804.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-015.jpg"
+          },
+          {
+            "id": "kundan-choker-16",
+            "code": "SB-AD9E71D8",
+            "rawFilename": "AD9E71D8-F028-4FD8-A5D9-ED138B337EC7.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-016.jpg"
+          },
+          {
+            "id": "kundan-choker-17",
+            "code": "SB-B5207E2E",
+            "rawFilename": "B5207E2E-B044-4040-ADD7-C898E0D8F06E.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-017.jpg"
+          },
+          {
+            "id": "kundan-choker-18",
+            "code": "SB-B746EAA0",
+            "rawFilename": "B746EAA0-6881-45F6-8430-5FE412AE96AE.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-018.jpg"
+          },
+          {
+            "id": "kundan-choker-19",
+            "code": "SB-C4270F0B",
+            "rawFilename": "C4270F0B-1A54-45AA-B199-6F33C3D1B07A.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-019.jpg"
+          },
+          {
+            "id": "kundan-choker-20",
+            "code": "SB-C9E80C3E",
+            "rawFilename": "C9E80C3E-2EA8-4C93-85C9-8D36564B1409.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-020.jpg"
+          },
+          {
+            "id": "kundan-choker-21",
+            "code": "SB-CD096089",
+            "rawFilename": "CD096089-0F67-41B7-8803-3C30DB150FF2.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-021.jpg"
+          },
+          {
+            "id": "kundan-choker-22",
+            "code": "SB-D4CCA76E",
+            "rawFilename": "D4CCA76E-F67A-4D11-800B-607D3F1D47FD.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-022.jpg"
+          },
+          {
+            "id": "kundan-choker-23",
+            "code": "SB-DAA9DB93",
+            "rawFilename": "DAA9DB93-B6A1-4063-8B29-B8085AE65D26.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-023.jpg"
+          },
+          {
+            "id": "kundan-choker-24",
+            "code": "SB-E2D81E33",
+            "rawFilename": "E2D81E33-1A94-42D1-B3FB-E950664A60C9.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-024.jpg"
+          },
+          {
+            "id": "kundan-choker-25",
+            "code": "SB-E3A79DA7",
+            "rawFilename": "E3A79DA7-6959-4EF6-8FC2-204FDD6E821B.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-025.jpg"
+          },
+          {
+            "id": "kundan-choker-26",
+            "code": "SB-EAE02BC4",
+            "rawFilename": "EAE02BC4-5F0F-4BBC-9C8E-69861F832CFF.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-026.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "mop-sets",
+        "name": "Mother of Pearl (MOP) Sets",
+        "description": "Exquisite Natural MOP Stone Necklace & Earring Combinations",
+        "parentSlug": "premium-jewellery",
+        "parentName": "Premium Jewellery",
+        "coverImage": "/images/catalog/necklaces/mop-sets/mop-sets-001.jpg",
+        "itemCount": 16,
+        "images": [
+          {
+            "id": "mop-sets-1",
+            "code": "SB-000E5E31",
+            "rawFilename": "000E5E31-73F4-4152-B4FD-177080A60CC9.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-001.jpg"
+          },
+          {
+            "id": "mop-sets-2",
+            "code": "SB-202BD283",
+            "rawFilename": "202BD283-034C-4125-9498-9A00FC19F5CF.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-002.jpg"
+          },
+          {
+            "id": "mop-sets-3",
+            "code": "SB-229BE8BB",
+            "rawFilename": "229BE8BB-CEE2-42F1-B738-E26542E2684B.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-003.jpg"
+          },
+          {
+            "id": "mop-sets-4",
+            "code": "SB-3BAE284B",
+            "rawFilename": "3BAE284B-8229-4A6B-A01C-6701ED7041A4.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-004.jpg"
+          },
+          {
+            "id": "mop-sets-5",
+            "code": "SB-44A645E6",
+            "rawFilename": "44A645E6-C408-4BE7-97E8-57C7D35B3B42.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-005.jpg"
+          },
+          {
+            "id": "mop-sets-6",
+            "code": "SB-6B0CF4F5",
+            "rawFilename": "6B0CF4F5-4175-4508-AE95-B25FA3B7D445.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-006.jpg"
+          },
+          {
+            "id": "mop-sets-7",
+            "code": "SB-80BD5B58",
+            "rawFilename": "80BD5B58-6C29-4DDB-A19B-3756F770B7DB.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-007.jpg"
+          },
+          {
+            "id": "mop-sets-8",
+            "code": "SB-8BA7C2CC",
+            "rawFilename": "8BA7C2CC-8DC3-47BF-AD58-715CA7E6EC9C.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-008.jpg"
+          },
+          {
+            "id": "mop-sets-9",
+            "code": "SB-90DF3ADC",
+            "rawFilename": "90DF3ADC-54A9-4CA6-8920-B095EDE9E777.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-009.jpg"
+          },
+          {
+            "id": "mop-sets-10",
+            "code": "SB-989F8D2D",
+            "rawFilename": "989F8D2D-C144-4960-87AE-C92EDB846BF4.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-010.jpg"
+          },
+          {
+            "id": "mop-sets-11",
+            "code": "SB-AC8753B6",
+            "rawFilename": "AC8753B6-86BE-44BF-BFF9-2340124C017D.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-011.jpg"
+          },
+          {
+            "id": "mop-sets-12",
+            "code": "SB-ACB09972",
+            "rawFilename": "ACB09972-1081-4A5C-8821-1B511D0450A6.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-012.jpg"
+          },
+          {
+            "id": "mop-sets-13",
+            "code": "SB-B81112FF",
+            "rawFilename": "B81112FF-8485-49CE-A857-3811D9BFEA6C.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-013.jpg"
+          },
+          {
+            "id": "mop-sets-14",
+            "code": "SB-DB22DC61",
+            "rawFilename": "DB22DC61-4626-452E-8B55-BC8FCAC336D1.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-014.jpg"
+          },
+          {
+            "id": "mop-sets-15",
+            "code": "SB-EA6C767E",
+            "rawFilename": "EA6C767E-68FC-49C8-AD62-4F6BDEEED66B.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-015.jpg"
+          },
+          {
+            "id": "mop-sets-16",
+            "code": "SB-EB83E3EF",
+            "rawFilename": "EB83E3EF-AAE5-42E2-9627-9D692A734403.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-016.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "party-wear-necklace",
+        "name": "Party Wear Necklaces",
+        "description": "Glamorous Contemporary Evening Party Wear Sets",
+        "parentSlug": "premium-jewellery",
+        "parentName": "Premium Jewellery",
+        "coverImage": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-001.jpg",
+        "itemCount": 26,
+        "images": [
+          {
+            "id": "party-wear-necklace-1",
+            "code": "SB-088AE405",
+            "rawFilename": "088AE405-DBF3-4A3B-AEBA-CC31DE41E924.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-001.jpg"
+          },
+          {
+            "id": "party-wear-necklace-2",
+            "code": "SB-1B9936B7",
+            "rawFilename": "1B9936B7-F6EC-4562-B5DB-57703B89543C.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-002.jpg"
+          },
+          {
+            "id": "party-wear-necklace-3",
+            "code": "SB-34216B8E",
+            "rawFilename": "34216B8E-A838-4BAA-902F-5E42BDF47862.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-003.jpg"
+          },
+          {
+            "id": "party-wear-necklace-4",
+            "code": "SB-37B32CFB",
+            "rawFilename": "37B32CFB-DD39-47DA-AFA4-B43E5DBBC2FA.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-004.jpg"
+          },
+          {
+            "id": "party-wear-necklace-5",
+            "code": "SB-3E1DE675",
+            "rawFilename": "3E1DE675-DD7B-4558-952A-6FF940C59835.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-005.jpg"
+          },
+          {
+            "id": "party-wear-necklace-6",
+            "code": "SB-54B6CD57",
+            "rawFilename": "54B6CD57-C6D3-4D38-A735-A85D54260AD0.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-006.jpg"
+          },
+          {
+            "id": "party-wear-necklace-7",
+            "code": "SB-60DB5C6E",
+            "rawFilename": "60DB5C6E-9FD0-48B4-9A0B-5D823655139B.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-007.jpg"
+          },
+          {
+            "id": "party-wear-necklace-8",
+            "code": "SB-66DD86D8",
+            "rawFilename": "66DD86D8-53E0-4053-98F2-60D9CA3E4611.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-008.jpg"
+          },
+          {
+            "id": "party-wear-necklace-9",
+            "code": "SB-7D4AE82E",
+            "rawFilename": "7D4AE82E-DB2E-4480-B700-807916DF8391.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-009.jpg"
+          },
+          {
+            "id": "party-wear-necklace-10",
+            "code": "SB-82F1E591",
+            "rawFilename": "82F1E591-C14B-40BA-BF09-FC17B10E5212.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-010.jpg"
+          },
+          {
+            "id": "party-wear-necklace-11",
+            "code": "SB-8BA3B7C4",
+            "rawFilename": "8BA3B7C4-D9C5-4D5B-AD61-6403A1E52B37.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-011.jpg"
+          },
+          {
+            "id": "party-wear-necklace-12",
+            "code": "SB-AD989EDD",
+            "rawFilename": "AD989EDD-14D8-4507-9D56-1214F8E6E823.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-012.jpg"
+          },
+          {
+            "id": "party-wear-necklace-13",
+            "code": "SB-AE6E48DD",
+            "rawFilename": "AE6E48DD-7C85-434A-965D-A6C52137C2C6.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-013.jpg"
+          },
+          {
+            "id": "party-wear-necklace-14",
+            "code": "SB-AEF11D59",
+            "rawFilename": "AEF11D59-A3A5-453E-8FCC-9D79D8DC9BCA.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-014.jpg"
+          },
+          {
+            "id": "party-wear-necklace-15",
+            "code": "SB-B40CA979",
+            "rawFilename": "B40CA979-87AF-4226-8987-D2D031DD46E9.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-015.jpg"
+          },
+          {
+            "id": "party-wear-necklace-16",
+            "code": "SB-B6C9FDFB",
+            "rawFilename": "B6C9FDFB-DA54-4E5E-A76C-2737FF8C7B9B.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-016.jpg"
+          },
+          {
+            "id": "party-wear-necklace-17",
+            "code": "SB-C1C2CBDC",
+            "rawFilename": "C1C2CBDC-2CCD-487A-8DB6-1178AE76EB34.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-017.jpg"
+          },
+          {
+            "id": "party-wear-necklace-18",
+            "code": "SB-C34EC97E",
+            "rawFilename": "C34EC97E-CF5C-4F29-81E7-445516B04D53.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-018.jpg"
+          },
+          {
+            "id": "party-wear-necklace-19",
+            "code": "SB-CD91D9B5",
+            "rawFilename": "CD91D9B5-268F-4E01-B998-E9DB0EB399FB.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-019.jpg"
+          },
+          {
+            "id": "party-wear-necklace-20",
+            "code": "SB-D0D8C17C",
+            "rawFilename": "D0D8C17C-E854-4A52-90BB-B04493EAD2EF.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-020.jpg"
+          },
+          {
+            "id": "party-wear-necklace-21",
+            "code": "SB-DB46FDDD",
+            "rawFilename": "DB46FDDD-9D44-4CD9-966B-76FEBE6C77A5.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-021.jpg"
+          },
+          {
+            "id": "party-wear-necklace-22",
+            "code": "SB-DC39CD36",
+            "rawFilename": "DC39CD36-4E91-4C4F-882D-C66ADA053E38.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-022.jpg"
+          },
+          {
+            "id": "party-wear-necklace-23",
+            "code": "SB-E0279D47",
+            "rawFilename": "E0279D47-29EF-4C4A-890F-12A7635A93CB.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-023.jpg"
+          },
+          {
+            "id": "party-wear-necklace-24",
+            "code": "SB-E330D567",
+            "rawFilename": "E330D567-440B-460C-A26C-1BEFA6D55526.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-024.jpg"
+          },
+          {
+            "id": "party-wear-necklace-25",
+            "code": "SB-E34763D7",
+            "rawFilename": "E34763D7-2D9E-4985-8885-84C6FD6ED9C1.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-025.jpg"
+          },
+          {
+            "id": "party-wear-necklace-26",
+            "code": "SB-F8D6ACD5",
+            "rawFilename": "F8D6ACD5-ADE3-4893-9E3C-B8BA35362FD1.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-026.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "sabyasachi-inspired-necklace",
+        "name": "Sabyasachi Inspired Necklaces",
+        "description": "Heritage Heritage Royal Sabyasachi Aesthetic Bridal Sets",
+        "parentSlug": "premium-jewellery",
+        "parentName": "Premium Jewellery",
+        "coverImage": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-001.jpg",
+        "itemCount": 37,
+        "images": [
+          {
+            "id": "sabyasachi-inspired-necklace-1",
+            "code": "SB-0104827B",
+            "rawFilename": "0104827B-9925-4D30-B2BA-89846644BEE5.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-001.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-2",
+            "code": "SB-03A573E9",
+            "rawFilename": "03A573E9-3C2B-4548-8792-F52CFF9677CF.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-002.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-3",
+            "code": "SB-0501169E",
+            "rawFilename": "0501169E-1CD1-42E6-AEF9-2DA1D13A8908.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-003.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-4",
+            "code": "SB-08D3AB2C",
+            "rawFilename": "08D3AB2C-0475-47DB-97AB-F2338AE87345.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-004.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-5",
+            "code": "SB-2732A6B8",
+            "rawFilename": "2732A6B8-1385-4AAD-AD29-76562DC070CB.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-005.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-6",
+            "code": "SB-2A05564B",
+            "rawFilename": "2A05564B-BD2A-4770-AB9E-7862E6BA830A.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-006.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-7",
+            "code": "SB-2B30D6E2",
+            "rawFilename": "2B30D6E2-3B4F-4F80-9988-06E4B8723B24.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-007.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-8",
+            "code": "SB-33B30FEC",
+            "rawFilename": "33B30FEC-64D2-4CAC-8987-672517E1A549.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-008.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-9",
+            "code": "SB-3848FB3A",
+            "rawFilename": "3848FB3A-CA13-41A9-B426-B737339966B2.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-009.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-10",
+            "code": "SB-401FB6A6",
+            "rawFilename": "401FB6A6-6748-48E7-9BB7-A381D0BF11F3.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-010.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-11",
+            "code": "SB-42B0B055",
+            "rawFilename": "42B0B055-A64A-4D3D-A4C6-FDE8176FA028.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-011.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-12",
+            "code": "SB-447AE9F4",
+            "rawFilename": "447AE9F4-A7DD-40B6-8006-3214E1BFA576.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-012.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-13",
+            "code": "SB-4514CE7C",
+            "rawFilename": "4514CE7C-A98C-42B7-B2F3-91ED0FAEAFC4.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-013.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-14",
+            "code": "SB-48F113CC",
+            "rawFilename": "48F113CC-C78D-4BBF-82D2-25FD700A7C88.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-014.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-15",
+            "code": "SB-4981BEE9",
+            "rawFilename": "4981BEE9-0FAC-4A93-A824-47D168BE04B9.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-015.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-16",
+            "code": "SB-5806D134",
+            "rawFilename": "5806D134-DE44-43B3-88E9-07A1CE6F04A1.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-016.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-17",
+            "code": "SB-5A5B9750",
+            "rawFilename": "5A5B9750-1A71-4CC1-AE1F-ED070E7D88D5.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-017.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-18",
+            "code": "SB-5B237B25",
+            "rawFilename": "5B237B25-7AB7-4014-BA5C-6CC34F5CDC34.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-018.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-19",
+            "code": "SB-5DFB3744",
+            "rawFilename": "5DFB3744-30B9-4333-ADE8-2E79FC1CC75F.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-019.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-20",
+            "code": "SB-6185D205",
+            "rawFilename": "6185D205-941A-4802-A31C-8058263878CA.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-020.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-21",
+            "code": "SB-67970878",
+            "rawFilename": "67970878-48A9-4ECA-8FED-2D45E029DD99.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-021.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-22",
+            "code": "SB-6B8913EB",
+            "rawFilename": "6B8913EB-4958-4FC8-97DF-2D4C8CA1113A.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-022.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-23",
+            "code": "SB-6C65570E",
+            "rawFilename": "6C65570E-DFF5-4DE9-8272-C539262BE71F.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-023.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-24",
+            "code": "SB-733FFF32",
+            "rawFilename": "733FFF32-80E9-4212-9DE0-23C24E8CA5E4.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-024.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-25",
+            "code": "SB-859BE00E",
+            "rawFilename": "859BE00E-737B-4060-AA65-4F09562DA106.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-025.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-26",
+            "code": "SB-9D0BCF93",
+            "rawFilename": "9D0BCF93-CEC3-48F4-8E9B-ADB80B86B9FD.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-026.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-27",
+            "code": "SB-A1297367",
+            "rawFilename": "A1297367-F315-45F8-A403-866CB02FE5B6.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-027.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-28",
+            "code": "SB-B39B8ED6",
+            "rawFilename": "B39B8ED6-5310-4070-940F-182C2A636541.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-028.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-29",
+            "code": "SB-BDDAEB10",
+            "rawFilename": "BDDAEB10-2F3C-44BA-A29D-7C862A3AC478.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-029.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-30",
+            "code": "SB-D26F4BF8",
+            "rawFilename": "D26F4BF8-1646-4477-8124-E3C69807C697.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-030.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-31",
+            "code": "SB-D2F4FA62",
+            "rawFilename": "D2F4FA62-6D0A-4ACE-9AAE-2604C080836C.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-031.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-32",
+            "code": "SB-DCCFAC85",
+            "rawFilename": "DCCFAC85-A918-4BE2-86BD-D2FB887222C2.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-032.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-33",
+            "code": "SB-E210B220",
+            "rawFilename": "E210B220-4CEF-4A2B-B9F6-5BBF2B70A5D7.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-033.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-34",
+            "code": "SB-E828A253",
+            "rawFilename": "E828A253-73F7-429B-962F-76E58A9C26AA.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-034.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-35",
+            "code": "SB-EBFDBF80",
+            "rawFilename": "EBFDBF80-582D-4A92-910D-6D3E03CE2E76.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-035.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-36",
+            "code": "SB-ED02A128",
+            "rawFilename": "ED02A128-E1DD-4405-877A-696FA547AA4F.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-036.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-37",
+            "code": "SB-FEE4694A",
+            "rawFilename": "FEE4694A-D132-4B2A-B8C0-7E85F42095EF.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-037.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "victoria-necklace",
+        "name": "Victorian Heritage Necklaces",
+        "description": "Antique Victorian Polished Chokers and Long Sets",
+        "parentSlug": "premium-jewellery",
+        "parentName": "Premium Jewellery",
+        "coverImage": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-001.jpg",
+        "itemCount": 40,
+        "images": [
+          {
+            "id": "victoria-necklace-1",
+            "code": "SB-01E02AB3",
+            "rawFilename": "01E02AB3-BD4E-4157-BEF5-B7C2F7E20E88.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-001.jpg"
+          },
+          {
+            "id": "victoria-necklace-2",
+            "code": "SB-05AE79CB",
+            "rawFilename": "05AE79CB-F59E-4502-8082-DFC410373F73.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-002.jpg"
+          },
+          {
+            "id": "victoria-necklace-3",
+            "code": "SB-09D1350F",
+            "rawFilename": "09D1350F-0E06-4F59-A6C4-944418CF36C9.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-003.jpg"
+          },
+          {
+            "id": "victoria-necklace-4",
+            "code": "SB-14FD25BD",
+            "rawFilename": "14FD25BD-A0E0-4C9E-AAFA-BAE4011DD62C.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-004.jpg"
+          },
+          {
+            "id": "victoria-necklace-5",
+            "code": "SB-162B09A5",
+            "rawFilename": "162B09A5-1AA9-4044-A619-D361A0112F1E.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-005.jpg"
+          },
+          {
+            "id": "victoria-necklace-6",
+            "code": "SB-22F815CA",
+            "rawFilename": "22F815CA-2249-43EF-8AEF-D00EA9DD5B95.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-006.jpg"
+          },
+          {
+            "id": "victoria-necklace-7",
+            "code": "SB-269F95F7",
+            "rawFilename": "269F95F7-8F7E-4000-A3C4-D5EB2E0A04E8.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-007.jpg"
+          },
+          {
+            "id": "victoria-necklace-8",
+            "code": "SB-31E1872A",
+            "rawFilename": "31E1872A-1050-4593-B752-BF05211D9B5F.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-008.jpg"
+          },
+          {
+            "id": "victoria-necklace-9",
+            "code": "SB-3450A98B",
+            "rawFilename": "3450A98B-FDBA-47F0-A20A-8050CFC06EAF.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-009.jpg"
+          },
+          {
+            "id": "victoria-necklace-10",
+            "code": "SB-3478D2BD",
+            "rawFilename": "3478D2BD-0934-47F7-AA3C-FF402DCF5937.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-010.jpg"
+          },
+          {
+            "id": "victoria-necklace-11",
+            "code": "SB-3E7D60CE",
+            "rawFilename": "3E7D60CE-AB8E-4EB2-9B75-C84AB24E6AE0.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-011.jpg"
+          },
+          {
+            "id": "victoria-necklace-12",
+            "code": "SB-403B624F",
+            "rawFilename": "403B624F-8500-4EE2-8688-8C7B4217840E.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-012.jpg"
+          },
+          {
+            "id": "victoria-necklace-13",
+            "code": "SB-498F5A31",
+            "rawFilename": "498F5A31-43A8-4DE1-9BE9-1A1469B1E402.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-013.jpg"
+          },
+          {
+            "id": "victoria-necklace-14",
+            "code": "SB-4F9F0DC7",
+            "rawFilename": "4F9F0DC7-C8D9-4E6D-A578-8A4DA64785C3.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-014.jpg"
+          },
+          {
+            "id": "victoria-necklace-15",
+            "code": "SB-5051DE58",
+            "rawFilename": "5051DE58-D74D-49E8-8C60-E2123B6EDB99.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-015.jpg"
+          },
+          {
+            "id": "victoria-necklace-16",
+            "code": "SB-5344DBCE",
+            "rawFilename": "5344DBCE-0F2C-46DA-A617-67CBDB3AD326.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-016.jpg"
+          },
+          {
+            "id": "victoria-necklace-17",
+            "code": "SB-560CDBAF",
+            "rawFilename": "560CDBAF-694F-4C18-A2F5-2EC855C5D9A8.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-017.jpg"
+          },
+          {
+            "id": "victoria-necklace-18",
+            "code": "SB-5801A7AC",
+            "rawFilename": "5801A7AC-A2FB-4642-B6E3-4A47F7131D61.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-018.jpg"
+          },
+          {
+            "id": "victoria-necklace-19",
+            "code": "SB-60096C8B",
+            "rawFilename": "60096C8B-A0D2-4B8C-88D6-C309C4367069.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-019.jpg"
+          },
+          {
+            "id": "victoria-necklace-20",
+            "code": "SB-6613C4F6",
+            "rawFilename": "6613C4F6-0A4E-44F7-B039-6705670E2262.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-020.jpg"
+          },
+          {
+            "id": "victoria-necklace-21",
+            "code": "SB-6CAE3040",
+            "rawFilename": "6CAE3040-04A5-49D3-BB53-5A268DFF0A81.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-021.jpg"
+          },
+          {
+            "id": "victoria-necklace-22",
+            "code": "SB-6D9D6685",
+            "rawFilename": "6D9D6685-E6DE-4BA2-98BB-0387BB89EE8B.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-022.jpg"
+          },
+          {
+            "id": "victoria-necklace-23",
+            "code": "SB-81FBB820",
+            "rawFilename": "81FBB820-1705-46B3-8D4B-CE09389F93B6.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-023.jpg"
+          },
+          {
+            "id": "victoria-necklace-24",
+            "code": "SB-947EA58A",
+            "rawFilename": "947EA58A-BBDC-40B4-976C-2D1FF3E6279B.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-024.jpg"
+          },
+          {
+            "id": "victoria-necklace-25",
+            "code": "SB-ABB3C1DF",
+            "rawFilename": "ABB3C1DF-B424-4F0C-A6E5-F205623ACC46.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-025.jpg"
+          },
+          {
+            "id": "victoria-necklace-26",
+            "code": "SB-AD881A7D",
+            "rawFilename": "AD881A7D-C0CB-4876-B43F-1B66E1621B65.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-026.jpg"
+          },
+          {
+            "id": "victoria-necklace-27",
+            "code": "SB-BA588148",
+            "rawFilename": "BA588148-C519-4407-AB9A-6088F4905D05.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-027.jpg"
+          },
+          {
+            "id": "victoria-necklace-28",
+            "code": "SB-BDA4C85D",
+            "rawFilename": "BDA4C85D-D84D-42E4-AB86-C1ACBA74F037.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-028.jpg"
+          },
+          {
+            "id": "victoria-necklace-29",
+            "code": "SB-C2A1A0D1",
+            "rawFilename": "C2A1A0D1-9613-49A5-8CC5-0F6616A0099A.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-029.jpg"
+          },
+          {
+            "id": "victoria-necklace-30",
+            "code": "SB-CF7AA362",
+            "rawFilename": "CF7AA362-846F-4C16-B220-2109FFD38826.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-030.jpg"
+          },
+          {
+            "id": "victoria-necklace-31",
+            "code": "SB-D2AF310D",
+            "rawFilename": "D2AF310D-64B4-4A2E-A3D7-908964A559DD.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-031.jpg"
+          },
+          {
+            "id": "victoria-necklace-32",
+            "code": "SB-D4CCA76E",
+            "rawFilename": "D4CCA76E-F67A-4D11-800B-607D3F1D47FD.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-032.jpg"
+          },
+          {
+            "id": "victoria-necklace-33",
+            "code": "SB-D96F169B",
+            "rawFilename": "D96F169B-1E3D-4D99-A4F1-A2795B7CB454.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-033.jpg"
+          },
+          {
+            "id": "victoria-necklace-34",
+            "code": "SB-DA0FF054",
+            "rawFilename": "DA0FF054-D45C-446E-8F67-C7A3D9F73D9F.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-034.jpg"
+          },
+          {
+            "id": "victoria-necklace-35",
+            "code": "SB-E27080C4",
+            "rawFilename": "E27080C4-7CAA-4675-BEE2-FD8DCEFA689D.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-035.jpg"
+          },
+          {
+            "id": "victoria-necklace-36",
+            "code": "SB-E4E6ECC2",
+            "rawFilename": "E4E6ECC2-8A4C-45E2-9D4F-CF8601CD99EA.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-036.jpg"
+          },
+          {
+            "id": "victoria-necklace-37",
+            "code": "SB-E5ED6A59",
+            "rawFilename": "E5ED6A59-3B76-419D-B7B7-53522BB69365.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-037.jpg"
+          },
+          {
+            "id": "victoria-necklace-38",
+            "code": "SB-EF18B68F",
+            "rawFilename": "EF18B68F-70DA-4CC6-A991-DA8F693F94A8.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-038.jpg"
+          },
+          {
+            "id": "victoria-necklace-39",
+            "code": "SB-F4537C55",
+            "rawFilename": "F4537C55-4E4F-4CFF-900E-DB42AADAB933.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-039.jpg"
+          },
+          {
+            "id": "victoria-necklace-40",
+            "code": "SB-F79AD2D1",
+            "rawFilename": "F79AD2D1-969D-4C22-AD04-771D39096FF3.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-040.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "victorian-earrings",
+        "name": "Victorian Heritage Earrings",
+        "description": "Royal Victorian Finish Antique Polish Designer Earrings",
+        "parentSlug": "premium-jewellery",
+        "parentName": "Premium Jewellery",
+        "coverImage": "/images/catalog/earrings/victorian-earrings/victorian-earrings-001.jpg",
+        "itemCount": 57,
+        "images": [
+          {
+            "id": "victorian-earrings-1",
+            "code": "SB-00D0C53F",
+            "rawFilename": "00D0C53F-7899-4A6C-9854-A4ACC4F37FBD.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-001.jpg"
+          },
+          {
+            "id": "victorian-earrings-2",
+            "code": "SB-02C5A52D",
+            "rawFilename": "02C5A52D-E06E-4B10-8270-BD51C5EEFF11.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-002.jpg"
+          },
+          {
+            "id": "victorian-earrings-3",
+            "code": "SB-04A6FCE8",
+            "rawFilename": "04A6FCE8-FBB4-464D-BFA7-E94BB6957B72.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-003.jpg"
+          },
+          {
+            "id": "victorian-earrings-4",
+            "code": "SB-0652F93F",
+            "rawFilename": "0652F93F-CE14-44FE-965F-4A0B852173A1.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-004.jpg"
+          },
+          {
+            "id": "victorian-earrings-5",
+            "code": "SB-0985CE41",
+            "rawFilename": "0985CE41-6AAD-494D-802B-82EE3CE674C4.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-005.jpg"
+          },
+          {
+            "id": "victorian-earrings-6",
+            "code": "SB-11B828E5",
+            "rawFilename": "11B828E5-4311-4452-88E6-C683A044AB37.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-006.jpg"
+          },
+          {
+            "id": "victorian-earrings-7",
+            "code": "SB-13510AD8",
+            "rawFilename": "13510AD8-67E4-41CD-AD48-7B31D2BE659D.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-007.jpg"
+          },
+          {
+            "id": "victorian-earrings-8",
+            "code": "SB-137157AC",
+            "rawFilename": "137157AC-007F-4EED-92A9-70C803CB9E78.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-008.jpg"
+          },
+          {
+            "id": "victorian-earrings-9",
+            "code": "SB-1708A02A",
+            "rawFilename": "1708A02A-9CF7-409C-A071-346736E77595.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-009.jpg"
+          },
+          {
+            "id": "victorian-earrings-10",
+            "code": "SB-178052CF",
+            "rawFilename": "178052CF-5914-4C6C-B564-0199DADA9E15.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-010.jpg"
+          },
+          {
+            "id": "victorian-earrings-11",
+            "code": "SB-194338E9",
+            "rawFilename": "194338E9-04A8-4C9C-BB5F-04F9E377EADC.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-011.jpg"
+          },
+          {
+            "id": "victorian-earrings-12",
+            "code": "SB-247C2282",
+            "rawFilename": "247C2282-81E2-4719-87BD-05757F27EF93.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-012.jpg"
+          },
+          {
+            "id": "victorian-earrings-13",
+            "code": "SB-2A12ED5E",
+            "rawFilename": "2A12ED5E-D0AD-4C1A-BDC9-3091FEF640DA.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-013.jpg"
+          },
+          {
+            "id": "victorian-earrings-14",
+            "code": "SB-2FA82EEE",
+            "rawFilename": "2FA82EEE-CC55-46EE-BA72-935E7AF95E14.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-014.jpg"
+          },
+          {
+            "id": "victorian-earrings-15",
+            "code": "SB-35B6135B",
+            "rawFilename": "35B6135B-30E6-49B5-9324-9BB52C8D94EA.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-015.jpg"
+          },
+          {
+            "id": "victorian-earrings-16",
+            "code": "SB-5150AEBF",
+            "rawFilename": "5150AEBF-5F66-4EEA-85BF-B1C14EE35E68.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-016.jpg"
+          },
+          {
+            "id": "victorian-earrings-17",
+            "code": "SB-58584661",
+            "rawFilename": "58584661-C4F4-4CA1-964F-0FD0B28842A9.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-017.jpg"
+          },
+          {
+            "id": "victorian-earrings-18",
+            "code": "SB-5E6357BC",
+            "rawFilename": "5E6357BC-2055-45F7-A59A-D8B09804E662.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-018.jpg"
+          },
+          {
+            "id": "victorian-earrings-19",
+            "code": "SB-646CFBEA",
+            "rawFilename": "646CFBEA-A39A-47DA-A095-8E2353A0060F.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-019.jpg"
+          },
+          {
+            "id": "victorian-earrings-20",
+            "code": "SB-671F1F07",
+            "rawFilename": "671F1F07-0D26-44A6-B06B-E4B9CF01BC84.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-020.jpg"
+          },
+          {
+            "id": "victorian-earrings-21",
+            "code": "SB-678F3DC4",
+            "rawFilename": "678F3DC4-C79B-48E1-BFAE-5777366575E2.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-021.jpg"
+          },
+          {
+            "id": "victorian-earrings-22",
+            "code": "SB-685CF13C",
+            "rawFilename": "685CF13C-3E10-461D-9762-835A1434DBD6.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-022.jpg"
+          },
+          {
+            "id": "victorian-earrings-23",
+            "code": "SB-6891D205",
+            "rawFilename": "6891D205-C87C-4ECA-AB65-69A81536692A.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-023.jpg"
+          },
+          {
+            "id": "victorian-earrings-24",
+            "code": "SB-6F751986",
+            "rawFilename": "6F751986-8FAA-4D5F-99A2-F4511BDEB8B5.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-024.jpg"
+          },
+          {
+            "id": "victorian-earrings-25",
+            "code": "SB-7325ECAE",
+            "rawFilename": "7325ECAE-97BB-4747-9592-774BE77BAA69.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-025.jpg"
+          },
+          {
+            "id": "victorian-earrings-26",
+            "code": "SB-80F69C85",
+            "rawFilename": "80F69C85-8075-4E88-B115-1EEB9A42FA14.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-026.jpg"
+          },
+          {
+            "id": "victorian-earrings-27",
+            "code": "SB-82295782",
+            "rawFilename": "82295782-ABC1-4031-9F89-EAEDB3E4DBD9.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-027.jpg"
+          },
+          {
+            "id": "victorian-earrings-28",
+            "code": "SB-896F52DD",
+            "rawFilename": "896F52DD-7BFF-4E1D-9816-C68AB2B4171C.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-028.jpg"
+          },
+          {
+            "id": "victorian-earrings-29",
+            "code": "SB-8EA1DA48",
+            "rawFilename": "8EA1DA48-DE06-4084-9381-FDC67341B240.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-029.jpg"
+          },
+          {
+            "id": "victorian-earrings-30",
+            "code": "SB-9583C68B",
+            "rawFilename": "9583C68B-775C-447A-8C03-043E8014F923.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-030.jpg"
+          },
+          {
+            "id": "victorian-earrings-31",
+            "code": "SB-9606C00A",
+            "rawFilename": "9606C00A-1BE4-45B7-90D3-932F0C1E3822.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-031.jpg"
+          },
+          {
+            "id": "victorian-earrings-32",
+            "code": "SB-99D42D16",
+            "rawFilename": "99D42D16-1B3A-425C-87E9-7C7C85AA1FF4.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-032.jpg"
+          },
+          {
+            "id": "victorian-earrings-33",
+            "code": "SB-9EAB4640",
+            "rawFilename": "9EAB4640-5D64-46B2-9AF5-344B350BE5C7.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-033.jpg"
+          },
+          {
+            "id": "victorian-earrings-34",
+            "code": "SB-A3330B31",
+            "rawFilename": "A3330B31-9B29-412F-8191-512D2EA43246.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-034.jpg"
+          },
+          {
+            "id": "victorian-earrings-35",
+            "code": "SB-AC56FD5C",
+            "rawFilename": "AC56FD5C-3985-48D4-B011-67A07B77C66A.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-035.jpg"
+          },
+          {
+            "id": "victorian-earrings-36",
+            "code": "SB-AE0FF451",
+            "rawFilename": "AE0FF451-CACB-44FB-B1E8-305D640533FB.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-036.jpg"
+          },
+          {
+            "id": "victorian-earrings-37",
+            "code": "SB-B1786C1A",
+            "rawFilename": "B1786C1A-A383-4DEA-9FE9-09025E773C1A.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-037.jpg"
+          },
+          {
+            "id": "victorian-earrings-38",
+            "code": "SB-B1EAF89F",
+            "rawFilename": "B1EAF89F-3A01-482C-BCE2-DBD281273DD8.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-038.jpg"
+          },
+          {
+            "id": "victorian-earrings-39",
+            "code": "SB-BA92A01D",
+            "rawFilename": "BA92A01D-2F60-405A-B9DB-4D7CE5E86ED3.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-039.jpg"
+          },
+          {
+            "id": "victorian-earrings-40",
+            "code": "SB-BD0A276D",
+            "rawFilename": "BD0A276D-0573-4688-BACC-AD6816307382.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-040.jpg"
+          },
+          {
+            "id": "victorian-earrings-41",
+            "code": "SB-C7262FC0",
+            "rawFilename": "C7262FC0-31A9-4DB4-9338-0187DD964D8B.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-041.jpg"
+          },
+          {
+            "id": "victorian-earrings-42",
+            "code": "SB-D08654D4",
+            "rawFilename": "D08654D4-507A-4B6B-82DE-E11984AC076B.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-042.jpg"
+          },
+          {
+            "id": "victorian-earrings-43",
+            "code": "SB-D3129435",
+            "rawFilename": "D3129435-5E11-4A65-B635-B60AF1F874F2.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-043.jpg"
+          },
+          {
+            "id": "victorian-earrings-44",
+            "code": "SB-D4A95F04",
+            "rawFilename": "D4A95F04-09F4-4D68-A41D-17FE7B8ED8BF.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-044.jpg"
+          },
+          {
+            "id": "victorian-earrings-45",
+            "code": "SB-D5DE8ABF",
+            "rawFilename": "D5DE8ABF-8DD3-4F96-83AF-99EC8E58038C.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-045.jpg"
+          },
+          {
+            "id": "victorian-earrings-46",
+            "code": "SB-D939621E",
+            "rawFilename": "D939621E-EB02-4694-80E5-0BA14C84D43F.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-046.jpg"
+          },
+          {
+            "id": "victorian-earrings-47",
+            "code": "SB-DAC8D61E",
+            "rawFilename": "DAC8D61E-9432-43B1-9000-6695FDACB40B.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-047.jpg"
+          },
+          {
+            "id": "victorian-earrings-48",
+            "code": "SB-DBF181BD",
+            "rawFilename": "DBF181BD-39C6-4DE1-AD35-2E752714ED61.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-048.jpg"
+          },
+          {
+            "id": "victorian-earrings-49",
+            "code": "SB-DC5624CF",
+            "rawFilename": "DC5624CF-E1FC-422B-8478-1B1B8EA1C0B3.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-049.jpg"
+          },
+          {
+            "id": "victorian-earrings-50",
+            "code": "SB-E2F38395",
+            "rawFilename": "E2F38395-80F5-4A4C-AB64-32DFB00CF061.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-050.jpg"
+          },
+          {
+            "id": "victorian-earrings-51",
+            "code": "SB-F210BB83",
+            "rawFilename": "F210BB83-4175-4F4E-974D-F4D28ED54BFC.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-051.jpg"
+          },
+          {
+            "id": "victorian-earrings-52",
+            "code": "SB-F58E6537",
+            "rawFilename": "F58E6537-CE5E-4819-8B08-102D6C4973D9.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-052.jpg"
+          },
+          {
+            "id": "victorian-earrings-53",
+            "code": "SB-FC227920",
+            "rawFilename": "FC227920-E2AB-4EB1-B7BF-D1394814C660.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-053.jpg"
+          },
+          {
+            "id": "victorian-earrings-54",
+            "code": "SB-FC654361",
+            "rawFilename": "FC654361-123C-442F-A2DF-9382CA68BB44.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-054.jpg"
+          },
+          {
+            "id": "victorian-earrings-55",
+            "code": "SB-FD2B454E",
+            "rawFilename": "FD2B454E-0E71-433D-9B4D-0416674FBBFD.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-055.jpg"
+          },
+          {
+            "id": "victorian-earrings-56",
+            "code": "SB-FEAC621D",
+            "rawFilename": "FEAC621D-008E-4F48-8D30-570516224131.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-056.jpg"
+          },
+          {
+            "id": "victorian-earrings-57",
+            "code": "SB-FED31444",
+            "rawFilename": "FED31444-2B44-498D-B020-ED9BB0AE1A20.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-057.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "american-diamond-earrings",
+        "name": "American Diamond Earrings",
+        "description": "High-Sparkle AD & CZ Party Wear Earrings",
+        "parentSlug": "premium-jewellery",
+        "parentName": "Premium Jewellery",
+        "coverImage": "/images/catalog/earrings/american-diamond-earrings/american-diamond-earrings-001.jpg",
+        "itemCount": 4,
+        "images": [
+          {
+            "id": "american-diamond-earrings-1",
+            "code": "SB-450D7AF5",
+            "rawFilename": "450D7AF5-7C64-4E02-8A4C-0BC837DF4B1F.jpg",
+            "src": "/images/catalog/earrings/american-diamond-earrings/american-diamond-earrings-001.jpg"
+          },
+          {
+            "id": "american-diamond-earrings-2",
+            "code": "SB-6E4C2B8C",
+            "rawFilename": "6E4C2B8C-E88B-4B00-8BBF-EE044E6476EC.jpg",
+            "src": "/images/catalog/earrings/american-diamond-earrings/american-diamond-earrings-002.jpg"
+          },
+          {
+            "id": "american-diamond-earrings-3",
+            "code": "SB-91E00CA0",
+            "rawFilename": "91E00CA0-16D2-4141-B546-EA6A6E0C65EC.jpg",
+            "src": "/images/catalog/earrings/american-diamond-earrings/american-diamond-earrings-003.jpg"
+          },
+          {
+            "id": "american-diamond-earrings-4",
+            "code": "SB-AA7E0C48",
+            "rawFilename": "AA7E0C48-041D-4C83-A5B4-7D6D7EADD6E3.jpg",
+            "src": "/images/catalog/earrings/american-diamond-earrings/american-diamond-earrings-004.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "mother-of-pearl",
+        "name": "Mother of Pearl Earrings",
+        "description": "Natural Mother of Pearl (MOP) Lustrous Statement Earrings",
+        "parentSlug": "premium-jewellery",
+        "parentName": "Premium Jewellery",
+        "coverImage": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-001.jpg",
+        "itemCount": 45,
+        "images": [
+          {
+            "id": "mother-of-pearl-1",
+            "code": "SB-016B31DF",
+            "rawFilename": "016B31DF-AF26-4EF1-BC59-1F916ACD07C3.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-001.jpg"
+          },
+          {
+            "id": "mother-of-pearl-2",
+            "code": "SB-04BCDCF8",
+            "rawFilename": "04BCDCF8-F771-41F4-B136-66D9EA66D921.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-002.jpg"
+          },
+          {
+            "id": "mother-of-pearl-3",
+            "code": "SB-0F6560F6",
+            "rawFilename": "0F6560F6-65D3-4160-9A6A-6AEA865BE38C.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-003.jpg"
+          },
+          {
+            "id": "mother-of-pearl-4",
+            "code": "SB-1CFD3EF4",
+            "rawFilename": "1CFD3EF4-F270-44B2-9489-19451BB00328.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-004.jpg"
+          },
+          {
+            "id": "mother-of-pearl-5",
+            "code": "SB-1D96661F",
+            "rawFilename": "1D96661F-DDAA-4264-8C86-9AFD7AD409C1.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-005.jpg"
+          },
+          {
+            "id": "mother-of-pearl-6",
+            "code": "SB-1E8F0F06",
+            "rawFilename": "1E8F0F06-9806-4E9F-9426-4E89F5C74B2A.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-006.jpg"
+          },
+          {
+            "id": "mother-of-pearl-7",
+            "code": "SB-1FED6033",
+            "rawFilename": "1FED6033-8D10-46F8-BCD7-598E9A4C0E4B.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-007.jpg"
+          },
+          {
+            "id": "mother-of-pearl-8",
+            "code": "SB-21817A9A",
+            "rawFilename": "21817A9A-4DD0-460C-8F2F-0029843B71FB.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-008.jpg"
+          },
+          {
+            "id": "mother-of-pearl-9",
+            "code": "SB-21FB6545",
+            "rawFilename": "21FB6545-B71D-46A4-AC37-7B0F484BE84A.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-009.jpg"
+          },
+          {
+            "id": "mother-of-pearl-10",
+            "code": "SB-35755CE4",
+            "rawFilename": "35755CE4-08E7-4E78-876A-CC2D1686EE42.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-010.jpg"
+          },
+          {
+            "id": "mother-of-pearl-11",
+            "code": "SB-35F5A221",
+            "rawFilename": "35F5A221-0382-49E3-B0DC-5B30BB1A3728.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-011.jpg"
+          },
+          {
+            "id": "mother-of-pearl-12",
+            "code": "SB-3FC1ACB9",
+            "rawFilename": "3FC1ACB9-1AF0-45AD-BE8E-88A109AC5A38.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-012.jpg"
+          },
+          {
+            "id": "mother-of-pearl-13",
+            "code": "SB-4158F7F5",
+            "rawFilename": "4158F7F5-E1FB-49A1-A94E-FFC4F197912E.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-013.jpg"
+          },
+          {
+            "id": "mother-of-pearl-14",
+            "code": "SB-529BCD38",
+            "rawFilename": "529BCD38-856F-43BA-BC5F-B6DEC9FE9D41.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-014.jpg"
+          },
+          {
+            "id": "mother-of-pearl-15",
+            "code": "SB-5F78AF09",
+            "rawFilename": "5F78AF09-44C5-4852-89EF-2E38427BC78E.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-015.jpg"
+          },
+          {
+            "id": "mother-of-pearl-16",
+            "code": "SB-60423802",
+            "rawFilename": "60423802-BC49-4BC3-96C3-BF5F8CC8AB9B.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-016.jpg"
+          },
+          {
+            "id": "mother-of-pearl-17",
+            "code": "SB-61A18BA0",
+            "rawFilename": "61A18BA0-BAC7-4987-8E79-C951853F53E5.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-017.jpg"
+          },
+          {
+            "id": "mother-of-pearl-18",
+            "code": "SB-61F722D6",
+            "rawFilename": "61F722D6-3EC1-4353-B0F1-88A583120431.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-018.jpg"
+          },
+          {
+            "id": "mother-of-pearl-19",
+            "code": "SB-68D62D97",
+            "rawFilename": "68D62D97-C7CD-4FCD-9213-194C4372674F.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-019.jpg"
+          },
+          {
+            "id": "mother-of-pearl-20",
+            "code": "SB-6916916A",
+            "rawFilename": "6916916A-E8BE-45AC-A864-F4E98B890071.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-020.jpg"
+          },
+          {
+            "id": "mother-of-pearl-21",
+            "code": "SB-74F482C9",
+            "rawFilename": "74F482C9-D8AC-4F4C-83B3-3E84D65EEF0D.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-021.jpg"
+          },
+          {
+            "id": "mother-of-pearl-22",
+            "code": "SB-767D3A29",
+            "rawFilename": "767D3A29-DEF6-4291-9EC3-D16348EC4B85.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-022.jpg"
+          },
+          {
+            "id": "mother-of-pearl-23",
+            "code": "SB-77B58722",
+            "rawFilename": "77B58722-6070-45EE-8E55-A47ECBEF92CF.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-023.jpg"
+          },
+          {
+            "id": "mother-of-pearl-24",
+            "code": "SB-8603FA59",
+            "rawFilename": "8603FA59-5C85-4951-9D1E-F92CDDBBD5E6.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-024.jpg"
+          },
+          {
+            "id": "mother-of-pearl-25",
+            "code": "SB-94C017DB",
+            "rawFilename": "94C017DB-F753-4E84-81CF-60D66E01B7F6.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-025.jpg"
+          },
+          {
+            "id": "mother-of-pearl-26",
+            "code": "SB-9A6BA694",
+            "rawFilename": "9A6BA694-FD9E-4EB3-9E3C-0F2479F351C6.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-026.jpg"
+          },
+          {
+            "id": "mother-of-pearl-27",
+            "code": "SB-9EF12427",
+            "rawFilename": "9EF12427-B922-4905-857C-56D0C221E395.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-027.jpg"
+          },
+          {
+            "id": "mother-of-pearl-28",
+            "code": "SB-A1CF5D32",
+            "rawFilename": "A1CF5D32-D95F-4B57-BD98-B56AFF891C87.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-028.jpg"
+          },
+          {
+            "id": "mother-of-pearl-29",
+            "code": "SB-A4A23CE6",
+            "rawFilename": "A4A23CE6-17E7-4B4F-99AF-D570C04C2268.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-029.jpg"
+          },
+          {
+            "id": "mother-of-pearl-30",
+            "code": "SB-A83458A2",
+            "rawFilename": "A83458A2-1455-4942-8548-F64436122EA0.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-030.jpg"
+          },
+          {
+            "id": "mother-of-pearl-31",
+            "code": "SB-AB376285",
+            "rawFilename": "AB376285-14CC-43EE-AB39-5BD9296B590A.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-031.jpg"
+          },
+          {
+            "id": "mother-of-pearl-32",
+            "code": "SB-ABF8D052",
+            "rawFilename": "ABF8D052-EAA8-48B3-BA7C-0E497B7A934B.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-032.jpg"
+          },
+          {
+            "id": "mother-of-pearl-33",
+            "code": "SB-AC4BC6A2",
+            "rawFilename": "AC4BC6A2-940D-4AE3-AF95-9CB76BBE8848.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-033.jpg"
+          },
+          {
+            "id": "mother-of-pearl-34",
+            "code": "SB-B7292DD9",
+            "rawFilename": "B7292DD9-EA4F-4F0D-87D3-206A77FD548D.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-034.jpg"
+          },
+          {
+            "id": "mother-of-pearl-35",
+            "code": "SB-B8131667",
+            "rawFilename": "B8131667-E1EF-497B-B38B-FCADE6B3049B.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-035.jpg"
+          },
+          {
+            "id": "mother-of-pearl-36",
+            "code": "SB-BABAAE29",
+            "rawFilename": "BABAAE29-C8B5-45ED-A3B0-8B5AC417419C.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-036.jpg"
+          },
+          {
+            "id": "mother-of-pearl-37",
+            "code": "SB-C6CE4981",
+            "rawFilename": "C6CE4981-84A7-4C0D-8091-A99E096B3FE5.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-037.jpg"
+          },
+          {
+            "id": "mother-of-pearl-38",
+            "code": "SB-CCBE5E67",
+            "rawFilename": "CCBE5E67-5EDC-4F8B-83A6-524DF089324C.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-038.jpg"
+          },
+          {
+            "id": "mother-of-pearl-39",
+            "code": "SB-CD0F9EB6",
+            "rawFilename": "CD0F9EB6-8146-4C3A-878D-7525D6D88A09.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-039.jpg"
+          },
+          {
+            "id": "mother-of-pearl-40",
+            "code": "SB-D1246A86",
+            "rawFilename": "D1246A86-13BF-477C-A501-ED85C3BC2F21.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-040.jpg"
+          },
+          {
+            "id": "mother-of-pearl-41",
+            "code": "SB-DF30A083",
+            "rawFilename": "DF30A083-C8D8-4AE1-B46A-5B9753D82E2F.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-041.jpg"
+          },
+          {
+            "id": "mother-of-pearl-42",
+            "code": "SB-E924BEA5",
+            "rawFilename": "E924BEA5-02DA-40FD-BA5E-4FACA74C08C8.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-042.jpg"
+          },
+          {
+            "id": "mother-of-pearl-43",
+            "code": "SB-EAEA96AB",
+            "rawFilename": "EAEA96AB-114E-42B2-BCB8-575ACCD801C6.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-043.jpg"
+          },
+          {
+            "id": "mother-of-pearl-44",
+            "code": "SB-F26FC738",
+            "rawFilename": "F26FC738-9086-420F-A580-31D89EEEBE82.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-044.jpg"
+          },
+          {
+            "id": "mother-of-pearl-45",
+            "code": "SB-F630B175",
+            "rawFilename": "F630B175-71D0-422A-9DCF-09EA8BF2B0A3.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-045.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "normal-jewellery",
+    "aliases": [
+      "silver-earrings",
+      "normal-jewellery-category",
+      "regular-jewellery",
+      "normal-jewelry"
+    ],
+    "name": "Normal Jewellery",
+    "description": "Everyday trending oxidised brass, daily wear earrings, meenakari, and antique collections.",
+    "hasSubcategories": true,
+    "coverImage": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-001.jpg",
+    "totalItems": 297,
+    "subcategories": [
+      {
+        "slug": "daily-wear-oxydised-earrings",
+        "name": "Daily Wear Oxidised Earrings",
+        "description": "Lightweight Antique Silver & Black Metal Jhumkas and Tops",
+        "parentSlug": "normal-jewellery",
+        "parentName": "Normal Jewellery",
+        "coverImage": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-001.jpg",
+        "itemCount": 54,
+        "images": [
+          {
+            "id": "daily-wear-oxydised-earrings-1",
+            "code": "SB-01668F4D",
+            "rawFilename": "01668F4D-AEE5-4F06-B6D1-EA7C10CE6085.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-001.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-2",
+            "code": "SB-0FDA0CC8",
+            "rawFilename": "0FDA0CC8-643A-4E4E-AB67-8F85A24774FF.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-002.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-3",
+            "code": "SB-19081711",
+            "rawFilename": "19081711-EE5E-4830-922E-1DD59EB9250D.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-003.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-4",
+            "code": "SB-1CE78CB3",
+            "rawFilename": "1CE78CB3-368D-4036-8134-1B5E00843C93.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-004.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-5",
+            "code": "SB-29ACF372",
+            "rawFilename": "29ACF372-BBCF-4A50-96A6-16243132CC05.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-005.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-6",
+            "code": "SB-2A40ED8E",
+            "rawFilename": "2A40ED8E-DDFD-455B-B955-B16CF811BCE1.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-006.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-7",
+            "code": "SB-2DF7E8A6",
+            "rawFilename": "2DF7E8A6-ADEF-4776-A0AC-49BFAEA225A8.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-007.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-8",
+            "code": "SB-2ECF613F",
+            "rawFilename": "2ECF613F-2F86-4CCE-8593-F831A98E91A7.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-008.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-9",
+            "code": "SB-312ED90D",
+            "rawFilename": "312ED90D-9E0A-4199-AB2C-0D662B581074.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-009.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-10",
+            "code": "SB-37A3C36B",
+            "rawFilename": "37A3C36B-18D1-4431-9E74-F549A79E4204.png",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-010.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-11",
+            "code": "SB-3B09C1AF",
+            "rawFilename": "3B09C1AF-8AA2-42C5-99B7-5519E5186014.png",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-011.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-12",
+            "code": "SB-3DE137A1",
+            "rawFilename": "3DE137A1-0101-44D9-BC3B-711D138F5AB7.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-012.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-13",
+            "code": "SB-3FE2E2C8",
+            "rawFilename": "3FE2E2C8-A67C-440F-ABBD-11BE5013DAA0.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-013.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-14",
+            "code": "SB-53A53031",
+            "rawFilename": "53A53031-9A12-43A6-A98A-39E4369C4FD8.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-014.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-15",
+            "code": "SB-5B8436F4",
+            "rawFilename": "5B8436F4-0853-48DD-A228-27A467845BEB.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-015.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-16",
+            "code": "SB-62A48076",
+            "rawFilename": "62A48076-29DF-43E0-B094-9F034B6C6B11.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-016.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-17",
+            "code": "SB-684A298D",
+            "rawFilename": "684A298D-BA2E-41DE-9832-15FC7B8B4614.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-017.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-18",
+            "code": "SB-6A283D03",
+            "rawFilename": "6A283D03-F49F-4842-9C38-7ACBACAC8210.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-018.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-19",
+            "code": "SB-726991EA",
+            "rawFilename": "726991EA-FFBF-42F9-B4CF-863C351505E7.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-019.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-20",
+            "code": "SB-77C9B306",
+            "rawFilename": "77C9B306-F6E8-4938-8C2E-F1007E70F1D7.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-020.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-21",
+            "code": "SB-7CF30D64",
+            "rawFilename": "7CF30D64-5A90-433B-B31C-EAA468EBA4BA.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-021.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-22",
+            "code": "SB-81D39088",
+            "rawFilename": "81D39088-5646-43B5-9304-1BDAA5352F36.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-022.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-23",
+            "code": "SB-8CA12A61",
+            "rawFilename": "8CA12A61-F11D-42FD-9BDB-A8040A1C5703.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-023.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-24",
+            "code": "SB-91FCA551",
+            "rawFilename": "91FCA551-0C22-455D-ADC4-5444CD7E510B.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-024.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-25",
+            "code": "SB-9406C654",
+            "rawFilename": "9406C654-608B-4F25-802F-AEB5AC5AAF01.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-025.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-26",
+            "code": "SB-9579A0D8",
+            "rawFilename": "9579A0D8-49E3-40C4-96EE-E9E479E27AB4.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-026.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-27",
+            "code": "SB-9A35EB13",
+            "rawFilename": "9A35EB13-C23A-4C86-A368-36314E6DD2F7.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-027.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-28",
+            "code": "SB-9F1B287C",
+            "rawFilename": "9F1B287C-0519-4C09-8243-E98C22CB7AA5.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-028.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-29",
+            "code": "SB-A25D18E5",
+            "rawFilename": "A25D18E5-824C-42B9-826F-A5DEA1249140.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-029.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-30",
+            "code": "SB-AB6C3B88",
+            "rawFilename": "AB6C3B88-3FD1-4D5F-9301-D4073FF802CF.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-030.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-31",
+            "code": "SB-ACFDA80B",
+            "rawFilename": "ACFDA80B-2526-4040-9FBC-0A3820F7E0FE.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-031.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-32",
+            "code": "SB-AEBAE7A3",
+            "rawFilename": "AEBAE7A3-9D0A-4FC0-A0A3-C9D8EEC5F02E.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-032.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-33",
+            "code": "SB-B0582BCE",
+            "rawFilename": "B0582BCE-FD49-4B23-B832-9CDCF0980553.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-033.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-34",
+            "code": "SB-B0BA5563",
+            "rawFilename": "B0BA5563-1D19-44AE-91D9-AA30DA7062D1.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-034.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-35",
+            "code": "SB-B15A6243",
+            "rawFilename": "B15A6243-AF30-4EEA-8FBF-8760CB06B3D0.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-035.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-36",
+            "code": "SB-B1DF7F43",
+            "rawFilename": "B1DF7F43-35DB-40CA-B1B9-0967075A5AB2.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-036.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-37",
+            "code": "SB-B61A89AB",
+            "rawFilename": "B61A89AB-5F5A-45B3-9DBE-19C840F0E3A9.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-037.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-38",
+            "code": "SB-B9F6C32B",
+            "rawFilename": "B9F6C32B-10B0-47FF-ACCC-3AB78F48B851.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-038.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-39",
+            "code": "SB-BB84DC24",
+            "rawFilename": "BB84DC24-0CD1-4842-B528-36A61C949B36.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-039.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-40",
+            "code": "SB-BC564CE8",
+            "rawFilename": "BC564CE8-4F68-49DE-8C5F-C7D132C476A9.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-040.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-41",
+            "code": "SB-C5BFE81C",
+            "rawFilename": "C5BFE81C-C458-4352-B577-AFFF3B7A36D6.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-041.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-42",
+            "code": "SB-C9674091",
+            "rawFilename": "C9674091-E8A7-4E2B-9299-BAEF94670D73.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-042.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-43",
+            "code": "SB-DAA3335E",
+            "rawFilename": "DAA3335E-40CF-4490-A7EF-38388E6DC46E.png",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-043.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-44",
+            "code": "SB-DC8C02B5",
+            "rawFilename": "DC8C02B5-82C4-4F25-8E08-4CEBE1775D87.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-044.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-45",
+            "code": "SB-DD5C4E0F",
+            "rawFilename": "DD5C4E0F-DC05-4E48-BF81-2CE52579EF35.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-045.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-46",
+            "code": "SB-DEA1AA2A",
+            "rawFilename": "DEA1AA2A-B94B-43E4-8383-9D2777016A43.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-046.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-47",
+            "code": "SB-DF81D2E3",
+            "rawFilename": "DF81D2E3-5687-4172-9123-D44F712BE5A6.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-047.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-48",
+            "code": "SB-E111CED0",
+            "rawFilename": "E111CED0-7233-4283-AC9E-6BE8B95C46BD.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-048.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-49",
+            "code": "SB-E8C2330E",
+            "rawFilename": "E8C2330E-1CC5-49B9-9BDD-79E57E742073.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-049.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-50",
+            "code": "SB-EE15A7FD",
+            "rawFilename": "EE15A7FD-A387-4697-9DF5-3CF80B831230.png",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-050.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-51",
+            "code": "SB-F478FD86",
+            "rawFilename": "F478FD86-19D7-43CE-B415-7F59D98A8A92.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-051.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-52",
+            "code": "SB-F8893D5C",
+            "rawFilename": "F8893D5C-1024-4055-B50A-ED668AD892AF.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-052.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-53",
+            "code": "SB-F9357A8B",
+            "rawFilename": "F9357A8B-F22F-4678-B129-A32D411872D1.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-053.jpg"
+          },
+          {
+            "id": "daily-wear-oxydised-earrings-54",
+            "code": "SB-FE15CD74",
+            "rawFilename": "FE15CD74-773E-44A4-9CAB-9129105BD5C9.jpg",
+            "src": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-054.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "kashmiri-earrings",
+        "name": "Kashmiri Earrings",
+        "description": "Authentic Kashmiri Hanging Jhumkis with Pearl Drops",
+        "parentSlug": "normal-jewellery",
+        "parentName": "Normal Jewellery",
+        "coverImage": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-001.jpg",
+        "itemCount": 42,
+        "images": [
+          {
+            "id": "kashmiri-earrings-1",
+            "code": "SB-08B77267",
+            "rawFilename": "08B77267-14DD-49F4-8E16-5F6B908A2815.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-001.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-2",
+            "code": "SB-0CF2B166",
+            "rawFilename": "0CF2B166-B82F-4860-8DDA-2DB2A2196E6A.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-002.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-3",
+            "code": "SB-15C3C8BE",
+            "rawFilename": "15C3C8BE-1D2F-4882-9FCF-FD12DA7B88FE.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-003.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-4",
+            "code": "SB-194EB9D5",
+            "rawFilename": "194EB9D5-7714-4A1A-B222-19130CD97FC1.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-004.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-5",
+            "code": "SB-1E9D4106",
+            "rawFilename": "1E9D4106-7BD1-4E2E-BFA6-D170CCF673D7.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-005.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-6",
+            "code": "SB-20C9C649",
+            "rawFilename": "20C9C649-74BA-43EE-A0F8-26EBB3D3747C.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-006.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-7",
+            "code": "SB-217DDAEC",
+            "rawFilename": "217DDAEC-6FF3-447C-BC67-A1F21DA0F394.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-007.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-8",
+            "code": "SB-27B757C2",
+            "rawFilename": "27B757C2-BF0D-4CF4-8A6C-76306EA52FA4.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-008.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-9",
+            "code": "SB-30493E2E",
+            "rawFilename": "30493E2E-7863-4458-96B0-BF7BBA3C3545.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-009.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-10",
+            "code": "SB-3D5ABF4B",
+            "rawFilename": "3D5ABF4B-8851-4F93-88D5-14905E87D7EB.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-010.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-11",
+            "code": "SB-47093535",
+            "rawFilename": "47093535-D97B-49EC-9907-0F3EF3CBA8C2.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-011.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-12",
+            "code": "SB-52BA3F49",
+            "rawFilename": "52BA3F49-6C55-4857-9492-17363B9B8D91.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-012.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-13",
+            "code": "SB-58DE727D",
+            "rawFilename": "58DE727D-CD97-404C-AE51-C127FC6F8909.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-013.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-14",
+            "code": "SB-59A90DA4",
+            "rawFilename": "59A90DA4-33C0-4991-BB81-251DF1EBDF4C.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-014.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-15",
+            "code": "SB-5DCF930A",
+            "rawFilename": "5DCF930A-F16D-4025-960D-EAB798FDB903.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-015.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-16",
+            "code": "SB-6077E1FB",
+            "rawFilename": "6077E1FB-125D-4864-B37C-D6D56433D7FE.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-016.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-17",
+            "code": "SB-67145E01",
+            "rawFilename": "67145E01-D1E9-47F6-BEAF-D9205822992A.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-017.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-18",
+            "code": "SB-68960F29",
+            "rawFilename": "68960F29-D067-4AAD-A1FE-D22A66D19CD9.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-018.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-19",
+            "code": "SB-6BA59AC0",
+            "rawFilename": "6BA59AC0-E5FF-4A39-8BAB-F1A435D34093.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-019.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-20",
+            "code": "SB-712B0E2D",
+            "rawFilename": "712B0E2D-4AA4-499E-88B7-D488FE93A8A7.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-020.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-21",
+            "code": "SB-71F2DFBF",
+            "rawFilename": "71F2DFBF-6258-4AF6-B061-A53FAC217B8B.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-021.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-22",
+            "code": "SB-785E2D73",
+            "rawFilename": "785E2D73-6C77-468F-8425-98BB6C754BAD.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-022.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-23",
+            "code": "SB-851B1C56",
+            "rawFilename": "851B1C56-21A7-48B2-BCFD-1A1027A7E8A2.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-023.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-24",
+            "code": "SB-877D7D2C",
+            "rawFilename": "877D7D2C-6551-4E12-943B-F2E7CF78C13E.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-024.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-25",
+            "code": "SB-90990810",
+            "rawFilename": "90990810-36B6-4639-ABDB-51E9A71210A4.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-025.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-26",
+            "code": "SB-914705F7",
+            "rawFilename": "914705F7-EF20-43E2-89B6-41DBF64A1B79.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-026.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-27",
+            "code": "SB-953EFBF4",
+            "rawFilename": "953EFBF4-DC83-4053-B1A6-2634C2C8082D.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-027.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-28",
+            "code": "SB-9B1298E7",
+            "rawFilename": "9B1298E7-D8BC-4D8E-B588-3F42AE2BFEC9.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-028.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-29",
+            "code": "SB-AF6F736D",
+            "rawFilename": "AF6F736D-12EB-4461-BA3F-297486069759.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-029.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-30",
+            "code": "SB-B70D44A0",
+            "rawFilename": "B70D44A0-3040-4983-B911-C630EBF8D72D.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-030.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-31",
+            "code": "SB-C48E63B8",
+            "rawFilename": "C48E63B8-90FF-475A-9C3D-E17E6B7CBA72.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-031.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-32",
+            "code": "SB-C57D4FA1",
+            "rawFilename": "C57D4FA1-FAD0-4B37-A4EF-B5032F043AB8.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-032.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-33",
+            "code": "SB-C5F21BEA",
+            "rawFilename": "C5F21BEA-BD37-4DA2-9A80-2BDA42AF8DB8.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-033.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-34",
+            "code": "SB-CAFFEB5C",
+            "rawFilename": "CAFFEB5C-0968-459C-A40E-CD9C7E130184.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-034.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-35",
+            "code": "SB-CBC0FF79",
+            "rawFilename": "CBC0FF79-C137-429A-8739-7A4999A62144.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-035.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-36",
+            "code": "SB-CCACB5BF",
+            "rawFilename": "CCACB5BF-2894-4158-9F78-27CBD76F8623.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-036.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-37",
+            "code": "SB-E1EDDDEE",
+            "rawFilename": "E1EDDDEE-C084-4976-876A-C0F9535E5416.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-037.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-38",
+            "code": "SB-E2F80ADB",
+            "rawFilename": "E2F80ADB-55BF-42BE-B829-E41ABD914745.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-038.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-39",
+            "code": "SB-E52884C9",
+            "rawFilename": "E52884C9-4861-463C-8331-AF7A4B6153E3.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-039.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-40",
+            "code": "SB-EA1C435D",
+            "rawFilename": "EA1C435D-83AD-4B03-9D51-46C7D685A890.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-040.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-41",
+            "code": "SB-ED2B4C5F",
+            "rawFilename": "ED2B4C5F-874C-4A3D-A18E-3228DFE1896E.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-041.jpg"
+          },
+          {
+            "id": "kashmiri-earrings-42",
+            "code": "SB-EF30751A",
+            "rawFilename": "EF30751A-F077-4EA6-B0E5-44351879D896.jpg",
+            "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-042.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "kundan-studs",
+        "name": "Kundan Studs & Tops",
+        "description": "Elegant Kundan Floral and Geometric Ear Studs",
+        "parentSlug": "normal-jewellery",
+        "parentName": "Normal Jewellery",
+        "coverImage": "/images/catalog/earrings/kundan-studs/kundan-studs-001.jpg",
+        "itemCount": 25,
+        "images": [
+          {
+            "id": "kundan-studs-1",
+            "code": "SB-0181F684",
+            "rawFilename": "0181F684-D1E3-47A9-8532-A997E3BC5B84.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-001.jpg"
+          },
+          {
+            "id": "kundan-studs-2",
+            "code": "SB-027D9101",
+            "rawFilename": "027D9101-60AA-4172-B406-9F07B1B02842.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-002.jpg"
+          },
+          {
+            "id": "kundan-studs-3",
+            "code": "SB-052487CA",
+            "rawFilename": "052487CA-762E-4452-ADF4-5AE91B0C6C63.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-003.jpg"
+          },
+          {
+            "id": "kundan-studs-4",
+            "code": "SB-052D7309",
+            "rawFilename": "052D7309-9C92-4182-9E7B-798007C386C4.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-004.jpg"
+          },
+          {
+            "id": "kundan-studs-5",
+            "code": "SB-14383030",
+            "rawFilename": "14383030-F889-4E1D-A913-A316DA6E7D3B.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-005.jpg"
+          },
+          {
+            "id": "kundan-studs-6",
+            "code": "SB-2712CF9C",
+            "rawFilename": "2712CF9C-FC63-4EEF-9997-AF7FC4465734.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-006.jpg"
+          },
+          {
+            "id": "kundan-studs-7",
+            "code": "SB-2816F3D7",
+            "rawFilename": "2816F3D7-6843-4163-8775-E4F9FE8DCDA2.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-007.jpg"
+          },
+          {
+            "id": "kundan-studs-8",
+            "code": "SB-5118FE4A",
+            "rawFilename": "5118FE4A-990C-45F0-A40E-691207352377.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-008.jpg"
+          },
+          {
+            "id": "kundan-studs-9",
+            "code": "SB-5928B082",
+            "rawFilename": "5928B082-2DC1-4EF7-AD75-A9D8B9FDAF6A.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-009.jpg"
+          },
+          {
+            "id": "kundan-studs-10",
+            "code": "SB-5A5AF419",
+            "rawFilename": "5A5AF419-89FF-4C24-A898-219F95D4C3A4.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-010.jpg"
+          },
+          {
+            "id": "kundan-studs-11",
+            "code": "SB-5B5B5847",
+            "rawFilename": "5B5B5847-9850-42DF-B5CD-1AD93EAF243E.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-011.jpg"
+          },
+          {
+            "id": "kundan-studs-12",
+            "code": "SB-6119F264",
+            "rawFilename": "6119F264-6ACB-4FE9-9FBD-2B505B4E09B7.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-012.jpg"
+          },
+          {
+            "id": "kundan-studs-13",
+            "code": "SB-72338E86",
+            "rawFilename": "72338E86-1AC5-4288-B58F-31424ABDCACC.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-013.jpg"
+          },
+          {
+            "id": "kundan-studs-14",
+            "code": "SB-9EF90F50",
+            "rawFilename": "9EF90F50-1A3C-419B-B8EC-4367A1B81EEB.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-014.jpg"
+          },
+          {
+            "id": "kundan-studs-15",
+            "code": "SB-A1C61795",
+            "rawFilename": "A1C61795-976B-4CB7-955E-12469870E1E9.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-015.jpg"
+          },
+          {
+            "id": "kundan-studs-16",
+            "code": "SB-A3F8692C",
+            "rawFilename": "A3F8692C-36AF-4A72-A4F0-B8379BF39DE8.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-016.jpg"
+          },
+          {
+            "id": "kundan-studs-17",
+            "code": "SB-ACE25257",
+            "rawFilename": "ACE25257-3B07-46B1-8E38-74D32EACF585.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-017.jpg"
+          },
+          {
+            "id": "kundan-studs-18",
+            "code": "SB-AF9CC997",
+            "rawFilename": "AF9CC997-B044-4283-88E6-0D8EA805D220.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-018.jpg"
+          },
+          {
+            "id": "kundan-studs-19",
+            "code": "SB-B2F0FDDB",
+            "rawFilename": "B2F0FDDB-4F89-4CC9-9F80-3EABA443C2E7.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-019.jpg"
+          },
+          {
+            "id": "kundan-studs-20",
+            "code": "SB-C429FABC",
+            "rawFilename": "C429FABC-374F-4BC7-85C9-DC3B530CF4E1.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-020.jpg"
+          },
+          {
+            "id": "kundan-studs-21",
+            "code": "SB-C86BC5EB",
+            "rawFilename": "C86BC5EB-5646-4E51-970B-1E200E84C166.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-021.jpg"
+          },
+          {
+            "id": "kundan-studs-22",
+            "code": "SB-D8132267",
+            "rawFilename": "D8132267-359A-4F7B-AE12-C6A9B6CDE44E.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-022.jpg"
+          },
+          {
+            "id": "kundan-studs-23",
+            "code": "SB-DC5EA0C9",
+            "rawFilename": "DC5EA0C9-76D0-4EE2-96B5-FBFDD8197B86.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-023.jpg"
+          },
+          {
+            "id": "kundan-studs-24",
+            "code": "SB-F0177878",
+            "rawFilename": "F0177878-E3EA-4B9E-9097-A028E027C500.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-024.jpg"
+          },
+          {
+            "id": "kundan-studs-25",
+            "code": "SB-FC9E1F52",
+            "rawFilename": "FC9E1F52-ADD9-4342-A953-925735B4E023.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-025.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "meenakari-earrings",
+        "name": "Meenakari Earrings",
+        "description": "Vibrant Enamel Painted Traditional Rajasthani Meenakari",
+        "parentSlug": "normal-jewellery",
+        "parentName": "Normal Jewellery",
+        "coverImage": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-001.jpg",
+        "itemCount": 62,
+        "images": [
+          {
+            "id": "meenakari-earrings-1",
+            "code": "SB-001FC96B",
+            "rawFilename": "001FC96B-CD4C-4908-87CC-1FF00B611AFC.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-001.jpg"
+          },
+          {
+            "id": "meenakari-earrings-2",
+            "code": "SB-03FC5DF9",
+            "rawFilename": "03FC5DF9-5963-41C9-B04F-F2B8FC527BB0.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-002.jpg"
+          },
+          {
+            "id": "meenakari-earrings-3",
+            "code": "SB-0A057070",
+            "rawFilename": "0A057070-2E93-4935-AC16-D864E851A722.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-003.jpg"
+          },
+          {
+            "id": "meenakari-earrings-4",
+            "code": "SB-0C071266",
+            "rawFilename": "0C071266-C8CE-4864-9265-0F1307B0C08E.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-004.jpg"
+          },
+          {
+            "id": "meenakari-earrings-5",
+            "code": "SB-131BFD9F",
+            "rawFilename": "131BFD9F-E771-4E3F-AE25-874D024B09A3.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-005.jpg"
+          },
+          {
+            "id": "meenakari-earrings-6",
+            "code": "SB-14433CBA",
+            "rawFilename": "14433CBA-D881-434D-ABBD-573CAA06327A.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-006.jpg"
+          },
+          {
+            "id": "meenakari-earrings-7",
+            "code": "SB-1610CE61",
+            "rawFilename": "1610CE61-33ED-4C1B-9B7E-E4FE17167CF5.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-007.jpg"
+          },
+          {
+            "id": "meenakari-earrings-8",
+            "code": "SB-1A86D28E",
+            "rawFilename": "1A86D28E-B9C2-471C-B2B4-4FCFF1F53D56.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-008.jpg"
+          },
+          {
+            "id": "meenakari-earrings-9",
+            "code": "SB-1B6D21F3",
+            "rawFilename": "1B6D21F3-9BD6-4310-8EA7-B2684560C07F.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-009.jpg"
+          },
+          {
+            "id": "meenakari-earrings-10",
+            "code": "SB-23B083F1",
+            "rawFilename": "23B083F1-B27E-4557-BB3D-8475C30416F2.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-010.jpg"
+          },
+          {
+            "id": "meenakari-earrings-11",
+            "code": "SB-25352D68",
+            "rawFilename": "25352D68-9715-4226-B2A7-B8F89B221086.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-011.jpg"
+          },
+          {
+            "id": "meenakari-earrings-12",
+            "code": "SB-29DABC7C",
+            "rawFilename": "29DABC7C-FE99-4EC9-ABA5-1B58AFB32B0F.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-012.jpg"
+          },
+          {
+            "id": "meenakari-earrings-13",
+            "code": "SB-2A00EEC4",
+            "rawFilename": "2A00EEC4-0629-408A-854B-F1720CBAA574.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-013.jpg"
+          },
+          {
+            "id": "meenakari-earrings-14",
+            "code": "SB-30B45F7E",
+            "rawFilename": "30B45F7E-62BC-44A0-921F-3AB55267E17B.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-014.jpg"
+          },
+          {
+            "id": "meenakari-earrings-15",
+            "code": "SB-393337AC",
+            "rawFilename": "393337AC-5578-4F38-85F6-0FE0A7920609.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-015.jpg"
+          },
+          {
+            "id": "meenakari-earrings-16",
+            "code": "SB-3B2B00A5",
+            "rawFilename": "3B2B00A5-BFF6-4C24-97D2-B674F6F6E195.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-016.jpg"
+          },
+          {
+            "id": "meenakari-earrings-17",
+            "code": "SB-3DFFCB99",
+            "rawFilename": "3DFFCB99-4ABB-4870-96CC-AA0622AF07B2.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-017.jpg"
+          },
+          {
+            "id": "meenakari-earrings-18",
+            "code": "SB-4944CD0F",
+            "rawFilename": "4944CD0F-CF17-4AEA-A5B9-F3862B6EC729.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-018.jpg"
+          },
+          {
+            "id": "meenakari-earrings-19",
+            "code": "SB-4EDB25D9",
+            "rawFilename": "4EDB25D9-A1F5-4492-B45D-3CC2ECA7B578.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-019.jpg"
+          },
+          {
+            "id": "meenakari-earrings-20",
+            "code": "SB-5009BACE",
+            "rawFilename": "5009BACE-22FB-4787-BA38-9810D6A81D50.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-020.jpg"
+          },
+          {
+            "id": "meenakari-earrings-21",
+            "code": "SB-52C2616A",
+            "rawFilename": "52C2616A-5B2D-4FE3-9C0C-7691406D7A57.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-021.jpg"
+          },
+          {
+            "id": "meenakari-earrings-22",
+            "code": "SB-533C5469",
+            "rawFilename": "533C5469-6015-4F85-9A2E-9BFB88BD2244.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-022.jpg"
+          },
+          {
+            "id": "meenakari-earrings-23",
+            "code": "SB-534B16E9",
+            "rawFilename": "534B16E9-9C79-4AB5-BF3F-B1CA022A48B9.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-023.jpg"
+          },
+          {
+            "id": "meenakari-earrings-24",
+            "code": "SB-5D86045C",
+            "rawFilename": "5D86045C-889A-4F29-ABDE-66A6D4C867FB.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-024.jpg"
+          },
+          {
+            "id": "meenakari-earrings-25",
+            "code": "SB-637BF0F5",
+            "rawFilename": "637BF0F5-A9C5-46F1-A1CF-BF5F1EFB6892.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-025.jpg"
+          },
+          {
+            "id": "meenakari-earrings-26",
+            "code": "SB-6436AE94",
+            "rawFilename": "6436AE94-AA45-4E69-A053-6146A5D009BC.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-026.jpg"
+          },
+          {
+            "id": "meenakari-earrings-27",
+            "code": "SB-7215AAEE",
+            "rawFilename": "7215AAEE-A3CF-40EE-9A4B-F5E488A1207F.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-027.jpg"
+          },
+          {
+            "id": "meenakari-earrings-28",
+            "code": "SB-725858F2",
+            "rawFilename": "725858F2-84CD-4006-BB64-53269CC75094.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-028.jpg"
+          },
+          {
+            "id": "meenakari-earrings-29",
+            "code": "SB-727DA4A0",
+            "rawFilename": "727DA4A0-CB95-4FF7-BA3A-86F263FAA71A.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-029.jpg"
+          },
+          {
+            "id": "meenakari-earrings-30",
+            "code": "SB-7F4DE3E1",
+            "rawFilename": "7F4DE3E1-5396-4FAA-8BF1-1B63FF5F78D8.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-030.jpg"
+          },
+          {
+            "id": "meenakari-earrings-31",
+            "code": "SB-850D1438",
+            "rawFilename": "850D1438-8698-48A4-8EFF-2AFC0A591E35.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-031.jpg"
+          },
+          {
+            "id": "meenakari-earrings-32",
+            "code": "SB-85DF2C1C",
+            "rawFilename": "85DF2C1C-CA9C-4C6C-9937-C632D14107DA.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-032.jpg"
+          },
+          {
+            "id": "meenakari-earrings-33",
+            "code": "SB-8638F4BB",
+            "rawFilename": "8638F4BB-CE6D-4467-B67C-0A85B6CCA503.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-033.jpg"
+          },
+          {
+            "id": "meenakari-earrings-34",
+            "code": "SB-8B9A15BB",
+            "rawFilename": "8B9A15BB-89DC-4EE3-8B11-A0AFC44D3E30.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-034.jpg"
+          },
+          {
+            "id": "meenakari-earrings-35",
+            "code": "SB-8F7963AC",
+            "rawFilename": "8F7963AC-758C-4E6D-BB88-19DD0B5403F0.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-035.jpg"
+          },
+          {
+            "id": "meenakari-earrings-36",
+            "code": "SB-974A23A3",
+            "rawFilename": "974A23A3-C466-4C09-BE41-EA9B2A7198D5.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-036.jpg"
+          },
+          {
+            "id": "meenakari-earrings-37",
+            "code": "SB-98E0B837",
+            "rawFilename": "98E0B837-E9D1-4F86-A2D0-007B43795630.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-037.jpg"
+          },
+          {
+            "id": "meenakari-earrings-38",
+            "code": "SB-A2B15AB8",
+            "rawFilename": "A2B15AB8-BCEA-4DC3-8E0B-4902BE99EEA8.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-038.jpg"
+          },
+          {
+            "id": "meenakari-earrings-39",
+            "code": "SB-A714A5CC",
+            "rawFilename": "A714A5CC-F0B0-44B7-9589-BE4BA14D7BAF.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-039.jpg"
+          },
+          {
+            "id": "meenakari-earrings-40",
+            "code": "SB-ABD92161",
+            "rawFilename": "ABD92161-3964-4049-BC19-483C44180CFE.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-040.jpg"
+          },
+          {
+            "id": "meenakari-earrings-41",
+            "code": "SB-ABE1DF27",
+            "rawFilename": "ABE1DF27-BD62-40D0-BFE5-8BE84CA9CC17.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-041.jpg"
+          },
+          {
+            "id": "meenakari-earrings-42",
+            "code": "SB-ACF5B6B0",
+            "rawFilename": "ACF5B6B0-15B3-40C5-B4EF-73B725F50E7A.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-042.jpg"
+          },
+          {
+            "id": "meenakari-earrings-43",
+            "code": "SB-AFA27497",
+            "rawFilename": "AFA27497-8A72-4FAD-B0AE-2C412A357A56.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-043.jpg"
+          },
+          {
+            "id": "meenakari-earrings-44",
+            "code": "SB-B07ACC39",
+            "rawFilename": "B07ACC39-A403-4054-A36E-DA3F44FA131E.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-044.jpg"
+          },
+          {
+            "id": "meenakari-earrings-45",
+            "code": "SB-B78D5CC6",
+            "rawFilename": "B78D5CC6-0DCA-4EAA-A6CF-D2FD75BA1D20.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-045.jpg"
+          },
+          {
+            "id": "meenakari-earrings-46",
+            "code": "SB-BE12D719",
+            "rawFilename": "BE12D719-2B08-4A04-BCB7-FF6199897902.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-046.jpg"
+          },
+          {
+            "id": "meenakari-earrings-47",
+            "code": "SB-C2A21A89",
+            "rawFilename": "C2A21A89-27D1-44D9-A97B-0998CEC7CAD2.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-047.jpg"
+          },
+          {
+            "id": "meenakari-earrings-48",
+            "code": "SB-C352ACD0",
+            "rawFilename": "C352ACD0-C5E1-4D9A-84A7-01EE2E7F04C4.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-048.jpg"
+          },
+          {
+            "id": "meenakari-earrings-49",
+            "code": "SB-C376F4DB",
+            "rawFilename": "C376F4DB-6E66-45CC-8D24-58FDE1DA5AC3.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-049.jpg"
+          },
+          {
+            "id": "meenakari-earrings-50",
+            "code": "SB-C7684C4E",
+            "rawFilename": "C7684C4E-1FFE-4069-9CC1-C4FED490B6A1.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-050.jpg"
+          },
+          {
+            "id": "meenakari-earrings-51",
+            "code": "SB-CAE31E16",
+            "rawFilename": "CAE31E16-FCEB-47BC-9FEB-484D8E574BD5.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-051.jpg"
+          },
+          {
+            "id": "meenakari-earrings-52",
+            "code": "SB-CB29AB2E",
+            "rawFilename": "CB29AB2E-781D-4578-B300-B841694BB213.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-052.jpg"
+          },
+          {
+            "id": "meenakari-earrings-53",
+            "code": "SB-DCDF28B0",
+            "rawFilename": "DCDF28B0-58FC-4DB2-8A7A-3E403C26467E.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-053.jpg"
+          },
+          {
+            "id": "meenakari-earrings-54",
+            "code": "SB-DE21F5D2",
+            "rawFilename": "DE21F5D2-54DE-452D-B500-3E19BFC52A82.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-054.jpg"
+          },
+          {
+            "id": "meenakari-earrings-55",
+            "code": "SB-DF750C76",
+            "rawFilename": "DF750C76-200E-4C17-B831-64AB0A42DE4C.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-055.jpg"
+          },
+          {
+            "id": "meenakari-earrings-56",
+            "code": "SB-EC7657FB",
+            "rawFilename": "EC7657FB-6340-4762-AEA1-5DF39708B2BB.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-056.jpg"
+          },
+          {
+            "id": "meenakari-earrings-57",
+            "code": "SB-EDD84BB8",
+            "rawFilename": "EDD84BB8-3513-4226-B7B8-75506FB09680.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-057.jpg"
+          },
+          {
+            "id": "meenakari-earrings-58",
+            "code": "SB-F015B80D",
+            "rawFilename": "F015B80D-F879-4AAC-910C-CFA17A83AC33.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-058.jpg"
+          },
+          {
+            "id": "meenakari-earrings-59",
+            "code": "SB-F2323AB6",
+            "rawFilename": "F2323AB6-112F-4206-9475-6CB70C2760F2.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-059.jpg"
+          },
+          {
+            "id": "meenakari-earrings-60",
+            "code": "SB-FCDB3961",
+            "rawFilename": "FCDB3961-3C54-4921-A02F-85551812FC6F.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-060.jpg"
+          },
+          {
+            "id": "meenakari-earrings-61",
+            "code": "SB-FCDC7AE9",
+            "rawFilename": "FCDC7AE9-8DF9-46EC-A34F-51EDBD8E2561.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-061.jpg"
+          },
+          {
+            "id": "meenakari-earrings-62",
+            "code": "SB-FE0C06A9",
+            "rawFilename": "FE0C06A9-5969-4BF0-90BC-544590A7D11D.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-062.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "monalisa-oxydised-earrings",
+        "name": "Monalisa Oxidised Earrings",
+        "description": "Dual-Tone Monalisa Stone Accented Oxidised Earrings",
+        "parentSlug": "normal-jewellery",
+        "parentName": "Normal Jewellery",
+        "coverImage": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-001.jpg",
+        "itemCount": 48,
+        "images": [
+          {
+            "id": "monalisa-oxydised-earrings-1",
+            "code": "SB-00B076E8",
+            "rawFilename": "00B076E8-F5BD-4CAE-BAD8-A0197C0694CD.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-001.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-2",
+            "code": "SB-02885593",
+            "rawFilename": "02885593-11D2-4DBA-A9BF-A1D77035F10F.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-002.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-3",
+            "code": "SB-04B26003",
+            "rawFilename": "04B26003-2FC6-43A0-849E-0C1C0483813A.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-003.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-4",
+            "code": "SB-06B9F4F3",
+            "rawFilename": "06B9F4F3-0DEB-41F9-8F50-3FF6363BBF51.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-004.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-5",
+            "code": "SB-08C6EFA0",
+            "rawFilename": "08C6EFA0-7B66-40D3-AFB5-5D8F6C47BE2F.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-005.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-6",
+            "code": "SB-0C24E082",
+            "rawFilename": "0C24E082-B393-42D4-B3AF-D76F0935575B.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-006.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-7",
+            "code": "SB-0CD6A31A",
+            "rawFilename": "0CD6A31A-51E6-4902-930C-BF7A75D8FB74.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-007.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-8",
+            "code": "SB-10F766DB",
+            "rawFilename": "10F766DB-7ACB-4112-8600-C86181D44BC0.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-008.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-9",
+            "code": "SB-1590B76D",
+            "rawFilename": "1590B76D-52FA-481D-BA4B-13EFEC4841CD.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-009.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-10",
+            "code": "SB-17126674",
+            "rawFilename": "1712667442.773174-F1718CBA-302A-40FE-990A-278E32A07B7D.png",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-010.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-11",
+            "code": "SB-17131737",
+            "rawFilename": "1713173712.960328-01DF9D7C-7C9A-4EB7-BD4D-C4ED92B3160E.png",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-011.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-12",
+            "code": "SB-17131739",
+            "rawFilename": "1713173914.5349998-A0A9DEB8-510E-4248-BE6A-D6B2787CE5FF.png",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-012.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-13",
+            "code": "SB-2A6550FD",
+            "rawFilename": "2A6550FD-5AC4-4032-B4BE-A2E4974420CB.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-013.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-14",
+            "code": "SB-2B3BCC10",
+            "rawFilename": "2B3BCC10-BBAC-478E-972C-A54F0703F045.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-014.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-15",
+            "code": "SB-33990E80",
+            "rawFilename": "33990E80-364F-4C08-BC0A-7546A48391F9.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-015.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-16",
+            "code": "SB-34EAEE83",
+            "rawFilename": "34EAEE83-F2E2-46A9-A43B-5C64C19FBFE1.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-016.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-17",
+            "code": "SB-358A8AD0",
+            "rawFilename": "358A8AD0-EAEC-45AD-B136-1FF6809DA363.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-017.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-18",
+            "code": "SB-380D18CF",
+            "rawFilename": "380D18CF-4192-4DB6-B2BC-6530A7CCD222.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-018.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-19",
+            "code": "SB-3AB84B27",
+            "rawFilename": "3AB84B27-3D3A-48A6-97CB-3CC5AB7E7078.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-019.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-20",
+            "code": "SB-3ECBA05A",
+            "rawFilename": "3ECBA05A-A984-4C46-8D87-BA61C80EBF2C.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-020.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-21",
+            "code": "SB-42A0CB16",
+            "rawFilename": "42A0CB16-ABA4-48E8-9CBF-B9A2EBBC41B0.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-021.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-22",
+            "code": "SB-43C64E5F",
+            "rawFilename": "43C64E5F-1BA2-4131-940D-814C46F4680A.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-022.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-23",
+            "code": "SB-4C767B13",
+            "rawFilename": "4C767B13-906C-4E8F-9763-7AD665F5FAD0.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-023.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-24",
+            "code": "SB-52A368A7",
+            "rawFilename": "52A368A7-C3AE-4D70-94D2-8BC003B3AEE1.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-024.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-25",
+            "code": "SB-5F605F56",
+            "rawFilename": "5F605F56-BFC2-4CB9-A3A8-DB4FDFDE8DEC.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-025.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-26",
+            "code": "SB-72413A47",
+            "rawFilename": "72413A47-2DBA-495F-B65F-4D946597ACAF.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-026.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-27",
+            "code": "SB-768E170A",
+            "rawFilename": "768E170A-180C-49C5-8950-9A5DD4D731FC.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-027.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-28",
+            "code": "SB-84125CA6",
+            "rawFilename": "84125CA6-AC03-4633-AE92-E1107920495E.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-028.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-29",
+            "code": "SB-8A5064CC",
+            "rawFilename": "8A5064CC-548D-417D-968A-C369BA4551B6.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-029.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-30",
+            "code": "SB-8C3EDC0D",
+            "rawFilename": "8C3EDC0D-912C-4623-9127-C37502DD610C.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-030.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-31",
+            "code": "SB-8C71A4F7",
+            "rawFilename": "8C71A4F7-A062-4C0E-9113-03887D2C48CB.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-031.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-32",
+            "code": "SB-8E9F409F",
+            "rawFilename": "8E9F409F-228C-4AE4-9F09-9ECC9127F89A.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-032.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-33",
+            "code": "SB-8F3FE387",
+            "rawFilename": "8F3FE387-5D22-4F58-867C-5069E635054E.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-033.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-34",
+            "code": "SB-90539CE8",
+            "rawFilename": "90539CE8-0105-472F-B24F-39CA1836D819.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-034.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-35",
+            "code": "SB-99C93E8A",
+            "rawFilename": "99C93E8A-9A39-45D0-91EA-EA8257B83393.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-035.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-36",
+            "code": "SB-A07E7A79",
+            "rawFilename": "A07E7A79-F6CD-4DBE-9C9F-F59F822BF237.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-036.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-37",
+            "code": "SB-A49EF262",
+            "rawFilename": "A49EF262-BF4E-47DE-836F-FAD8C064B6C9.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-037.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-38",
+            "code": "SB-A57586AC",
+            "rawFilename": "A57586AC-473F-424D-8477-E0A805CA645B.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-038.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-39",
+            "code": "SB-A792810B",
+            "rawFilename": "A792810B-60C5-4142-A1FD-17B55A901034.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-039.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-40",
+            "code": "SB-A848A41F",
+            "rawFilename": "A848A41F-975A-4A7C-9496-5A3A60DBA078.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-040.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-41",
+            "code": "SB-AE06E3FE",
+            "rawFilename": "AE06E3FE-053D-4765-B634-470C145B0621.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-041.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-42",
+            "code": "SB-B67683A1",
+            "rawFilename": "B67683A1-C2DA-4647-AC49-E27123E99714.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-042.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-43",
+            "code": "SB-B82467E7",
+            "rawFilename": "B82467E7-A2B5-42BA-9A24-0857807C492A.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-043.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-44",
+            "code": "SB-D25AB46F",
+            "rawFilename": "D25AB46F-99BA-4563-8907-47BF5BDB9E71.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-044.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-45",
+            "code": "SB-DA473071",
+            "rawFilename": "DA473071-234E-4FB1-B736-60D716A66734.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-045.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-46",
+            "code": "SB-E684397B",
+            "rawFilename": "E684397B-BFEA-47DE-97BA-262DA2421C42.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-046.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-47",
+            "code": "SB-ED18813D",
+            "rawFilename": "ED18813D-3E3D-4CCB-9726-F132EDFE871D.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-047.jpg"
+          },
+          {
+            "id": "monalisa-oxydised-earrings-48",
+            "code": "SB-F8D648F7",
+            "rawFilename": "F8D648F7-D286-4E06-804F-BD58AD98914B.jpg",
+            "src": "/images/catalog/earrings/monalisa-oxydised-earrings/monalisa-oxydised-earrings-048.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "antique-bangles",
+        "name": "Antique Bangles",
+        "description": "Traditional Antique Gold & Matte Finish Bangles Direct from Jaipur",
+        "parentSlug": "normal-jewellery",
+        "parentName": "Normal Jewellery",
+        "coverImage": "/images/catalog/bangles/antique-bangles/antique-bangles-001.jpg",
+        "itemCount": 10,
+        "images": [
+          {
+            "id": "antique-bangles-1",
+            "code": "SB-3098DCE5",
+            "rawFilename": "3098DCE5-1FDC-4536-9D42-A7F4BF2D34B7.jpg",
+            "src": "/images/catalog/bangles/antique-bangles/antique-bangles-001.jpg"
+          },
+          {
+            "id": "antique-bangles-2",
+            "code": "SB-8202DD46",
+            "rawFilename": "8202DD46-45CF-45A4-BC91-759D4EE94AB1.jpg",
+            "src": "/images/catalog/bangles/antique-bangles/antique-bangles-002.jpg"
+          },
+          {
+            "id": "antique-bangles-3",
+            "code": "SB-8B867D91",
+            "rawFilename": "8B867D91-3885-418F-AE35-907FF2B68E28.jpg",
+            "src": "/images/catalog/bangles/antique-bangles/antique-bangles-003.jpg"
+          },
+          {
+            "id": "antique-bangles-4",
+            "code": "SB-BE2F8772",
+            "rawFilename": "BE2F8772-E30B-4610-976E-26A7B024E746.jpg",
+            "src": "/images/catalog/bangles/antique-bangles/antique-bangles-004.jpg"
+          },
+          {
+            "id": "antique-bangles-5",
+            "code": "SB-C2011376",
+            "rawFilename": "C2011376-4FBC-4021-B1DD-210D18C6C6AC.jpg",
+            "src": "/images/catalog/bangles/antique-bangles/antique-bangles-005.jpg"
+          },
+          {
+            "id": "antique-bangles-6",
+            "code": "SB-CCA073A8",
+            "rawFilename": "CCA073A8-8B10-4AEA-BE74-8E3A28E5A8EC.jpg",
+            "src": "/images/catalog/bangles/antique-bangles/antique-bangles-006.jpg"
+          },
+          {
+            "id": "antique-bangles-7",
+            "code": "SB-CEDB3454",
+            "rawFilename": "CEDB3454-6648-498D-A62C-26DD4247DAE1.jpg",
+            "src": "/images/catalog/bangles/antique-bangles/antique-bangles-007.jpg"
+          },
+          {
+            "id": "antique-bangles-8",
+            "code": "SB-EF68EB95",
+            "rawFilename": "EF68EB95-A215-465E-AFEC-9AE304F4DF53.jpg",
+            "src": "/images/catalog/bangles/antique-bangles/antique-bangles-008.jpg"
+          },
+          {
+            "id": "antique-bangles-9",
+            "code": "SB-F66C1B50",
+            "rawFilename": "F66C1B50-1AC2-4025-A023-3A5F97F4684E.jpg",
+            "src": "/images/catalog/bangles/antique-bangles/antique-bangles-009.jpg"
+          },
+          {
+            "id": "antique-bangles-10",
+            "code": "SB-FE179D49",
+            "rawFilename": "FE179D49-D4FA-402D-B1B7-A5BC9B769C30.jpg",
+            "src": "/images/catalog/bangles/antique-bangles/antique-bangles-010.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "western-bracelets",
+        "name": "Western Bracelets",
+        "description": "Chic & Modern Western Design Brass Bracelets",
+        "parentSlug": "normal-jewellery",
+        "parentName": "Normal Jewellery",
+        "coverImage": "/images/catalog/bracelets/western-bracelets/western-bracelets-001.jpg",
+        "itemCount": 56,
+        "images": [
+          {
+            "id": "western-bracelets-1",
+            "code": "SB-03BF2D1E",
+            "rawFilename": "03BF2D1E-234B-4021-9F2F-F36B4F6B225F.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-001.jpg"
+          },
+          {
+            "id": "western-bracelets-2",
+            "code": "SB-04CABB5C",
+            "rawFilename": "04CABB5C-17ED-4567-9D0A-EE3D0231EBA5.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-002.jpg"
+          },
+          {
+            "id": "western-bracelets-3",
+            "code": "SB-060F3840",
+            "rawFilename": "060F3840-FA2A-4BAB-8604-AB57B6390B58.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-003.jpg"
+          },
+          {
+            "id": "western-bracelets-4",
+            "code": "SB-0DD00900",
+            "rawFilename": "0DD00900-F415-4C35-B5AB-92523CD8C741.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-004.jpg"
+          },
+          {
+            "id": "western-bracelets-5",
+            "code": "SB-0FD886C7",
+            "rawFilename": "0FD886C7-5B83-4BCA-8190-ED408A33D149.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-005.jpg"
+          },
+          {
+            "id": "western-bracelets-6",
+            "code": "SB-1154547A",
+            "rawFilename": "1154547A-1AB2-42ED-A764-02FDC0AC1B5C.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-006.jpg"
+          },
+          {
+            "id": "western-bracelets-7",
+            "code": "SB-1BCA5407",
+            "rawFilename": "1BCA5407-1EB6-4DF7-BCCF-792699DAB059.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-007.jpg"
+          },
+          {
+            "id": "western-bracelets-8",
+            "code": "SB-1F3109C0",
+            "rawFilename": "1F3109C0-B5BB-41DF-A8B9-A41F2544802F.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-008.jpg"
+          },
+          {
+            "id": "western-bracelets-9",
+            "code": "SB-2294ED4A",
+            "rawFilename": "2294ED4A-4079-4B2F-BDED-FDEA13C0BA8A.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-009.jpg"
+          },
+          {
+            "id": "western-bracelets-10",
+            "code": "SB-314F4B9E",
+            "rawFilename": "314F4B9E-E84C-4DA3-BE27-C5291D437D08.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-010.jpg"
+          },
+          {
+            "id": "western-bracelets-11",
+            "code": "SB-395318F7",
+            "rawFilename": "395318F7-8266-4164-AAB4-E8A44334B7E8.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-011.jpg"
+          },
+          {
+            "id": "western-bracelets-12",
+            "code": "SB-3A09BF66",
+            "rawFilename": "3A09BF66-46E7-43C4-8076-DCB0487AEFA0.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-012.jpg"
+          },
+          {
+            "id": "western-bracelets-13",
+            "code": "SB-3C7EA6ED",
+            "rawFilename": "3C7EA6ED-5457-4571-A795-52EBEF6A3842.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-013.jpg"
+          },
+          {
+            "id": "western-bracelets-14",
+            "code": "SB-3CD1D5C9",
+            "rawFilename": "3CD1D5C9-2FA7-491C-A1CA-07DAD63A0D12.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-014.jpg"
+          },
+          {
+            "id": "western-bracelets-15",
+            "code": "SB-3EE2E4F6",
+            "rawFilename": "3EE2E4F6-9D7C-46AB-AC64-430F58E74D08.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-015.jpg"
+          },
+          {
+            "id": "western-bracelets-16",
+            "code": "SB-4157E287",
+            "rawFilename": "4157E287-8937-4A2F-9F7B-CF9EAD2AE90B.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-016.jpg"
+          },
+          {
+            "id": "western-bracelets-17",
+            "code": "SB-437DFD60",
+            "rawFilename": "437DFD60-DE55-49E4-BCB2-F0EA0A17120B.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-017.jpg"
+          },
+          {
+            "id": "western-bracelets-18",
+            "code": "SB-4895E5BE",
+            "rawFilename": "4895E5BE-21E5-40B6-8AD2-B640E033353F.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-018.jpg"
+          },
+          {
+            "id": "western-bracelets-19",
+            "code": "SB-49372FE1",
+            "rawFilename": "49372FE1-674E-42DC-B1FC-4B7EDF91BD56.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-019.jpg"
+          },
+          {
+            "id": "western-bracelets-20",
+            "code": "SB-4DC3FE9B",
+            "rawFilename": "4DC3FE9B-DA92-46D1-99C4-98982E1558FC.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-020.jpg"
+          },
+          {
+            "id": "western-bracelets-21",
+            "code": "SB-4F78FD30",
+            "rawFilename": "4F78FD30-1870-4896-8FBB-4EF6FBC3FDA3.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-021.jpg"
+          },
+          {
+            "id": "western-bracelets-22",
+            "code": "SB-585F7DA2",
+            "rawFilename": "585F7DA2-EB83-4272-A919-08B62B5A1259.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-022.jpg"
+          },
+          {
+            "id": "western-bracelets-23",
+            "code": "SB-59F5AC45",
+            "rawFilename": "59F5AC45-2527-4528-9CC7-49CA2325FB49.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-023.jpg"
+          },
+          {
+            "id": "western-bracelets-24",
+            "code": "SB-5BEDCC10",
+            "rawFilename": "5BEDCC10-0569-4227-BC6E-65F03CEB9CFE.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-024.jpg"
+          },
+          {
+            "id": "western-bracelets-25",
+            "code": "SB-5F72E563",
+            "rawFilename": "5F72E563-92B1-454F-829C-B8021C85DF71.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-025.jpg"
+          },
+          {
+            "id": "western-bracelets-26",
+            "code": "SB-7724E68C",
+            "rawFilename": "7724E68C-AD34-4594-81F1-32A61293612E.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-026.jpg"
+          },
+          {
+            "id": "western-bracelets-27",
+            "code": "SB-790F90FF",
+            "rawFilename": "790F90FF-7D20-4668-8830-4B281CF45CC2.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-027.jpg"
+          },
+          {
+            "id": "western-bracelets-28",
+            "code": "SB-7B39A2BA",
+            "rawFilename": "7B39A2BA-89D9-402F-ADA0-98483A769359.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-028.jpg"
+          },
+          {
+            "id": "western-bracelets-29",
+            "code": "SB-862DEBD0",
+            "rawFilename": "862DEBD0-19B2-494A-843E-879A4A976585.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-029.jpg"
+          },
+          {
+            "id": "western-bracelets-30",
+            "code": "SB-8B54A189",
+            "rawFilename": "8B54A189-1F2F-4EED-B386-650AAC63A1AE.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-030.jpg"
+          },
+          {
+            "id": "western-bracelets-31",
+            "code": "SB-8F2ADDA7",
+            "rawFilename": "8F2ADDA7-A38C-4736-948D-1B0CDAB3B128.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-031.jpg"
+          },
+          {
+            "id": "western-bracelets-32",
+            "code": "SB-94E19F6B",
+            "rawFilename": "94E19F6B-B5C7-4D27-9687-F10E8308B8BF.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-032.jpg"
+          },
+          {
+            "id": "western-bracelets-33",
+            "code": "SB-99675268",
+            "rawFilename": "99675268-4276-4B38-B479-6232C02680CF.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-033.jpg"
+          },
+          {
+            "id": "western-bracelets-34",
+            "code": "SB-A532580A",
+            "rawFilename": "A532580A-62F5-439A-9342-836DC00A8B22.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-034.jpg"
+          },
+          {
+            "id": "western-bracelets-35",
+            "code": "SB-A6FB83D0",
+            "rawFilename": "A6FB83D0-A696-4BDE-89E3-0280CC5F9232.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-035.jpg"
+          },
+          {
+            "id": "western-bracelets-36",
+            "code": "SB-AA0843B7",
+            "rawFilename": "AA0843B7-217E-4145-BEE2-3DB1954E9125.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-036.jpg"
+          },
+          {
+            "id": "western-bracelets-37",
+            "code": "SB-B264F4C3",
+            "rawFilename": "B264F4C3-70C5-4041-98FA-F86BB0DC0C30.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-037.jpg"
+          },
+          {
+            "id": "western-bracelets-38",
+            "code": "SB-B5A74FCA",
+            "rawFilename": "B5A74FCA-09D7-4598-82FA-5047D8813EA0.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-038.jpg"
+          },
+          {
+            "id": "western-bracelets-39",
+            "code": "SB-B6627677",
+            "rawFilename": "B6627677-BDDE-4836-B15E-F1E3D5ECCD06.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-039.jpg"
+          },
+          {
+            "id": "western-bracelets-40",
+            "code": "SB-C00DC011",
+            "rawFilename": "C00DC011-5B1B-43DF-8C81-7ED1D7DA6941.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-040.jpg"
+          },
+          {
+            "id": "western-bracelets-41",
+            "code": "SB-C68D00E5",
+            "rawFilename": "C68D00E5-5D59-459F-9298-6D85DC342298.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-041.jpg"
+          },
+          {
+            "id": "western-bracelets-42",
+            "code": "SB-C85EFA12",
+            "rawFilename": "C85EFA12-8BD4-4D24-A00D-73C1B7B73500.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-042.jpg"
+          },
+          {
+            "id": "western-bracelets-43",
+            "code": "SB-C9958C76",
+            "rawFilename": "C9958C76-D2FE-4A51-BB9E-BBD371725709.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-043.jpg"
+          },
+          {
+            "id": "western-bracelets-44",
+            "code": "SB-CD132A96",
+            "rawFilename": "CD132A96-51E9-4F3A-AEBC-402465E20648.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-044.jpg"
+          },
+          {
+            "id": "western-bracelets-45",
+            "code": "SB-CD35A96F",
+            "rawFilename": "CD35A96F-C2C2-4290-BB23-60E0A5B25409.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-045.jpg"
+          },
+          {
+            "id": "western-bracelets-46",
+            "code": "SB-CF4E4E84",
+            "rawFilename": "CF4E4E84-520B-4D58-B063-02B934EE35B9.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-046.jpg"
+          },
+          {
+            "id": "western-bracelets-47",
+            "code": "SB-CFF158C1",
+            "rawFilename": "CFF158C1-9185-4A92-AF64-7623F03B63E4.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-047.jpg"
+          },
+          {
+            "id": "western-bracelets-48",
+            "code": "SB-D3B851B8",
+            "rawFilename": "D3B851B8-223B-4B2D-B6C8-EFBF5F60FBA0.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-048.jpg"
+          },
+          {
+            "id": "western-bracelets-49",
+            "code": "SB-E1A31C7F",
+            "rawFilename": "E1A31C7F-021C-4F67-8E0B-B69D30B2D7AF.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-049.jpg"
+          },
+          {
+            "id": "western-bracelets-50",
+            "code": "SB-E9772261",
+            "rawFilename": "E9772261-018B-4527-A1D5-2DCE601A3468.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-050.jpg"
+          },
+          {
+            "id": "western-bracelets-51",
+            "code": "SB-E99CAB05",
+            "rawFilename": "E99CAB05-4C15-4FA8-8E0D-8027C0C346B0.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-051.jpg"
+          },
+          {
+            "id": "western-bracelets-52",
+            "code": "SB-ECA6777E",
+            "rawFilename": "ECA6777E-43C2-4879-B628-66EAE47DC236.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-052.jpg"
+          },
+          {
+            "id": "western-bracelets-53",
+            "code": "SB-F3C02A54",
+            "rawFilename": "F3C02A54-8BAA-4595-A7E6-69725494C346.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-053.jpg"
+          },
+          {
+            "id": "western-bracelets-54",
+            "code": "SB-F65ADBDC",
+            "rawFilename": "F65ADBDC-339E-46C9-A6D0-844E107443AA.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-054.jpg"
+          },
+          {
+            "id": "western-bracelets-55",
+            "code": "SB-F8ADACA4",
+            "rawFilename": "F8ADACA4-80B0-49F2-8B0E-3EDD8C834495.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-055.jpg"
+          },
+          {
+            "id": "western-bracelets-56",
+            "code": "SB-FB29B369",
+            "rawFilename": "FB29B369-AB2E-44EE-A7DB-5F26B114452E.jpg",
+            "src": "/images/catalog/bracelets/western-bracelets/western-bracelets-056.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "slug": "bangles",
     "aliases": [
       "bangels"

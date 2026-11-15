@@ -12,14 +12,14 @@ export interface CategoryItem {
 
 export const DEFAULT_CATEGORIES: CategoryItem[] = [
   {
-    title: 'Premium Earrings',
-    slug: 'premium-earrings',
-    image: '/images/categories/cat-premium-earrings.jpg',
+    title: 'Premium Jewellery',
+    slug: 'premium-jewellery',
+    image: '/images/categories/cat-premium-jewellery.jpg',
   },
   {
-    title: 'Silver Earrings',
-    slug: 'silver-earrings',
-    image: '/images/categories/cat-silver-earrings.jpg',
+    title: 'Normal Jewellery',
+    slug: 'normal-jewellery',
+    image: '/images/categories/cat-normal-jewellery.jpg',
   },
   {
     title: 'Studs',

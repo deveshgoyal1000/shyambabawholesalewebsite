@@ -28,7 +28,7 @@
         "preheading": "",
         "headlineLine1": "JAIPUR BIGGEST ARTIFICIAL JEWELLERY",
         "headlineLine2": "MANUFACTURER & WHOLESALER",
-        "subtitle": "Supplying to BOUTIQUE OWNERS , SHOPKEEPERS, EXHIBITION CUSTOMER, CUSTOMER WITH WEBSITE , B2B .",
+        "subtitle": "Supplying to Boutique Owners, Shopkeepers, Exhibition Customers, Customer with Website, B2B",
         "point1": "REAL Manufacturer & Wholesaler",
         "point2": "150+ Karigars Crafting Jewellery for Us.",
         "point3": "All Kind off “Designs Under One Roof”.",
@@ -53,14 +53,14 @@
         "subheading": "Explore our premium brass jewellery collections",
         "categories": [
           {
-            "title": "Premium Earrings",
-            "slug": "premium-earrings",
-            "image": "/images/categories/cat-premium-earrings.jpg"
+            "title": "Premium Jewellery",
+            "slug": "premium-jewellery",
+            "image": "/images/categories/cat-premium-jewellery.jpg"
           },
           {
-            "title": "Silver Earrings",
-            "slug": "silver-earrings",
-            "image": "/images/categories/cat-silver-earrings.jpg"
+            "title": "Normal Jewellery",
+            "slug": "normal-jewellery",
+            "image": "/images/categories/cat-normal-jewellery.jpg"
           },
           {
             "title": "Studs",
