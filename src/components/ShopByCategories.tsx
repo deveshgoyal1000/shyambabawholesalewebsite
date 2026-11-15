@@ -109,48 +109,118 @@ export default function ShopByCategories({
                 threshold={0.12}
                 rootMargin="0px 0px -40px 0px"
               >
-                <Link
-                  href={href}
-                  className="group block rounded-2xl overflow-hidden bg-white border-2 border-[#D4C7B4] hover:border-[#C4B7A4] shadow-[0_4px_18px_rgba(0,0,0,0.07)] hover:shadow-[0_10px_28px_rgba(0,0,0,0.12)] active:scale-[0.98] transition-all duration-300 card-hover-lift"
-                  style={{ WebkitTapHighlightColor: 'transparent' }}
-                >
-                  {/* Image Container with 4:5 aspect ratio matching Krishaz (padding-bottom: 125%) */}
-                  <div className="relative aspect-[4/5] overflow-hidden bg-[#F7F4EE]">
-                    <img
-                      src={cat.image || '/images/categories/cat-premium-earrings.jpg'}
-                      alt={cat.title || 'Category'}
-                      className="w-full h-full object-cover card-img-zoom"
-                      loading="lazy"
-                    />
-                  </div>
+                {cat.slug === 'premium-jewellery' ? (
+                  <Link
+                    href={href}
+                    className="group relative flex flex-col justify-between h-full rounded-2xl overflow-hidden bg-[#0D0D0D] border-2 border-[#C9A84C] shadow-[0_6px_22px_rgba(0,0,0,0.18)] hover:shadow-[0_12px_32px_rgba(201,168,76,0.28)] active:scale-[0.98] transition-all duration-300 p-3.5 sm:p-5 text-center select-none"
+                    style={{ WebkitTapHighlightColor: 'transparent', minHeight: '100%' }}
+                  >
+                    {/* Background gold shimmer glow */}
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(201,168,76,0.18)_0%,transparent_75%)] pointer-events-none" />
 
-                  {/* Category Name Line Box - Crisp visible border, multi-line wrap with Earrings on new line */}
-                  <div className="px-3.5 py-3.5 sm:px-5 sm:py-5 md:py-6 bg-white border-t-2 border-[#D4C7B4] flex items-center justify-between min-h-[70px] sm:min-h-[76px] md:min-h-[82px]">
-                    <div className="flex-1 min-w-0 pr-1.5">
+                    {/* Center Big Bold Typography */}
+                    <div className="my-auto py-8 sm:py-12 z-10 px-1">
                       <span
-                        style={{
-                          fontFamily:
-                            '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-                        }}
-                        className="block text-[#121212] font-semibold text-[15px] sm:text-[17px] md:text-[18.5px] leading-tight sm:leading-snug transition-colors duration-200"
+                        style={{ fontFamily: 'Georgia, serif' }}
+                        className="block text-[#FAF8F5] text-[20px] xs:text-[23px] sm:text-[30px] md:text-[34px] font-bold leading-tight tracking-tight drop-shadow-md"
                       >
-                        {cat.title && cat.title.endsWith('Earrings') ? (
-                          <>
-                            <span className="block">{cat.title.replace(/\s*Earrings$/, '')}</span>
-                            <span className="block sm:inline sm:ml-1 text-[14px] sm:text-[17px] md:text-[18.5px] text-neutral-700 font-medium">
-                              Earrings
-                            </span>
-                          </>
-                        ) : (
-                          <span className="block">{cat.title || 'Category'}</span>
-                        )}
+                        PREMIUM
+                      </span>
+                      <span
+                        style={{ fontFamily: 'Georgia, serif' }}
+                        className="block text-[#C9A84C] text-[15px] xs:text-[17px] sm:text-[22px] md:text-[25px] font-normal tracking-wider mt-1"
+                      >
+                        JEWELLERY
                       </span>
                     </div>
-                    <span className="text-[#C9A84C] group-hover:text-[#9A7E2E] text-[22px] sm:text-[24px] font-bold group-hover:translate-x-1.5 transition-all duration-200 ml-1.5 shrink-0">
-                      &rarr;
-                    </span>
-                  </div>
-                </Link>
+
+                    {/* Bottom Action Footer */}
+                    <div className="w-full pt-3 border-t border-[#C9A84C]/30 flex items-center justify-between z-10 text-[#C9A84C] group-hover:text-[#FAF8F5] transition-colors">
+                      <span className="text-[11px] sm:text-[13px] font-semibold tracking-wide">
+                        View Categories
+                      </span>
+                      <span className="text-[18px] sm:text-[20px] font-bold group-hover:translate-x-1.5 transition-transform">
+                        &rarr;
+                      </span>
+                    </div>
+                  </Link>
+                ) : cat.slug === 'normal-jewellery' ? (
+                  <Link
+                    href={href}
+                    className="group relative flex flex-col justify-between h-full rounded-2xl overflow-hidden bg-[#1E3A8A] border-2 border-blue-400/60 shadow-[0_6px_22px_rgba(30,58,138,0.25)] hover:shadow-[0_12px_32px_rgba(59,130,246,0.3)] active:scale-[0.98] transition-all duration-300 p-3.5 sm:p-5 text-center select-none"
+                    style={{ WebkitTapHighlightColor: 'transparent', minHeight: '100%' }}
+                  >
+                    {/* Background cyan/blue radial glow */}
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(96,165,250,0.22)_0%,transparent_75%)] pointer-events-none" />
+
+                    {/* Center Big Bold Typography */}
+                    <div className="my-auto py-8 sm:py-12 z-10 px-1">
+                      <span
+                        style={{ fontFamily: 'Georgia, serif' }}
+                        className="block text-white text-[20px] xs:text-[23px] sm:text-[30px] md:text-[34px] font-bold leading-tight tracking-tight drop-shadow-md"
+                      >
+                        NORMAL
+                      </span>
+                      <span
+                        style={{ fontFamily: 'Georgia, serif' }}
+                        className="block text-blue-200 text-[15px] xs:text-[17px] sm:text-[22px] md:text-[25px] font-normal tracking-wider mt-1"
+                      >
+                        JEWELLERY
+                      </span>
+                    </div>
+
+                    {/* Bottom Action Footer */}
+                    <div className="w-full pt-3 border-t border-white/20 flex items-center justify-between z-10 text-white transition-colors">
+                      <span className="text-[11px] sm:text-[13px] font-semibold tracking-wide">
+                        View Categories
+                      </span>
+                      <span className="text-[18px] sm:text-[20px] font-bold group-hover:translate-x-1.5 transition-transform">
+                        &rarr;
+                      </span>
+                    </div>
+                  </Link>
+                ) : (
+                  <Link
+                    href={href}
+                    className="group block rounded-2xl overflow-hidden bg-white border-2 border-[#D4C7B4] hover:border-[#C4B7A4] shadow-[0_4px_18px_rgba(0,0,0,0.07)] hover:shadow-[0_10px_28px_rgba(0,0,0,0.12)] active:scale-[0.98] transition-all duration-300 card-hover-lift"
+                    style={{ WebkitTapHighlightColor: 'transparent' }}
+                  >
+                    <div className="relative aspect-[4/5] overflow-hidden bg-[#F7F4EE]">
+                      <img
+                        src={cat.image || '/images/categories/cat-premium-earrings.jpg'}
+                        alt={cat.title || 'Category'}
+                        className="w-full h-full object-cover card-img-zoom"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <div className="px-3.5 py-3.5 sm:px-5 sm:py-5 md:py-6 bg-white border-t-2 border-[#D4C7B4] flex items-center justify-between min-h-[70px] sm:min-h-[76px] md:min-h-[82px]">
+                      <div className="flex-1 min-w-0 pr-1.5">
+                        <span
+                          style={{
+                            fontFamily:
+                              '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                          }}
+                          className="block text-[#121212] font-semibold text-[15px] sm:text-[17px] md:text-[18.5px] leading-tight sm:leading-snug transition-colors duration-200"
+                        >
+                          {cat.title && cat.title.endsWith('Earrings') ? (
+                            <>
+                              <span className="block">{cat.title.replace(/\s*Earrings$/, '')}</span>
+                              <span className="block sm:inline sm:ml-1 text-[14px] sm:text-[17px] md:text-[18.5px] text-neutral-700 font-medium">
+                                Earrings
+                              </span>
+                            </>
+                          ) : (
+                            <span className="block">{cat.title || 'Category'}</span>
+                          )}
+                        </span>
+                      </div>
+                      <span className="text-[#C9A84C] group-hover:text-[#9A7E2E] text-[22px] sm:text-[24px] font-bold group-hover:translate-x-1.5 transition-all duration-200 ml-1.5 shrink-0">
+                        &rarr;
+                      </span>
+                    </div>
+                  </Link>
+                )}
               </ScrollReveal>
             )
           })}
