@@ -26,11 +26,11 @@ export default function HeroBanner() {
       {/* 1. Full-bleed background photography: Krishaz mobile hero background on mobile, desktop hero background on larger screens */}
       {/* Mobile Hero Background (Exact Krishaz Wholesale mobile background image) */}
       <div
-        className={`absolute inset-0 bg-cover bg-center will-change-transform sm:hidden ${
+        className={`absolute inset-0 bg-cover bg-[position:55%_20%] will-change-transform sm:hidden ${
           mounted ? 'animate-cinema-drift opacity-100' : 'scale-105 opacity-70'
         } transition-opacity duration-1000`}
         style={{
-          backgroundImage: `url('/images/hero/hero-mobile-krishaz.jpg')`,
+          backgroundImage: `url('/images/hero/hero-mobile-artisan.webp')`,
         }}
       ></div>
 
@@ -45,7 +45,14 @@ export default function HeroBanner() {
       ></div>
 
       {/* 2. Warm vignette overlay: subtle and warm on mobile to match Krishaz's golden bronze glow, deeper on desktop */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/65 sm:from-black/80 sm:via-black/70 sm:to-black/85 pointer-events-none"></div>
+      <div className="absolute inset-0 sm:hidden bg-gradient-to-b from-black/85 via-black/60 to-black/95 pointer-events-none"></div>
+      <div
+        className="absolute inset-0 sm:hidden pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle at 50% 45%, rgba(201, 168, 76, 0.15) 0%, rgba(10, 8, 8, 0.35) 75%)',
+        }}
+      ></div>
+      <div className="absolute inset-0 hidden sm:block bg-gradient-to-b from-black/80 via-black/70 to-black/85 pointer-events-none"></div>
 
       {/* 3. Ambient Living Gold Light Ray (Breathes gently behind content while user stays on site) */}
       <div
@@ -78,13 +85,12 @@ export default function HeroBanner() {
         <div className="mb-3.5 sm:mb-4.5">
           <h1
             style={{ fontFamily: 'Georgia, serif', transitionDelay: '200ms' }}
-            className={`text-[32px] sm:text-[44px] md:text-5xl lg:text-[56px] font-bold tracking-tight text-white leading-[1.2] transition-opacity duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
+            className={`text-[23px] sm:text-[44px] md:text-5xl lg:text-[56px] font-bold tracking-tight text-white leading-[1.2] transition-opacity duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] ${
               mounted ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <span>Brass Jewellery Manufacturer</span>
-            <br />
-            <span>&amp; Exporters</span>
+            <span>Brass Jewellery</span><br /><span>Manufacturer &amp; Exporters</span>
+            
           </h1>
         </div>
 
@@ -110,8 +116,8 @@ export default function HeroBanner() {
               style={{ transitionDelay: `${420 + idx * 80}ms` }}
             >
               {/* Circular Gold Icon: 34-36px diameter, prominent check */}
-              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border-[1.5px] border-[#C9A84C] flex items-center justify-center text-[#C9A84C] flex-shrink-0 bg-black/35 shadow-sm">
-                <Check className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-[#C9A84C] stroke-[2.4]" />
+              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border-[1.5px] border-[#22c55e] flex items-center justify-center text-[#22c55e] flex-shrink-0 bg-black/50 shadow-[0_0_12px_rgba(34,197,94,0.3)]">
+                <Check className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-[#22c55e] stroke-[2.8]" />
               </div>
 
               {/* Point Label: 17px on mobile, 18-19px on desktop */}

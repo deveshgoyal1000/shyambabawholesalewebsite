@@ -180,7 +180,7 @@ export const puckConfig: Config<ComponentProps> = {
         point4: '500+ Unique Designs',
         button1Text: 'Shop Wholesale',
         button2Text: 'View Catalog',
-        bgImageMobile: '/images/hero/hero-mobile-krishaz.jpg',
+        bgImageMobile: '/images/hero/hero-mobile-artisan.webp',
         bgImageDesktop: '/images/hero/hero-desktop-krishaz.png',
       },
       render: ({
@@ -200,15 +200,23 @@ export const puckConfig: Config<ComponentProps> = {
         <section className="relative min-h-[640px] sm:min-h-[700px] flex flex-col justify-between text-center text-white overflow-hidden select-none">
           {/* Background Images */}
           <div
-            className="absolute inset-0 bg-cover bg-center sm:hidden"
+            className="absolute inset-0 bg-cover bg-[position:50%_15%] sm:hidden"
             style={{ backgroundImage: `url('${bgImageMobile}')` }}
           />
           <div
             className="absolute inset-0 bg-cover bg-center hidden sm:block"
             style={{ backgroundImage: `url('${bgImageDesktop}')` }}
           />
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/65 sm:from-black/80 sm:via-black/70 sm:to-black/85 pointer-events-none" />
+          {/* Mobile Overlay */}
+          <div className="absolute inset-0 sm:hidden bg-gradient-to-b from-black/85 via-black/60 to-black/95 pointer-events-none" />
+          <div
+            className="absolute inset-0 sm:hidden pointer-events-none"
+            style={{
+              background: 'radial-gradient(circle at 50% 45%, rgba(201, 168, 76, 0.15) 0%, rgba(10, 8, 8, 0.35) 75%)',
+            }}
+          />
+          {/* Desktop Overlay */}
+          <div className="absolute inset-0 hidden sm:block bg-gradient-to-b from-black/80 via-black/70 to-black/85 pointer-events-none" />
 
           {/* Ambient Gold Glow */}
           <div
@@ -224,26 +232,26 @@ export const puckConfig: Config<ComponentProps> = {
             {preheading && (
               <span
                 style={{ fontFamily: 'Georgia, serif' }}
-                className="text-[20px] sm:text-[24px] text-[#FAF8F5] mb-2"
+                className="text-[19px] sm:text-[24px] text-[#F3EFE6] tracking-wide mb-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]"
               >
                 {preheading}
               </span>
             )}
 
             <h1
-              style={{ fontFamily: 'Georgia, serif' }}
-              className="text-[30px] sm:text-[44px] md:text-[52px] font-bold tracking-tight text-white leading-[1.2] mb-3"
+              style={{ fontFamily: 'Georgia, serif', maxWidth: '320px' }}
+              className="text-[20px] sm:text-[42px] md:text-[50px] font-bold tracking-tight text-white leading-[1.3] mb-3 mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]"
             >
-              <span>{headlineLine1}</span>
+              <span className="block">{headlineLine1}</span>
               {headlineLine2 && (
-                <>
-                  <br />
-                  <span>{headlineLine2}</span>
-                </>
+                <span className="block mt-0.5">{headlineLine2}</span>
               )}
             </h1>
 
-            <p className="text-[15px] sm:text-[17px] text-[#FAF8F5]/95 max-w-md mx-auto mb-7 font-normal leading-relaxed">
+            <p
+              style={{ maxWidth: '250px' }}
+              className="text-[13.5px] sm:text-[17px] text-[#FAF8F5]/90 mx-auto mb-7 font-normal leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.85)] text-center"
+            >
               {subtitle}
             </p>
 
@@ -251,8 +259,8 @@ export const puckConfig: Config<ComponentProps> = {
             <div className="space-y-3 mb-8 w-full max-w-[320px] text-left mx-auto">
               {[point1, point2, point3, point4].filter(Boolean).map((pt) => (
                 <div key={pt} className="flex items-center gap-3">
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-[1.5px] border-[#C9A84C] flex items-center justify-center text-[#C9A84C] flex-shrink-0 bg-black/40">
-                    <Check className="w-4 h-4 text-[#C9A84C] stroke-[2.5]" />
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border-[1.5px] border-[#22c55e] flex items-center justify-center text-[#22c55e] flex-shrink-0 bg-black/50 shadow-[0_0_12px_rgba(34,197,94,0.3)]">
+                    <Check className="w-4 h-4 text-[#22c55e] stroke-[2.8]" />
                   </div>
                   <span className="text-[16px] sm:text-[18px] font-semibold text-white tracking-wide">
                     {pt}

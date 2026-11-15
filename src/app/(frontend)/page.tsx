@@ -131,6 +131,18 @@ async function getProducts(): Promise<ProductData[]> {
 }
 
 async function getPuckData() {
+  // In local development, prioritize local file so localhost preview reflects local changes immediately
+  if (process.env.NODE_ENV === 'development') {
+    try {
+      const dataFilePath = path.join(process.cwd(), 'src', 'data', 'home-puck.json')
+      const raw = await readFile(dataFilePath, 'utf-8')
+      const json = JSON.parse(raw)
+      if (json && json.content && json.content.length > 0) {
+        return json
+      }
+    } catch {}
+  }
+
   // 1. Try Vercel Blob (Cloud persistence for Vercel production)
   if (process.env.BLOB_READ_WRITE_TOKEN) {
     try {
