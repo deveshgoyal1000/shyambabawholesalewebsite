@@ -232,8 +232,8 @@ export const puckConfig: Config<ComponentProps> = {
         <section className="relative min-h-[780px] sm:min-h-[820px] flex flex-col justify-between text-center text-white overflow-hidden select-none">
           {/* Background Images */}
           <div
-            className="absolute inset-0 bg-cover bg-[position:50%_15%] sm:hidden"
-            style={{ backgroundImage: `url('${bgImageMobile}')` }}
+            className="absolute inset-0 bg-cover bg-[position:74%_10%] sm:hidden"
+            style={{ backgroundImage: `url('${bgImageMobile || '/images/hero/hero-mobile-artisan.webp'}')` }}
           />
           <div
             className="absolute inset-0 bg-cover bg-center hidden sm:block"
@@ -286,10 +286,10 @@ export const puckConfig: Config<ComponentProps> = {
               {activeSubtitle}
             </p>
 
-            {noteText && (
-              <div className="w-full max-w-[320px] px-3.5 py-1.5 rounded-xl bg-red-950/85 border border-red-500/50 text-red-100 text-[11px] sm:text-[12px] font-medium tracking-wide mb-4.5 shadow-sm mx-auto text-center leading-snug">
-                <span>{noteText}</span>
-              </div>
+            {activeNote && (
+              <p className="text-[10px] sm:text-[11.5px] text-red-200/95 font-medium tracking-tight mb-4 mx-auto text-center whitespace-nowrap drop-shadow-[0_1px_5px_rgba(0,0,0,0.95)]">
+                {activeNote}
+              </p>
             )}
 
             

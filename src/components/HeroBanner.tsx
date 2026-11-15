@@ -26,7 +26,7 @@ export default function HeroBanner() {
       {/* 1. Full-bleed background photography: Krishaz mobile hero background on mobile, desktop hero background on larger screens */}
       {/* Mobile Hero Background (Exact Krishaz Wholesale mobile background image) */}
       <div
-        className={`absolute inset-0 bg-cover bg-[position:55%_20%] will-change-transform sm:hidden ${
+        className={`absolute inset-0 bg-cover bg-[position:74%_10%] will-change-transform sm:hidden ${
           mounted ? 'animate-cinema-drift opacity-100' : 'scale-105 opacity-70'
         } transition-opacity duration-1000`}
         style={{
