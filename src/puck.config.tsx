@@ -262,7 +262,7 @@ export const puckConfig: Config<ComponentProps> = {
             }}
           />
 
-          <div className="relative z-10 max-w-xl mx-auto px-3 sm:px-6 py-4 sm:py-8 flex flex-col items-center flex-1 justify-center">
+          <div className="relative z-10 max-w-xl mx-auto px-3 sm:px-6 pt-8 sm:pt-16 pb-8 sm:pb-12 flex flex-col items-center flex-1 justify-center">
             {preheading && preheading !== "India's Trusted" && (
               <span
                 style={{ fontFamily: 'Georgia, serif' }}
@@ -274,16 +274,16 @@ export const puckConfig: Config<ComponentProps> = {
 
             <h1
               style={{ fontFamily: 'Georgia, serif' }}
-              className="font-bold tracking-tight text-white leading-[1.2] mb-2 mx-auto drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] px-2 text-center"
+              className="font-bold tracking-tight text-white leading-[1.25] mb-4 sm:mb-5 mx-auto drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] px-2 text-center"
             >
-              <span className="block text-[19px] sm:text-[40px]">JAIPUR BIGGEST</span>
-              <span className="block text-[19px] sm:text-[40px]">ARTIFICIAL JEWELLERY</span>
-              <span className="block text-[15px] sm:text-[34px] text-[#FAF8F5] mt-0.5">MANUFACTURER &amp; WHOLESALER</span>
+              <span className="block text-[21px] sm:text-[42px]">JAIPUR BIGGEST</span>
+              <span className="block text-[21px] sm:text-[42px]">ARTIFICIAL JEWELLERY</span>
+              <span className="block text-[16.5px] sm:text-[36px] text-[#FAF8F5] mt-1">MANUFACTURER &amp; WHOLESALER</span>
             </h1>
 
             <p
               style={{ maxWidth: '340px' }}
-              className="text-[11.5px] sm:text-[14px] tracking-wide text-[#FAF8F5]/85 mx-auto mb-1.5 font-normal leading-snug drop-shadow-[0_1px_4px_rgba(0,0,0,0.85)] text-center"
+              className="text-[12.5px] sm:text-[14.5px] tracking-wide text-[#FAF8F5]/90 mx-auto mb-3 sm:mb-4 font-normal leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.85)] text-center"
             >
               {activeSubtitle}
             </p>
@@ -291,7 +291,7 @@ export const puckConfig: Config<ComponentProps> = {
             {activeNote && (
               <p
                 style={{ fontSize: '10.5px' }}
-                className="sm:!text-[12px] text-red-200/95 font-medium tracking-tight mb-2.5 mx-auto text-center whitespace-nowrap drop-shadow-[0_1px_5px_rgba(0,0,0,0.95)] px-1"
+                className="sm:!text-[12px] text-red-200/95 font-medium tracking-tight mb-4 sm:mb-5 mx-auto text-center whitespace-nowrap drop-shadow-[0_1px_5px_rgba(0,0,0,0.95)] px-1"
               >
                 {activeNote}
               </p>
@@ -300,13 +300,13 @@ export const puckConfig: Config<ComponentProps> = {
             
 
             {/* Check points */}
-            <div className="space-y-1.5 sm:space-y-2 mb-3.5 w-full max-w-[340px] text-left mx-auto">
+            <div className="space-y-2 sm:space-y-2.5 mb-5 sm:mb-6 w-full max-w-[340px] text-left mx-auto">
               {activePoints.map((pt) => (
                 <div key={pt} className="flex items-center gap-3">
                   <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-full border-[1.5px] border-[#22c55e] flex items-center justify-center text-[#22c55e] flex-shrink-0 bg-black/50 shadow-[0_0_8px_rgba(34,197,94,0.3)]">
                     <Check className="w-3 h-3 sm:w-4 sm:h-4 text-[#22c55e] stroke-[3]" />
                   </div>
-                  <span className="text-[12.5px] sm:text-[16px] font-semibold text-white tracking-wide drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)] leading-tight flex-1">
+                  <span className="text-[13px] sm:text-[16px] font-semibold text-white tracking-wide drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)] leading-tight flex-1">
                     {pt}
                   </span>
                 </div>
@@ -314,16 +314,16 @@ export const puckConfig: Config<ComponentProps> = {
             </div>
 
             {/* Buttons */}
-            <div className="w-full max-w-[320px] sm:max-w-[340px] space-y-2">
+            <div className="w-full max-w-[320px] sm:max-w-[340px] space-y-2.5">
               <a
                 href="#categories"
-                className="w-full inline-flex items-center justify-center py-2.5 sm:py-3.5 px-6 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-bold text-[14px] sm:text-[16px] tracking-wide shadow-md transition-all text-center"
+                className="w-full inline-flex items-center justify-center py-3 sm:py-3.5 px-6 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-bold text-[14.5px] sm:text-[16px] tracking-wide shadow-md transition-all text-center"
               >
                 {button1Text}
               </a>
               <Link
                 href="/collections/all"
-                className="w-full inline-flex items-center justify-center py-2.5 sm:py-3.5 px-6 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-[14px] sm:text-[16px] tracking-wide border-2 border-white/90 transition-all text-center"
+                className="w-full inline-flex items-center justify-center py-3 sm:py-3.5 px-6 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-[14.5px] sm:text-[16px] tracking-wide border-2 border-white/90 transition-all text-center"
               >
                 {button2Text}
               </Link>
