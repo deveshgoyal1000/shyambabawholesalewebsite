@@ -7,7 +7,7 @@ import { MapPin } from 'lucide-react'
 export default function Footer() {
   return (
     <footer id="contact" className="relative bg-[#195799] text-white">
-      {/* Top Wave Transition matching Screenshot 1 */}
+      {/* Top Wave Transition */}
       <div className="w-full overflow-hidden leading-none bg-[#FAF8F5]">
         <svg
           viewBox="0 0 1200 120"
@@ -44,34 +44,12 @@ export default function Footer() {
           Style In Bulk, Profit In Every Piece
         </p>
 
-        {/* 4 Navigation / Info Columns */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-8 text-xs sm:text-sm">
-          {/* Column 1: Company */}
+        {/* Navigation & Contact Columns */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-xs sm:text-sm">
+          {/* Column 1: Quick Links */}
           <div>
-            <h4 className="font-bold text-sm sm:text-base text-white mb-3">Company</h4>
-            <ul className="space-y-2 text-white/90">
-              <li>
-                <Link href="/#faq" className="hover:text-white hover:underline transition-colors">
-                  Return Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/#faq" className="hover:text-white hover:underline transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/#faq" className="hover:text-white hover:underline transition-colors">
-                  Terms and Conditions
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 2: About Us */}
-          <div>
-            <h4 className="font-bold text-sm sm:text-base text-white mb-3">About Us</h4>
-            <ul className="space-y-2 text-white/90">
+            <h4 className="font-bold text-sm sm:text-base text-white mb-3">Quick Links</h4>
+            <ul className="space-y-2.5 text-white/90">
               <li>
                 <Link href="/#about" className="hover:text-white hover:underline transition-colors">
                   About Us
@@ -79,39 +57,74 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/#faq" className="hover:text-white hover:underline transition-colors">
-                  Copyright Notice
+                  FAQ
                 </Link>
               </li>
               <li>
-                <Link href="/#faq" className="hover:text-white hover:underline transition-colors">
-                  Payment Methods
-                </Link>
+                <a
+                  href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20book%20a%20live%20video%20call%20for%20wholesale%20selection"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white hover:underline transition-colors"
+                >
+                  Book a Video Call
+                </a>
               </li>
               <li>
-                <Link href="/#faq" className="hover:text-white hover:underline transition-colors">
-                  Shipping Information
-                </Link>
+                <a
+                  href="https://chat.whatsapp.com/H1jvdlP82xuLcoAl6TlRm3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white hover:underline transition-colors"
+                >
+                  Daily Updates WhatsApp Group
+                </a>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Get Help */}
+          {/* Column 2: Connect With Us */}
           <div>
-            <h4 className="font-bold text-sm sm:text-base text-white mb-3">Get Help</h4>
-            <ul className="space-y-2 text-white/90">
+            <h4 className="font-bold text-sm sm:text-base text-white mb-3">Connect With Us</h4>
+            <ul className="space-y-2.5 text-white/90">
               <li>
-                <Link href="/#faq" className="hover:text-white hover:underline transition-colors">
-                  Shipping Rates
-                </Link>
+                <a
+                  href="https://www.instagram.com/shreeshyambabajewellers/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white hover:underline transition-colors"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://maps.app.goo.gl/61ARaZmn6tniBYQS6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white hover:underline transition-colors"
+                >
+                  Google Map
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/919680865791?text=Hello%20Shyambaba%20Wholesale%2C%20I%20have%20an%20inquiry%20regarding%20wholesale%20jewellery."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white hover:underline transition-colors"
+                >
+                  WhatsApp Direct Chat
+                </a>
               </li>
             </ul>
           </div>
 
-          {/* Column 4: Contact Info with Pin */}
+          {/* Column 3: Contact Info with Pin */}
           <div>
             <h4 className="font-bold text-sm sm:text-base text-white mb-3">Contact Info</h4>
-            <div className="space-y-1 text-white/90 leading-relaxed text-xs sm:text-sm">
-              <p>Address: Shop no,</p>
+            <div className="space-y-1.5 text-white/90 leading-relaxed text-xs sm:text-sm">
+              <p className="font-medium text-white">Address: Shop no,</p>
               <p>206, Johari Bazar Rd,</p>
               <div className="flex items-start gap-1.5 mt-0.5">
                 <MapPin className="w-4 h-4 text-[#C9A84C] fill-[#C9A84C] flex-shrink-0 mt-0.5" />
@@ -120,6 +133,16 @@ export default function Footer() {
                   Jaipur, Rajasthan<br />
                   302003
                 </span>
+              </div>
+              <div className="pt-2 text-white/90">
+                <a
+                  href="https://wa.me/919680865791"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  Phone: +91 96808 65791
+                </a>
               </div>
             </div>
           </div>
