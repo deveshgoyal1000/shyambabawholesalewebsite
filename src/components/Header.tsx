@@ -225,7 +225,7 @@ export default function Header() {
 
             {/* Slide-out Drawer Panel */}
             <div
-              className={`fixed top-0 bottom-0 left-0 w-[85%] max-w-[340px] sm:max-w-[360px] h-full h-[100dvh] bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] z-10 ${
+              className={`fixed top-0 bottom-0 left-0 w-[88%] max-w-[340px] sm:max-w-[360px] h-full h-[100dvh] bg-[#FAF8F5] shadow-2xl flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] z-10 border-r border-[#EAE3D8] ${
                 mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
               }`}
               style={{
@@ -235,16 +235,16 @@ export default function Header() {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Top Bar of Drawer: Close 'X' on left, Brand in center stacked */}
-              <div className="flex items-center justify-between px-4 sm:px-6 h-[76px] sm:h-20 border-b border-[#ECE6DC] bg-white flex-shrink-0">
+              <div className="flex items-center justify-between px-4 sm:px-5 h-[76px] sm:h-20 border-b border-[#ECE6DC] bg-white flex-shrink-0">
                 {/* Left: Close X button */}
                 <div className="flex items-center w-10">
                   <button
                     onClick={() => setMobileMenuOpen(false)}
-                    className="p-2 -ml-2 text-[#121212] hover:text-[#195799] active:scale-95 transition-transform rounded-lg focus-visible:outline-none"
+                    className="w-9 h-9 rounded-full bg-neutral-100 hover:bg-neutral-200 active:scale-95 text-neutral-800 flex items-center justify-center transition-all focus-visible:outline-none"
                     style={{ WebkitTapHighlightColor: 'transparent' }}
                     aria-label="Close menu"
                   >
-                    <X className="w-6 h-6 stroke-[1.8]" />
+                    <X className="w-5 h-5 stroke-[2]" />
                   </button>
                 </div>
 
@@ -258,15 +258,15 @@ export default function Header() {
                   >
                     <span
                       style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
-                      className="text-[20px] sm:text-[22px] font-normal tracking-tight text-[#111111] leading-none"
+                      className="text-[20px] sm:text-[22px] font-normal tracking-tight text-[#111111] leading-none group-hover:text-[#195799] transition-colors"
                     >
                       ShyamBaba
                     </span>
                     <span
                       style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
-                      className="text-[10.5px] sm:text-[11.5px] font-normal tracking-[0.25em] uppercase text-[#333333] leading-none mt-1"
+                      className="text-[10px] sm:text-[11px] font-semibold tracking-[0.28em] uppercase text-[#111111] leading-none mt-1"
                     >
-                      Wholesale
+                      WHOLESALE
                     </span>
                   </Link>
                 </div>
@@ -275,56 +275,73 @@ export default function Header() {
                 <div className="w-10" aria-hidden="true" />
               </div>
 
-              {/* Drawer Body: Black Buttons with White Font */}
-              <div className="flex-1 overflow-y-auto overscroll-contain px-4 sm:px-5 py-6">
-                <ul className="space-y-3">
-                  {menuItems.map((item) => {
-                    const IconComponent = item.icon
-                    return (
-                      <li key={item.name}>
-                        {item.isExternal ? (
-                          <a
-                            href={item.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="w-full py-3.5 px-4 rounded-xl bg-black hover:bg-neutral-800 active:scale-98 text-white font-semibold text-[13.5px] sm:text-[14.5px] tracking-wide transition-all shadow-sm flex items-center justify-between text-left"
-                          >
-                            <span className="flex items-center gap-2.5">
-                              <IconComponent className="w-4 h-4 text-white/80 flex-shrink-0" />
-                              <span>{item.name}</span>
+              {/* Drawer Body: Clean Black Buttons with White Text & Icons */}
+              <div className="flex-1 overflow-y-auto overscroll-contain px-4 sm:px-5 py-5 flex flex-col justify-between">
+                <div>
+                  <ul className="space-y-2.5">
+                    {menuItems.map((item) => {
+                      const IconComponent = item.icon
+                      const content = (
+                        <>
+                          <span className="flex items-center gap-3">
+                            <span className="w-8 h-8 rounded-lg bg-white/10 border border-white/10 group-hover:border-white/30 flex items-center justify-center text-white flex-shrink-0 transition-colors">
+                              <IconComponent className="w-4 h-4 stroke-[2]" />
                             </span>
-                            <ChevronRight className="w-4 h-4 text-white/50 flex-shrink-0" />
-                          </a>
-                        ) : (
-                          <Link
-                            href={item.href}
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="w-full py-3.5 px-4 rounded-xl bg-black hover:bg-neutral-800 active:scale-98 text-white font-semibold text-[13.5px] sm:text-[14.5px] tracking-wide transition-all shadow-sm flex items-center justify-between text-left"
-                          >
-                            <span className="flex items-center gap-2.5">
-                              <IconComponent className="w-4 h-4 text-white/80 flex-shrink-0" />
-                              <span>{item.name}</span>
+                            <span className="text-[13.5px] sm:text-[14px] font-medium text-white tracking-wide group-hover:text-white transition-colors">
+                              {item.name}
                             </span>
-                            <ChevronRight className="w-4 h-4 text-white/50 flex-shrink-0" />
-                          </Link>
-                        )}
-                      </li>
-                    )
-                  })}
-                </ul>
+                          </span>
+                          <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-white group-hover:translate-x-1 flex-shrink-0 transition-transform" />
+                        </>
+                      )
+
+                      return (
+                        <li key={item.name}>
+                          {item.isExternal ? (
+                            <a
+                              href={item.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={() => setMobileMenuOpen(false)}
+                              className="group w-full py-3 px-3.5 rounded-xl bg-[#161616] hover:bg-[#222222] active:scale-[0.98] border border-[#2B2B2B] hover:border-white/30 text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)] transition-all duration-200 flex items-center justify-between text-left"
+                            >
+                              {content}
+                            </a>
+                          ) : (
+                            <Link
+                              href={item.href}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className="group w-full py-3 px-3.5 rounded-xl bg-[#161616] hover:bg-[#222222] active:scale-[0.98] border border-[#2B2B2B] hover:border-white/30 text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)] transition-all duration-200 flex items-center justify-between text-left"
+                            >
+                              {content}
+                            </Link>
+                          )}
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </div>
 
                 {/* Direct WhatsApp Quick Chat Bar */}
-                <div className="mt-8 pt-6 border-t border-neutral-100">
+                <div className="pt-5 mt-6 border-t border-[#EAE3D8]">
                   <a
                     href="https://wa.me/919680865791?text=Hello%20Shyambaba%20Wholesale%2C%20I%20have%20an%20inquiry%20regarding%20wholesale%20jewellery."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-3.5 px-4 bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.985] text-white rounded-xl flex items-center justify-center gap-2 font-semibold text-[13.5px] shadow-sm transition-all"
+                    className="w-full py-3.5 px-4 bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.985] text-white rounded-xl flex items-center justify-center gap-2 font-semibold text-[13.5px] shadow-[0_4px_14px_rgba(37,211,102,0.22)] transition-all"
                   >
                     <MessageCircle className="w-4 h-4 fill-white" />
                     <span>WhatsApp Direct Chat</span>
                   </a>
+
+                  <div className="mt-4 text-center">
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-[#111111] font-bold block">
+                      Jaipur Biggest Jewellery Wholesaler
+                    </span>
+                    <span className="text-[11px] text-neutral-500 block mt-0.5">
+                      +91 96808 65791 &bull; Worldwide Shipping
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

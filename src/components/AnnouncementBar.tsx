@@ -22,7 +22,7 @@ export default function AnnouncementBar() {
     {
       id: 1,
       Icon: Sparkles,
-      iconColor: 'text-[#C9A84C]',
+      iconColor: 'text-[#111111]',
       highlight: 'Low MOV ₹3,000 / $50',
       text: 'Direct Jaipur Manufacturer Wholesale Pricing',
       href: '/collections/all',
@@ -31,7 +31,7 @@ export default function AnnouncementBar() {
     {
       id: 2,
       Icon: Globe,
-      iconColor: 'text-[#195799]',
+      iconColor: 'text-[#111111]',
       highlight: 'Worldwide Express Cargo',
       text: 'Doorstep Air Delivery to 50+ Countries',
       href: '/#international',
@@ -40,7 +40,7 @@ export default function AnnouncementBar() {
     {
       id: 3,
       Icon: ShieldCheck,
-      iconColor: 'text-[#C9A84C]',
+      iconColor: 'text-[#111111]',
       highlight: '5,000+ Exclusive Designs',
       text: 'Premium Brass & Oxidised Silver Jewellery',
       href: '/collections/all',
@@ -121,9 +121,9 @@ export default function AnnouncementBar() {
             href="https://wa.me/919680865791"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 hover:text-[#195799] transition-colors"
+            className="flex items-center gap-1.5 hover:text-[#111111] transition-colors"
           >
-            <Phone className="w-3.5 h-3.5 text-[#195799]" />
+            <Phone className="w-3.5 h-3.5 text-[#111111]" />
             <span className="font-medium">+91 96808 65791</span>
           </a>
           <span className="text-neutral-300">|</span>
@@ -155,7 +155,7 @@ export default function AnnouncementBar() {
                 href={current.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[12.5px] sm:text-[13.5px] md:text-[14px] leading-normal font-normal text-neutral-800 hover:text-[#195799] transition-colors truncate sm:overflow-visible"
+                className="text-[12.5px] sm:text-[13.5px] md:text-[14px] leading-normal font-normal text-neutral-800 hover:text-[#111111] transition-colors truncate sm:overflow-visible"
               >
                 <strong className="font-semibold text-[#121212] tracking-tight">
                   {current.highlight}
@@ -166,7 +166,7 @@ export default function AnnouncementBar() {
             ) : (
               <Link
                 href={current.href}
-                className="text-[12.5px] sm:text-[13.5px] md:text-[14px] leading-normal font-normal text-neutral-800 hover:text-[#195799] transition-colors truncate sm:overflow-visible"
+                className="text-[12.5px] sm:text-[13.5px] md:text-[14px] leading-normal font-normal text-neutral-800 hover:text-[#111111] transition-colors truncate sm:overflow-visible"
               >
                 <strong className="font-semibold text-[#121212] tracking-tight">
                   {current.highlight}
@@ -194,7 +194,7 @@ export default function AnnouncementBar() {
             href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20book%20a%20live%20video%20call%20for%20wholesale%20selection"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-[12px] text-neutral-700 hover:text-[#195799] font-medium transition-colors"
+            className="inline-flex items-center gap-1.5 text-[12px] text-neutral-700 hover:text-[#111111] font-medium transition-colors"
           >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75"></span>

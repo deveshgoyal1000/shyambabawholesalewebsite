@@ -120,17 +120,22 @@ export const puckConfig: Config<ComponentProps> = {
       },
       render: ({ highlight, subtext, phoneNumber }) => (
         <div className="bg-white border-b border-[#ECE6DC] text-[#121212] select-none w-full">
-          <div className="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between text-xs sm:text-sm">
+          <div className="max-w-7xl mx-auto px-4 py-2 sm:py-2.5 flex items-center justify-between text-xs sm:text-sm">
             <div className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#C9A84C]" />
-              <strong className="font-semibold text-[#121212]">{highlight}</strong>
-              <span className="text-neutral-400">•</span>
+              <Sparkles className="w-3.5 h-3.5 text-[#111111]" />
+              <strong className="font-semibold text-[#111111]">{highlight}</strong>
+              <span className="text-neutral-300">•</span>
               <span className="text-neutral-600 hidden sm:inline">{subtext}</span>
             </div>
-            <div className="flex items-center gap-1.5 text-neutral-600 font-medium">
-              <Phone className="w-3.5 h-3.5 text-[#195799]" />
+            <a
+              href={`https://wa.me/${(phoneNumber || '919680865791').replace(/\D/g, '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-neutral-800 hover:text-black font-medium transition-colors"
+            >
+              <Phone className="w-3.5 h-3.5 text-[#111111]" />
               <span>{phoneNumber}</span>
-            </div>
+            </a>
           </div>
         </div>
       ),
