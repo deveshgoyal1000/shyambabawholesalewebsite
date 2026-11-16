@@ -231,105 +231,117 @@ export const puckConfig: Config<ComponentProps> = {
           .replace('Note :  ', 'Note : ');
 
         return (
-        <section className="relative min-h-[calc(100dvh-82px)] sm:min-h-[760px] flex flex-col justify-center text-center text-white overflow-hidden select-none">
-          {/* Background Images */}
-          <div
-            className="absolute inset-0 bg-cover bg-[position:74%_10%] sm:hidden"
-            style={{ backgroundImage: `url('${bgImageMobile || '/images/hero/hero-mobile-artisan.webp'}')` }}
-          />
-          <div
-            className="absolute inset-0 bg-cover bg-center hidden sm:block"
-            style={{ backgroundImage: `url('${bgImageDesktop}')` }}
-          />
-          {/* Mobile Overlay */}
-          <div className="absolute inset-0 sm:hidden bg-gradient-to-b from-black/85 via-black/60 to-black/95 pointer-events-none" />
-          <div
-            className="absolute inset-0 sm:hidden pointer-events-none"
-            style={{
-              background: 'radial-gradient(circle at 50% 45%, rgba(201, 168, 76, 0.15) 0%, rgba(10, 8, 8, 0.35) 75%)',
-            }}
-          />
-          {/* Desktop Overlay */}
-          <div className="absolute inset-0 hidden sm:block bg-gradient-to-b from-black/80 via-black/70 to-black/85 pointer-events-none" />
+          <>
+            {/* Mobile Hero: Graphic Banner with interactive hotspot links */}
+            <section className="relative w-full block sm:hidden bg-[#0A0808] select-none overflow-hidden">
+              <div className="relative w-full max-w-[500px] mx-auto">
+                <img
+                  src="/images/hero/hero-mobile-graphic-banner.webp"
+                  alt="Jaipur's Biggest Artificial Jewellery Manufacturer & Wholesaler"
+                  className="w-full h-auto block select-none"
+                  loading="eager"
+                  fetchPriority="high"
+                />
+                {/* Hotspot Link: View Catalog */}
+                <Link
+                  href="/collections/all"
+                  aria-label="View Catalog"
+                  className="absolute left-[12%] top-[78.1%] w-[76%] h-[9.8%] rounded-full cursor-pointer z-10 active:opacity-80"
+                />
+                {/* Hotspot Link: Terms & Conditions */}
+                <a
+                  href="#faq"
+                  aria-label="Terms & Conditions"
+                  className="absolute left-[26%] top-[89.5%] w-[48%] h-[5%] rounded-full cursor-pointer z-10 active:opacity-80"
+                />
+              </div>
+            </section>
 
-          {/* Ambient Gold Glow */}
-          <div
-            className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[500px] h-[340px] sm:h-[500px] rounded-full pointer-events-none"
-            style={{
-              background:
-                'radial-gradient(circle, rgba(201, 168, 76, 0.18) 0%, rgba(25, 87, 153, 0.08) 50%, transparent 75%)',
-              filter: 'blur(45px)',
-            }}
-          />
+            {/* Desktop Hero: Widescreen Luxury Layout */}
+            <section className="relative min-h-[760px] hidden sm:flex flex-col justify-center text-center text-white overflow-hidden select-none">
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url('${bgImageDesktop}')` }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/85 pointer-events-none" />
 
-          <div className="relative z-10 max-w-xl mx-auto px-3 sm:px-6 pt-8 sm:pt-16 pb-8 sm:pb-12 flex flex-col items-center flex-1 justify-center">
-            {preheading && preheading !== "India's Trusted" && (
-              <span
-                style={{ fontFamily: 'Georgia, serif' }}
-                className="text-[19px] sm:text-[24px] text-[#F3EFE6] tracking-wide mb-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]"
-              >
-                {preheading}
-              </span>
-            )}
+              {/* Ambient Gold Glow */}
+              <div
+                className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none"
+                style={{
+                  background:
+                    'radial-gradient(circle, rgba(201, 168, 76, 0.18) 0%, rgba(25, 87, 153, 0.08) 50%, transparent 75%)',
+                  filter: 'blur(45px)',
+                }}
+              />
 
-            <h1
-              style={{ fontFamily: 'Georgia, serif' }}
-              className="font-bold tracking-tight text-white leading-[1.25] mb-4 sm:mb-5 mx-auto drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] px-2 text-center"
-            >
-              <span className="block text-[21px] sm:text-[42px]">JAIPUR BIGGEST</span>
-              <span className="block text-[21px] sm:text-[42px]">ARTIFICIAL JEWELLERY</span>
-              <span className="block text-[16.5px] sm:text-[36px] text-[#FAF8F5] mt-1">MANUFACTURER &amp; WHOLESALER</span>
-            </h1>
-
-            <p
-              style={{ maxWidth: '340px' }}
-              className="text-[12.5px] sm:text-[14.5px] tracking-wide text-[#FAF8F5]/90 mx-auto mb-3 sm:mb-4 font-normal leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.85)] text-center"
-            >
-              {activeSubtitle}
-            </p>
-
-            {activeNote && (
-              <p
-                style={{ fontSize: '10.5px' }}
-                className="sm:!text-[12px] text-red-200/95 font-medium tracking-tight mb-4 sm:mb-5 mx-auto text-center whitespace-nowrap drop-shadow-[0_1px_5px_rgba(0,0,0,0.95)] px-1"
-              >
-                {activeNote}
-              </p>
-            )}
-
-            
-
-            {/* Check points */}
-            <div className="space-y-2 sm:space-y-2.5 mb-5 sm:mb-6 w-full max-w-[340px] text-left mx-auto">
-              {activePoints.map((pt) => (
-                <div key={pt} className="flex items-center gap-3">
-                  <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-full border-[1.5px] border-[#22c55e] flex items-center justify-center text-[#22c55e] flex-shrink-0 bg-black/50 shadow-[0_0_8px_rgba(34,197,94,0.3)]">
-                    <Check className="w-3 h-3 sm:w-4 sm:h-4 text-[#22c55e] stroke-[3]" />
-                  </div>
-                  <span className="text-[13px] sm:text-[16px] font-semibold text-white tracking-wide drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)] leading-tight flex-1">
-                    {pt}
+              <div className="relative z-10 max-w-xl mx-auto px-6 pt-16 pb-12 flex flex-col items-center flex-1 justify-center">
+                {preheading && preheading !== "India's Trusted" && (
+                  <span
+                    style={{ fontFamily: 'Georgia, serif' }}
+                    className="text-[24px] text-[#F3EFE6] tracking-wide mb-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]"
+                  >
+                    {preheading}
                   </span>
-                </div>
-              ))}
-            </div>
+                )}
 
-            {/* Buttons */}
-            <div className="w-full max-w-[320px] sm:max-w-[340px] space-y-2.5">
-              <a
-                href="#categories"
-                className="w-full inline-flex items-center justify-center py-3 sm:py-3.5 px-6 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-bold text-[14.5px] sm:text-[16px] tracking-wide shadow-md transition-all text-center"
-              >
-                {button1Text}
-              </a>
-              <Link
-                href="/collections/all"
-                className="w-full inline-flex items-center justify-center py-3 sm:py-3.5 px-6 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-[14.5px] sm:text-[16px] tracking-wide border-2 border-white/90 transition-all text-center"
-              >
-                {button2Text}
-              </Link>
-            </div>
-          </div>
-        </section>
+                <h1
+                  style={{ fontFamily: 'Georgia, serif' }}
+                  className="font-bold tracking-tight text-white leading-[1.25] mb-5 mx-auto drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] px-2 text-center"
+                >
+                  <span className="block text-[42px]">JAIPUR BIGGEST</span>
+                  <span className="block text-[42px]">ARTIFICIAL JEWELLERY</span>
+                  <span className="block text-[36px] text-[#FAF8F5] mt-1">MANUFACTURER &amp; WHOLESALER</span>
+                </h1>
+
+                <p
+                  style={{ maxWidth: '340px' }}
+                  className="text-[14.5px] tracking-wide text-[#FAF8F5]/90 mx-auto mb-4 font-normal leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.85)] text-center"
+                >
+                  {activeSubtitle}
+                </p>
+
+                {activeNote && (
+                  <p
+                    style={{ fontSize: '11px' }}
+                    className="text-red-200/95 font-medium tracking-tight mb-5 mx-auto text-center whitespace-nowrap drop-shadow-[0_1px_5px_rgba(0,0,0,0.95)] px-1"
+                  >
+                    {activeNote}
+                  </p>
+                )}
+
+                {/* Check points */}
+                <div className="space-y-2.5 mb-6 w-full max-w-[340px] text-left mx-auto">
+                  {activePoints.map((pt) => (
+                    <div key={pt} className="flex items-center gap-3">
+                      <div className="w-7 h-7 rounded-full border-[1.5px] border-[#22c55e] flex items-center justify-center text-[#22c55e] flex-shrink-0 bg-black/50 shadow-[0_0_8px_rgba(34,197,94,0.3)]">
+                        <Check className="w-4 h-4 text-[#22c55e] stroke-[3]" />
+                      </div>
+                      <span className="text-[16px] font-semibold text-white tracking-wide drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)] leading-tight flex-1">
+                        {pt}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Buttons */}
+                <div className="w-full max-w-[340px] space-y-2.5">
+                  <a
+                    href="#categories"
+                    className="w-full inline-flex items-center justify-center py-3.5 px-6 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-bold text-[16px] tracking-wide shadow-md transition-all text-center"
+                  >
+                    {button1Text}
+                  </a>
+                  <Link
+                    href="/collections/all"
+                    className="w-full inline-flex items-center justify-center py-3.5 px-6 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-[16px] tracking-wide border-2 border-white/90 transition-all text-center"
+                  >
+                    {button2Text}
+                  </Link>
+                </div>
+              </div>
+            </section>
+          </>
         );
       },
     },
