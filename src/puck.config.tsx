@@ -13,6 +13,7 @@ import {
   ArrowRight,
 } from 'lucide-react'
 import ImageUploadField from '@/components/puck/ImageUploadField'
+import AnnouncementBar from '@/components/AnnouncementBar'
 import Header from '@/components/Header'
 import ShopByCategories, { CategoryItem, DEFAULT_CATEGORIES } from '@/components/ShopByCategories'
 import GallerySection from '@/components/GallerySection'
@@ -108,37 +109,7 @@ export const puckConfig: Config<ComponentProps> = {
     // 1. Top Announcement Bar
     AnnouncementBarBlock: {
       label: '1. Top Announcement Bar',
-      fields: {
-        highlight: { type: 'text', label: 'Highlight Text' },
-        subtext: { type: 'text', label: 'Subtext' },
-        phoneNumber: { type: 'text', label: 'WhatsApp Phone Number' },
-      },
-      defaultProps: {
-        highlight: 'Low MOV ₹3,000 / $50',
-        subtext: 'Direct Jaipur Manufacturer Wholesale Pricing',
-        phoneNumber: '+91 96808 65791',
-      },
-      render: ({ highlight, subtext, phoneNumber }) => (
-        <div className="bg-white border-b border-[#ECE6DC] text-[#121212] select-none w-full">
-          <div className="max-w-7xl mx-auto px-4 py-2 sm:py-2.5 flex items-center justify-between text-xs sm:text-sm">
-            <div className="flex items-center gap-2">
-              <Sparkles className="w-3.5 h-3.5 text-[#111111]" />
-              <strong className="font-semibold text-[#111111]">{highlight}</strong>
-              <span className="text-neutral-300">•</span>
-              <span className="text-neutral-600 hidden sm:inline">{subtext}</span>
-            </div>
-            <a
-              href={`https://wa.me/${(phoneNumber || '919680865791').replace(/\D/g, '')}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-neutral-800 hover:text-black font-medium transition-colors"
-            >
-              <Phone className="w-3.5 h-3.5 text-[#111111]" />
-              <span>{phoneNumber}</span>
-            </a>
-          </div>
-        </div>
-      ),
+      render: () => <AnnouncementBar />,
     },
 
     // 2. Header & Navigation Bar
