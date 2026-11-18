@@ -21,36 +21,6 @@ export const DEFAULT_CATEGORIES: CategoryItem[] = [
     slug: 'normal-jewellery',
     image: '/images/categories/cat-normal-jewellery.jpg',
   },
-  {
-    title: 'Studs',
-    slug: 'studs',
-    image: '/images/categories/cat-studs.jpg',
-  },
-  {
-    title: 'Kundan',
-    slug: 'kundan-earrings',
-    image: '/images/categories/cat-kundan.jpg',
-  },
-  {
-    title: 'Rajwadi',
-    slug: 'rajwadi',
-    image: '/images/categories/cat-rajwadi.jpg',
-  },
-  {
-    title: 'Ear-Chain',
-    slug: 'ear-chain',
-    image: '/images/categories/cat-ear-chain.jpg',
-  },
-  {
-    title: 'Anti Tarnish',
-    slug: 'anti-tarnish',
-    image: '/images/categories/cat-anti-tarnish.jpg',
-  },
-  {
-    title: 'New Arrivals',
-    slug: 'new-arrivals',
-    image: '/images/categories/cat-new-arrivals.jpg',
-  },
 ]
 
 export interface ShopByCategoriesProps {
@@ -60,7 +30,7 @@ export interface ShopByCategoriesProps {
 }
 
 export default function ShopByCategories({
-  heading = 'Shop By Categories',
+  heading = 'Explore Catalog',
   subheading = 'Explore our premium brass jewellery collections',
   categories = DEFAULT_CATEGORIES,
 }: ShopByCategoriesProps) {
@@ -77,7 +47,7 @@ export default function ShopByCategories({
               style={{ fontFamily: 'Georgia, serif' }}
               className="text-[#121212] text-[28px] sm:text-[34px] md:text-[42px] font-normal tracking-[0.5px] leading-tight"
             >
-              {heading || 'Shop By Categories'}
+              {heading || 'Explore Catalog'}
             </h2>
 
             <p
@@ -92,8 +62,14 @@ export default function ShopByCategories({
           </div>
         </ScrollReveal>
 
-        {/* Categories Grid: Triggers strictly when each row scrolls into active view on mobile */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3.5 sm:gap-4 md:gap-5">
+        {/* Categories Grid: Centered 2-column layout when 2 categories, responsive grid otherwise */}
+        <div
+          className={
+            displayCategories.length === 2
+              ? 'grid grid-cols-2 max-w-3xl mx-auto gap-3.5 sm:gap-6'
+              : 'grid grid-cols-2 md:grid-cols-4 gap-3.5 sm:gap-4 md:gap-5'
+          }
+        >
           {displayCategories.map((cat, idx) => {
             const href = cat.slug?.startsWith('http') || cat.slug?.startsWith('/')
               ? cat.slug
@@ -112,32 +88,32 @@ export default function ShopByCategories({
                 {cat.slug === 'premium-jewellery' ? (
                   <Link
                     href={href}
-                    className="group relative flex flex-col justify-between h-full rounded-2xl overflow-hidden bg-[#0D0D0D] border-2 border-[#C9A84C] shadow-[0_6px_22px_rgba(0,0,0,0.18)] hover:shadow-[0_12px_32px_rgba(201,168,76,0.28)] active:scale-[0.98] transition-all duration-300 p-3.5 sm:p-5 text-center select-none"
+                    className="group relative flex flex-col justify-between h-full rounded-2xl overflow-hidden bg-[#8B0000] border-2 border-red-400/60 shadow-[0_6px_22px_rgba(139,0,0,0.25)] hover:shadow-[0_12px_32px_rgba(185,28,28,0.35)] active:scale-[0.98] transition-all duration-300 p-3.5 sm:p-5 text-center select-none"
                     style={{ WebkitTapHighlightColor: 'transparent', minHeight: '100%' }}
                   >
-                    {/* Background gold shimmer glow */}
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(201,168,76,0.18)_0%,transparent_75%)] pointer-events-none" />
+                    {/* Background ruby glow */}
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(255,255,255,0.18)_0%,transparent_75%)] pointer-events-none" />
 
                     {/* Center Big Bold Typography */}
                     <div className="my-auto py-8 sm:py-12 z-10 px-1">
                       <span
                         style={{ fontFamily: 'Georgia, serif' }}
-                        className="block text-[#FAF8F5] text-[20px] xs:text-[23px] sm:text-[30px] md:text-[34px] font-bold leading-tight tracking-tight drop-shadow-md"
+                        className="block text-white text-[20px] xs:text-[23px] sm:text-[30px] md:text-[34px] font-bold leading-tight tracking-tight drop-shadow-md"
                       >
                         PREMIUM
                       </span>
                       <span
                         style={{ fontFamily: 'Georgia, serif' }}
-                        className="block text-[#C9A84C] text-[15px] xs:text-[17px] sm:text-[22px] md:text-[25px] font-normal tracking-wider mt-1"
+                        className="block text-red-100 text-[15px] xs:text-[17px] sm:text-[22px] md:text-[25px] font-normal tracking-wider mt-1"
                       >
                         JEWELLERY
                       </span>
                     </div>
 
                     {/* Bottom Action Footer */}
-                    <div className="w-full pt-3 border-t border-[#C9A84C]/30 flex items-center justify-between z-10 text-[#C9A84C] group-hover:text-[#FAF8F5] transition-colors">
+                    <div className="w-full pt-3 border-t border-white/20 flex items-center justify-between z-10 text-white transition-colors">
                       <span className="text-[11px] sm:text-[13px] font-semibold tracking-wide">
-                        View Categories
+                        View Catalogue
                       </span>
                       <span className="text-[18px] sm:text-[20px] font-bold group-hover:translate-x-1.5 transition-transform">
                         &rarr;
@@ -172,7 +148,7 @@ export default function ShopByCategories({
                     {/* Bottom Action Footer */}
                     <div className="w-full pt-3 border-t border-white/20 flex items-center justify-between z-10 text-white transition-colors">
                       <span className="text-[11px] sm:text-[13px] font-semibold tracking-wide">
-                        View Categories
+                        View Catalogue
                       </span>
                       <span className="text-[18px] sm:text-[20px] font-bold group-hover:translate-x-1.5 transition-transform">
                         &rarr;

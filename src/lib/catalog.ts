@@ -81,12 +81,14 @@ export function findCategoryOrSubcategory(slug: string): {
     'normal-jewellery': { categorySlug: 'normal-jewellery' },
     'premium-earrings': { categorySlug: 'premium-jewellery' },
     'silver-earrings': { categorySlug: 'normal-jewellery' },
-    'studs': { categorySlug: 'earrings', subSlug: 'kundan-studs' },
-    'kundan-earrings': { categorySlug: 'kundan-pendants' },
-    'kundan': { categorySlug: 'kundan-pendants' },
-    'rajwadi': { categorySlug: 'earrings', subSlug: 'meenakari-earrings' },
-    'ear-chain': { categorySlug: 'kanchain' },
-    'anti-tarnish': { categorySlug: 'earrings', subSlug: 'daily-wear-oxydised-earrings' },
+    'studs': { categorySlug: 'normal-jewellery', subSlug: 'kundan-studs' },
+    'kundan-earrings': { categorySlug: 'premium-jewellery', subSlug: 'kundan' },
+    'kundan': { categorySlug: 'premium-jewellery', subSlug: 'kundan' },
+    'rajwadi': { categorySlug: 'premium-jewellery', subSlug: 'rajwadi' },
+    'ear-chain': { categorySlug: 'normal-jewellery', subSlug: 'ear-chain' },
+    'kanchain': { categorySlug: 'normal-jewellery', subSlug: 'ear-chain' },
+    'anti-tarnish': { categorySlug: 'normal-jewellery', subSlug: 'daily-wear-oxydised-earrings' },
+    'new-arrivals': { categorySlug: 'premium-jewellery', subSlug: 'new-arrivals' },
   }
 
   if (shortcuts[norm]) {

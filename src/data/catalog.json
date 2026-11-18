@@ -10,8 +10,1151 @@
     "description": "Handcrafted luxury brass, bridal chokers, Victorian heritage, and premium designer jewellery.",
     "hasSubcategories": true,
     "coverImage": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-001.jpg",
-    "totalItems": 307,
+    "totalItems": 492,
     "subcategories": [
+      {
+        "slug": "kundan",
+        "name": "Kundan",
+        "description": "Exquisite Kundan Pendants and Heritage Jewellery",
+        "parentSlug": "premium-jewellery",
+        "parentName": "Premium Jewellery",
+        "coverImage": "/images/categories/cat-kundan.jpg",
+        "itemCount": 87,
+        "images": [
+          {
+            "id": "kundan-pendants-1",
+            "code": "SB-00B3AF1D",
+            "rawFilename": "00B3AF1D-EF86-4B4B-9157-550B29023DAB.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-001.jpg"
+          },
+          {
+            "id": "kundan-pendants-2",
+            "code": "SB-016B7B79",
+            "rawFilename": "016B7B79-31F8-48E9-9BC6-221C7CE980E0.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-002.jpg"
+          },
+          {
+            "id": "kundan-pendants-3",
+            "code": "SB-07C24CF4",
+            "rawFilename": "07C24CF4-5D22-478E-9709-22971EB248BC.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-003.jpg"
+          },
+          {
+            "id": "kundan-pendants-4",
+            "code": "SB-105C5278",
+            "rawFilename": "105C5278-012A-43A0-87B6-5966CFF047FC.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-004.jpg"
+          },
+          {
+            "id": "kundan-pendants-5",
+            "code": "SB-1411FD5E",
+            "rawFilename": "1411FD5E-C7E9-4692-8885-B945DB10671D.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-005.jpg"
+          },
+          {
+            "id": "kundan-pendants-6",
+            "code": "SB-178B5E6F",
+            "rawFilename": "178B5E6F-2043-4685-AF52-4B3DD172FF4F.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-006.jpg"
+          },
+          {
+            "id": "kundan-pendants-7",
+            "code": "SB-1CBFFD71",
+            "rawFilename": "1CBFFD71-53B3-4CD7-B8AE-B308373695BF.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-007.jpg"
+          },
+          {
+            "id": "kundan-pendants-8",
+            "code": "SB-2113FE25",
+            "rawFilename": "2113FE25-DA65-4B52-90A7-4B461F82B635.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-008.jpg"
+          },
+          {
+            "id": "kundan-pendants-9",
+            "code": "SB-2603253C",
+            "rawFilename": "2603253C-EBAC-44E9-9F86-D4AD947A0D7F.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-009.jpg"
+          },
+          {
+            "id": "kundan-pendants-10",
+            "code": "SB-2C6257DA",
+            "rawFilename": "2C6257DA-E75D-45C9-8D93-E716F94B7DB7.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-010.jpg"
+          },
+          {
+            "id": "kundan-pendants-11",
+            "code": "SB-3260EA85",
+            "rawFilename": "3260EA85-6EEC-41AC-A39D-84A82C1A8687.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-011.jpg"
+          },
+          {
+            "id": "kundan-pendants-12",
+            "code": "SB-3484322F",
+            "rawFilename": "3484322F-9B21-4C55-A5D5-061901A190F5.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-012.jpg"
+          },
+          {
+            "id": "kundan-pendants-13",
+            "code": "SB-373BE07A",
+            "rawFilename": "373BE07A-B49F-4E47-BD16-7FD572A380E4.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-013.jpg"
+          },
+          {
+            "id": "kundan-pendants-14",
+            "code": "SB-3BF8E449",
+            "rawFilename": "3BF8E449-8A40-4384-8FBF-C4FFC8725D72.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-014.jpg"
+          },
+          {
+            "id": "kundan-pendants-15",
+            "code": "SB-3C6E49D8",
+            "rawFilename": "3C6E49D8-B089-49C1-9291-AB2801B27D72.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-015.jpg"
+          },
+          {
+            "id": "kundan-pendants-16",
+            "code": "SB-3F82599E",
+            "rawFilename": "3F82599E-D6FA-4C1A-BA42-99ECB4765199.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-016.jpg"
+          },
+          {
+            "id": "kundan-pendants-17",
+            "code": "SB-44E5D997",
+            "rawFilename": "44E5D997-F59B-4471-AEED-99C5DE101528.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-017.jpg"
+          },
+          {
+            "id": "kundan-pendants-18",
+            "code": "SB-4BA8F7DE",
+            "rawFilename": "4BA8F7DE-1334-48F7-84C0-8535F1F2881D.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-018.jpg"
+          },
+          {
+            "id": "kundan-pendants-19",
+            "code": "SB-4FCE361F",
+            "rawFilename": "4FCE361F-D42A-4A58-845B-8E985C37FDF8.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-019.jpg"
+          },
+          {
+            "id": "kundan-pendants-20",
+            "code": "SB-5497BD03",
+            "rawFilename": "5497BD03-4B0B-4A36-9157-912A991EDF1D.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-020.jpg"
+          },
+          {
+            "id": "kundan-pendants-21",
+            "code": "SB-56C1D2F1",
+            "rawFilename": "56C1D2F1-0660-4C29-99D2-B379B6C52485.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-021.jpg"
+          },
+          {
+            "id": "kundan-pendants-22",
+            "code": "SB-571E748F",
+            "rawFilename": "571E748F-2497-4CE9-BAAE-E2325D308EE3.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-022.jpg"
+          },
+          {
+            "id": "kundan-pendants-23",
+            "code": "SB-583C7064",
+            "rawFilename": "583C7064-7977-4208-9D36-B9B02EDFA6F8.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-023.jpg"
+          },
+          {
+            "id": "kundan-pendants-24",
+            "code": "SB-59E06427",
+            "rawFilename": "59E06427-DCEB-4494-A057-A888500698E2.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-024.jpg"
+          },
+          {
+            "id": "kundan-pendants-25",
+            "code": "SB-5AA499A1",
+            "rawFilename": "5AA499A1-DCAB-4343-85DA-003A3343E0E6.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-025.jpg"
+          },
+          {
+            "id": "kundan-pendants-26",
+            "code": "SB-5F71227A",
+            "rawFilename": "5F71227A-AC41-44A8-BEFC-739B43EDBC4E.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-026.jpg"
+          },
+          {
+            "id": "kundan-pendants-27",
+            "code": "SB-5FEC71B5",
+            "rawFilename": "5FEC71B5-6C41-49B8-BB08-63411DCB3F35.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-027.jpg"
+          },
+          {
+            "id": "kundan-pendants-28",
+            "code": "SB-6B511404",
+            "rawFilename": "6B511404-28B0-4DFF-A0B5-B10EA398FE32.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-028.jpg"
+          },
+          {
+            "id": "kundan-pendants-29",
+            "code": "SB-6FDF0B04",
+            "rawFilename": "6FDF0B04-6694-41E0-8313-6686C16E6FA1.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-029.jpg"
+          },
+          {
+            "id": "kundan-pendants-30",
+            "code": "SB-70F6FB5F",
+            "rawFilename": "70F6FB5F-1413-4344-B052-E87AFD4BD49E.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-030.jpg"
+          },
+          {
+            "id": "kundan-pendants-31",
+            "code": "SB-72242FBE",
+            "rawFilename": "72242FBE-43FE-472B-88B8-BFA9CD002169.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-031.jpg"
+          },
+          {
+            "id": "kundan-pendants-32",
+            "code": "SB-798A67E9",
+            "rawFilename": "798A67E9-CF0F-44A5-B083-A6A67B039C18.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-032.jpg"
+          },
+          {
+            "id": "kundan-pendants-33",
+            "code": "SB-7A7E8A86",
+            "rawFilename": "7A7E8A86-41B3-4C04-AFB6-19F6EEAD628C.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-033.jpg"
+          },
+          {
+            "id": "kundan-pendants-34",
+            "code": "SB-7B65CCEE",
+            "rawFilename": "7B65CCEE-EF4D-40CE-8455-2F36B9190CD2.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-034.jpg"
+          },
+          {
+            "id": "kundan-pendants-35",
+            "code": "SB-820706E1",
+            "rawFilename": "820706E1-DBAD-4527-A378-F2AC0AE9F86D.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-035.jpg"
+          },
+          {
+            "id": "kundan-pendants-36",
+            "code": "SB-8535C7C8",
+            "rawFilename": "8535C7C8-A698-47DD-AF77-09D4D96E5395.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-036.jpg"
+          },
+          {
+            "id": "kundan-pendants-37",
+            "code": "SB-86AD6A42",
+            "rawFilename": "86AD6A42-B2DF-478B-B770-9D78C42278FF.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-037.jpg"
+          },
+          {
+            "id": "kundan-pendants-38",
+            "code": "SB-8AFFA666",
+            "rawFilename": "8AFFA666-BCDE-4841-98CA-35E993896051.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-038.jpg"
+          },
+          {
+            "id": "kundan-pendants-39",
+            "code": "SB-8C3D1F96",
+            "rawFilename": "8C3D1F96-5EED-44F7-8A97-70C5CF5CB781.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-039.jpg"
+          },
+          {
+            "id": "kundan-pendants-40",
+            "code": "SB-8CA46B86",
+            "rawFilename": "8CA46B86-59AF-473A-9F14-50542D7E182D.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-040.jpg"
+          },
+          {
+            "id": "kundan-pendants-41",
+            "code": "SB-8CCC70E8",
+            "rawFilename": "8CCC70E8-7653-4518-BAF2-5D198969EC78.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-041.jpg"
+          },
+          {
+            "id": "kundan-pendants-42",
+            "code": "SB-955A31EA",
+            "rawFilename": "955A31EA-7645-41A0-9953-0C5F05315554.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-042.jpg"
+          },
+          {
+            "id": "kundan-pendants-43",
+            "code": "SB-96B4006B",
+            "rawFilename": "96B4006B-A1C5-4BFD-89C7-A964892F87EA.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-043.jpg"
+          },
+          {
+            "id": "kundan-pendants-44",
+            "code": "SB-97C19A01",
+            "rawFilename": "97C19A01-66BD-44D2-8842-9A211C33CC8A.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-044.jpg"
+          },
+          {
+            "id": "kundan-pendants-45",
+            "code": "SB-987FFA3D",
+            "rawFilename": "987FFA3D-2BD7-46EC-A111-A9CA1751F4FC.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-045.jpg"
+          },
+          {
+            "id": "kundan-pendants-46",
+            "code": "SB-98A574C9",
+            "rawFilename": "98A574C9-0257-4572-8605-03E5F994F69A.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-046.jpg"
+          },
+          {
+            "id": "kundan-pendants-47",
+            "code": "SB-99A9FC02",
+            "rawFilename": "99A9FC02-AEE1-40D0-B573-70B19B975CB0.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-047.jpg"
+          },
+          {
+            "id": "kundan-pendants-48",
+            "code": "SB-9A862A06",
+            "rawFilename": "9A862A06-0B03-4FA8-90B6-0B89A86EB71A.png",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-048.jpg"
+          },
+          {
+            "id": "kundan-pendants-49",
+            "code": "SB-9CFF6F0A",
+            "rawFilename": "9CFF6F0A-3DEF-4A5A-8CD3-ED621CF95231.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-049.jpg"
+          },
+          {
+            "id": "kundan-pendants-50",
+            "code": "SB-9D6E7033",
+            "rawFilename": "9D6E7033-A50A-4D00-98CA-5B74C395FECA.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-050.jpg"
+          },
+          {
+            "id": "kundan-pendants-51",
+            "code": "SB-9FEE351D",
+            "rawFilename": "9FEE351D-94C2-48AF-AD10-92FEAFD5EE52.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-051.jpg"
+          },
+          {
+            "id": "kundan-pendants-52",
+            "code": "SB-A2A76039",
+            "rawFilename": "A2A76039-DC49-4804-BECC-56E409612515.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-052.jpg"
+          },
+          {
+            "id": "kundan-pendants-53",
+            "code": "SB-A4D58ED7",
+            "rawFilename": "A4D58ED7-E73D-4EE5-A410-B7E66A700806.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-053.jpg"
+          },
+          {
+            "id": "kundan-pendants-54",
+            "code": "SB-A6E67906",
+            "rawFilename": "A6E67906-CBE8-4EAB-B711-D5306A6C1174.png",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-054.jpg"
+          },
+          {
+            "id": "kundan-pendants-55",
+            "code": "SB-ADCF59CA",
+            "rawFilename": "ADCF59CA-F140-4A65-8FAF-17E5191966A7.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-055.jpg"
+          },
+          {
+            "id": "kundan-pendants-56",
+            "code": "SB-ADEC1C4C",
+            "rawFilename": "ADEC1C4C-8675-4997-A31C-B700EC25126D.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-056.jpg"
+          },
+          {
+            "id": "kundan-pendants-57",
+            "code": "SB-B06D92DB",
+            "rawFilename": "B06D92DB-B773-400A-9087-5BF54DC36943.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-057.jpg"
+          },
+          {
+            "id": "kundan-pendants-58",
+            "code": "SB-B220D736",
+            "rawFilename": "B220D736-FC33-43AF-8E0B-1397A5FD58B2.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-058.jpg"
+          },
+          {
+            "id": "kundan-pendants-59",
+            "code": "SB-B24216CD",
+            "rawFilename": "B24216CD-EC79-4079-BC65-2A7E93204236.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-059.jpg"
+          },
+          {
+            "id": "kundan-pendants-60",
+            "code": "SB-B79933DA",
+            "rawFilename": "B79933DA-98DE-4527-89EA-D08C01188888.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-060.jpg"
+          },
+          {
+            "id": "kundan-pendants-61",
+            "code": "SB-BCD07B71",
+            "rawFilename": "BCD07B71-97AD-4658-99B9-E1DAC9AFC988.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-061.jpg"
+          },
+          {
+            "id": "kundan-pendants-62",
+            "code": "SB-BDAB8341",
+            "rawFilename": "BDAB8341-B9B4-49CE-967F-993739F4EDC2.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-062.jpg"
+          },
+          {
+            "id": "kundan-pendants-63",
+            "code": "SB-BDF52CA2",
+            "rawFilename": "BDF52CA2-DD58-421E-A6DA-2C5C9A5BBBA3.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-063.jpg"
+          },
+          {
+            "id": "kundan-pendants-64",
+            "code": "SB-BE7D0D88",
+            "rawFilename": "BE7D0D88-C566-4B96-A4C4-A017735F007C.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-064.jpg"
+          },
+          {
+            "id": "kundan-pendants-65",
+            "code": "SB-BEA41BF9",
+            "rawFilename": "BEA41BF9-D32B-48C6-B3CB-842BBB23ADA0.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-065.jpg"
+          },
+          {
+            "id": "kundan-pendants-66",
+            "code": "SB-BFDCCCD5",
+            "rawFilename": "BFDCCCD5-5CD0-4F55-8AFC-09E1D33417A6.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-066.jpg"
+          },
+          {
+            "id": "kundan-pendants-67",
+            "code": "SB-C5015C87",
+            "rawFilename": "C5015C87-0116-4167-9AD6-091FABD254D1.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-067.jpg"
+          },
+          {
+            "id": "kundan-pendants-68",
+            "code": "SB-C58277A0",
+            "rawFilename": "C58277A0-E9E6-4269-A50C-F85B00FC9451.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-068.jpg"
+          },
+          {
+            "id": "kundan-pendants-69",
+            "code": "SB-C8518CE5",
+            "rawFilename": "C8518CE5-A485-49B2-94FB-1B936CC48B3F.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-069.jpg"
+          },
+          {
+            "id": "kundan-pendants-70",
+            "code": "SB-CDA80AF3",
+            "rawFilename": "CDA80AF3-1664-40DD-A13F-9A809A752260.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-070.jpg"
+          },
+          {
+            "id": "kundan-pendants-71",
+            "code": "SB-D222CCD8",
+            "rawFilename": "D222CCD8-5EC6-4045-9AA2-9A22CA58710E.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-071.jpg"
+          },
+          {
+            "id": "kundan-pendants-72",
+            "code": "SB-D2A94C99",
+            "rawFilename": "D2A94C99-9ADF-45D9-A18A-12091535D2A9.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-072.jpg"
+          },
+          {
+            "id": "kundan-pendants-73",
+            "code": "SB-D34871FF",
+            "rawFilename": "D34871FF-9C84-4D29-BEB8-BAE2DA15A4CD.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-073.jpg"
+          },
+          {
+            "id": "kundan-pendants-74",
+            "code": "SB-D409380D",
+            "rawFilename": "D409380D-2F6D-4BD6-A9C6-5EC4751F9BEF.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-074.jpg"
+          },
+          {
+            "id": "kundan-pendants-75",
+            "code": "SB-D719F769",
+            "rawFilename": "D719F769-8BEA-4470-BE4E-C10653D39933.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-075.jpg"
+          },
+          {
+            "id": "kundan-pendants-76",
+            "code": "SB-D779AF5C",
+            "rawFilename": "D779AF5C-0FB2-4F45-B283-1D04A4CE7D65.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-076.jpg"
+          },
+          {
+            "id": "kundan-pendants-77",
+            "code": "SB-D84209A9",
+            "rawFilename": "D84209A9-8553-4B54-8F3C-CB753D885B40.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-077.jpg"
+          },
+          {
+            "id": "kundan-pendants-78",
+            "code": "SB-D9324AF4",
+            "rawFilename": "D9324AF4-690D-4368-81C8-28BAD81D5324.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-078.jpg"
+          },
+          {
+            "id": "kundan-pendants-79",
+            "code": "SB-DDD9644B",
+            "rawFilename": "DDD9644B-F84D-4D5E-BE04-AB9FAA575C1E.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-079.jpg"
+          },
+          {
+            "id": "kundan-pendants-80",
+            "code": "SB-E0ED69C9",
+            "rawFilename": "E0ED69C9-672B-4FBA-946B-846237FBEF5F.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-080.jpg"
+          },
+          {
+            "id": "kundan-pendants-81",
+            "code": "SB-E297B358",
+            "rawFilename": "E297B358-6293-44DB-BA4F-5FBF529FBF9B.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-081.jpg"
+          },
+          {
+            "id": "kundan-pendants-82",
+            "code": "SB-E36FE5BD",
+            "rawFilename": "E36FE5BD-F1AD-4B08-A23B-5DD1E373A106.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-082.jpg"
+          },
+          {
+            "id": "kundan-pendants-83",
+            "code": "SB-E81DAA18",
+            "rawFilename": "E81DAA18-67FB-402E-899A-0C2A2F3EA713.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-083.jpg"
+          },
+          {
+            "id": "kundan-pendants-84",
+            "code": "SB-EBFA14E8",
+            "rawFilename": "EBFA14E8-771B-487F-928A-D290B8C7869C.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-084.jpg"
+          },
+          {
+            "id": "kundan-pendants-85",
+            "code": "SB-F5D97DB8",
+            "rawFilename": "F5D97DB8-F553-44DE-9CCF-22BD3478E889.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-085.jpg"
+          },
+          {
+            "id": "kundan-pendants-86",
+            "code": "SB-F90ABBAA",
+            "rawFilename": "F90ABBAA-14E0-4908-8664-5F8C2B9299A9.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-086.jpg"
+          },
+          {
+            "id": "kundan-pendants-87",
+            "code": "SB-FFD15397",
+            "rawFilename": "FFD15397-2CCA-4D79-AFE2-C2E31D36F817.jpg",
+            "src": "/images/catalog/kundan-pendants/kundan-pendants-087.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "rajwadi",
+        "name": "Rajwadi",
+        "description": "Royal Rajasthani Heritage & Meenakari Jewels",
+        "parentSlug": "premium-jewellery",
+        "parentName": "Premium Jewellery",
+        "coverImage": "/images/categories/cat-rajwadi.jpg",
+        "itemCount": 62,
+        "images": [
+          {
+            "id": "meenakari-earrings-1",
+            "code": "SB-001FC96B",
+            "rawFilename": "001FC96B-CD4C-4908-87CC-1FF00B611AFC.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-001.jpg"
+          },
+          {
+            "id": "meenakari-earrings-2",
+            "code": "SB-03FC5DF9",
+            "rawFilename": "03FC5DF9-5963-41C9-B04F-F2B8FC527BB0.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-002.jpg"
+          },
+          {
+            "id": "meenakari-earrings-3",
+            "code": "SB-0A057070",
+            "rawFilename": "0A057070-2E93-4935-AC16-D864E851A722.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-003.jpg"
+          },
+          {
+            "id": "meenakari-earrings-4",
+            "code": "SB-0C071266",
+            "rawFilename": "0C071266-C8CE-4864-9265-0F1307B0C08E.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-004.jpg"
+          },
+          {
+            "id": "meenakari-earrings-5",
+            "code": "SB-131BFD9F",
+            "rawFilename": "131BFD9F-E771-4E3F-AE25-874D024B09A3.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-005.jpg"
+          },
+          {
+            "id": "meenakari-earrings-6",
+            "code": "SB-14433CBA",
+            "rawFilename": "14433CBA-D881-434D-ABBD-573CAA06327A.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-006.jpg"
+          },
+          {
+            "id": "meenakari-earrings-7",
+            "code": "SB-1610CE61",
+            "rawFilename": "1610CE61-33ED-4C1B-9B7E-E4FE17167CF5.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-007.jpg"
+          },
+          {
+            "id": "meenakari-earrings-8",
+            "code": "SB-1A86D28E",
+            "rawFilename": "1A86D28E-B9C2-471C-B2B4-4FCFF1F53D56.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-008.jpg"
+          },
+          {
+            "id": "meenakari-earrings-9",
+            "code": "SB-1B6D21F3",
+            "rawFilename": "1B6D21F3-9BD6-4310-8EA7-B2684560C07F.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-009.jpg"
+          },
+          {
+            "id": "meenakari-earrings-10",
+            "code": "SB-23B083F1",
+            "rawFilename": "23B083F1-B27E-4557-BB3D-8475C30416F2.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-010.jpg"
+          },
+          {
+            "id": "meenakari-earrings-11",
+            "code": "SB-25352D68",
+            "rawFilename": "25352D68-9715-4226-B2A7-B8F89B221086.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-011.jpg"
+          },
+          {
+            "id": "meenakari-earrings-12",
+            "code": "SB-29DABC7C",
+            "rawFilename": "29DABC7C-FE99-4EC9-ABA5-1B58AFB32B0F.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-012.jpg"
+          },
+          {
+            "id": "meenakari-earrings-13",
+            "code": "SB-2A00EEC4",
+            "rawFilename": "2A00EEC4-0629-408A-854B-F1720CBAA574.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-013.jpg"
+          },
+          {
+            "id": "meenakari-earrings-14",
+            "code": "SB-30B45F7E",
+            "rawFilename": "30B45F7E-62BC-44A0-921F-3AB55267E17B.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-014.jpg"
+          },
+          {
+            "id": "meenakari-earrings-15",
+            "code": "SB-393337AC",
+            "rawFilename": "393337AC-5578-4F38-85F6-0FE0A7920609.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-015.jpg"
+          },
+          {
+            "id": "meenakari-earrings-16",
+            "code": "SB-3B2B00A5",
+            "rawFilename": "3B2B00A5-BFF6-4C24-97D2-B674F6F6E195.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-016.jpg"
+          },
+          {
+            "id": "meenakari-earrings-17",
+            "code": "SB-3DFFCB99",
+            "rawFilename": "3DFFCB99-4ABB-4870-96CC-AA0622AF07B2.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-017.jpg"
+          },
+          {
+            "id": "meenakari-earrings-18",
+            "code": "SB-4944CD0F",
+            "rawFilename": "4944CD0F-CF17-4AEA-A5B9-F3862B6EC729.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-018.jpg"
+          },
+          {
+            "id": "meenakari-earrings-19",
+            "code": "SB-4EDB25D9",
+            "rawFilename": "4EDB25D9-A1F5-4492-B45D-3CC2ECA7B578.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-019.jpg"
+          },
+          {
+            "id": "meenakari-earrings-20",
+            "code": "SB-5009BACE",
+            "rawFilename": "5009BACE-22FB-4787-BA38-9810D6A81D50.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-020.jpg"
+          },
+          {
+            "id": "meenakari-earrings-21",
+            "code": "SB-52C2616A",
+            "rawFilename": "52C2616A-5B2D-4FE3-9C0C-7691406D7A57.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-021.jpg"
+          },
+          {
+            "id": "meenakari-earrings-22",
+            "code": "SB-533C5469",
+            "rawFilename": "533C5469-6015-4F85-9A2E-9BFB88BD2244.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-022.jpg"
+          },
+          {
+            "id": "meenakari-earrings-23",
+            "code": "SB-534B16E9",
+            "rawFilename": "534B16E9-9C79-4AB5-BF3F-B1CA022A48B9.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-023.jpg"
+          },
+          {
+            "id": "meenakari-earrings-24",
+            "code": "SB-5D86045C",
+            "rawFilename": "5D86045C-889A-4F29-ABDE-66A6D4C867FB.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-024.jpg"
+          },
+          {
+            "id": "meenakari-earrings-25",
+            "code": "SB-637BF0F5",
+            "rawFilename": "637BF0F5-A9C5-46F1-A1CF-BF5F1EFB6892.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-025.jpg"
+          },
+          {
+            "id": "meenakari-earrings-26",
+            "code": "SB-6436AE94",
+            "rawFilename": "6436AE94-AA45-4E69-A053-6146A5D009BC.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-026.jpg"
+          },
+          {
+            "id": "meenakari-earrings-27",
+            "code": "SB-7215AAEE",
+            "rawFilename": "7215AAEE-A3CF-40EE-9A4B-F5E488A1207F.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-027.jpg"
+          },
+          {
+            "id": "meenakari-earrings-28",
+            "code": "SB-725858F2",
+            "rawFilename": "725858F2-84CD-4006-BB64-53269CC75094.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-028.jpg"
+          },
+          {
+            "id": "meenakari-earrings-29",
+            "code": "SB-727DA4A0",
+            "rawFilename": "727DA4A0-CB95-4FF7-BA3A-86F263FAA71A.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-029.jpg"
+          },
+          {
+            "id": "meenakari-earrings-30",
+            "code": "SB-7F4DE3E1",
+            "rawFilename": "7F4DE3E1-5396-4FAA-8BF1-1B63FF5F78D8.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-030.jpg"
+          },
+          {
+            "id": "meenakari-earrings-31",
+            "code": "SB-850D1438",
+            "rawFilename": "850D1438-8698-48A4-8EFF-2AFC0A591E35.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-031.jpg"
+          },
+          {
+            "id": "meenakari-earrings-32",
+            "code": "SB-85DF2C1C",
+            "rawFilename": "85DF2C1C-CA9C-4C6C-9937-C632D14107DA.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-032.jpg"
+          },
+          {
+            "id": "meenakari-earrings-33",
+            "code": "SB-8638F4BB",
+            "rawFilename": "8638F4BB-CE6D-4467-B67C-0A85B6CCA503.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-033.jpg"
+          },
+          {
+            "id": "meenakari-earrings-34",
+            "code": "SB-8B9A15BB",
+            "rawFilename": "8B9A15BB-89DC-4EE3-8B11-A0AFC44D3E30.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-034.jpg"
+          },
+          {
+            "id": "meenakari-earrings-35",
+            "code": "SB-8F7963AC",
+            "rawFilename": "8F7963AC-758C-4E6D-BB88-19DD0B5403F0.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-035.jpg"
+          },
+          {
+            "id": "meenakari-earrings-36",
+            "code": "SB-974A23A3",
+            "rawFilename": "974A23A3-C466-4C09-BE41-EA9B2A7198D5.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-036.jpg"
+          },
+          {
+            "id": "meenakari-earrings-37",
+            "code": "SB-98E0B837",
+            "rawFilename": "98E0B837-E9D1-4F86-A2D0-007B43795630.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-037.jpg"
+          },
+          {
+            "id": "meenakari-earrings-38",
+            "code": "SB-A2B15AB8",
+            "rawFilename": "A2B15AB8-BCEA-4DC3-8E0B-4902BE99EEA8.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-038.jpg"
+          },
+          {
+            "id": "meenakari-earrings-39",
+            "code": "SB-A714A5CC",
+            "rawFilename": "A714A5CC-F0B0-44B7-9589-BE4BA14D7BAF.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-039.jpg"
+          },
+          {
+            "id": "meenakari-earrings-40",
+            "code": "SB-ABD92161",
+            "rawFilename": "ABD92161-3964-4049-BC19-483C44180CFE.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-040.jpg"
+          },
+          {
+            "id": "meenakari-earrings-41",
+            "code": "SB-ABE1DF27",
+            "rawFilename": "ABE1DF27-BD62-40D0-BFE5-8BE84CA9CC17.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-041.jpg"
+          },
+          {
+            "id": "meenakari-earrings-42",
+            "code": "SB-ACF5B6B0",
+            "rawFilename": "ACF5B6B0-15B3-40C5-B4EF-73B725F50E7A.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-042.jpg"
+          },
+          {
+            "id": "meenakari-earrings-43",
+            "code": "SB-AFA27497",
+            "rawFilename": "AFA27497-8A72-4FAD-B0AE-2C412A357A56.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-043.jpg"
+          },
+          {
+            "id": "meenakari-earrings-44",
+            "code": "SB-B07ACC39",
+            "rawFilename": "B07ACC39-A403-4054-A36E-DA3F44FA131E.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-044.jpg"
+          },
+          {
+            "id": "meenakari-earrings-45",
+            "code": "SB-B78D5CC6",
+            "rawFilename": "B78D5CC6-0DCA-4EAA-A6CF-D2FD75BA1D20.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-045.jpg"
+          },
+          {
+            "id": "meenakari-earrings-46",
+            "code": "SB-BE12D719",
+            "rawFilename": "BE12D719-2B08-4A04-BCB7-FF6199897902.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-046.jpg"
+          },
+          {
+            "id": "meenakari-earrings-47",
+            "code": "SB-C2A21A89",
+            "rawFilename": "C2A21A89-27D1-44D9-A97B-0998CEC7CAD2.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-047.jpg"
+          },
+          {
+            "id": "meenakari-earrings-48",
+            "code": "SB-C352ACD0",
+            "rawFilename": "C352ACD0-C5E1-4D9A-84A7-01EE2E7F04C4.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-048.jpg"
+          },
+          {
+            "id": "meenakari-earrings-49",
+            "code": "SB-C376F4DB",
+            "rawFilename": "C376F4DB-6E66-45CC-8D24-58FDE1DA5AC3.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-049.jpg"
+          },
+          {
+            "id": "meenakari-earrings-50",
+            "code": "SB-C7684C4E",
+            "rawFilename": "C7684C4E-1FFE-4069-9CC1-C4FED490B6A1.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-050.jpg"
+          },
+          {
+            "id": "meenakari-earrings-51",
+            "code": "SB-CAE31E16",
+            "rawFilename": "CAE31E16-FCEB-47BC-9FEB-484D8E574BD5.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-051.jpg"
+          },
+          {
+            "id": "meenakari-earrings-52",
+            "code": "SB-CB29AB2E",
+            "rawFilename": "CB29AB2E-781D-4578-B300-B841694BB213.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-052.jpg"
+          },
+          {
+            "id": "meenakari-earrings-53",
+            "code": "SB-DCDF28B0",
+            "rawFilename": "DCDF28B0-58FC-4DB2-8A7A-3E403C26467E.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-053.jpg"
+          },
+          {
+            "id": "meenakari-earrings-54",
+            "code": "SB-DE21F5D2",
+            "rawFilename": "DE21F5D2-54DE-452D-B500-3E19BFC52A82.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-054.jpg"
+          },
+          {
+            "id": "meenakari-earrings-55",
+            "code": "SB-DF750C76",
+            "rawFilename": "DF750C76-200E-4C17-B831-64AB0A42DE4C.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-055.jpg"
+          },
+          {
+            "id": "meenakari-earrings-56",
+            "code": "SB-EC7657FB",
+            "rawFilename": "EC7657FB-6340-4762-AEA1-5DF39708B2BB.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-056.jpg"
+          },
+          {
+            "id": "meenakari-earrings-57",
+            "code": "SB-EDD84BB8",
+            "rawFilename": "EDD84BB8-3513-4226-B7B8-75506FB09680.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-057.jpg"
+          },
+          {
+            "id": "meenakari-earrings-58",
+            "code": "SB-F015B80D",
+            "rawFilename": "F015B80D-F879-4AAC-910C-CFA17A83AC33.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-058.jpg"
+          },
+          {
+            "id": "meenakari-earrings-59",
+            "code": "SB-F2323AB6",
+            "rawFilename": "F2323AB6-112F-4206-9475-6CB70C2760F2.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-059.jpg"
+          },
+          {
+            "id": "meenakari-earrings-60",
+            "code": "SB-FCDB3961",
+            "rawFilename": "FCDB3961-3C54-4921-A02F-85551812FC6F.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-060.jpg"
+          },
+          {
+            "id": "meenakari-earrings-61",
+            "code": "SB-FCDC7AE9",
+            "rawFilename": "FCDC7AE9-8DF9-46EC-A34F-51EDBD8E2561.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-061.jpg"
+          },
+          {
+            "id": "meenakari-earrings-62",
+            "code": "SB-FE0C06A9",
+            "rawFilename": "FE0C06A9-5969-4BF0-90BC-544590A7D11D.jpg",
+            "src": "/images/catalog/earrings/meenakari-earrings/meenakari-earrings-062.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "new-arrivals",
+        "name": "New Arrivals",
+        "description": "Freshly Crafted Exclusive Jewellery Designs",
+        "parentSlug": "premium-jewellery",
+        "parentName": "Premium Jewellery",
+        "coverImage": "/images/categories/cat-new-arrivals.jpg",
+        "itemCount": 36,
+        "images": [
+          {
+            "id": "delicate-ethnic-necklace-1",
+            "code": "SB-05403835",
+            "rawFilename": "05403835-509A-4FC3-A1A1-7721ECDCFD55.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-001.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-2",
+            "code": "SB-062ED2AE",
+            "rawFilename": "062ED2AE-A40D-4019-9215-0A519A021D5A.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-002.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-3",
+            "code": "SB-0B9603AF",
+            "rawFilename": "0B9603AF-9BA9-47F2-A389-1AA4CE21485B.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-003.jpg"
+          },
+          {
+            "id": "delicate-ethnic-necklace-4",
+            "code": "SB-0FF452C8",
+            "rawFilename": "0FF452C8-568B-4F78-9C14-46815A6431C0.jpg",
+            "src": "/images/catalog/necklaces/delicate-ethnic-necklace/delicate-ethnic-necklace-004.jpg"
+          },
+          {
+            "id": "kundan-choker-1",
+            "code": "SB-01E02AB3",
+            "rawFilename": "01E02AB3-BD4E-4157-BEF5-B7C2F7E20E88.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-001.jpg"
+          },
+          {
+            "id": "kundan-choker-2",
+            "code": "SB-088AE405",
+            "rawFilename": "088AE405-DBF3-4A3B-AEBA-CC31DE41E924.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-002.jpg"
+          },
+          {
+            "id": "kundan-choker-3",
+            "code": "SB-25C6972D",
+            "rawFilename": "25C6972D-5048-4F3D-998B-67BD1A50FD14.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-003.jpg"
+          },
+          {
+            "id": "kundan-choker-4",
+            "code": "SB-2EFCBC85",
+            "rawFilename": "2EFCBC85-B43E-43DA-9D1B-0C8276568989.jpg",
+            "src": "/images/catalog/necklaces/kundan-choker/kundan-choker-004.jpg"
+          },
+          {
+            "id": "mop-sets-1",
+            "code": "SB-000E5E31",
+            "rawFilename": "000E5E31-73F4-4152-B4FD-177080A60CC9.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-001.jpg"
+          },
+          {
+            "id": "mop-sets-2",
+            "code": "SB-202BD283",
+            "rawFilename": "202BD283-034C-4125-9498-9A00FC19F5CF.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-002.jpg"
+          },
+          {
+            "id": "mop-sets-3",
+            "code": "SB-229BE8BB",
+            "rawFilename": "229BE8BB-CEE2-42F1-B738-E26542E2684B.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-003.jpg"
+          },
+          {
+            "id": "mop-sets-4",
+            "code": "SB-3BAE284B",
+            "rawFilename": "3BAE284B-8229-4A6B-A01C-6701ED7041A4.jpg",
+            "src": "/images/catalog/necklaces/mop-sets/mop-sets-004.jpg"
+          },
+          {
+            "id": "party-wear-necklace-1",
+            "code": "SB-088AE405",
+            "rawFilename": "088AE405-DBF3-4A3B-AEBA-CC31DE41E924.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-001.jpg"
+          },
+          {
+            "id": "party-wear-necklace-2",
+            "code": "SB-1B9936B7",
+            "rawFilename": "1B9936B7-F6EC-4562-B5DB-57703B89543C.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-002.jpg"
+          },
+          {
+            "id": "party-wear-necklace-3",
+            "code": "SB-34216B8E",
+            "rawFilename": "34216B8E-A838-4BAA-902F-5E42BDF47862.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-003.jpg"
+          },
+          {
+            "id": "party-wear-necklace-4",
+            "code": "SB-37B32CFB",
+            "rawFilename": "37B32CFB-DD39-47DA-AFA4-B43E5DBBC2FA.jpg",
+            "src": "/images/catalog/necklaces/party-wear-necklace/party-wear-necklace-004.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-1",
+            "code": "SB-0104827B",
+            "rawFilename": "0104827B-9925-4D30-B2BA-89846644BEE5.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-001.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-2",
+            "code": "SB-03A573E9",
+            "rawFilename": "03A573E9-3C2B-4548-8792-F52CFF9677CF.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-002.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-3",
+            "code": "SB-0501169E",
+            "rawFilename": "0501169E-1CD1-42E6-AEF9-2DA1D13A8908.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-003.jpg"
+          },
+          {
+            "id": "sabyasachi-inspired-necklace-4",
+            "code": "SB-08D3AB2C",
+            "rawFilename": "08D3AB2C-0475-47DB-97AB-F2338AE87345.jpg",
+            "src": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-004.jpg"
+          },
+          {
+            "id": "victoria-necklace-1",
+            "code": "SB-01E02AB3",
+            "rawFilename": "01E02AB3-BD4E-4157-BEF5-B7C2F7E20E88.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-001.jpg"
+          },
+          {
+            "id": "victoria-necklace-2",
+            "code": "SB-05AE79CB",
+            "rawFilename": "05AE79CB-F59E-4502-8082-DFC410373F73.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-002.jpg"
+          },
+          {
+            "id": "victoria-necklace-3",
+            "code": "SB-09D1350F",
+            "rawFilename": "09D1350F-0E06-4F59-A6C4-944418CF36C9.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-003.jpg"
+          },
+          {
+            "id": "victoria-necklace-4",
+            "code": "SB-14FD25BD",
+            "rawFilename": "14FD25BD-A0E0-4C9E-AAFA-BAE4011DD62C.jpg",
+            "src": "/images/catalog/necklaces/victoria-necklace/victoria-necklace-004.jpg"
+          },
+          {
+            "id": "victorian-earrings-1",
+            "code": "SB-00D0C53F",
+            "rawFilename": "00D0C53F-7899-4A6C-9854-A4ACC4F37FBD.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-001.jpg"
+          },
+          {
+            "id": "victorian-earrings-2",
+            "code": "SB-02C5A52D",
+            "rawFilename": "02C5A52D-E06E-4B10-8270-BD51C5EEFF11.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-002.jpg"
+          },
+          {
+            "id": "victorian-earrings-3",
+            "code": "SB-04A6FCE8",
+            "rawFilename": "04A6FCE8-FBB4-464D-BFA7-E94BB6957B72.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-003.jpg"
+          },
+          {
+            "id": "victorian-earrings-4",
+            "code": "SB-0652F93F",
+            "rawFilename": "0652F93F-CE14-44FE-965F-4A0B852173A1.jpg",
+            "src": "/images/catalog/earrings/victorian-earrings/victorian-earrings-004.jpg"
+          },
+          {
+            "id": "american-diamond-earrings-1",
+            "code": "SB-450D7AF5",
+            "rawFilename": "450D7AF5-7C64-4E02-8A4C-0BC837DF4B1F.jpg",
+            "src": "/images/catalog/earrings/american-diamond-earrings/american-diamond-earrings-001.jpg"
+          },
+          {
+            "id": "american-diamond-earrings-2",
+            "code": "SB-6E4C2B8C",
+            "rawFilename": "6E4C2B8C-E88B-4B00-8BBF-EE044E6476EC.jpg",
+            "src": "/images/catalog/earrings/american-diamond-earrings/american-diamond-earrings-002.jpg"
+          },
+          {
+            "id": "american-diamond-earrings-3",
+            "code": "SB-91E00CA0",
+            "rawFilename": "91E00CA0-16D2-4141-B546-EA6A6E0C65EC.jpg",
+            "src": "/images/catalog/earrings/american-diamond-earrings/american-diamond-earrings-003.jpg"
+          },
+          {
+            "id": "american-diamond-earrings-4",
+            "code": "SB-AA7E0C48",
+            "rawFilename": "AA7E0C48-041D-4C83-A5B4-7D6D7EADD6E3.jpg",
+            "src": "/images/catalog/earrings/american-diamond-earrings/american-diamond-earrings-004.jpg"
+          },
+          {
+            "id": "mother-of-pearl-1",
+            "code": "SB-016B31DF",
+            "rawFilename": "016B31DF-AF26-4EF1-BC59-1F916ACD07C3.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-001.jpg"
+          },
+          {
+            "id": "mother-of-pearl-2",
+            "code": "SB-04BCDCF8",
+            "rawFilename": "04BCDCF8-F771-41F4-B136-66D9EA66D921.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-002.jpg"
+          },
+          {
+            "id": "mother-of-pearl-3",
+            "code": "SB-0F6560F6",
+            "rawFilename": "0F6560F6-65D3-4160-9A6A-6AEA865BE38C.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-003.jpg"
+          },
+          {
+            "id": "mother-of-pearl-4",
+            "code": "SB-1CFD3EF4",
+            "rawFilename": "1CFD3EF4-F270-44B2-9489-19451BB00328.jpg",
+            "src": "/images/catalog/earrings/mother-of-pearl/mother-of-pearl-004.jpg"
+          }
+        ]
+      },
       {
         "slug": "delicate-ethnic-necklace",
         "name": "Delicate Ethnic Necklaces",
@@ -1967,15 +3110,176 @@
     "description": "Everyday trending oxidised brass, daily wear earrings, meenakari, and antique collections.",
     "hasSubcategories": true,
     "coverImage": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-001.jpg",
-    "totalItems": 297,
+    "totalItems": 308,
     "subcategories": [
       {
+        "slug": "kundan-studs",
+        "name": "Studs",
+        "description": "Elegant Kundan Floral and Geometric Ear Studs",
+        "parentSlug": "normal-jewellery",
+        "parentName": "Normal Jewellery",
+        "coverImage": "/images/categories/cat-studs.jpg",
+        "itemCount": 25,
+        "images": [
+          {
+            "id": "kundan-studs-1",
+            "code": "SB-0181F684",
+            "rawFilename": "0181F684-D1E3-47A9-8532-A997E3BC5B84.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-001.jpg"
+          },
+          {
+            "id": "kundan-studs-2",
+            "code": "SB-027D9101",
+            "rawFilename": "027D9101-60AA-4172-B406-9F07B1B02842.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-002.jpg"
+          },
+          {
+            "id": "kundan-studs-3",
+            "code": "SB-052487CA",
+            "rawFilename": "052487CA-762E-4452-ADF4-5AE91B0C6C63.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-003.jpg"
+          },
+          {
+            "id": "kundan-studs-4",
+            "code": "SB-052D7309",
+            "rawFilename": "052D7309-9C92-4182-9E7B-798007C386C4.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-004.jpg"
+          },
+          {
+            "id": "kundan-studs-5",
+            "code": "SB-14383030",
+            "rawFilename": "14383030-F889-4E1D-A913-A316DA6E7D3B.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-005.jpg"
+          },
+          {
+            "id": "kundan-studs-6",
+            "code": "SB-2712CF9C",
+            "rawFilename": "2712CF9C-FC63-4EEF-9997-AF7FC4465734.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-006.jpg"
+          },
+          {
+            "id": "kundan-studs-7",
+            "code": "SB-2816F3D7",
+            "rawFilename": "2816F3D7-6843-4163-8775-E4F9FE8DCDA2.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-007.jpg"
+          },
+          {
+            "id": "kundan-studs-8",
+            "code": "SB-5118FE4A",
+            "rawFilename": "5118FE4A-990C-45F0-A40E-691207352377.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-008.jpg"
+          },
+          {
+            "id": "kundan-studs-9",
+            "code": "SB-5928B082",
+            "rawFilename": "5928B082-2DC1-4EF7-AD75-A9D8B9FDAF6A.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-009.jpg"
+          },
+          {
+            "id": "kundan-studs-10",
+            "code": "SB-5A5AF419",
+            "rawFilename": "5A5AF419-89FF-4C24-A898-219F95D4C3A4.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-010.jpg"
+          },
+          {
+            "id": "kundan-studs-11",
+            "code": "SB-5B5B5847",
+            "rawFilename": "5B5B5847-9850-42DF-B5CD-1AD93EAF243E.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-011.jpg"
+          },
+          {
+            "id": "kundan-studs-12",
+            "code": "SB-6119F264",
+            "rawFilename": "6119F264-6ACB-4FE9-9FBD-2B505B4E09B7.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-012.jpg"
+          },
+          {
+            "id": "kundan-studs-13",
+            "code": "SB-72338E86",
+            "rawFilename": "72338E86-1AC5-4288-B58F-31424ABDCACC.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-013.jpg"
+          },
+          {
+            "id": "kundan-studs-14",
+            "code": "SB-9EF90F50",
+            "rawFilename": "9EF90F50-1A3C-419B-B8EC-4367A1B81EEB.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-014.jpg"
+          },
+          {
+            "id": "kundan-studs-15",
+            "code": "SB-A1C61795",
+            "rawFilename": "A1C61795-976B-4CB7-955E-12469870E1E9.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-015.jpg"
+          },
+          {
+            "id": "kundan-studs-16",
+            "code": "SB-A3F8692C",
+            "rawFilename": "A3F8692C-36AF-4A72-A4F0-B8379BF39DE8.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-016.jpg"
+          },
+          {
+            "id": "kundan-studs-17",
+            "code": "SB-ACE25257",
+            "rawFilename": "ACE25257-3B07-46B1-8E38-74D32EACF585.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-017.jpg"
+          },
+          {
+            "id": "kundan-studs-18",
+            "code": "SB-AF9CC997",
+            "rawFilename": "AF9CC997-B044-4283-88E6-0D8EA805D220.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-018.jpg"
+          },
+          {
+            "id": "kundan-studs-19",
+            "code": "SB-B2F0FDDB",
+            "rawFilename": "B2F0FDDB-4F89-4CC9-9F80-3EABA443C2E7.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-019.jpg"
+          },
+          {
+            "id": "kundan-studs-20",
+            "code": "SB-C429FABC",
+            "rawFilename": "C429FABC-374F-4BC7-85C9-DC3B530CF4E1.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-020.jpg"
+          },
+          {
+            "id": "kundan-studs-21",
+            "code": "SB-C86BC5EB",
+            "rawFilename": "C86BC5EB-5646-4E51-970B-1E200E84C166.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-021.jpg"
+          },
+          {
+            "id": "kundan-studs-22",
+            "code": "SB-D8132267",
+            "rawFilename": "D8132267-359A-4F7B-AE12-C6A9B6CDE44E.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-022.jpg"
+          },
+          {
+            "id": "kundan-studs-23",
+            "code": "SB-DC5EA0C9",
+            "rawFilename": "DC5EA0C9-76D0-4EE2-96B5-FBFDD8197B86.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-023.jpg"
+          },
+          {
+            "id": "kundan-studs-24",
+            "code": "SB-F0177878",
+            "rawFilename": "F0177878-E3EA-4B9E-9097-A028E027C500.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-024.jpg"
+          },
+          {
+            "id": "kundan-studs-25",
+            "code": "SB-FC9E1F52",
+            "rawFilename": "FC9E1F52-ADD9-4342-A953-925735B4E023.jpg",
+            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-025.jpg"
+          }
+        ]
+      },
+      {
         "slug": "daily-wear-oxydised-earrings",
-        "name": "Daily Wear Oxidised Earrings",
+        "name": "Anti Tarnish",
         "description": "Lightweight Antique Silver & Black Metal Jhumkas and Tops",
         "parentSlug": "normal-jewellery",
         "parentName": "Normal Jewellery",
-        "coverImage": "/images/catalog/earrings/daily-wear-oxydised-earrings/daily-wear-oxydised-earrings-001.jpg",
+        "coverImage": "/images/categories/cat-anti-tarnish.jpg",
         "itemCount": 54,
         "images": [
           {
@@ -2305,6 +3609,83 @@
         ]
       },
       {
+        "slug": "ear-chain",
+        "name": "Ear-Chain",
+        "description": "Traditional & Contemporary Kan-Chain Accessories",
+        "parentSlug": "normal-jewellery",
+        "parentName": "Normal Jewellery",
+        "coverImage": "/images/categories/cat-ear-chain.jpg",
+        "itemCount": 11,
+        "images": [
+          {
+            "id": "kanchain-1",
+            "code": "SB-12ADAFAC",
+            "rawFilename": "12ADAFAC-DF41-4264-9D4E-C44B6405525E.jpg",
+            "src": "/images/catalog/kanchain/kanchain-001.jpg"
+          },
+          {
+            "id": "kanchain-2",
+            "code": "SB-27A44322",
+            "rawFilename": "27A44322-5FCF-481F-9575-17866F9198DF.jpg",
+            "src": "/images/catalog/kanchain/kanchain-002.jpg"
+          },
+          {
+            "id": "kanchain-3",
+            "code": "SB-90C3E808",
+            "rawFilename": "90C3E808-E8B5-4A37-AF73-A95453605C16.jpg",
+            "src": "/images/catalog/kanchain/kanchain-003.jpg"
+          },
+          {
+            "id": "kanchain-4",
+            "code": "SB-92BE57D7",
+            "rawFilename": "92BE57D7-AADD-4C91-B4C3-74E79D491E41.jpg",
+            "src": "/images/catalog/kanchain/kanchain-004.jpg"
+          },
+          {
+            "id": "kanchain-5",
+            "code": "SB-92F8220D",
+            "rawFilename": "92F8220D-7216-48DA-A1A9-6F166C0DDDFE.jpg",
+            "src": "/images/catalog/kanchain/kanchain-005.jpg"
+          },
+          {
+            "id": "kanchain-6",
+            "code": "SB-9F0AAB6B",
+            "rawFilename": "9F0AAB6B-BC98-495E-A234-47EF9D8933D9.jpg",
+            "src": "/images/catalog/kanchain/kanchain-006.jpg"
+          },
+          {
+            "id": "kanchain-7",
+            "code": "SB-B418C7C9",
+            "rawFilename": "B418C7C9-48DF-417B-BED3-031FD955F2C7.jpg",
+            "src": "/images/catalog/kanchain/kanchain-007.jpg"
+          },
+          {
+            "id": "kanchain-8",
+            "code": "SB-B6E4C896",
+            "rawFilename": "B6E4C896-F3BF-4843-9C71-35E3749DE003.jpg",
+            "src": "/images/catalog/kanchain/kanchain-008.jpg"
+          },
+          {
+            "id": "kanchain-9",
+            "code": "SB-B9E3B28F",
+            "rawFilename": "B9E3B28F-A968-4B8A-A368-6A0AE1EDE1F2.jpg",
+            "src": "/images/catalog/kanchain/kanchain-009.jpg"
+          },
+          {
+            "id": "kanchain-10",
+            "code": "SB-E7326505",
+            "rawFilename": "E7326505-6CCE-42C4-8D45-2C4512997A39.jpg",
+            "src": "/images/catalog/kanchain/kanchain-010.jpg"
+          },
+          {
+            "id": "kanchain-11",
+            "code": "SB-F3FB9128",
+            "rawFilename": "F3FB9128-5E29-4211-A593-6A838AE8A05D.jpg",
+            "src": "/images/catalog/kanchain/kanchain-011.jpg"
+          }
+        ]
+      },
+      {
         "slug": "kashmiri-earrings",
         "name": "Kashmiri Earrings",
         "description": "Authentic Kashmiri Hanging Jhumkis with Pearl Drops",
@@ -2564,167 +3945,6 @@
             "code": "SB-EF30751A",
             "rawFilename": "EF30751A-F077-4EA6-B0E5-44351879D896.jpg",
             "src": "/images/catalog/earrings/kashmiri-earrings/kashmiri-earrings-042.jpg"
-          }
-        ]
-      },
-      {
-        "slug": "kundan-studs",
-        "name": "Kundan Studs & Tops",
-        "description": "Elegant Kundan Floral and Geometric Ear Studs",
-        "parentSlug": "normal-jewellery",
-        "parentName": "Normal Jewellery",
-        "coverImage": "/images/catalog/earrings/kundan-studs/kundan-studs-001.jpg",
-        "itemCount": 25,
-        "images": [
-          {
-            "id": "kundan-studs-1",
-            "code": "SB-0181F684",
-            "rawFilename": "0181F684-D1E3-47A9-8532-A997E3BC5B84.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-001.jpg"
-          },
-          {
-            "id": "kundan-studs-2",
-            "code": "SB-027D9101",
-            "rawFilename": "027D9101-60AA-4172-B406-9F07B1B02842.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-002.jpg"
-          },
-          {
-            "id": "kundan-studs-3",
-            "code": "SB-052487CA",
-            "rawFilename": "052487CA-762E-4452-ADF4-5AE91B0C6C63.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-003.jpg"
-          },
-          {
-            "id": "kundan-studs-4",
-            "code": "SB-052D7309",
-            "rawFilename": "052D7309-9C92-4182-9E7B-798007C386C4.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-004.jpg"
-          },
-          {
-            "id": "kundan-studs-5",
-            "code": "SB-14383030",
-            "rawFilename": "14383030-F889-4E1D-A913-A316DA6E7D3B.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-005.jpg"
-          },
-          {
-            "id": "kundan-studs-6",
-            "code": "SB-2712CF9C",
-            "rawFilename": "2712CF9C-FC63-4EEF-9997-AF7FC4465734.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-006.jpg"
-          },
-          {
-            "id": "kundan-studs-7",
-            "code": "SB-2816F3D7",
-            "rawFilename": "2816F3D7-6843-4163-8775-E4F9FE8DCDA2.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-007.jpg"
-          },
-          {
-            "id": "kundan-studs-8",
-            "code": "SB-5118FE4A",
-            "rawFilename": "5118FE4A-990C-45F0-A40E-691207352377.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-008.jpg"
-          },
-          {
-            "id": "kundan-studs-9",
-            "code": "SB-5928B082",
-            "rawFilename": "5928B082-2DC1-4EF7-AD75-A9D8B9FDAF6A.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-009.jpg"
-          },
-          {
-            "id": "kundan-studs-10",
-            "code": "SB-5A5AF419",
-            "rawFilename": "5A5AF419-89FF-4C24-A898-219F95D4C3A4.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-010.jpg"
-          },
-          {
-            "id": "kundan-studs-11",
-            "code": "SB-5B5B5847",
-            "rawFilename": "5B5B5847-9850-42DF-B5CD-1AD93EAF243E.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-011.jpg"
-          },
-          {
-            "id": "kundan-studs-12",
-            "code": "SB-6119F264",
-            "rawFilename": "6119F264-6ACB-4FE9-9FBD-2B505B4E09B7.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-012.jpg"
-          },
-          {
-            "id": "kundan-studs-13",
-            "code": "SB-72338E86",
-            "rawFilename": "72338E86-1AC5-4288-B58F-31424ABDCACC.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-013.jpg"
-          },
-          {
-            "id": "kundan-studs-14",
-            "code": "SB-9EF90F50",
-            "rawFilename": "9EF90F50-1A3C-419B-B8EC-4367A1B81EEB.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-014.jpg"
-          },
-          {
-            "id": "kundan-studs-15",
-            "code": "SB-A1C61795",
-            "rawFilename": "A1C61795-976B-4CB7-955E-12469870E1E9.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-015.jpg"
-          },
-          {
-            "id": "kundan-studs-16",
-            "code": "SB-A3F8692C",
-            "rawFilename": "A3F8692C-36AF-4A72-A4F0-B8379BF39DE8.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-016.jpg"
-          },
-          {
-            "id": "kundan-studs-17",
-            "code": "SB-ACE25257",
-            "rawFilename": "ACE25257-3B07-46B1-8E38-74D32EACF585.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-017.jpg"
-          },
-          {
-            "id": "kundan-studs-18",
-            "code": "SB-AF9CC997",
-            "rawFilename": "AF9CC997-B044-4283-88E6-0D8EA805D220.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-018.jpg"
-          },
-          {
-            "id": "kundan-studs-19",
-            "code": "SB-B2F0FDDB",
-            "rawFilename": "B2F0FDDB-4F89-4CC9-9F80-3EABA443C2E7.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-019.jpg"
-          },
-          {
-            "id": "kundan-studs-20",
-            "code": "SB-C429FABC",
-            "rawFilename": "C429FABC-374F-4BC7-85C9-DC3B530CF4E1.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-020.jpg"
-          },
-          {
-            "id": "kundan-studs-21",
-            "code": "SB-C86BC5EB",
-            "rawFilename": "C86BC5EB-5646-4E51-970B-1E200E84C166.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-021.jpg"
-          },
-          {
-            "id": "kundan-studs-22",
-            "code": "SB-D8132267",
-            "rawFilename": "D8132267-359A-4F7B-AE12-C6A9B6CDE44E.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-022.jpg"
-          },
-          {
-            "id": "kundan-studs-23",
-            "code": "SB-DC5EA0C9",
-            "rawFilename": "DC5EA0C9-76D0-4EE2-96B5-FBFDD8197B86.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-023.jpg"
-          },
-          {
-            "id": "kundan-studs-24",
-            "code": "SB-F0177878",
-            "rawFilename": "F0177878-E3EA-4B9E-9097-A028E027C500.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-024.jpg"
-          },
-          {
-            "id": "kundan-studs-25",
-            "code": "SB-FC9E1F52",
-            "rawFilename": "FC9E1F52-ADD9-4342-A953-925735B4E023.jpg",
-            "src": "/images/catalog/earrings/kundan-studs/kundan-studs-025.jpg"
           }
         ]
       },

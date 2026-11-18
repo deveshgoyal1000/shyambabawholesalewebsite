@@ -49,7 +49,7 @@
       "type": "ShopByCategoriesBlock",
       "props": {
         "id": "categories-block",
-        "heading": "Shop By Categories",
+        "heading": "Explore Catalog",
         "subheading": "Explore our premium brass jewellery collections",
         "categories": [
           {
@@ -61,36 +61,6 @@
             "title": "Normal Jewellery",
             "slug": "normal-jewellery",
             "image": "/images/categories/cat-normal-jewellery.jpg"
-          },
-          {
-            "title": "Studs",
-            "slug": "studs",
-            "image": "/images/categories/cat-studs.jpg"
-          },
-          {
-            "title": "Kundan",
-            "slug": "kundan-earrings",
-            "image": "/images/categories/cat-kundan.jpg"
-          },
-          {
-            "title": "Rajwadi",
-            "slug": "rajwadi",
-            "image": "/images/categories/cat-rajwadi.jpg"
-          },
-          {
-            "title": "Ear-Chain",
-            "slug": "ear-chain",
-            "image": "/images/categories/cat-ear-chain.jpg"
-          },
-          {
-            "title": "Anti Tarnish",
-            "slug": "anti-tarnish",
-            "image": "/images/categories/cat-anti-tarnish.jpg"
-          },
-          {
-            "title": "New Arrivals",
-            "slug": "new-arrivals",
-            "image": "/images/categories/cat-new-arrivals.jpg"
           }
         ]
       }

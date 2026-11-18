@@ -44,83 +44,86 @@ export default function Footer() {
           Style In Bulk, Profit In Every Piece
         </p>
 
-        {/* Navigation & Contact Columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-xs sm:text-sm">
-          {/* Column 1: Quick Links */}
-          <div>
-            <h4 className="font-bold text-sm sm:text-base text-white mb-3">Quick Links</h4>
-            <ul className="space-y-2.5 text-white/90">
-              <li>
-                <Link href="/#about" className="hover:text-white hover:underline transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/#faq" className="hover:text-white hover:underline transition-colors">
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20book%20a%20live%20video%20call%20for%20wholesale%20selection"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white hover:underline transition-colors"
-                >
-                  Book a Video Call
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://chat.whatsapp.com/H1jvdlP82xuLcoAl6TlRm3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white hover:underline transition-colors"
-                >
-                  Daily Updates WhatsApp Group
-                </a>
-              </li>
-            </ul>
+        {/* Navigation & Contact Columns: 2 Columns on Mobile, 3 Columns on Desktop */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-8 sm:gap-8 text-xs sm:text-sm">
+          {/* Left Column on Mobile / Col 1 & 2 on Desktop */}
+          <div className="space-y-7 md:space-y-0 md:contents">
+            {/* Quick Links */}
+            <div>
+              <h4 className="font-bold text-sm sm:text-base text-white mb-3">Quick Links</h4>
+              <ul className="space-y-2.5 text-white/90">
+                <li>
+                  <Link href="/#about" className="hover:text-white hover:underline transition-colors">
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#faq" className="hover:text-white hover:underline transition-colors">
+                    FAQ
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20book%20a%20live%20video%20call%20for%20wholesale%20selection"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white hover:underline transition-colors"
+                  >
+                    Book a Video Call
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://chat.whatsapp.com/H1jvdlP82xuLcoAl6TlRm3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white hover:underline transition-colors"
+                  >
+                    Daily Updates WhatsApp Group
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Connect With Us */}
+            <div>
+              <h4 className="font-bold text-sm sm:text-base text-white mb-3">Connect With Us</h4>
+              <ul className="space-y-2.5 text-white/90">
+                <li>
+                  <a
+                    href="https://www.instagram.com/shreeshyambabajewellers/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white hover:underline transition-colors"
+                  >
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://maps.app.goo.gl/61ARaZmn6tniBYQS6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white hover:underline transition-colors"
+                  >
+                    Google Map
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://wa.me/919680865791?text=Hello%20Shyambaba%20Wholesale%2C%20I%20have%20an%20inquiry%20regarding%20wholesale%20jewellery."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white hover:underline transition-colors"
+                  >
+                    WhatsApp Direct Chat
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          {/* Column 2: Connect With Us */}
-          <div>
-            <h4 className="font-bold text-sm sm:text-base text-white mb-3">Connect With Us</h4>
-            <ul className="space-y-2.5 text-white/90">
-              <li>
-                <a
-                  href="https://www.instagram.com/shreeshyambabajewellers/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white hover:underline transition-colors"
-                >
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://maps.app.goo.gl/61ARaZmn6tniBYQS6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white hover:underline transition-colors"
-                >
-                  Google Map
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/919680865791?text=Hello%20Shyambaba%20Wholesale%2C%20I%20have%20an%20inquiry%20regarding%20wholesale%20jewellery."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white hover:underline transition-colors"
-                >
-                  WhatsApp Direct Chat
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 3: Contact Info with Pin */}
+          {/* Right Column on Mobile / Col 3 on Desktop: Contact Info */}
           <div>
             <h4 className="font-bold text-sm sm:text-base text-white mb-3">Contact Info</h4>
             <div className="space-y-1.5 text-white/90 leading-relaxed text-xs sm:text-sm">
@@ -139,7 +142,7 @@ export default function Footer() {
                   href="https://wa.me/919680865791"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-white transition-colors block"
                 >
                   Phone: +91 96808 65791
                 </a>
