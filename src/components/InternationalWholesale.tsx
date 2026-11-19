@@ -61,13 +61,10 @@ export default function InternationalWholesale() {
               fontFamily:
                 '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
             }}
-            className="text-[13px] sm:text-[14px] text-[#2C2C2C] mb-2 font-normal text-center"
+            className="text-[13px] sm:text-[14px] text-[#2C2C2C] mb-6 sm:mb-8 font-normal text-center"
           >
             Delivering Premium Jewellery to Your Country
           </p>
-          <div className="inline-block px-3.5 py-1 rounded-full bg-[#FAF5E8] border border-[#C9A84C]/40 text-[#92400E] text-[11px] sm:text-xs font-bold tracking-wider uppercase mb-6 sm:mb-8">
-            USA &bull; UK &bull; CANADA &bull; UAE &bull; AUSTRALIA &amp; MORE
-          </div>
         </ScrollReveal>
 
         {/* Stacked Country Cards - Enhanced Height, Distinct Luxury Borders, Country Name Only */}
