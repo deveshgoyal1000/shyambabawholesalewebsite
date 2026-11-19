@@ -8,51 +8,33 @@ import ScrollReveal from '@/components/ScrollReveal'
 export default function InternationalWholesale() {
   const countries = [
     {
-      country: 'United States',
+      country: 'USA',
       slug: 'united-states',
       flag: 'https://flagcdn.com/w80/us.png',
       popular: true,
     },
     {
-      country: 'United Kingdom',
+      country: 'UK',
       slug: 'united-kingdom',
       flag: 'https://flagcdn.com/w80/gb.png',
       popular: false,
     },
     {
-      country: 'Bangladesh',
-      slug: 'bangladesh',
-      flag: 'https://flagcdn.com/w80/bd.png',
-      popular: false,
-    },
-    {
-      country: 'Canada',
+      country: 'CANADA',
       slug: 'canada',
       flag: 'https://flagcdn.com/w80/ca.png',
       popular: false,
     },
     {
-      country: 'Dubai (Emirates)',
+      country: 'UAE',
       slug: 'dubai',
       flag: 'https://flagcdn.com/w80/ae.png',
       popular: false,
     },
     {
-      country: 'Malaysia',
-      slug: 'malaysia',
-      flag: 'https://flagcdn.com/w80/my.png',
-      popular: false,
-    },
-    {
-      country: 'Australia',
+      country: 'AUSTRALIA',
       slug: 'australia',
       flag: 'https://flagcdn.com/w80/au.png',
-      popular: false,
-    },
-    {
-      country: 'Singapore',
-      slug: 'singapore',
-      flag: 'https://flagcdn.com/w80/sg.png',
       popular: false,
     },
   ]
@@ -79,10 +61,13 @@ export default function InternationalWholesale() {
               fontFamily:
                 '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
             }}
-            className="text-[13px] sm:text-[14px] text-[#2C2C2C] mb-6 sm:mb-8 font-normal text-center"
+            className="text-[13px] sm:text-[14px] text-[#2C2C2C] mb-2 font-normal text-center"
           >
             Delivering Premium Jewellery to Your Country
           </p>
+          <div className="inline-block px-3.5 py-1 rounded-full bg-[#FAF5E8] border border-[#C9A84C]/40 text-[#92400E] text-[11px] sm:text-xs font-bold tracking-wider uppercase mb-6 sm:mb-8">
+            USA &bull; UK &bull; CANADA &bull; UAE &bull; AUSTRALIA &amp; MORE
+          </div>
         </ScrollReveal>
 
         {/* Stacked Country Cards - Enhanced Height, Distinct Luxury Borders, Country Name Only */}
@@ -137,7 +122,7 @@ export default function InternationalWholesale() {
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
             <Plane className="w-5 h-5 text-white shrink-0" />
-            <span>We ship to 50+ countries &rarr;</span>
+            <span>&amp; MORE &mdash; We Ship to 50+ Countries Worldwide &rarr;</span>
           </a>
         </div>
 
