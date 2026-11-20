@@ -37,6 +37,16 @@ export default function ShopByCategories({
   const displayCategories =
     categories && categories.length > 0 ? categories : DEFAULT_CATEGORIES
 
+  const handleCategoryClick = () => {
+    try {
+      if (typeof window !== 'undefined') {
+        const path = window.location.pathname
+        sessionStorage.setItem(`sb_scroll_${path}`, window.scrollY.toString())
+        sessionStorage.setItem('sb_last_anchor', 'categories')
+      }
+    } catch (e) {}
+  }
+
   return (
     <section id="categories" className="py-10 md:py-16 bg-[#FAF8F5]">
       <div className="max-w-2xl lg:max-w-6xl mx-auto px-3 sm:px-6">
@@ -88,6 +98,7 @@ export default function ShopByCategories({
                 {cat.slug === 'premium-jewellery' ? (
                   <Link
                     href={href}
+                    onClick={handleCategoryClick}
                     className="group relative flex flex-col justify-between h-full rounded-2xl overflow-hidden bg-[#8B0000] border-2 border-red-400/60 shadow-[0_6px_22px_rgba(139,0,0,0.25)] hover:shadow-[0_12px_32px_rgba(185,28,28,0.35)] active:scale-[0.98] transition-all duration-300 p-3.5 sm:p-5 text-center select-none"
                     style={{ WebkitTapHighlightColor: 'transparent', minHeight: '100%' }}
                   >
@@ -123,6 +134,7 @@ export default function ShopByCategories({
                 ) : cat.slug === 'normal-jewellery' ? (
                   <Link
                     href={href}
+                    onClick={handleCategoryClick}
                     className="group relative flex flex-col justify-between h-full rounded-2xl overflow-hidden bg-[#1E3A8A] border-2 border-blue-400/60 shadow-[0_6px_22px_rgba(30,58,138,0.25)] hover:shadow-[0_12px_32px_rgba(59,130,246,0.3)] active:scale-[0.98] transition-all duration-300 p-3.5 sm:p-5 text-center select-none"
                     style={{ WebkitTapHighlightColor: 'transparent', minHeight: '100%' }}
                   >
@@ -158,6 +170,7 @@ export default function ShopByCategories({
                 ) : (
                   <Link
                     href={href}
+                    onClick={handleCategoryClick}
                     className="group block rounded-2xl overflow-hidden bg-white border-2 border-[#D4C7B4] hover:border-[#C4B7A4] shadow-[0_4px_18px_rgba(0,0,0,0.07)] hover:shadow-[0_10px_28px_rgba(0,0,0,0.12)] active:scale-[0.98] transition-all duration-300 card-hover-lift"
                     style={{ WebkitTapHighlightColor: 'transparent' }}
                   >

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
+import ScrollRestoration from '@/components/ScrollRestoration'
 
 export const viewport: Viewport = {
   themeColor: '#ffffff',
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
       <body suppressHydrationWarning className="bg-white text-charcoal antialiased">
+        <ScrollRestoration />
         {children}
       </body>
     </html>
