@@ -425,10 +425,10 @@ export default function CollectionPageEditor({
                             selectSubcategoryForEditing(sub)
                             setActiveSubcategory(sub)
                           }}
-                          className="w-full py-1.5 px-2 rounded-lg bg-neutral-50 hover:bg-[#195799] text-neutral-700 hover:text-white text-[11px] font-semibold border border-neutral-200 hover:border-[#195799] flex items-center justify-center gap-1 transition-colors"
+                          className="w-full py-2 px-3 rounded-xl bg-[#195799] hover:bg-[#124378] text-white text-xs font-bold flex items-center justify-center gap-1.5 shadow-xs transition-colors"
                         >
                           <span>Open Gallery</span>
-                          <ArrowRight className="w-3 h-3" />
+                          <ArrowRight className="w-3.5 h-3.5 text-white" />
                         </button>
                       </div>
                     </div>

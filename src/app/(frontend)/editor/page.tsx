@@ -1,7 +1,7 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
-import { Puck, type Data } from '@measured/puck'
+import React, { useState, useEffect, useRef } from 'react'
+import { Puck, type Data, usePuck } from '@measured/puck'
 import '@measured/puck/puck.css'
 import { puckConfig, type ComponentProps } from '@/puck.config'
 import { DEFAULT_CATEGORIES } from '@/components/ShopByCategories'
@@ -254,7 +254,8 @@ export default function EditorPage() {
   }, [])
 
   // Execute publish to staging or main site
-  const handleExecutePublish = async (target: 'staging' | 'main') => {
+  const handleExecutePublish = async (target: 'staging' | 'main', overrideData?: Data<ComponentProps>) => {
+    const dataToPublish = overrideData || data
     setPublishingTarget(target)
     setSaveStatus(
       target === 'main'
@@ -267,7 +268,7 @@ export default function EditorPage() {
       const res = await fetch('/api/editor/publish', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ target, data }),
+        body: JSON.stringify({ target, data: dataToPublish }),
       })
 
       const json = await res.json()
@@ -303,6 +304,100 @@ export default function EditorPage() {
   const handlePuckPublish = async (savedData: Data<ComponentProps>) => {
     setData(savedData)
     setIsPublishModalOpen(true)
+  }
+
+  // Custom Header Actions for Puck to keep only one Publish button with both options
+  const PuckHeaderActions = () => {
+    const { appState } = usePuck()
+    const [dropdownOpen, setDropdownOpen] = useState(false)
+    const dropdownRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+      const handleClickOutside = (e: MouseEvent) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+          setDropdownOpen(false)
+        }
+      }
+      document.addEventListener('mousedown', handleClickOutside)
+      return () => document.removeEventListener('mousedown', handleClickOutside)
+    }, [])
+
+    return (
+      <div className="relative inline-flex items-center" ref={dropdownRef}>
+        <div className="inline-flex items-center rounded-lg bg-[#0052cc] hover:bg-[#0047b3] text-white shadow-xs font-semibold text-xs overflow-hidden">
+          <button
+            type="button"
+            onClick={() => {
+              const currentData = appState.data as Data<ComponentProps>
+              setData(currentData)
+              setIsPublishModalOpen(true)
+            }}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-white hover:bg-white/10 transition-colors cursor-pointer"
+          >
+            <Globe className="w-3.5 h-3.5 text-white" />
+            <span className="font-semibold text-xs">Publish</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => setDropdownOpen((prev) => !prev)}
+            className="px-2 py-1.5 text-white/90 hover:text-white hover:bg-white/10 border-l border-white/20 transition-colors cursor-pointer"
+            title="Publish Options"
+          >
+            <ChevronDown className="w-3.5 h-3.5" />
+          </button>
+        </div>
+
+        {dropdownOpen && (
+          <div className="absolute right-0 top-10 w-64 bg-white border border-neutral-200 rounded-xl shadow-2xl p-1.5 z-50 animate-scale-up space-y-1 text-left">
+            <button
+              type="button"
+              onClick={() => {
+                setDropdownOpen(false)
+                const currentData = appState.data as Data<ComponentProps>
+                setData(currentData)
+                handleExecutePublish('staging', currentData)
+              }}
+              className="w-full p-2.5 rounded-lg hover:bg-neutral-100 text-left transition-colors flex items-start gap-2.5 group cursor-pointer"
+            >
+              <div className="w-6 h-6 rounded-md bg-blue-50 text-blue-700 font-bold flex items-center justify-center shrink-0 mt-0.5 text-xs">
+                1
+              </div>
+              <div>
+                <p className="text-xs font-bold text-neutral-900 group-hover:text-blue-700">
+                  Publish to Staging Site
+                </p>
+                <p className="text-[10px] text-neutral-500">
+                  Instant preview on localhost:3000
+                </p>
+              </div>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                setDropdownOpen(false)
+                const currentData = appState.data as Data<ComponentProps>
+                setData(currentData)
+                handleExecutePublish('main', currentData)
+              }}
+              className="w-full p-2.5 rounded-lg hover:bg-neutral-100 text-left transition-colors flex items-start gap-2.5 group cursor-pointer border-t border-neutral-100"
+            >
+              <div className="w-6 h-6 rounded-md bg-emerald-50 text-emerald-700 font-bold flex items-center justify-center shrink-0 mt-0.5 text-xs">
+                2
+              </div>
+              <div>
+                <p className="text-xs font-bold text-neutral-900 group-hover:text-emerald-700">
+                  Publish to Main Live Site
+                </p>
+                <p className="text-[10px] text-neutral-500">
+                  Deploys live worldwide on Vercel
+                </p>
+              </div>
+            </button>
+          </div>
+        )}
+      </div>
+    )
   }
 
   if (loading) {
@@ -471,71 +566,8 @@ export default function EditorPage() {
           </div>
         )}
 
-        {/* Right: Publish Button (Minimal #195799 style) */}
-        <div className="flex items-center gap-2 relative">
-          {/* Dual Publish Action (Staging vs Main Site) */}
-          <div className="relative">
-            <div className="inline-flex items-center rounded-lg bg-[#195799] hover:bg-[#124378] text-white shadow-xs transition-colors">
-              <button
-                type="button"
-                onClick={() => setIsPublishModalOpen(true)}
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-white font-medium text-xs hover:bg-white/10 rounded-l-lg transition-colors cursor-pointer"
-              >
-                <Globe className="w-3.5 h-3.5 text-white/90" />
-                <span>Publish</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => setShowPublishDropdown((prev) => !prev)}
-                className="px-2 py-1.5 text-white/80 hover:text-white hover:bg-white/10 rounded-r-lg border-l border-white/20 transition-colors cursor-pointer"
-                title="Publish Options"
-              >
-                <ChevronDown className="w-3.5 h-3.5" />
-              </button>
-            </div>
-
-            {/* Quick Publish Dropdown */}
-            {showPublishDropdown && (
-              <div className="absolute right-0 top-11 w-64 bg-[#1C1D22] border border-neutral-700 rounded-2xl shadow-2xl p-2 z-50 animate-scale-up space-y-1">
-                <button
-                  type="button"
-                  onClick={() => handleExecutePublish('staging')}
-                  className="w-full p-2.5 rounded-xl hover:bg-neutral-800 text-left transition-colors flex items-start gap-2.5 group cursor-pointer"
-                >
-                  <div className="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 mt-0.5">
-                    <span className="text-xs">1</span>
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold text-white group-hover:text-blue-300">
-                      Publish to Staging Site
-                    </p>
-                    <p className="text-[10px] text-neutral-400">
-                      Instant preview on <code className="text-neutral-300">localhost:3000</code>
-                    </p>
-                  </div>
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => handleExecutePublish('main')}
-                  className="w-full p-2.5 rounded-xl hover:bg-neutral-800 text-left transition-colors flex items-start gap-2.5 group cursor-pointer border-t border-neutral-800/80"
-                >
-                  <div className="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 mt-0.5">
-                    <span className="text-xs">2</span>
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold text-white group-hover:text-blue-300">
-                      Publish to Main Live Site
-                    </p>
-                    <p className="text-[10px] text-neutral-400">
-                      Deploys live worldwide on Vercel
-                    </p>
-                  </div>
-                </button>
-              </div>
-            )}
-          </div>
-
+        {/* Right: Live Website Link Only */}
+        <div className="flex items-center gap-2">
           <a
             href={
               currentView === 'country'
@@ -596,7 +628,14 @@ export default function EditorPage() {
           <>
             {/* Tab 1: Visual Page Editor (Puck) */}
             <div className={`w-full h-full ${currentTab === 'visual' ? 'block' : 'hidden'}`}>
-              <Puck config={puckConfig} data={data} onPublish={handlePuckPublish} />
+              <Puck
+                config={puckConfig}
+                data={data}
+                onPublish={handlePuckPublish}
+                overrides={{
+                  headerActions: PuckHeaderActions,
+                }}
+              />
             </div>
 
             {/* Tab 2: Products & Catalog CMS */}
