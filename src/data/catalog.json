@@ -10,7 +10,7 @@
     "description": "Handcrafted luxury brass, bridal chokers, Victorian heritage, and premium designer jewellery.",
     "hasSubcategories": true,
     "coverImage": "/images/catalog/necklaces/sabyasachi-inspired-necklace/sabyasachi-inspired-necklace-001.jpg",
-    "totalItems": 487,
+    "totalItems": 491,
     "subcategories": [
       {
         "slug": "kundan",
@@ -2781,8 +2781,33 @@
         "parentSlug": "premium-jewellery",
         "parentName": "Premium Jewellery",
         "coverImage": "/images/catalog/earrings/american-diamond-earrings/american-diamond-earrings-001.jpg",
-        "itemCount": 0,
-        "images": []
+        "itemCount": 4,
+        "images": [
+          {
+            "id": "american-diamond-earrings-1795379017135-3",
+            "code": "AA7E0C48-041D-4C83-A5B4-7D6D7EADD6E3",
+            "rawFilename": "AA7E0C48-041D-4C83-A5B4-7D6D7EADD6E3.jpg",
+            "src": "https://xtzxsxhimaac8uxm.public.blob.vercel-storage.com/uploads/1795379016048-3-AA7E0C48-041D-4C83-A5B4-7D6D7EADD6E3.jpg"
+          },
+          {
+            "id": "american-diamond-earrings-1795379016047-2",
+            "code": "450D7AF5-7C64-4E02-8A4C-0BC837DF4B1F",
+            "rawFilename": "450D7AF5-7C64-4E02-8A4C-0BC837DF4B1F.jpg",
+            "src": "https://xtzxsxhimaac8uxm.public.blob.vercel-storage.com/uploads/1795379015028-2-450D7AF5-7C64-4E02-8A4C-0BC837DF4B1F.jpg"
+          },
+          {
+            "id": "american-diamond-earrings-1795379015027-1",
+            "code": "91E00CA0-16D2-4141-B546-EA6A6E0C65EC",
+            "rawFilename": "91E00CA0-16D2-4141-B546-EA6A6E0C65EC.jpg",
+            "src": "https://xtzxsxhimaac8uxm.public.blob.vercel-storage.com/uploads/1795379013849-1-91E00CA0-16D2-4141-B546-EA6A6E0C65EC.jpg"
+          },
+          {
+            "id": "american-diamond-earrings-1795379013847-0",
+            "code": "6E4C2B8C-E88B-4B00-8BBF-EE044E6476EC",
+            "rawFilename": "6E4C2B8C-E88B-4B00-8BBF-EE044E6476EC.jpg",
+            "src": "https://xtzxsxhimaac8uxm.public.blob.vercel-storage.com/uploads/1795379012525-0-6E4C2B8C-E88B-4B00-8BBF-EE044E6476EC.jpg"
+          }
+        ]
       },
       {
         "slug": "mother-of-pearl",
