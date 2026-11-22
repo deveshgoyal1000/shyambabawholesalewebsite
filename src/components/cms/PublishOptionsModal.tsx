@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   X,
   Upload,
@@ -35,6 +35,26 @@ export default function PublishOptionsModal({
     message: string
   } | null>(null)
 
+  // Close on Escape key press & prevent background scrolling
+  useEffect(() => {
+    if (!isOpen) return
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && publishingTarget === null) {
+        onClose()
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    const originalOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = originalOverflow
+    }
+  }, [isOpen, publishingTarget, onClose])
+
   if (!isOpen) return null
 
   const handleExecutePublish = async (target: 'staging' | 'main') => {
@@ -55,8 +75,18 @@ export default function PublishOptionsModal({
   }
 
   return (
-    <div className="fixed inset-0 z-[120] bg-black/75 backdrop-blur-xs flex items-center justify-center p-4 select-none animate-fade-in">
-      <div className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-7 shadow-2xl border border-neutral-200 flex flex-col space-y-5 animate-scale-up">
+    <div
+      onClick={(e) => {
+        if (e.target === e.currentTarget && publishingTarget === null) {
+          onClose()
+        }
+      }}
+      className="fixed inset-0 z-[120] bg-black/75 backdrop-blur-xs flex items-center justify-center p-4 select-none animate-fade-in font-sans cursor-pointer"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-7 shadow-2xl border border-neutral-200 flex flex-col space-y-5 animate-scale-up cursor-default"
+      >
         {/* Header */}
         <div className="flex items-center justify-between pb-3.5 border-b border-neutral-200">
           <div className="flex items-center gap-2.5">
@@ -64,10 +94,10 @@ export default function PublishOptionsModal({
               <Globe className="w-4.5 h-4.5 text-[#195799]" />
             </div>
             <div>
-              <h3 style={{ fontFamily: 'Georgia, serif' }} className="text-lg font-bold text-neutral-900 leading-tight">
+              <h3 className="text-lg font-bold text-neutral-900 leading-tight">
                 Publish Website Changes
               </h3>
-              <p className="text-xs text-neutral-500">
+              <p className="text-xs text-neutral-500 mt-0.5">
                 Choose whether to deploy to Staging or directly to the Main Live site.
               </p>
             </div>

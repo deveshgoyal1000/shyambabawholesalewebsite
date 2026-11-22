@@ -88,6 +88,26 @@ export default function ProductCatalogCMS() {
     fetchProducts()
   }, [selectedCategory, page])
 
+  // Close modal on Escape key & manage body scroll
+  useEffect(() => {
+    if (!showAddModal) return
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setShowAddModal(false)
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    const originalOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = originalOverflow
+    }
+  }, [showAddModal])
+
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     setPage(1)
@@ -363,10 +383,20 @@ export default function ProductCatalogCMS() {
 
       {/* Add Product Modal */}
       {showAddModal && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-neutral-200 animate-scale-up">
+        <div
+          onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              setShowAddModal(false)
+            }
+          }}
+          className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 select-none animate-fade-in font-sans cursor-pointer"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-neutral-200 animate-scale-up cursor-default"
+          >
             <div className="flex items-center justify-between pb-4 border-b border-neutral-200">
-              <h3 style={{ fontFamily: 'Georgia, serif' }} className="text-lg sm:text-xl font-bold text-neutral-900">
+              <h3 className="text-lg sm:text-xl font-bold text-neutral-900">
                 Add New Product to Catalogue
               </h3>
               <button

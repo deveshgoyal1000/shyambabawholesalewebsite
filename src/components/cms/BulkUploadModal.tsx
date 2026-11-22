@@ -73,6 +73,26 @@ export default function BulkUploadModal({
     if (initialSubcategorySlug) setSelectedSubcategory(initialSubcategorySlug)
   }, [initialCategorySlug, initialSubcategorySlug])
 
+  // Close on Escape key press & prevent background scrolling
+  useEffect(() => {
+    if (!isOpen) return
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && !uploading) {
+        onClose()
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    const originalOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = originalOverflow
+    }
+  }, [isOpen, uploading, onClose])
+
   if (!isOpen) return null
 
   const currentCategoryData = categories.find((c) => c.slug === selectedCategory)
@@ -159,8 +179,18 @@ export default function BulkUploadModal({
   }
 
   return (
-    <div className="fixed inset-0 z-[100] bg-black/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-5 select-none animate-fade-in">
-      <div className="bg-white rounded-3xl max-w-2xl w-full p-5 sm:p-7 shadow-2xl border border-neutral-200 flex flex-col max-h-[90vh] overflow-hidden">
+    <div
+      onClick={(e) => {
+        if (e.target === e.currentTarget && !uploading) {
+          onClose()
+        }
+      }}
+      className="fixed inset-0 z-[100] bg-black/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-5 select-none animate-fade-in font-sans cursor-pointer"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="bg-white rounded-3xl max-w-2xl w-full p-5 sm:p-7 shadow-2xl border border-neutral-200 flex flex-col max-h-[90vh] overflow-hidden cursor-default"
+      >
         {/* Modal Header */}
         <div className="flex items-center justify-between pb-4 border-b border-neutral-200">
           <div className="flex items-center gap-2.5">
@@ -168,10 +198,10 @@ export default function BulkUploadModal({
               <Upload className="w-4.5 h-4.5 text-[#195799]" />
             </div>
             <div>
-              <h3 style={{ fontFamily: 'Georgia, serif' }} className="text-lg font-bold text-neutral-900 leading-tight">
+              <h3 className="text-lg font-bold text-neutral-900 leading-tight">
                 Bulk Upload Products &amp; Images
               </h3>
-              <p className="text-xs text-neutral-500">
+              <p className="text-xs text-neutral-500 mt-0.5">
                 Upload multiple jewellery photos at once with auto-detected product codes.
               </p>
             </div>
