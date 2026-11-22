@@ -824,9 +824,9 @@ export default function CollectionPageEditor({
                     <button
                       type="button"
                       onClick={() => setConfirmClearOpen(true)}
-                      className="w-full py-2 px-3 rounded-lg border border-red-200 bg-red-50 hover:bg-red-100 text-red-700 text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors"
+                      className="w-full py-2.5 px-3 rounded-xl bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all"
                     >
-                      <Trash2 className="w-3.5 h-3.5 text-red-600" />
+                      <Trash2 className="w-4 h-4 text-white" />
                       <span>Clear All Images in {activeSubcategory.name}</span>
                     </button>
                   ) : (
