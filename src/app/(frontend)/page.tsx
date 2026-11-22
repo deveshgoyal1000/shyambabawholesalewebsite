@@ -131,22 +131,13 @@ async function getProducts(): Promise<ProductData[]> {
 }
 
 async function getPuckData() {
-  // 1. Try local bundled JSON file first (ensures Git commits & deploys take immediate effect in production & dev)
-  try {
-    const dataFilePath = path.join(process.cwd(), 'src', 'data', 'home-puck.json')
-    const raw = await readFile(dataFilePath, 'utf-8')
-    const json = JSON.parse(raw)
-    if (json && json.content && json.content.length > 0) {
-      return json
-    }
-  } catch {}
-
-  // 2. Try Vercel Blob (Cloud persistence for Vercel production editor)
+  // 1. Try Vercel Blob first (Contains the latest live published content from editor)
   if (process.env.BLOB_READ_WRITE_TOKEN) {
     try {
       const { blobs } = await list({ prefix: 'home-puck.json' })
       if (blobs.length > 0) {
-        const res = await fetch(`${blobs[0].url}?t=${Date.now()}`, { cache: 'no-store' })
+        const sorted = blobs.sort((a, b) => b.uploadedAt.getTime() - a.uploadedAt.getTime())
+        const res = await fetch(`${sorted[0].url}?t=${Date.now()}`, { cache: 'no-store' })
         if (res.ok) {
           const json = await res.json()
           if (json && json.content && json.content.length > 0) {
@@ -158,6 +149,16 @@ async function getPuckData() {
       console.warn('Error reading from Vercel Blob:', blobErr)
     }
   }
+
+  // 2. Fallback to local bundled JSON file
+  try {
+    const dataFilePath = path.join(process.cwd(), 'src', 'data', 'home-puck.json')
+    const raw = await readFile(dataFilePath, 'utf-8')
+    const json = JSON.parse(raw)
+    if (json && json.content && json.content.length > 0) {
+      return json
+    }
+  } catch {}
 
   return null
 }

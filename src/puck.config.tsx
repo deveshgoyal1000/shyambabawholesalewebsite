@@ -56,11 +56,13 @@ export type ComponentProps = {
     bgImageDesktop: string
   }
   ShopByCategoriesBlock: {
+    quickActions?: any
     heading: string
     subheading: string
     categories: CategoryItem[]
   }
   GallerySectionBlock: {
+    quickActions?: any
     heading: string
     subheading: string
   }
@@ -128,6 +130,20 @@ export const puckConfig: Config<ComponentProps> = {
     HeroBannerBlock: {
       label: '3. Hero Banner (Krishaz Style)',
       fields: {
+        bgImageMobile: {
+          type: 'custom',
+          label: '1. Mobile Graphic Banner / Background Image',
+          render: ({ value, onChange }) => (
+            <ImageUploadField label="Mobile Graphic Banner Image (Primary)" value={value} onChange={onChange} />
+          ),
+        },
+        bgImageDesktop: {
+          type: 'custom',
+          label: '2. Desktop Hero Background Image',
+          render: ({ value, onChange }) => (
+            <ImageUploadField label="Desktop Hero Background Image" value={value} onChange={onChange} />
+          ),
+        },
         preheading: { type: 'text', label: 'Pre-heading' },
         headlineLine1: { type: 'text', label: 'Headline Line 1' },
         headlineLine2: { type: 'text', label: 'Headline Line 2' },
@@ -138,18 +154,6 @@ export const puckConfig: Config<ComponentProps> = {
         point4: { type: 'text', label: 'Point 4' },
         button1Text: { type: 'text', label: 'Primary Button Label' },
         button2Text: { type: 'text', label: 'Secondary Button Label' },
-        bgImageMobile: {
-          type: 'custom',
-          render: ({ value, onChange }) => (
-            <ImageUploadField label="Mobile Hero Background Image" value={value} onChange={onChange} />
-          ),
-        },
-        bgImageDesktop: {
-          type: 'custom',
-          render: ({ value, onChange }) => (
-            <ImageUploadField label="Desktop Hero Background Image" value={value} onChange={onChange} />
-          ),
-        },
       },
       defaultProps: {
         preheading: "India's Trusted",
@@ -212,7 +216,7 @@ export const puckConfig: Config<ComponentProps> = {
             <section className="relative w-full block sm:hidden bg-[#0A0808] select-none overflow-hidden">
               <div className="relative w-full max-w-[500px] mx-auto">
                 <img
-                  src="/images/hero/hero-mobile-graphic-banner.webp"
+                  src={bgImageMobile || "/images/hero/hero-mobile-graphic-banner.webp"}
                   alt="Jaipur's Biggest Artificial Jewellery Manufacturer & Wholesaler"
                   className="w-full h-auto block select-none"
                   loading="eager"
@@ -326,6 +330,52 @@ export const puckConfig: Config<ComponentProps> = {
     ShopByCategoriesBlock: {
       label: '3. Shop by Categories (Detailed Grid)',
       fields: {
+        quickActions: {
+          type: 'custom',
+          render: () => (
+            <div className="space-y-2.5 p-3 rounded-2xl bg-neutral-900 border border-neutral-700 my-2">
+              <p className="text-[11px] font-bold text-amber-300 uppercase tracking-wider flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                <span>Collection Editors &amp; Bulk Upload:</span>
+              </p>
+              <button
+                type="button"
+                onClick={() =>
+                  window.dispatchEvent(
+                    new CustomEvent('sb_open_collection_editor', { detail: { slug: 'premium-jewellery' } })
+                  )
+                }
+                className="w-full py-2.5 px-3 rounded-xl bg-[#8B0000] hover:bg-red-800 text-white font-bold text-xs flex items-center justify-between border border-red-500/50 shadow-md transition-all cursor-pointer"
+              >
+                <span>📂 Enter Premium Jewellery Editor</span>
+                <span className="text-amber-300">↗</span>
+              </button>
+              <button
+                type="button"
+                onClick={() =>
+                  window.dispatchEvent(
+                    new CustomEvent('sb_open_collection_editor', { detail: { slug: 'normal-jewellery' } })
+                  )
+                }
+                className="w-full py-2.5 px-3 rounded-xl bg-[#1E3A8A] hover:bg-blue-800 text-white font-bold text-xs flex items-center justify-between border border-blue-500/50 shadow-md transition-all cursor-pointer"
+              >
+                <span>📂 Enter Normal Jewellery Editor</span>
+                <span className="text-blue-300">↗</span>
+              </button>
+              <button
+                type="button"
+                onClick={() =>
+                  window.dispatchEvent(
+                    new CustomEvent('sb_open_bulk_upload', { detail: { categorySlug: 'premium-jewellery' } })
+                  )
+                }
+                className="w-full py-2.5 px-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-neutral-950 font-bold text-xs flex items-center justify-center gap-1.5 shadow-md transition-all cursor-pointer"
+              >
+                <span>⚡ Bulk Upload Products</span>
+              </button>
+            </div>
+          ),
+        },
         heading: { type: 'text', label: 'Section Heading' },
         subheading: { type: 'text', label: 'Subheading' },
         categories: {
@@ -368,6 +418,52 @@ export const puckConfig: Config<ComponentProps> = {
     GallerySectionBlock: {
       label: '4. Wholesale Gallery (Product Showcase)',
       fields: {
+        quickActions: {
+          type: 'custom',
+          render: () => (
+            <div className="space-y-2.5 p-3 rounded-2xl bg-neutral-900 border border-neutral-700 my-2">
+              <p className="text-[11px] font-bold text-amber-300 uppercase tracking-wider flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                <span>Collection Editors &amp; Bulk Upload:</span>
+              </p>
+              <button
+                type="button"
+                onClick={() =>
+                  window.dispatchEvent(
+                    new CustomEvent('sb_open_collection_editor', { detail: { slug: 'premium-jewellery' } })
+                  )
+                }
+                className="w-full py-2.5 px-3 rounded-xl bg-[#8B0000] hover:bg-red-800 text-white font-bold text-xs flex items-center justify-between border border-red-500/50 shadow-md transition-all cursor-pointer"
+              >
+                <span>📂 Enter Premium Jewellery Editor</span>
+                <span className="text-amber-300">↗</span>
+              </button>
+              <button
+                type="button"
+                onClick={() =>
+                  window.dispatchEvent(
+                    new CustomEvent('sb_open_collection_editor', { detail: { slug: 'normal-jewellery' } })
+                  )
+                }
+                className="w-full py-2.5 px-3 rounded-xl bg-[#1E3A8A] hover:bg-blue-800 text-white font-bold text-xs flex items-center justify-between border border-blue-500/50 shadow-md transition-all cursor-pointer"
+              >
+                <span>📂 Enter Normal Jewellery Editor</span>
+                <span className="text-blue-300">↗</span>
+              </button>
+              <button
+                type="button"
+                onClick={() =>
+                  window.dispatchEvent(
+                    new CustomEvent('sb_open_bulk_upload', { detail: { categorySlug: 'premium-jewellery' } })
+                  )
+                }
+                className="w-full py-2.5 px-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-neutral-950 font-bold text-xs flex items-center justify-center gap-1.5 shadow-md transition-all cursor-pointer"
+              >
+                <span>⚡ Bulk Upload Products</span>
+              </button>
+            </div>
+          ),
+        },
         heading: { type: 'text', label: 'Section Heading' },
         subheading: { type: 'text', label: 'Subheading' },
       },
