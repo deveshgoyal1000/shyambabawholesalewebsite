@@ -281,14 +281,11 @@ export const puckConfig: Config<ComponentProps> = {
                   style={{ fontFamily: 'Georgia, serif' }}
                   className="font-bold tracking-tight text-white leading-[1.25] mb-5 mx-auto drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] px-2 text-center"
                 >
-                  <span className="block text-[42px]">
-                    {headlineLine1 || 'JAIPUR BIGGEST'}
+                  <span className="block text-[38px] sm:text-[42px]">
+                    {headlineLine1 || 'JAIPUR BIGGEST ARTIFICIAL JEWELLERY'}
                   </span>
-                  <span className="block text-[42px]">
-                    {headlineLine2 || 'ARTIFICIAL JEWELLERY'}
-                  </span>
-                  <span className="block text-[36px] text-[#FAF8F5] mt-1">
-                    MANUFACTURER &amp; WHOLESALER
+                  <span className="block text-[32px] sm:text-[36px] text-[#FAF8F5] mt-1">
+                    {headlineLine2 || 'MANUFACTURER & WHOLESALER'}
                   </span>
                 </h1>
 
