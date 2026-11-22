@@ -4,7 +4,11 @@ import React, { useState } from 'react'
 import { Plus, Minus, MessageCircle } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 
-export default function FAQSection() {
+export interface FAQSectionProps {
+  heading?: string
+}
+
+export default function FAQSection({ heading }: FAQSectionProps = {}) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   const faqs = [
@@ -84,7 +88,7 @@ export default function FAQSection() {
               style={{ fontFamily: 'Georgia, serif' }}
               className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight"
             >
-              Frequently Asked Questions
+              {heading || 'Frequently Asked Questions'}
             </h2>
 
             {/* Gold Accent Divider Bar */}

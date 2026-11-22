@@ -3,7 +3,11 @@
 import React from 'react'
 import ScrollReveal from '@/components/ScrollReveal'
 
-export default function ManufacturingProcess() {
+export interface ManufacturingProcessProps {
+  heading?: string
+}
+
+export default function ManufacturingProcess({ heading }: ManufacturingProcessProps = {}) {
   const steps = [
     {
       num: 1,
@@ -47,7 +51,7 @@ export default function ManufacturingProcess() {
               style={{ fontFamily: 'Georgia, serif' }}
               className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight"
             >
-              From Sketch To Stunning Jewellery
+              {heading || 'From Sketch To Stunning Jewellery'}
             </h2>
 
             {/* Gold Accent Divider Bar matching Krishaz */}

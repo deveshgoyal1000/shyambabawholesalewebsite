@@ -1,3 +1,5 @@
+import countryOverridesData from './countryOverrides.json'
+
 export interface CountryWholesaleInfo {
   slug: string
   country: string
@@ -137,8 +139,12 @@ export const internationalCountries: Record<string, CountryWholesaleInfo> = {
 
 export function getCountryBySlug(slug: string): CountryWholesaleInfo {
   const normalized = slug.toLowerCase().trim()
+  const overrides = (countryOverridesData || {}) as Record<string, Partial<CountryWholesaleInfo>>
+  const override = overrides[normalized]
+
   if (internationalCountries[normalized]) {
-    return internationalCountries[normalized]
+    const base = internationalCountries[normalized]
+    return override ? { ...base, ...override } : base
   }
 
   // Fallback for any other country
@@ -147,7 +153,7 @@ export function getCountryBySlug(slug: string): CountryWholesaleInfo {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ')
 
-  return {
+  const fallback: CountryWholesaleInfo = {
     slug,
     country: cleanName,
     shortName: cleanName,
@@ -161,4 +167,6 @@ export function getCountryBySlug(slug: string): CountryWholesaleInfo {
     videoPoster: 'https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=1200&auto=format&fit=crop',
     overviewText: `Direct Jaipur manufacturer export to retail jewellers, online boutiques, and bridal stylists in ${cleanName}. Every piece is inspected via live video call before dispatch.`,
   }
+
+  return override ? { ...fallback, ...override } : fallback
 }

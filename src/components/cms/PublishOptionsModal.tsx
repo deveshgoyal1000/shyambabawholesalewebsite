@@ -60,11 +60,11 @@ export default function PublishOptionsModal({
         {/* Header */}
         <div className="flex items-center justify-between pb-3.5 border-b border-neutral-200">
           <div className="flex items-center gap-2.5">
-            <div className="w-10 h-10 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-800 shadow-xs">
-              <Rocket className="w-5 h-5 text-amber-700" />
+            <div className="w-9 h-9 rounded-xl bg-blue-50 text-[#195799] flex items-center justify-center shadow-xs">
+              <Globe className="w-4.5 h-4.5 text-[#195799]" />
             </div>
             <div>
-              <h3 style={{ fontFamily: 'Georgia, serif' }} className="text-lg sm:text-xl font-bold text-neutral-900 leading-tight">
+              <h3 style={{ fontFamily: 'Georgia, serif' }} className="text-lg font-bold text-neutral-900 leading-tight">
                 Publish Website Changes
               </h3>
               <p className="text-xs text-neutral-500">
@@ -171,26 +171,26 @@ export default function PublishOptionsModal({
             onClick={() => !publishingTarget && setSelectedTarget('main')}
             className={`p-4 rounded-2xl border-2 transition-all cursor-pointer flex flex-col justify-between ${
               selectedTarget === 'main'
-                ? 'border-emerald-500 bg-emerald-50/30 shadow-md'
+                ? 'border-[#195799] bg-blue-50/50 shadow-sm'
                 : 'border-neutral-200 hover:border-neutral-300 bg-white'
             }`}
           >
             <div className="flex items-start justify-between gap-3">
               <div className="flex items-start gap-3">
-                <div className="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5">
-                  <Globe className="w-4 h-4 text-emerald-700" />
+                <div className="w-9 h-9 rounded-xl bg-blue-100 text-[#195799] flex items-center justify-center shrink-0 mt-0.5">
+                  <Globe className="w-4 h-4 text-[#195799]" />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
                     <h4 className="text-sm font-bold text-neutral-900">
-                      2. Publish to Main Site (Production Live)
+                      2. Publish to Main Live Website
                     </h4>
-                    <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-emerald-500 text-white font-mono shadow-xs">
-                      Live Worldwide
+                    <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-[#195799] text-white font-mono shadow-xs">
+                      Live Production
                     </span>
                   </div>
                   <p className="text-xs text-neutral-500 mt-1">
-                    Deploys your banners, text, categories, and products directly to the live domain (<code className="font-mono text-[11px] text-emerald-800">shyambabawholesalewebsite.vercel.app</code>) for all customers.
+                    Deploys your banners, text, categories, and products directly to the live domain (<code className="font-mono text-[11px] text-[#195799]">shyambabawholesalewebsite.vercel.app</code>) for all customers.
                   </p>
                 </div>
               </div>
@@ -200,7 +200,7 @@ export default function PublishOptionsModal({
                 name="publishTarget"
                 checked={selectedTarget === 'main'}
                 onChange={() => setSelectedTarget('main')}
-                className="mt-1 w-4 h-4 text-emerald-600 focus:ring-emerald-500"
+                className="mt-1 w-4 h-4 text-[#195799] focus:ring-[#195799]"
               />
             </div>
 
@@ -213,7 +213,7 @@ export default function PublishOptionsModal({
                   e.stopPropagation()
                   handleExecutePublish('main')
                 }}
-                className="px-4 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm disabled:opacity-50"
+                className="px-4 py-1.5 rounded-xl bg-[#195799] hover:bg-[#124378] text-white text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm disabled:opacity-50"
               >
                 {publishingTarget === 'main' ? (
                   <>
@@ -222,7 +222,7 @@ export default function PublishOptionsModal({
                   </>
                 ) : (
                   <>
-                    <Rocket className="w-3.5 h-3.5" />
+                    <Check className="w-3.5 h-3.5" />
                     <span>Publish to Main Site</span>
                   </>
                 )}

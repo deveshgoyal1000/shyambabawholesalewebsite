@@ -26,7 +26,11 @@ function InstagramIcon({ className = 'w-4 h-4' }: { className?: string }) {
   )
 }
 
-export default function Header() {
+export interface HeaderProps {
+  brandName?: string
+}
+
+export default function Header({ brandName = 'ShyamBabaWholesale' }: HeaderProps) {
   const [mounted, setMounted] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
@@ -124,25 +128,64 @@ export default function Header() {
           {/* Desktop Left Spacer to balance layout */}
           <div className="hidden lg:flex items-center w-24" />
 
-          {/* Center: Brand Name 'ShyamBaba' and 'Wholesale' stacked in new line centered */}
+          {/* Center: Brand Name dynamically rendered with exact Georgia font */}
           <div className="flex-1 flex justify-center text-center px-1">
             <Link
               href="/"
               className="flex flex-col items-center justify-center select-none py-1 group"
               style={{ WebkitTapHighlightColor: 'transparent' }}
             >
-              <span
-                style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
-                className="text-[26px] xs:text-[30px] sm:text-[36px] md:text-[40px] font-normal tracking-tight text-[#111111] leading-none group-hover:text-[#195799] transition-colors duration-200 block"
-              >
-                ShyamBaba
-              </span>
-              <span
-                style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
-                className="text-[12px] xs:text-[14px] sm:text-[16px] md:text-[17px] font-normal tracking-[0.28em] uppercase text-[#333333] leading-none group-hover:text-[#195799] transition-colors duration-200 block mt-1.5"
-              >
-                Wholesale
-              </span>
+              {(() => {
+                if (!brandName || brandName === 'ShyamBabaWholesale') {
+                  return (
+                    <>
+                      <span
+                        style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
+                        className="text-[26px] xs:text-[30px] sm:text-[36px] md:text-[40px] font-normal tracking-tight text-[#111111] leading-none group-hover:text-[#195799] transition-colors duration-200 block"
+                      >
+                        ShyamBaba
+                      </span>
+                      <span
+                        style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
+                        className="text-[12px] xs:text-[14px] sm:text-[16px] md:text-[17px] font-normal tracking-[0.28em] uppercase text-[#333333] leading-none group-hover:text-[#195799] transition-colors duration-200 block mt-1.5"
+                      >
+                        Wholesale
+                      </span>
+                    </>
+                  )
+                }
+
+                // Split if user used spaces
+                const parts = brandName.split(' ')
+                if (parts.length > 1) {
+                  return (
+                    <>
+                      <span
+                        style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
+                        className="text-[26px] xs:text-[30px] sm:text-[36px] md:text-[40px] font-normal tracking-tight text-[#111111] leading-none group-hover:text-[#195799] transition-colors duration-200 block"
+                      >
+                        {parts[0]}
+                      </span>
+                      <span
+                        style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
+                        className="text-[12px] xs:text-[14px] sm:text-[16px] md:text-[17px] font-normal tracking-[0.28em] uppercase text-[#333333] leading-none group-hover:text-[#195799] transition-colors duration-200 block mt-1.5"
+                      >
+                        {parts.slice(1).join(' ')}
+                      </span>
+                    </>
+                  )
+                }
+
+                // If user entered a single word like 'ShyamBabaWholesal'
+                return (
+                  <span
+                    style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}
+                    className="text-[22px] xs:text-[26px] sm:text-[32px] md:text-[36px] font-normal tracking-tight text-[#111111] leading-none group-hover:text-[#195799] transition-colors duration-200 block"
+                  >
+                    {brandName}
+                  </span>
+                )
+              })()}
             </Link>
           </div>
 

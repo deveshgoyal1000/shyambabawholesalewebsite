@@ -13,6 +13,7 @@ export const revalidate = 0
 
 const localPuckPath = path.join(process.cwd(), 'src', 'data', 'home-puck.json')
 const localCatalogPath = path.join(process.cwd(), 'src', 'data', 'catalog.json')
+const localCountryOverridesPath = path.join(process.cwd(), 'src', 'data', 'countryOverrides.json')
 
 export async function POST(request: NextRequest) {
   try {
@@ -74,19 +75,36 @@ export async function POST(request: NextRequest) {
         }
       }
 
-      // 3. Commit and push to Git so Vercel deploys code changes to production
+      // 3. Sync countryOverrides.json to Vercel Blob
+      if (process.env.BLOB_READ_WRITE_TOKEN) {
+        try {
+          const countryRaw = await readFile(localCountryOverridesPath, 'utf-8')
+          await put('countryOverrides.json', countryRaw, {
+            access: 'public',
+            addRandomSuffix: false,
+            allowOverwrite: true,
+          })
+        } catch (blobCountryErr: any) {
+          console.warn('Vercel Blob sync error for country overrides:', blobCountryErr)
+        }
+      }
+
+      // 4. Commit and push to Git so Vercel deploys code changes to production
       try {
-        await execAsync('git add src/ public/ && git commit -m "CMS: Publish to main live site" && git push origin main')
+        await execAsync('git add src/ public/')
+        await execAsync('git commit -m "CMS: Publish to main live site"')
+        await execAsync('git push origin main')
         console.log('Successfully pushed changes to origin main')
       } catch (gitErr: any) {
         // If nothing to commit or push already up to date, that is fine
         console.log('Git commit/push output:', gitErr.message || gitErr)
       }
 
-      // 4. Revalidate cache
+      // 5. Revalidate cache
       try {
         revalidatePath('/', 'layout')
         revalidatePath('/collections', 'layout')
+        revalidatePath('/international', 'layout')
       } catch (e) {}
 
       return NextResponse.json({

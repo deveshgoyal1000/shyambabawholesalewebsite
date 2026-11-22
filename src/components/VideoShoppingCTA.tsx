@@ -4,7 +4,12 @@ import React from 'react'
 import { Video } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 
-export default function VideoShoppingCTA() {
+export interface VideoShoppingCTAProps {
+  heading?: string
+  subheading?: string
+}
+
+export default function VideoShoppingCTA({ heading, subheading }: VideoShoppingCTAProps = {}) {
   return (
     <section className="py-8 bg-[#FAF8F5]">
       <div className="max-w-xl mx-auto px-4 sm:px-6">
@@ -21,7 +26,7 @@ export default function VideoShoppingCTA() {
               style={{ fontFamily: 'Georgia, serif' }}
               className="text-[26px] sm:text-[32px] md:text-[34px] font-bold text-[#121212] mb-2 tracking-normal leading-tight"
             >
-              Book a Live Video Call
+              {heading || 'Book a Live Video Call'}
             </h3>
 
             {/* Subtitle */}
@@ -32,7 +37,7 @@ export default function VideoShoppingCTA() {
               }}
               className="text-[15px] sm:text-[16px] text-[#3A3A3A] mb-6 font-medium"
             >
-              See products in real before ordering
+              {subheading || 'See products in real before ordering'}
             </p>
 
             {/* "Book Now →" Button */}

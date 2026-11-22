@@ -119,35 +119,6 @@ export default function ShopByCategories({
               >
                 {cat.slug === 'premium-jewellery' ? (
                   <div className="relative h-full">
-                    {/* Floating Editor Controls on Top of Card */}
-                    {isEditor && (
-                      <div className="absolute top-2.5 left-2.5 right-2.5 z-30 flex items-center justify-between gap-1 pointer-events-auto">
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.preventDefault()
-                            e.stopPropagation()
-                            dispatchEditorEvent('sb_open_collection_editor', { slug: cat.slug })
-                          }}
-                          className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-black/85 hover:bg-black text-amber-300 hover:text-amber-200 border border-amber-400/50 text-[10.5px] font-bold shadow-md backdrop-blur-xs transition-all active:scale-95 cursor-pointer"
-                          title="Enter & Edit this page in Visual Editor"
-                        >
-                          <span>📂 Enter &amp; Edit Page ↗</span>
-                        </button>
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.preventDefault()
-                            e.stopPropagation()
-                            dispatchEditorEvent('sb_open_bulk_upload', { categorySlug: cat.slug })
-                          }}
-                          className="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-amber-400 hover:bg-amber-300 text-neutral-950 text-[10.5px] font-bold shadow-md transition-all active:scale-95 cursor-pointer"
-                          title="Bulk Upload Products"
-                        >
-                          <span>⚡ Bulk Upload</span>
-                        </button>
-                      </div>
-                    )}
                     <Link
                       href={href}
                       onClick={(e) => handleCategoryClick(e, cat.slug)}
@@ -186,35 +157,6 @@ export default function ShopByCategories({
                   </div>
                 ) : cat.slug === 'normal-jewellery' ? (
                   <div className="relative h-full">
-                    {/* Floating Editor Controls on Top of Card */}
-                    {isEditor && (
-                      <div className="absolute top-2.5 left-2.5 right-2.5 z-30 flex items-center justify-between gap-1 pointer-events-auto">
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.preventDefault()
-                            e.stopPropagation()
-                            dispatchEditorEvent('sb_open_collection_editor', { slug: cat.slug })
-                          }}
-                          className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-black/85 hover:bg-black text-amber-300 hover:text-amber-200 border border-amber-400/50 text-[10.5px] font-bold shadow-md backdrop-blur-xs transition-all active:scale-95 cursor-pointer"
-                          title="Enter & Edit this page in Visual Editor"
-                        >
-                          <span>📂 Enter &amp; Edit Page ↗</span>
-                        </button>
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.preventDefault()
-                            e.stopPropagation()
-                            dispatchEditorEvent('sb_open_bulk_upload', { categorySlug: cat.slug })
-                          }}
-                          className="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-amber-400 hover:bg-amber-300 text-neutral-950 text-[10.5px] font-bold shadow-md transition-all active:scale-95 cursor-pointer"
-                          title="Bulk Upload Products"
-                        >
-                          <span>⚡ Bulk Upload</span>
-                        </button>
-                      </div>
-                    )}
                     <Link
                       href={href}
                       onClick={(e) => handleCategoryClick(e, cat.slug)}
@@ -253,36 +195,6 @@ export default function ShopByCategories({
                   </div>
                 ) : (
                   <div className="relative h-full">
-                    {/* Floating Editor Controls on Top of Card */}
-                    {isEditor && (
-                      <div className="absolute top-2.5 left-2.5 right-2.5 z-30 flex items-center justify-between gap-1 pointer-events-auto">
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.preventDefault()
-                            e.stopPropagation()
-                            window.dispatchEvent(
-                              new CustomEvent('sb_open_collection_editor', { detail: { slug: cat.slug } })
-                            )
-                          }}
-                          className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-black/85 hover:bg-black text-amber-300 hover:text-amber-200 border border-amber-400/50 text-[10.5px] font-bold shadow-md backdrop-blur-xs transition-all active:scale-95 cursor-pointer"
-                        >
-                          <span>📂 Enter &amp; Edit ↗</span>
-                        </button>
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.preventDefault()
-                            e.stopPropagation()
-                            window.dispatchEvent(
-                              new CustomEvent('sb_open_bulk_upload', { detail: { categorySlug: cat.slug } }))
-                          }}
-                          className="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-amber-400 hover:bg-amber-300 text-neutral-950 text-[10.5px] font-bold shadow-md transition-all active:scale-95 cursor-pointer"
-                        >
-                          <span>⚡ Bulk</span>
-                        </button>
-                      </div>
-                    )}
                     <Link
                       href={href}
                       onClick={(e) => handleCategoryClick(e, cat.slug)}

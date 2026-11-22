@@ -4,7 +4,12 @@ import React from 'react'
 import Link from 'next/link'
 import { MapPin } from 'lucide-react'
 
-export default function Footer() {
+export interface FooterProps {
+  companyName?: string
+  tagline?: string
+}
+
+export default function Footer({ companyName, tagline }: FooterProps = {}) {
   return (
     <footer id="contact" className="relative bg-[#195799] text-white">
       {/* Top Wave Transition */}
@@ -41,7 +46,7 @@ export default function Footer() {
 
         {/* Tagline below logo */}
         <p className="text-white font-bold text-sm sm:text-base tracking-wide mt-4 mb-8">
-          Style In Bulk, Profit In Every Piece
+          {tagline || 'Style In Bulk, Profit In Every Piece'}
         </p>
 
         {/* Navigation & Contact Columns: 2 Columns on Mobile, 3 Columns on Desktop */}

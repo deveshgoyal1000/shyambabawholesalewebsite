@@ -12,7 +12,17 @@ import {
   ChevronRight,
 } from 'lucide-react'
 
-export default function AnnouncementBar() {
+export interface AnnouncementBarProps {
+  highlight?: string
+  subtext?: string
+  phoneNumber?: string
+}
+
+export default function AnnouncementBar({
+  highlight,
+  subtext,
+  phoneNumber,
+}: AnnouncementBarProps = {}) {
   const [activeIdx, setActiveIdx] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
@@ -23,8 +33,8 @@ export default function AnnouncementBar() {
       id: 1,
       Icon: Sparkles,
       iconColor: 'text-[#111111]',
-      highlight: 'Low MOV ₹3,000 / $50',
-      text: 'Direct Jaipur Manufacturer Wholesale Pricing',
+      highlight: highlight || 'Low MOV ₹3,000 / $50',
+      text: subtext || 'Direct Jaipur Manufacturer Wholesale Pricing',
       href: '/collections/all',
       isExternal: false,
     },

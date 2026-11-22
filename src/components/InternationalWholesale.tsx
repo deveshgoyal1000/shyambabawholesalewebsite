@@ -5,7 +5,11 @@ import Link from 'next/link'
 import { Globe, ShieldCheck, PackageCheck, ChevronRight, Plane } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 
-export default function InternationalWholesale() {
+export interface InternationalWholesaleProps {
+  heading?: string
+}
+
+export default function InternationalWholesale({ heading }: InternationalWholesaleProps = {}) {
   const countries = [
     {
       country: 'USA',
@@ -50,7 +54,7 @@ export default function InternationalWholesale() {
             style={{ fontFamily: 'Georgia, serif' }}
             className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight text-center"
           >
-            We Serve Retailers Worldwide
+            {heading || 'We Serve Retailers Worldwide'}
           </h2>
 
           {/* Gold Accent Divider Bar matching Krishaz */}

@@ -4,7 +4,11 @@ import React, { useRef, useState, useEffect } from 'react'
 import { Star, CheckCircle2 } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 
-export default function Testimonials() {
+export interface TestimonialsProps {
+  heading?: string
+}
+
+export default function Testimonials({ heading }: TestimonialsProps = {}) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [activeIdx, setActiveIdx] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
@@ -120,7 +124,7 @@ export default function Testimonials() {
               style={{ fontFamily: 'Georgia, serif' }}
               className="text-[28px] sm:text-[36px] md:text-[44px] font-normal text-[#121212] tracking-[0.5px] leading-tight mb-2 sm:mb-2.5"
             >
-              What Our Retailers Say
+              {heading || 'What Our Retailers Say'}
             </h2>
 
             <p

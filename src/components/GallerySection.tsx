@@ -4,7 +4,12 @@ import React, { useRef, useState, useEffect } from 'react'
 import { Play, ChevronLeft, ChevronRight } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 
-export default function GallerySection() {
+export interface GallerySectionProps {
+  heading?: string
+  subheading?: string
+}
+
+export default function GallerySection({ heading, subheading }: GallerySectionProps = {}) {
   const carouselRef = useRef<HTMLDivElement>(null)
   const [activeIdx, setActiveIdx] = useState(0)
 
@@ -62,7 +67,7 @@ export default function GallerySection() {
               style={{ fontFamily: 'Georgia, serif' }}
               className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight"
             >
-              Explore Shyambaba&apos;s Gallery
+              {heading || "Explore Shyambaba's Gallery"}
             </h2>
 
             {/* Gold Accent Divider Bar matching Krishaz */}
@@ -75,7 +80,7 @@ export default function GallerySection() {
               }}
               className="text-[13px] sm:text-[14px] text-[#2C2C2C] font-normal text-center"
             >
-              The Art Of Adornment
+              {subheading || 'The Art Of Adornment'}
             </p>
           </div>
         </ScrollReveal>

@@ -4,7 +4,11 @@ import React, { useEffect, useRef, useState } from 'react'
 import ScrollReveal from '@/components/ScrollReveal'
 import { Video } from 'lucide-react'
 
-export default function ManufacturerComparison() {
+export interface ManufacturerComparisonProps {
+  heading?: string
+}
+
+export default function ManufacturerComparison({ heading }: ManufacturerComparisonProps = {}) {
   const tableRef = useRef<HTMLDivElement>(null)
   const [tableInView, setTableInView] = useState(false)
 
@@ -91,7 +95,7 @@ export default function ManufacturerComparison() {
               style={{ fontFamily: 'Georgia, serif' }}
               className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight"
             >
-              ShyamBabaWholesale vs Other Suppliers
+              {heading || 'ShyamBabaWholesale vs Other Suppliers'}
             </h2>
 
             {/* Gold Accent Divider Bar matching Krishaz */}

@@ -4,7 +4,19 @@ import React from 'react'
 import { ShieldCheck, Users, Globe } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 
-export default function WholesaleLeadCTA() {
+export interface WholesaleLeadCTAProps {
+  title?: string
+  description?: string
+  button1Text?: string
+  button2Text?: string
+}
+
+export default function WholesaleLeadCTA({
+  title,
+  description,
+  button1Text,
+  button2Text,
+}: WholesaleLeadCTAProps = {}) {
   return (
     <section className="w-full bg-[#FAF8F5]">
       {/* 1. Royal Blue Banner matching Krishaz */}
@@ -16,12 +28,13 @@ export default function WholesaleLeadCTA() {
               style={{ fontFamily: 'Georgia, serif' }}
               className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-white leading-[1.22] tracking-[0.5px]"
             >
-              Boost your sales with Shyambaba&apos;s premium brass earrings
+              {title || 'Boost your sales with Shyambaba’s premium brass earrings'}
             </h2>
 
             {/* Subtitle - Bigger & Clearer on Mobile */}
             <p className="text-white/95 text-[15px] sm:text-[17px] mt-3.5 sm:mt-4 max-w-lg mx-auto leading-relaxed font-normal font-sans">
-              Join thousands of retailers worldwide who trust SHYAMBABA for premium quality &amp; designer brass jewellery.
+              {description ||
+                'Join thousands of retailers worldwide who trust SHYAMBABA for premium quality & designer brass jewellery.'}
             </p>
 
             {/* Action Buttons - Bigger & Bolder */}
@@ -31,7 +44,7 @@ export default function WholesaleLeadCTA() {
                 className="btn-tactile block w-full bg-[#D4AF37] hover:bg-[#C9A84C] text-neutral-950 font-bold text-[15px] sm:text-[17px] py-4 sm:py-4.5 px-8 rounded-full shadow-lg hover:shadow-xl text-center font-sans tracking-wide active:scale-98 transition-all"
                 style={{ WebkitTapHighlightColor: 'transparent' }}
               >
-                Shop Wholesale
+                {button1Text || 'Shop Wholesale'}
               </a>
 
               <a
@@ -41,7 +54,7 @@ export default function WholesaleLeadCTA() {
                 className="btn-tactile block w-full bg-transparent hover:bg-white/15 text-white font-bold text-[15px] sm:text-[17px] py-4 sm:py-4.5 px-8 rounded-full border-2 border-white text-center font-sans tracking-wide active:scale-98 transition-all"
                 style={{ WebkitTapHighlightColor: 'transparent' }}
               >
-                Contact Us
+                {button2Text || 'Contact Us'}
               </a>
             </div>
 

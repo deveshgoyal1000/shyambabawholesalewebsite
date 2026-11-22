@@ -56,17 +56,17 @@ export type ComponentProps = {
     bgImageDesktop: string
   }
   ShopByCategoriesBlock: {
-    quickActions?: any
+    enterPages?: any
     heading: string
     subheading: string
     categories: CategoryItem[]
   }
   GallerySectionBlock: {
-    quickActions?: any
     heading: string
     subheading: string
   }
   InternationalWholesaleBlock: {
+    enterCountryPages?: any
     heading: string
   }
   ManufacturerComparisonBlock: {
@@ -111,7 +111,19 @@ export const puckConfig: Config<ComponentProps> = {
     // 1. Top Announcement Bar
     AnnouncementBarBlock: {
       label: '1. Top Announcement Bar',
-      render: () => <AnnouncementBar />,
+      fields: {
+        highlight: { type: 'text', label: 'Highlight Text' },
+        subtext: { type: 'text', label: 'Subtext' },
+        phoneNumber: { type: 'text', label: 'Phone / WhatsApp' },
+      },
+      defaultProps: {
+        highlight: 'Low MOV ₹3,000 / $50',
+        subtext: 'Direct Jaipur Manufacturer Wholesale Pricing',
+        phoneNumber: '+91 96808 65791',
+      },
+      render: ({ highlight, subtext, phoneNumber }) => (
+        <AnnouncementBar highlight={highlight} subtext={subtext} phoneNumber={phoneNumber} />
+      ),
     },
 
     // 2. Header & Navigation Bar
@@ -123,7 +135,7 @@ export const puckConfig: Config<ComponentProps> = {
       defaultProps: {
         brandName: 'ShyamBabaWholesale',
       },
-      render: () => <Header />,
+      render: ({ brandName }) => <Header brandName={brandName} />,
     },
 
     // 3. Exact Krishaz Style Full-Bleed Hero
@@ -269,9 +281,15 @@ export const puckConfig: Config<ComponentProps> = {
                   style={{ fontFamily: 'Georgia, serif' }}
                   className="font-bold tracking-tight text-white leading-[1.25] mb-5 mx-auto drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] px-2 text-center"
                 >
-                  <span className="block text-[42px]">JAIPUR BIGGEST</span>
-                  <span className="block text-[42px]">ARTIFICIAL JEWELLERY</span>
-                  <span className="block text-[36px] text-[#FAF8F5] mt-1">MANUFACTURER &amp; WHOLESALER</span>
+                  <span className="block text-[42px]">
+                    {headlineLine1 || 'JAIPUR BIGGEST'}
+                  </span>
+                  <span className="block text-[42px]">
+                    {headlineLine2 || 'ARTIFICIAL JEWELLERY'}
+                  </span>
+                  <span className="block text-[36px] text-[#FAF8F5] mt-1">
+                    MANUFACTURER &amp; WHOLESALER
+                  </span>
                 </h1>
 
                 <p
@@ -330,13 +348,12 @@ export const puckConfig: Config<ComponentProps> = {
     ShopByCategoriesBlock: {
       label: '3. Shop by Categories (Detailed Grid)',
       fields: {
-        quickActions: {
+        enterPages: {
           type: 'custom',
           render: () => (
-            <div className="space-y-2.5 p-3 rounded-2xl bg-neutral-900 border border-neutral-700 my-2">
-              <p className="text-[11px] font-bold text-amber-300 uppercase tracking-wider flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                <span>Collection Editors &amp; Bulk Upload:</span>
+            <div className="space-y-2 p-3.5 rounded-xl bg-white border border-neutral-200 my-2 shadow-xs">
+              <p className="text-[11px] font-bold text-neutral-800 uppercase tracking-wider">
+                Enter Pages
               </p>
               <button
                 type="button"
@@ -345,10 +362,10 @@ export const puckConfig: Config<ComponentProps> = {
                     new CustomEvent('sb_open_collection_editor', { detail: { slug: 'premium-jewellery' } })
                   )
                 }
-                className="w-full py-2.5 px-3 rounded-xl bg-[#8B0000] hover:bg-red-800 text-white font-bold text-xs flex items-center justify-between border border-red-500/50 shadow-md transition-all cursor-pointer"
+                className="w-full py-2 px-3 rounded-lg bg-neutral-50 hover:bg-neutral-100 text-[#195799] font-medium text-xs flex items-center justify-between border border-neutral-200 transition-colors cursor-pointer"
               >
-                <span>📂 Enter Premium Jewellery Editor</span>
-                <span className="text-amber-300">↗</span>
+                <span>Premium Jewellery Page</span>
+                <span>&rarr;</span>
               </button>
               <button
                 type="button"
@@ -357,10 +374,10 @@ export const puckConfig: Config<ComponentProps> = {
                     new CustomEvent('sb_open_collection_editor', { detail: { slug: 'normal-jewellery' } })
                   )
                 }
-                className="w-full py-2.5 px-3 rounded-xl bg-[#1E3A8A] hover:bg-blue-800 text-white font-bold text-xs flex items-center justify-between border border-blue-500/50 shadow-md transition-all cursor-pointer"
+                className="w-full py-2 px-3 rounded-lg bg-neutral-50 hover:bg-neutral-100 text-[#195799] font-medium text-xs flex items-center justify-between border border-neutral-200 transition-colors cursor-pointer"
               >
-                <span>📂 Enter Normal Jewellery Editor</span>
-                <span className="text-blue-300">↗</span>
+                <span>Normal Jewellery Page</span>
+                <span>&rarr;</span>
               </button>
               <button
                 type="button"
@@ -369,9 +386,9 @@ export const puckConfig: Config<ComponentProps> = {
                     new CustomEvent('sb_open_bulk_upload', { detail: { categorySlug: 'premium-jewellery' } })
                   )
                 }
-                className="w-full py-2.5 px-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-neutral-950 font-bold text-xs flex items-center justify-center gap-1.5 shadow-md transition-all cursor-pointer"
+                className="w-full py-2 px-3 rounded-lg bg-[#195799] hover:bg-[#124378] text-white font-medium text-xs flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
               >
-                <span>⚡ Bulk Upload Products</span>
+                <span>Bulk Upload Products</span>
               </button>
             </div>
           ),
@@ -418,52 +435,6 @@ export const puckConfig: Config<ComponentProps> = {
     GallerySectionBlock: {
       label: '4. Wholesale Gallery (Product Showcase)',
       fields: {
-        quickActions: {
-          type: 'custom',
-          render: () => (
-            <div className="space-y-2.5 p-3 rounded-2xl bg-neutral-900 border border-neutral-700 my-2">
-              <p className="text-[11px] font-bold text-amber-300 uppercase tracking-wider flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                <span>Collection Editors &amp; Bulk Upload:</span>
-              </p>
-              <button
-                type="button"
-                onClick={() =>
-                  window.dispatchEvent(
-                    new CustomEvent('sb_open_collection_editor', { detail: { slug: 'premium-jewellery' } })
-                  )
-                }
-                className="w-full py-2.5 px-3 rounded-xl bg-[#8B0000] hover:bg-red-800 text-white font-bold text-xs flex items-center justify-between border border-red-500/50 shadow-md transition-all cursor-pointer"
-              >
-                <span>📂 Enter Premium Jewellery Editor</span>
-                <span className="text-amber-300">↗</span>
-              </button>
-              <button
-                type="button"
-                onClick={() =>
-                  window.dispatchEvent(
-                    new CustomEvent('sb_open_collection_editor', { detail: { slug: 'normal-jewellery' } })
-                  )
-                }
-                className="w-full py-2.5 px-3 rounded-xl bg-[#1E3A8A] hover:bg-blue-800 text-white font-bold text-xs flex items-center justify-between border border-blue-500/50 shadow-md transition-all cursor-pointer"
-              >
-                <span>📂 Enter Normal Jewellery Editor</span>
-                <span className="text-blue-300">↗</span>
-              </button>
-              <button
-                type="button"
-                onClick={() =>
-                  window.dispatchEvent(
-                    new CustomEvent('sb_open_bulk_upload', { detail: { categorySlug: 'premium-jewellery' } })
-                  )
-                }
-                className="w-full py-2.5 px-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-neutral-950 font-bold text-xs flex items-center justify-center gap-1.5 shadow-md transition-all cursor-pointer"
-              >
-                <span>⚡ Bulk Upload Products</span>
-              </button>
-            </div>
-          ),
-        },
         heading: { type: 'text', label: 'Section Heading' },
         subheading: { type: 'text', label: 'Subheading' },
       },
@@ -471,19 +442,52 @@ export const puckConfig: Config<ComponentProps> = {
         heading: 'Trending Wholesale Jewellery',
         subheading: 'Jaipur Factory Finished Brass & Oxidised Silver Pieces',
       },
-      render: () => <GallerySection />,
+      render: ({ heading, subheading }) => (
+        <GallerySection heading={heading} subheading={subheading} />
+      ),
     },
 
     // 5. International Wholesale
     InternationalWholesaleBlock: {
       label: '5. International Wholesale (50+ Countries)',
       fields: {
+        enterCountryPages: {
+          type: 'custom',
+          render: () => (
+            <div className="space-y-2 p-3.5 rounded-xl bg-white border border-neutral-200 my-2 shadow-xs">
+              <p className="text-[11px] font-bold text-neutral-800 uppercase tracking-wider">
+                Enter Country Pages
+              </p>
+              {[
+                { slug: 'united-states', name: 'United States (USA)' },
+                { slug: 'united-kingdom', name: 'United Kingdom (UK)' },
+                { slug: 'canada', name: 'Canada' },
+                { slug: 'dubai', name: 'UAE (Dubai)' },
+                { slug: 'australia', name: 'Australia' },
+              ].map((c) => (
+                <button
+                  key={c.slug}
+                  type="button"
+                  onClick={() =>
+                    window.dispatchEvent(
+                      new CustomEvent('sb_open_country_editor', { detail: { slug: c.slug } })
+                    )
+                  }
+                  className="w-full py-1.5 px-3 rounded-lg bg-neutral-50 hover:bg-neutral-100 text-[#195799] font-medium text-xs flex items-center justify-between border border-neutral-200 transition-colors cursor-pointer"
+                >
+                  <span>{c.name}</span>
+                  <span>&rarr;</span>
+                </button>
+              ))}
+            </div>
+          ),
+        },
         heading: { type: 'text', label: 'Heading' },
       },
       defaultProps: {
         heading: 'Worldwide Express Cargo Delivery',
       },
-      render: () => <InternationalWholesale />,
+      render: ({ heading }) => <InternationalWholesale heading={heading} />,
     },
 
     // 6. Manufacturer vs Trader Comparison
@@ -495,7 +499,7 @@ export const puckConfig: Config<ComponentProps> = {
       defaultProps: {
         heading: 'Why Source Direct from Jaipur Factory vs Market Traders',
       },
-      render: () => <ManufacturerComparison />,
+      render: ({ heading }) => <ManufacturerComparison heading={heading} />,
     },
 
     // 7. Factory Story ("We Don't Source. We Are Manufacture.")
@@ -596,7 +600,7 @@ export const puckConfig: Config<ComponentProps> = {
       defaultProps: {
         heading: 'Jaipur Artisan Craftsmanship',
       },
-      render: () => <ManufacturingProcess />,
+      render: ({ heading }) => <ManufacturingProcess heading={heading} />,
     },
 
     // 9. Video Shopping CTA
@@ -610,7 +614,9 @@ export const puckConfig: Config<ComponentProps> = {
         heading: 'Live Video Call Selection from Factory Floor',
         subheading: 'Inspect real shine, weight, and finish before dispatch',
       },
-      render: () => <VideoShoppingCTA />,
+      render: ({ heading, subheading }) => (
+        <VideoShoppingCTA heading={heading} subheading={subheading} />
+      ),
     },
 
     // 10. Customer Testimonials
@@ -622,7 +628,7 @@ export const puckConfig: Config<ComponentProps> = {
       defaultProps: {
         heading: 'Trusted by 10,000+ Retailers & Boutiques Worldwide',
       },
-      render: () => <Testimonials />,
+      render: ({ heading }) => <Testimonials heading={heading} />,
     },
 
     // 11. FAQ Accordion
@@ -634,7 +640,7 @@ export const puckConfig: Config<ComponentProps> = {
       defaultProps: {
         heading: 'Frequently Asked Wholesale Questions',
       },
-      render: () => <FAQSection />,
+      render: ({ heading }) => <FAQSection heading={heading} />,
     },
 
     // 12. Wholesale Lead CTA
@@ -653,7 +659,14 @@ export const puckConfig: Config<ComponentProps> = {
         button1Text: 'Shop Wholesale',
         button2Text: 'Contact Us',
       },
-      render: () => <WholesaleLeadCTA />,
+      render: ({ title, description, button1Text, button2Text }) => (
+        <WholesaleLeadCTA
+          title={title}
+          description={description}
+          button1Text={button1Text}
+          button2Text={button2Text}
+        />
+      ),
     },
 
     // 13. Footer
@@ -667,7 +680,9 @@ export const puckConfig: Config<ComponentProps> = {
         companyName: 'ShyamBaba Wholesale Jewellery',
         tagline: 'Jaipur Factory Direct Brass Jewellery Manufacturer & Exporter',
       },
-      render: () => <Footer />,
+      render: ({ companyName, tagline }) => (
+        <Footer companyName={companyName} tagline={tagline} />
+      ),
     },
   },
 }

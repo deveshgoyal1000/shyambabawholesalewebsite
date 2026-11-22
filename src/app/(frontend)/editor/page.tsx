@@ -9,6 +9,7 @@ import ProductCatalogCMS from '@/components/cms/ProductCatalogCMS'
 import CategoriesCMS from '@/components/cms/CategoriesCMS'
 import MediaLibraryCMS from '@/components/cms/MediaLibraryCMS'
 import CollectionPageEditor from '@/components/cms/CollectionPageEditor'
+import CountryPageEditor from '@/components/cms/CountryPageEditor'
 import BulkUploadModal from '@/components/cms/BulkUploadModal'
 import PublishOptionsModal from '@/components/cms/PublishOptionsModal'
 import {
@@ -167,8 +168,9 @@ const defaultHomeData: Data<ComponentProps> = {
 type TabType = 'visual' | 'products' | 'categories' | 'media'
 
 export default function EditorPage() {
-  const [currentView, setCurrentView] = useState<'home' | 'collection'>('home')
+  const [currentView, setCurrentView] = useState<'home' | 'collection' | 'country'>('home')
   const [activeCollectionSlug, setActiveCollectionSlug] = useState<string>('premium-jewellery')
+  const [activeCountrySlug, setActiveCountrySlug] = useState<string>('united-states')
 
   const [currentTab, setCurrentTab] = useState<TabType>('visual')
   const [data, setData] = useState<Data<ComponentProps>>(defaultHomeData)
@@ -185,12 +187,18 @@ export default function EditorPage() {
   const [publishingTarget, setPublishingTarget] = useState<'staging' | 'main' | null>(null)
   const [showPublishDropdown, setShowPublishDropdown] = useState<boolean>(false)
 
-  // Global Listeners for In-Editor Navigation & Bulk Upload
+  // Global Listeners for In-Editor Navigation, Country Pages & Bulk Upload
   useEffect(() => {
     const handleOpenCollection = (e: any) => {
       const slug = e.detail?.slug || 'premium-jewellery'
       setActiveCollectionSlug(slug)
       setCurrentView('collection')
+    }
+
+    const handleOpenCountry = (e: any) => {
+      const slug = e.detail?.slug || 'united-states'
+      setActiveCountrySlug(slug)
+      setCurrentView('country')
     }
 
     const handleOpenBulk = (e: any) => {
@@ -200,10 +208,12 @@ export default function EditorPage() {
     }
 
     window.addEventListener('sb_open_collection_editor', handleOpenCollection)
+    window.addEventListener('sb_open_country_editor', handleOpenCountry)
     window.addEventListener('sb_open_bulk_upload', handleOpenBulk)
 
     return () => {
       window.removeEventListener('sb_open_collection_editor', handleOpenCollection)
+      window.removeEventListener('sb_open_country_editor', handleOpenCountry)
       window.removeEventListener('sb_open_bulk_upload', handleOpenBulk)
     }
   }, [])
@@ -311,7 +321,7 @@ export default function EditorPage() {
         {/* Left: Brand + Page Dropdown */}
         <div className="flex items-center gap-2.5 sm:gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-black font-bold text-xs shadow-xs">
+            <div className="w-7 h-7 rounded-lg bg-[#195799] flex items-center justify-center text-white font-bold text-xs shadow-xs">
               SB
             </div>
             <span className="hidden sm:inline font-bold text-white text-xs sm:text-sm tracking-wide">
@@ -321,15 +331,24 @@ export default function EditorPage() {
 
           {/* Real Page Selector Dropdown */}
           <div className="flex items-center bg-neutral-900 border border-neutral-700/80 rounded-xl px-2.5 py-1 text-xs">
-            <span className="text-[10px] text-amber-400 font-bold uppercase tracking-wider mr-2 hidden md:inline">
+            <span className="text-[10px] text-neutral-400 font-bold uppercase tracking-wider mr-2 hidden md:inline">
               Page:
             </span>
             <select
-              value={currentView === 'home' ? 'home' : activeCollectionSlug}
+              value={
+                currentView === 'home'
+                  ? 'home'
+                  : currentView === 'country'
+                  ? `country:${activeCountrySlug}`
+                  : activeCollectionSlug
+              }
               onChange={(e) => {
                 const val = e.target.value
                 if (val === 'home') {
                   setCurrentView('home')
+                } else if (val.startsWith('country:')) {
+                  setActiveCountrySlug(val.replace('country:', ''))
+                  setCurrentView('country')
                 } else {
                   setActiveCollectionSlug(val)
                   setCurrentView('collection')
@@ -338,29 +357,46 @@ export default function EditorPage() {
               className="bg-transparent text-white font-semibold text-xs focus:outline-hidden cursor-pointer"
             >
               <option value="home" className="bg-neutral-900 text-white">
-                🏠 Home Page (Visual Drag &amp; Drop)
+                Home Page
               </option>
-              <optgroup label="Collections & Subcategories" className="bg-neutral-900 text-amber-300">
+              <optgroup label="International Country Pages" className="bg-neutral-900 text-blue-300">
+                <option value="country:united-states" className="bg-neutral-900 text-white">
+                  United States (USA)
+                </option>
+                <option value="country:united-kingdom" className="bg-neutral-900 text-white">
+                  United Kingdom (UK)
+                </option>
+                <option value="country:canada" className="bg-neutral-900 text-white">
+                  Canada
+                </option>
+                <option value="country:dubai" className="bg-neutral-900 text-white">
+                  UAE (Dubai)
+                </option>
+                <option value="country:australia" className="bg-neutral-900 text-white">
+                  Australia
+                </option>
+              </optgroup>
+              <optgroup label="Collections & Subcategories" className="bg-neutral-900 text-neutral-300">
                 <option value="premium-jewellery" className="bg-neutral-900 text-white">
-                  💎 Premium Jewellery (12 Subcategories)
+                  Premium Jewellery (12 Subcategories)
                 </option>
                 <option value="normal-jewellery" className="bg-neutral-900 text-white">
-                  💠 Normal Jewellery (8 Subcategories)
+                  Normal Jewellery (8 Subcategories)
                 </option>
                 <option value="bangles" className="bg-neutral-900 text-white">
-                  📿 Bangles (2 Subcategories)
+                  Bangles (2 Subcategories)
                 </option>
                 <option value="bracelets" className="bg-neutral-900 text-white">
-                  ✨ Bracelets (3 Subcategories)
+                  Bracelets (3 Subcategories)
                 </option>
                 <option value="earrings" className="bg-neutral-900 text-white">
-                  💎 Earrings (8 Subcategories)
+                  Earrings (8 Subcategories)
                 </option>
                 <option value="necklaces" className="bg-neutral-900 text-white">
-                  👑 Necklaces (6 Subcategories)
+                  Necklaces (6 Subcategories)
                 </option>
                 <option value="rings" className="bg-neutral-900 text-white">
-                  💍 Finger Rings (2 Subcategories)
+                  Finger Rings (2 Subcategories)
                 </option>
               </optgroup>
             </select>
@@ -389,7 +425,7 @@ export default function EditorPage() {
               onClick={() => setCurrentTab('products')}
               className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                 currentTab === 'products'
-                  ? 'bg-amber-500 text-neutral-950 shadow-sm font-bold'
+                  ? 'bg-[#195799] text-white shadow-sm font-semibold'
                   : 'text-neutral-400 hover:text-white hover:bg-neutral-800/60'
               }`}
             >
@@ -403,7 +439,7 @@ export default function EditorPage() {
               onClick={() => setCurrentTab('categories')}
               className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                 currentTab === 'categories'
-                  ? 'bg-neutral-700 text-white shadow-sm font-semibold'
+                  ? 'bg-[#195799] text-white shadow-sm font-semibold'
                   : 'text-neutral-400 hover:text-white hover:bg-neutral-800/60'
               }`}
             >
@@ -416,7 +452,7 @@ export default function EditorPage() {
               onClick={() => setCurrentTab('media')}
               className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                 currentTab === 'media'
-                  ? 'bg-neutral-700 text-white shadow-sm font-semibold'
+                  ? 'bg-[#195799] text-white shadow-sm font-semibold'
                   : 'text-neutral-400 hover:text-white hover:bg-neutral-800/60'
               }`}
             >
@@ -428,42 +464,30 @@ export default function EditorPage() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setCurrentView('home')}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition-all cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-white text-xs font-semibold transition-all cursor-pointer"
             >
-              <span>← Back to Home Page Editor</span>
+              <span>&larr; Back to Home Page Editor</span>
             </button>
           </div>
         )}
 
-        {/* Right: Publish Buttons & Quick Actions */}
+        {/* Right: Publish Button (Minimal #195799 style) */}
         <div className="flex items-center gap-2 relative">
-          <button
-            onClick={() => {
-              setBulkCategorySlug(currentView === 'collection' ? activeCollectionSlug : 'premium-jewellery')
-              setIsBulkModalOpen(true)
-            }}
-            className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-amber-400 hover:bg-amber-300 text-neutral-950 text-xs font-bold shadow-sm transition-all cursor-pointer"
-          >
-            <Upload className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">⚡ Bulk Upload</span>
-            <span className="sm:hidden">Bulk</span>
-          </button>
-
           {/* Dual Publish Action (Staging vs Main Site) */}
           <div className="relative">
-            <div className="inline-flex items-center rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 shadow-md">
+            <div className="inline-flex items-center rounded-lg bg-[#195799] hover:bg-[#124378] text-white shadow-xs transition-colors">
               <button
                 type="button"
                 onClick={() => setIsPublishModalOpen(true)}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-white font-bold text-xs hover:bg-white/10 rounded-l-xl transition-all cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-white font-medium text-xs hover:bg-white/10 rounded-l-lg transition-colors cursor-pointer"
               >
-                <Rocket className="w-3.5 h-3.5 text-amber-300" />
+                <Globe className="w-3.5 h-3.5 text-white/90" />
                 <span>Publish</span>
               </button>
               <button
                 type="button"
                 onClick={() => setShowPublishDropdown((prev) => !prev)}
-                className="px-2 py-1.5 text-white/80 hover:text-white hover:bg-white/10 rounded-r-xl border-l border-white/20 transition-all cursor-pointer"
+                className="px-2 py-1.5 text-white/80 hover:text-white hover:bg-white/10 rounded-r-lg border-l border-white/20 transition-colors cursor-pointer"
                 title="Publish Options"
               >
                 <ChevronDown className="w-3.5 h-3.5" />
@@ -482,7 +506,7 @@ export default function EditorPage() {
                     <span className="text-xs">1</span>
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-white group-hover:text-blue-300">
+                    <p className="text-xs font-semibold text-white group-hover:text-blue-300">
                       Publish to Staging Site
                     </p>
                     <p className="text-[10px] text-neutral-400">
@@ -496,11 +520,11 @@ export default function EditorPage() {
                   onClick={() => handleExecutePublish('main')}
                   className="w-full p-2.5 rounded-xl hover:bg-neutral-800 text-left transition-colors flex items-start gap-2.5 group cursor-pointer border-t border-neutral-800/80"
                 >
-                  <div className="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
-                    <Rocket className="w-3.5 h-3.5" />
+                  <div className="w-7 h-7 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 mt-0.5">
+                    <span className="text-xs">2</span>
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-white group-hover:text-emerald-300">
+                    <p className="text-xs font-semibold text-white group-hover:text-blue-300">
                       Publish to Main Live Site
                     </p>
                     <p className="text-[10px] text-neutral-400">
@@ -513,7 +537,13 @@ export default function EditorPage() {
           </div>
 
           <a
-            href={currentView === 'collection' ? `/collections/${activeCollectionSlug}` : '/'}
+            href={
+              currentView === 'country'
+                ? `/international/${activeCountrySlug}`
+                : currentView === 'collection'
+                ? `/collections/${activeCollectionSlug}`
+                : '/'
+            }
             target="_blank"
             rel="noopener noreferrer"
             title="Preview Live Website in new tab"
@@ -545,8 +575,16 @@ export default function EditorPage() {
 
       {/* Main Content Area */}
       <main className="flex-1 overflow-hidden relative">
-        {/* VIEW A: Internal Collection & Subcategory Live Page Editor */}
-        {currentView === 'collection' ? (
+        {/* VIEW A: Country Page Live Editor */}
+        {currentView === 'country' ? (
+          <div className="w-full h-full">
+            <CountryPageEditor
+              countrySlug={activeCountrySlug}
+              onBackToHome={() => setCurrentView('home')}
+            />
+          </div>
+        ) : currentView === 'collection' ? (
+          /* VIEW B: Internal Collection & Subcategory Live Page Editor */
           <div className="w-full h-full">
             <CollectionPageEditor
               collectionSlug={activeCollectionSlug}
@@ -554,7 +592,7 @@ export default function EditorPage() {
             />
           </div>
         ) : (
-          /* VIEW B: Home Page Editor with Visual and CMS Views */
+          /* VIEW C: Home Page Editor with Visual and CMS Views */
           <>
             {/* Tab 1: Visual Page Editor (Puck) */}
             <div className={`w-full h-full ${currentTab === 'visual' ? 'block' : 'hidden'}`}>

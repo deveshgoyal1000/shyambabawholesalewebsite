@@ -164,11 +164,11 @@ export default function BulkUploadModal({
         {/* Modal Header */}
         <div className="flex items-center justify-between pb-4 border-b border-neutral-200">
           <div className="flex items-center gap-2.5">
-            <div className="w-10 h-10 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-800 shadow-xs">
-              <Upload className="w-5 h-5 text-amber-700" />
+            <div className="w-9 h-9 rounded-xl bg-blue-50 text-[#195799] flex items-center justify-center shadow-xs">
+              <Upload className="w-4.5 h-4.5 text-[#195799]" />
             </div>
             <div>
-              <h3 style={{ fontFamily: 'Georgia, serif' }} className="text-lg sm:text-xl font-bold text-neutral-900 leading-tight">
+              <h3 style={{ fontFamily: 'Georgia, serif' }} className="text-lg font-bold text-neutral-900 leading-tight">
                 Bulk Upload Products &amp; Images
               </h3>
               <p className="text-xs text-neutral-500">
@@ -233,7 +233,7 @@ export default function BulkUploadModal({
           </div>
 
           {/* Drag & Drop File Zone */}
-          <div className="relative border-2 border-dashed border-amber-300 hover:border-amber-400 bg-amber-50/20 hover:bg-amber-50/50 rounded-2xl p-6 text-center transition-all cursor-pointer">
+          <div className="relative border-2 border-dashed border-neutral-300 hover:border-[#195799] bg-neutral-50/50 hover:bg-blue-50/20 rounded-2xl p-6 text-center transition-all cursor-pointer">
             <input
               type="file"
               multiple
@@ -243,14 +243,14 @@ export default function BulkUploadModal({
               className="absolute inset-0 w-full h-full opacity-0 cursor-pointer disabled:cursor-not-allowed"
             />
             <div className="flex flex-col items-center justify-center space-y-2">
-              <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center text-amber-700">
+              <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-[#195799]">
                 <ImageIcon className="w-6 h-6" />
               </div>
               <p className="font-semibold text-neutral-800 text-sm">
                 Drop multiple product images here or click to browse
               </p>
               <p className="text-[11px] text-neutral-500">
-                Select 5, 20, or 50+ photos (JPG, PNG, WEBP). Codes like SB-015 are detected from filenames automatically!
+                Select photos (JPG, PNG, WEBP). Product codes like SB-015 are auto-detected from filenames.
               </p>
             </div>
           </div>
