@@ -5,9 +5,6 @@ import { Puck, type Data, usePuck } from '@measured/puck'
 import '@measured/puck/puck.css'
 import { puckConfig, type ComponentProps } from '@/puck.config'
 import { DEFAULT_CATEGORIES } from '@/components/ShopByCategories'
-import ProductCatalogCMS from '@/components/cms/ProductCatalogCMS'
-import CategoriesCMS from '@/components/cms/CategoriesCMS'
-import MediaLibraryCMS from '@/components/cms/MediaLibraryCMS'
 import CollectionPageEditor from '@/components/cms/CollectionPageEditor'
 import CountryPageEditor from '@/components/cms/CountryPageEditor'
 import BulkUploadModal from '@/components/cms/BulkUploadModal'
@@ -165,14 +162,11 @@ const defaultHomeData: Data<ComponentProps> = {
   },
 }
 
-type TabType = 'visual' | 'products' | 'categories' | 'media'
-
 export default function EditorPage() {
   const [currentView, setCurrentView] = useState<'home' | 'collection' | 'country'>('home')
   const [activeCollectionSlug, setActiveCollectionSlug] = useState<string>('premium-jewellery')
   const [activeCountrySlug, setActiveCountrySlug] = useState<string>('united-states')
 
-  const [currentTab, setCurrentTab] = useState<TabType>('visual')
   const [data, setData] = useState<Data<ComponentProps>>(defaultHomeData)
   const [loading, setLoading] = useState<boolean>(true)
   const [saveStatus, setSaveStatus] = useState<string>('')
@@ -507,64 +501,8 @@ export default function EditorPage() {
           </div>
         </div>
 
-        {/* Center: Switcher Tabs (When on Home Page) */}
-        {currentView === 'home' ? (
-          <nav className="flex items-center bg-neutral-900/90 p-1 rounded-xl border border-neutral-800">
-            <button
-              data-tab="visual"
-              onClick={() => setCurrentTab('visual')}
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                currentTab === 'visual'
-                  ? 'bg-[#195799] text-white shadow-sm font-semibold'
-                  : 'text-neutral-400 hover:text-white hover:bg-neutral-800/60'
-              }`}
-            >
-              <Palette className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Visual Page Editor</span>
-              <span className="sm:hidden">Editor</span>
-            </button>
-
-            <button
-              data-tab="products"
-              onClick={() => setCurrentTab('products')}
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                currentTab === 'products'
-                  ? 'bg-[#195799] text-white shadow-sm font-semibold'
-                  : 'text-neutral-400 hover:text-white hover:bg-neutral-800/60'
-              }`}
-            >
-              <Package className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Products &amp; Catalog CMS</span>
-              <span className="sm:hidden">Products</span>
-            </button>
-
-            <button
-              data-tab="categories"
-              onClick={() => setCurrentTab('categories')}
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                currentTab === 'categories'
-                  ? 'bg-[#195799] text-white shadow-sm font-semibold'
-                  : 'text-neutral-400 hover:text-white hover:bg-neutral-800/60'
-              }`}
-            >
-              <FolderTree className="w-3.5 h-3.5" />
-              <span className="hidden md:inline">Categories</span>
-            </button>
-
-            <button
-              data-tab="media"
-              onClick={() => setCurrentTab('media')}
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                currentTab === 'media'
-                  ? 'bg-[#195799] text-white shadow-sm font-semibold'
-                  : 'text-neutral-400 hover:text-white hover:bg-neutral-800/60'
-              }`}
-            >
-              <ImageIcon className="w-3.5 h-3.5" />
-              <span className="hidden md:inline">Media Assets</span>
-            </button>
-          </nav>
-        ) : (
+        {/* Center: When not on home page, show Return to Home Editor */}
+        {currentView !== 'home' && (
           <div className="flex items-center gap-2">
             <button
               onClick={() => setCurrentView('home')}
@@ -633,41 +571,17 @@ export default function EditorPage() {
             />
           </div>
         ) : (
-          /* VIEW C: Home Page Editor with Visual and CMS Views */
-          <>
-            {/* Tab 1: Visual Page Editor (Puck) */}
-            <div className={`w-full h-full ${currentTab === 'visual' ? 'block' : 'hidden'}`}>
-              <Puck
-                config={puckConfig}
-                data={data}
-                onPublish={handlePuckPublish}
-                overrides={{
-                  headerActions: PuckHeaderActions,
-                }}
-              />
-            </div>
-
-            {/* Tab 2: Products & Catalog CMS */}
-            {currentTab === 'products' && (
-              <div className="w-full h-full">
-                <ProductCatalogCMS />
-              </div>
-            )}
-
-            {/* Tab 3: Categories & Collections */}
-            {currentTab === 'categories' && (
-              <div className="w-full h-full">
-                <CategoriesCMS />
-              </div>
-            )}
-
-            {/* Tab 4: Media Assets */}
-            {currentTab === 'media' && (
-              <div className="w-full h-full">
-                <MediaLibraryCMS />
-              </div>
-            )}
-          </>
+          /* VIEW C: Home Page Visual Editor (Puck) */
+          <div className="w-full h-full">
+            <Puck
+              config={puckConfig}
+              data={data}
+              onPublish={handlePuckPublish}
+              overrides={{
+                headerActions: PuckHeaderActions,
+              }}
+            />
+          </div>
         )}
       </main>
 
