@@ -376,17 +376,6 @@ export const puckConfig: Config<ComponentProps> = {
                 <span>Normal Jewellery Page</span>
                 <span>&rarr;</span>
               </button>
-              <button
-                type="button"
-                onClick={() =>
-                  window.dispatchEvent(
-                    new CustomEvent('sb_open_bulk_upload', { detail: { categorySlug: 'premium-jewellery' } })
-                  )
-                }
-                className="w-full py-2 px-3 rounded-lg bg-[#195799] hover:bg-[#124378] text-white font-medium text-xs flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
-              >
-                <span>Bulk Upload Products</span>
-              </button>
             </div>
           ),
         },

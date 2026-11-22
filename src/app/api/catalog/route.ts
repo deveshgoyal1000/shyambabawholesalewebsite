@@ -239,6 +239,30 @@ export async function DELETE(request: NextRequest) {
     const { searchParams } = new URL(request.url)
     const id = searchParams.get('id')
     const code = searchParams.get('code')
+    const clearSubcategory = searchParams.get('clearSubcategory') === 'true'
+    const categorySlug = searchParams.get('category')
+    const subcategorySlug = searchParams.get('subcategory')
+
+    // Handle clearing all images from a subcategory
+    if (clearSubcategory && categorySlug && subcategorySlug) {
+      const categories = await getCatalogData()
+      const targetCat = categories.find((c: any) => c.slug === categorySlug)
+      if (targetCat && targetCat.subcategories) {
+        const targetSub = targetCat.subcategories.find((s: any) => s.slug === subcategorySlug)
+        if (targetSub) {
+          const removedCount = targetSub.images?.length || 0
+          targetSub.images = []
+          targetSub.itemCount = 0
+          targetCat.totalItems = Math.max(0, (targetCat.totalItems || 0) - removedCount)
+          await saveCatalogData(categories)
+          return NextResponse.json({
+            success: true,
+            message: `Cleared all ${removedCount} images from ${targetSub.name}`,
+          })
+        }
+      }
+      return NextResponse.json({ success: false, error: 'Subcategory not found' }, { status: 404 })
+    }
 
     if (!id && !code) {
       return NextResponse.json(

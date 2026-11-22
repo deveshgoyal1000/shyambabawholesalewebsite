@@ -57,10 +57,11 @@ export async function POST(request: NextRequest) {
       const localFilePath = path.join(uploadsDir, fileName)
       await writeFile(localFilePath, buffer)
 
-      // Derive code from filename (e.g. SB-102.jpg or 405-bangle.jpg -> SB-102 or SB-405)
-      const baseName = file.name.replace(/\.[^/.]+$/, '').toUpperCase()
-      const codeMatch = baseName.match(/(SB-[A-Z0-9]+|[A-Z]{1,3}-[0-9]+|[0-9]{3,6})/)
-      const derivedCode = codeMatch ? (codeMatch[0].startsWith('SB-') ? codeMatch[0] : `SB-${codeMatch[0]}`) : `SB-${Date.now().toString(36).toUpperCase().slice(-4)}${i}`
+      // Use the image filename directly as the product code / image title
+      const baseName = file.name.replace(/\.[^/.]+$/, '').trim()
+      const derivedCode = baseName
+        ? baseName.toUpperCase().replace(/\s+/g, '-')
+        : `SB-${Date.now().toString(36).toUpperCase().slice(-4)}${i}`
 
       const newProductItem = {
         id: `${targetSub ? targetSub.slug : targetCategory.slug}-${Date.now()}-${i}`,
