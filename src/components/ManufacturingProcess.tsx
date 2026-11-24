@@ -3,43 +3,58 @@
 import React from 'react'
 import ScrollReveal from '@/components/ScrollReveal'
 
-export interface ManufacturingProcessProps {
-  heading?: string
+export interface ProcessStep {
+  num: number
+  title: string
+  desc: string
+  image: string
 }
 
-export default function ManufacturingProcess({ heading }: ManufacturingProcessProps = {}) {
-  const steps = [
-    {
-      num: 1,
-      title: 'Concept & Sketch',
-      desc: 'We start with your vision and create detailed sketches.',
-      image: '/images/process/step-1-final.png',
-    },
-    {
-      num: 2,
-      title: 'CAD Design',
-      desc: 'Transforming ideas into precise 3D CAD designs.',
-      image: '/images/process/step-2-final.png',
-    },
-    {
-      num: 3,
-      title: 'Sample Checking',
-      desc: 'We craft a sample piece for approval before bulk production.',
-      image: '/images/process/step-3-final.png',
-    },
-    {
-      num: 4,
-      title: 'Quality Check',
-      desc: 'Every piece undergoes rigorous quality inspection.',
-      image: '/images/process/step-4-final.png',
-    },
-    {
-      num: 5,
-      title: 'Order processing',
-      desc: 'Our stunning earrings are ready to deliver.',
-      image: '/images/process/step-5-final.png',
-    },
-  ]
+export const DEFAULT_PROCESS_STEPS: ProcessStep[] = [
+  {
+    num: 1,
+    title: 'Concept & Sketch',
+    desc: 'We start with your vision and create detailed sketches.',
+    image: '/images/process/step-1-final.png',
+  },
+  {
+    num: 2,
+    title: 'CAD Design',
+    desc: 'Transforming ideas into precise 3D CAD designs.',
+    image: '/images/process/step-2-final.png',
+  },
+  {
+    num: 3,
+    title: 'Sample Checking',
+    desc: 'We craft a sample piece for approval before bulk production.',
+    image: '/images/process/step-3-final.png',
+  },
+  {
+    num: 4,
+    title: 'Quality Check',
+    desc: 'Every piece undergoes rigorous quality inspection.',
+    image: '/images/process/step-4-final.png',
+  },
+  {
+    num: 5,
+    title: 'Order processing',
+    desc: 'Our stunning earrings are ready to deliver.',
+    image: '/images/process/step-5-final.png',
+  },
+]
+
+export interface ManufacturingProcessProps {
+  heading?: string
+  subheading?: string
+  steps?: ProcessStep[]
+}
+
+export default function ManufacturingProcess({
+  heading = 'Jaipur Craftsmanship',
+  subheading = 'Our 5-Step Precision Manufacturing Pipeline',
+  steps = DEFAULT_PROCESS_STEPS,
+}: ManufacturingProcessProps = {}) {
+  const displaySteps = steps && steps.length > 0 ? steps : DEFAULT_PROCESS_STEPS
 
   return (
     <section className="py-10 md:py-16 bg-[#FAF8F5]">
@@ -64,14 +79,14 @@ export default function ManufacturingProcess({ heading }: ManufacturingProcessPr
               }}
               className="text-[13px] sm:text-[14px] text-[#2C2C2C] font-normal"
             >
-              Our 5-Step Precision Manufacturing Pipeline
+              {subheading || 'Our 5-Step Precision Manufacturing Pipeline'}
             </p>
           </div>
         </ScrollReveal>
 
         {/* 5 Step Cards with Staggered ScrollReveal */}
         <div className="max-w-xl mx-auto space-y-3 sm:space-y-4">
-          {steps.map((step, idx) => (
+          {displaySteps.map((step, idx) => (
             <ScrollReveal
               key={step.num}
               direction="none"

@@ -27,12 +27,18 @@ export interface ShopByCategoriesProps {
   heading?: string
   subheading?: string
   categories?: CategoryItem[]
+  buttonText?: string
+  buttonLink?: string
+  cardButtonText?: string
 }
 
 export default function ShopByCategories({
   heading = 'Explore Catalog',
   subheading = 'Explore our premium brass jewellery collections',
   categories = DEFAULT_CATEGORIES,
+  buttonText = 'View Full Catalog →',
+  buttonLink = '/collections/all',
+  cardButtonText = 'View Catalogue',
 }: ShopByCategoriesProps) {
   const displayCategories =
     categories && categories.length > 0 ? categories : DEFAULT_CATEGORIES
@@ -147,7 +153,7 @@ export default function ShopByCategories({
                       {/* Bottom Action Footer */}
                       <div className="w-full pt-3 border-t border-white/20 flex items-center justify-between z-10 text-white transition-colors">
                         <span className="text-[11px] sm:text-[13px] font-semibold tracking-wide">
-                          View Catalogue
+                          {cardButtonText || 'View Catalogue'}
                         </span>
                         <span className="text-[18px] sm:text-[20px] font-bold group-hover:translate-x-1.5 transition-transform">
                           &rarr;
@@ -185,7 +191,7 @@ export default function ShopByCategories({
                       {/* Bottom Action Footer */}
                       <div className="w-full pt-3 border-t border-white/20 flex items-center justify-between z-10 text-white transition-colors">
                         <span className="text-[11px] sm:text-[13px] font-semibold tracking-wide">
-                          View Catalogue
+                          {cardButtonText || 'View Catalogue'}
                         </span>
                         <span className="text-[18px] sm:text-[20px] font-bold group-hover:translate-x-1.5 transition-transform">
                           &rarr;
@@ -247,11 +253,11 @@ export default function ShopByCategories({
         <ScrollReveal direction="up" distance={18} delay={100} duration={800} threshold={0.15}>
           <div className="mt-8 sm:mt-12 text-center w-full">
             <Link
-              href="/collections/all"
+              href={buttonLink || '/collections/all'}
               className="btn-tactile w-full sm:w-auto inline-flex items-center justify-center py-4 sm:py-4.5 px-8 sm:px-14 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-bold text-[15px] sm:text-[16px] tracking-wider uppercase shadow-lg hover:shadow-xl active:scale-[0.98] transition-all text-center"
               style={{ WebkitTapHighlightColor: 'transparent' }}
             >
-              View Full Catalog &rarr;
+              {buttonText || 'View Full Catalog →'}
             </Link>
           </div>
         </ScrollReveal>

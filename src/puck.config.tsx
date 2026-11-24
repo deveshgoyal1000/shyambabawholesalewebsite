@@ -17,9 +17,9 @@ import AnnouncementBar from '@/components/AnnouncementBar'
 import Header from '@/components/Header'
 import ShopByCategories, { CategoryItem, DEFAULT_CATEGORIES } from '@/components/ShopByCategories'
 import GallerySection from '@/components/GallerySection'
-import InternationalWholesale from '@/components/InternationalWholesale'
-import ManufacturerComparison from '@/components/ManufacturerComparison'
-import ManufacturingProcess from '@/components/ManufacturingProcess'
+import InternationalWholesale, { CountryItem, DEFAULT_COUNTRIES } from '@/components/InternationalWholesale'
+import ManufacturerComparison, { ComparisonRow, DEFAULT_COMPARISON_ROWS } from '@/components/ManufacturerComparison'
+import ManufacturingProcess, { ProcessStep, DEFAULT_PROCESS_STEPS } from '@/components/ManufacturingProcess'
 import VideoShoppingCTA from '@/components/VideoShoppingCTA'
 import Testimonials from '@/components/Testimonials'
 import FAQSection from '@/components/FAQSection'
@@ -59,6 +59,9 @@ export type ComponentProps = {
     enterPages?: any
     heading: string
     subheading: string
+    buttonText?: string
+    buttonLink?: string
+    cardButtonText?: string
     categories: CategoryItem[]
   }
   GallerySectionBlock: {
@@ -68,9 +71,24 @@ export type ComponentProps = {
   InternationalWholesaleBlock: {
     enterCountryPages?: any
     heading: string
+    subheading?: string
+    buttonText?: string
+    buttonLink?: string
+    badge1Title?: string
+    badge1Subtitle?: string
+    badge2Title?: string
+    badge2Subtitle?: string
+    badge3Title?: string
+    badge3Subtitle?: string
+    countries?: CountryItem[]
   }
   ManufacturerComparisonBlock: {
     heading: string
+    subheading?: string
+    featureColHeading?: string
+    usColHeading?: string
+    othersColHeading?: string
+    rows?: ComparisonRow[]
   }
   FactoryStoryBlock: {
     headlineLine1: string
@@ -80,13 +98,18 @@ export type ComponentProps = {
     badge2: string
     badge3: string
     buttonText: string
+    buttonLink?: string
   }
   ManufacturingProcessBlock: {
     heading: string
+    subheading?: string
+    steps?: ProcessStep[]
   }
   VideoShoppingCTABlock: {
     heading: string
     subheading: string
+    buttonText?: string
+    buttonLink?: string
   }
   TestimonialsBlock: {
     heading: string
@@ -381,6 +404,9 @@ export const puckConfig: Config<ComponentProps> = {
         },
         heading: { type: 'text', label: 'Section Heading' },
         subheading: { type: 'text', label: 'Subheading' },
+        buttonText: { type: 'text', label: 'Catalog Button Label (e.g. VIEW FULL CATALOG →)' },
+        buttonLink: { type: 'text', label: 'Catalog Button Link (e.g. /collections/all)' },
+        cardButtonText: { type: 'text', label: 'Category Card Link Text (e.g. View Catalogue)' },
         categories: {
           type: 'array',
           label: 'Categories (Edit Names, Images & Links)',
@@ -406,12 +432,18 @@ export const puckConfig: Config<ComponentProps> = {
       defaultProps: {
         heading: 'Shop By Categories',
         subheading: 'Explore our premium brass jewellery collections',
+        buttonText: 'View Full Catalog →',
+        buttonLink: '/collections/all',
+        cardButtonText: 'View Catalogue',
         categories: DEFAULT_CATEGORIES,
       },
-      render: ({ heading, subheading, categories }) => (
+      render: ({ heading, subheading, buttonText, buttonLink, cardButtonText, categories }) => (
         <ShopByCategories
           heading={heading}
           subheading={subheading}
+          buttonText={buttonText}
+          buttonLink={buttonLink}
+          cardButtonText={cardButtonText}
           categories={categories}
         />
       ),
@@ -468,24 +500,133 @@ export const puckConfig: Config<ComponentProps> = {
             </div>
           ),
         },
-        heading: { type: 'text', label: 'Heading' },
+        heading: { type: 'text', label: 'Section Heading' },
+        subheading: { type: 'text', label: 'Subheading' },
+        buttonText: { type: 'text', label: 'Bottom Button Label' },
+        buttonLink: { type: 'text', label: 'Bottom Button Link / WhatsApp URL' },
+        badge1Title: { type: 'text', label: 'Trust Badge 1 Title (e.g. 50+ Countries)' },
+        badge1Subtitle: { type: 'text', label: 'Trust Badge 1 Subtitle (e.g. Direct Export)' },
+        badge2Title: { type: 'text', label: 'Trust Badge 2 Title (e.g. 100% Insured)' },
+        badge2Subtitle: { type: 'text', label: 'Trust Badge 2 Subtitle (e.g. Air Cargo)' },
+        badge3Title: { type: 'text', label: 'Trust Badge 3 Title (e.g. Customs Clear)' },
+        badge3Subtitle: { type: 'text', label: 'Trust Badge 3 Subtitle (e.g. Documentation)' },
+        countries: {
+          type: 'array',
+          label: 'Country Cards (Names & Flags)',
+          getItemSummary: (item: any, idx?: number) => item?.country || `Country ${(idx ?? 0) + 1}`,
+          defaultItemProps: {
+            country: 'Country Name',
+            slug: 'country-slug',
+            flag: 'https://flagcdn.com/w80/us.png',
+          },
+          arrayFields: {
+            country: { type: 'text', label: 'Country Display Name' },
+            slug: { type: 'text', label: 'Country Page Slug (e.g. united-states)' },
+            flag: { type: 'text', label: 'Flag Image URL (e.g. https://flagcdn.com/w80/us.png)' },
+          },
+        },
       },
       defaultProps: {
         heading: 'Worldwide Express Cargo Delivery',
+        subheading: 'Delivering Premium Jewellery to Your Country',
+        buttonText: '& MORE — We Ship to 50+ Countries Worldwide →',
+        buttonLink: 'https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20am%20an%20international%20buyer%20and%20want%20to%20order%20wholesale%20jewellery%20with%20doorstep%20export%20to%20my%20country.',
+        badge1Title: '50+ Countries',
+        badge1Subtitle: 'Direct Export',
+        badge2Title: '100% Insured',
+        badge2Subtitle: 'Air Cargo',
+        badge3Title: 'Customs Clear',
+        badge3Subtitle: 'Documentation',
+        countries: DEFAULT_COUNTRIES,
       },
-      render: ({ heading }) => <InternationalWholesale heading={heading} />,
+      render: ({
+        heading,
+        subheading,
+        buttonText,
+        buttonLink,
+        badge1Title,
+        badge1Subtitle,
+        badge2Title,
+        badge2Subtitle,
+        badge3Title,
+        badge3Subtitle,
+        countries,
+      }) => (
+        <InternationalWholesale
+          heading={heading}
+          subheading={subheading}
+          buttonText={buttonText}
+          buttonLink={buttonLink}
+          badge1Title={badge1Title}
+          badge1Subtitle={badge1Subtitle}
+          badge2Title={badge2Title}
+          badge2Subtitle={badge2Subtitle}
+          badge3Title={badge3Title}
+          badge3Subtitle={badge3Subtitle}
+          countries={countries}
+        />
+      ),
     },
 
     // 6. Manufacturer vs Trader Comparison
     ManufacturerComparisonBlock: {
       label: '6. Manufacturer vs Trader Comparison',
       fields: {
-        heading: { type: 'text', label: 'Heading' },
+        heading: { type: 'text', label: 'Section Heading' },
+        subheading: { type: 'text', label: 'Subheading' },
+        featureColHeading: { type: 'text', label: 'Column 1 Header (Features)' },
+        usColHeading: { type: 'text', label: 'Column 2 Header (ShyamBaba)' },
+        othersColHeading: { type: 'text', label: 'Column 3 Header (Other Suppliers)' },
+        rows: {
+          type: 'array',
+          label: 'Comparison Rows',
+          getItemSummary: (item: any, idx?: number) => item?.feature || `Row ${(idx ?? 0) + 1}`,
+          defaultItemProps: {
+            feature: 'New Feature',
+            subfeature: '',
+            shyambaba: true,
+            others: false,
+          },
+          arrayFields: {
+            feature: { type: 'text', label: 'Feature Name' },
+            subfeature: { type: 'text', label: 'Sub-feature Note (Optional)' },
+            shyambaba: {
+              type: 'radio',
+              label: 'ShyamBaba Has It?',
+              options: [
+                { label: 'Yes (Green Checkmark)', value: true },
+                { label: 'No (Red Cross)', value: false },
+              ],
+            },
+            others: {
+              type: 'radio',
+              label: 'Other Suppliers Have It?',
+              options: [
+                { label: 'Yes (Green Checkmark)', value: true },
+                { label: 'No (Red Cross)', value: false },
+              ],
+            },
+          },
+        },
       },
       defaultProps: {
-        heading: 'Why Source Direct from Jaipur Factory vs Market Traders',
+        heading: 'Direct vs Traders',
+        subheading: 'Why 10,000+ Retailers Choose Direct Manufacturing',
+        featureColHeading: 'FEATURES',
+        usColHeading: 'SHYAMBABAWHOLESALE',
+        othersColHeading: 'OTHER SUPPLIERS',
+        rows: DEFAULT_COMPARISON_ROWS,
       },
-      render: ({ heading }) => <ManufacturerComparison heading={heading} />,
+      render: ({ heading, subheading, featureColHeading, usColHeading, othersColHeading, rows }) => (
+        <ManufacturerComparison
+          heading={heading}
+          subheading={subheading}
+          featureColHeading={featureColHeading}
+          usColHeading={usColHeading}
+          othersColHeading={othersColHeading}
+          rows={rows}
+        />
+      ),
     },
 
     // 7. Factory Story ("We Don't Source. We Are Manufacture.")
@@ -495,10 +636,11 @@ export const puckConfig: Config<ComponentProps> = {
         headlineLine1: { type: 'text', label: 'Headline Line 1' },
         headlineLine2: { type: 'text', label: 'Headline Line 2' },
         description: { type: 'textarea', label: 'Description' },
-        badge1: { type: 'text', label: 'Badge 1' },
-        badge2: { type: 'text', label: 'Badge 2' },
-        badge3: { type: 'text', label: 'Badge 3' },
+        badge1: { type: 'text', label: 'Badge 1 Title' },
+        badge2: { type: 'text', label: 'Badge 2 Title' },
+        badge3: { type: 'text', label: 'Badge 3 Title' },
         buttonText: { type: 'text', label: 'Button Label' },
+        buttonLink: { type: 'text', label: 'Button Link / URL' },
       },
       defaultProps: {
         headlineLine1: "We Don't Source.",
@@ -509,6 +651,7 @@ export const puckConfig: Config<ComponentProps> = {
         badge2: 'Skilled Artisans',
         badge3: '100% Quality Inspection',
         buttonText: 'Visit Our Manufacturing Unit',
+        buttonLink: 'https://wa.me/919680865791?text=Hello%20Shyambaba%20Wholesale%2C%20I%20want%20to%20visit%20your%20Jaipur%20manufacturing%20unit.',
       },
       render: ({
         headlineLine1,
@@ -518,6 +661,7 @@ export const puckConfig: Config<ComponentProps> = {
         badge2,
         badge3,
         buttonText,
+        buttonLink,
       }) => (
         <section id="about" className="py-10 md:py-16 bg-[#FAF8F5]">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
@@ -564,7 +708,7 @@ export const puckConfig: Config<ComponentProps> = {
 
             <div className="max-w-md mx-auto">
               <a
-                href="https://wa.me/919680865791?text=Hello%20Shyambaba%20Wholesale%2C%20I%20want%20to%20visit%20your%20Jaipur%20manufacturing%20unit."
+                href={buttonLink || 'https://wa.me/919680865791?text=Hello%20Shyambaba%20Wholesale%2C%20I%20want%20to%20visit%20your%20Jaipur%20manufacturing%20unit.'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center py-4 px-6 rounded-xl sm:rounded-2xl bg-[#195799] hover:bg-[#124378] text-white font-bold text-[16px] sm:text-[18px] tracking-wide shadow-md transition-all text-center"
@@ -581,12 +725,39 @@ export const puckConfig: Config<ComponentProps> = {
     ManufacturingProcessBlock: {
       label: '8. Manufacturing Process Steps',
       fields: {
-        heading: { type: 'text', label: 'Heading' },
+        heading: { type: 'text', label: 'Section Heading' },
+        subheading: { type: 'text', label: 'Subheading' },
+        steps: {
+          type: 'array',
+          label: 'Manufacturing Process Steps',
+          getItemSummary: (item: any, idx?: number) => item?.title || `Step ${(idx ?? 0) + 1}`,
+          defaultItemProps: {
+            num: 1,
+            title: 'New Step',
+            desc: 'Step details and description.',
+            image: '/images/process/step-1-final.png',
+          },
+          arrayFields: {
+            num: { type: 'number', label: 'Step Number' },
+            title: { type: 'text', label: 'Step Title' },
+            desc: { type: 'textarea', label: 'Step Description' },
+            image: {
+              type: 'custom',
+              render: ({ value, onChange }) => (
+                <ImageUploadField label="Step Image" value={value} onChange={onChange} />
+              ),
+            },
+          },
+        },
       },
       defaultProps: {
-        heading: 'Jaipur Artisan Craftsmanship',
+        heading: 'Jaipur Craftsmanship',
+        subheading: 'Our 5-Step Precision Manufacturing Pipeline',
+        steps: DEFAULT_PROCESS_STEPS,
       },
-      render: ({ heading }) => <ManufacturingProcess heading={heading} />,
+      render: ({ heading, subheading, steps }) => (
+        <ManufacturingProcess heading={heading} subheading={subheading} steps={steps} />
+      ),
     },
 
     // 9. Video Shopping CTA
@@ -595,13 +766,22 @@ export const puckConfig: Config<ComponentProps> = {
       fields: {
         heading: { type: 'text', label: 'Heading' },
         subheading: { type: 'text', label: 'Subheading' },
+        buttonText: { type: 'text', label: 'Button Label (e.g. Book Now →)' },
+        buttonLink: { type: 'text', label: 'Button Link / WhatsApp URL' },
       },
       defaultProps: {
-        heading: 'Live Video Call Selection from Factory Floor',
-        subheading: 'Inspect real shine, weight, and finish before dispatch',
+        heading: 'Book a Live Video Call',
+        subheading: 'See products in real before ordering',
+        buttonText: 'Book Now →',
+        buttonLink: 'https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20would%20like%20to%20Book%20a%20Live%20Video%20Call%20shopping%20session%20now.',
       },
-      render: ({ heading, subheading }) => (
-        <VideoShoppingCTA heading={heading} subheading={subheading} />
+      render: ({ heading, subheading, buttonText, buttonLink }) => (
+        <VideoShoppingCTA
+          heading={heading}
+          subheading={subheading}
+          buttonText={buttonText}
+          buttonLink={buttonLink}
+        />
       ),
     },
 

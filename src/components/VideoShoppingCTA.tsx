@@ -7,9 +7,16 @@ import ScrollReveal from '@/components/ScrollReveal'
 export interface VideoShoppingCTAProps {
   heading?: string
   subheading?: string
+  buttonText?: string
+  buttonLink?: string
 }
 
-export default function VideoShoppingCTA({ heading, subheading }: VideoShoppingCTAProps = {}) {
+export default function VideoShoppingCTA({
+  heading = 'Book a Live Video Call',
+  subheading = 'See products in real before ordering',
+  buttonText = 'Book Now →',
+  buttonLink = 'https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20would%20like%20to%20Book%20a%20Live%20Video%20Call%20shopping%20session%20now.',
+}: VideoShoppingCTAProps = {}) {
   return (
     <section className="py-8 bg-[#FAF8F5]">
       <div className="max-w-xl mx-auto px-4 sm:px-6">
@@ -43,14 +50,14 @@ export default function VideoShoppingCTA({ heading, subheading }: VideoShoppingC
             {/* "Book Now →" Button */}
             <div>
               <a
-                href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20would%20like%20to%20Book%20a%20Live%20Video%20Call%20shopping%20session%20now."
+                href={buttonLink || 'https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20would%20like%20to%20Book%20a%20Live%20Video%20Call%20shopping%20session%20now.'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-tactile inline-flex items-center justify-center gap-2.5 py-3.5 sm:py-4 px-9 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-bold text-[15px] sm:text-[16px] tracking-wide shadow-lg hover:shadow-xl active:scale-[0.985] transition-all w-full max-w-[320px]"
                 style={{ WebkitTapHighlightColor: 'transparent' }}
               >
                 <Video className="w-5 h-5" />
-                <span>Book Now &rarr;</span>
+                <span>{buttonText || 'Book Now →'}</span>
               </a>
             </div>
           </div>

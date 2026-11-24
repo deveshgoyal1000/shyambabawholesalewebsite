@@ -5,45 +5,74 @@ import Link from 'next/link'
 import { Globe, ShieldCheck, PackageCheck, ChevronRight, Plane } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 
-export interface InternationalWholesaleProps {
-  heading?: string
+export interface CountryItem {
+  country: string
+  slug: string
+  flag?: string
+  popular?: boolean
 }
 
-export default function InternationalWholesale({ heading }: InternationalWholesaleProps = {}) {
-  const countries = [
-    {
-      country: 'USA',
-      slug: 'united-states',
-      flag: 'https://flagcdn.com/w80/us.png',
-      popular: true,
-    },
-    {
-      country: 'UK',
-      slug: 'united-kingdom',
-      flag: 'https://flagcdn.com/w80/gb.png',
-      popular: false,
-    },
-    {
-      country: 'CANADA',
-      slug: 'canada',
-      flag: 'https://flagcdn.com/w80/ca.png',
-      popular: false,
-    },
-    {
-      country: 'UAE',
-      slug: 'dubai',
-      flag: 'https://flagcdn.com/w80/ae.png',
-      popular: false,
-    },
-    {
-      country: 'AUSTRALIA',
-      slug: 'australia',
-      flag: 'https://flagcdn.com/w80/au.png',
-      popular: false,
-    },
-  ]
+export const DEFAULT_COUNTRIES: CountryItem[] = [
+  {
+    country: 'USA',
+    slug: 'united-states',
+    flag: 'https://flagcdn.com/w80/us.png',
+    popular: true,
+  },
+  {
+    country: 'UK',
+    slug: 'united-kingdom',
+    flag: 'https://flagcdn.com/w80/gb.png',
+    popular: false,
+  },
+  {
+    country: 'CANADA',
+    slug: 'canada',
+    flag: 'https://flagcdn.com/w80/ca.png',
+    popular: false,
+  },
+  {
+    country: 'UAE',
+    slug: 'dubai',
+    flag: 'https://flagcdn.com/w80/ae.png',
+    popular: false,
+  },
+  {
+    country: 'AUSTRALIA',
+    slug: 'australia',
+    flag: 'https://flagcdn.com/w80/au.png',
+    popular: false,
+  },
+]
 
-  const displayed = countries.slice(0, 5)
+export interface InternationalWholesaleProps {
+  heading?: string
+  subheading?: string
+  buttonText?: string
+  buttonLink?: string
+  badge1Title?: string
+  badge1Subtitle?: string
+  badge2Title?: string
+  badge2Subtitle?: string
+  badge3Title?: string
+  badge3Subtitle?: string
+  countries?: CountryItem[]
+}
+
+export default function InternationalWholesale({
+  heading = 'We Serve Retailers Worldwide',
+  subheading = 'Delivering Premium Jewellery to Your Country',
+  buttonText = '& MORE — We Ship to 50+ Countries Worldwide →',
+  buttonLink = 'https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20am%20an%20international%20buyer%20and%20want%20to%20order%20wholesale%20jewellery%20with%20doorstep%20export%20to%20my%20country.',
+  badge1Title = '50+ Countries',
+  badge1Subtitle = 'Direct Export',
+  badge2Title = '100% Insured',
+  badge2Subtitle = 'Air Cargo',
+  badge3Title = 'Customs Clear',
+  badge3Subtitle = 'Documentation',
+  countries = DEFAULT_COUNTRIES,
+}: InternationalWholesaleProps = {}) {
+  const displayed = countries && countries.length > 0 ? countries : DEFAULT_COUNTRIES
 
   return (
     <section id="international" className="py-10 md:py-16 bg-[#FAF8F5]">
@@ -67,7 +96,7 @@ export default function InternationalWholesale({ heading }: InternationalWholesa
             }}
             className="text-[13px] sm:text-[14px] text-[#2C2C2C] mb-6 sm:mb-8 font-normal text-center"
           >
-            Delivering Premium Jewellery to Your Country
+            {subheading || 'Delivering Premium Jewellery to Your Country'}
           </p>
         </ScrollReveal>
 
@@ -89,14 +118,16 @@ export default function InternationalWholesale({ heading }: InternationalWholesa
               >
                 <div className="flex items-center gap-3.5 sm:gap-4">
                   {/* Flag Image with crisp outline & shadow */}
-                  <div className="w-10 h-6 sm:w-12 sm:h-7 rounded-md overflow-hidden shadow-xs flex-shrink-0 border border-neutral-300">
-                    <img
-                      src={c.flag}
-                      alt={`${c.country} Flag`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
-                    />
-                  </div>
+                  {c.flag ? (
+                    <div className="w-10 h-6 sm:w-12 sm:h-7 rounded-md overflow-hidden shadow-xs flex-shrink-0 border border-neutral-300">
+                      <img
+                        src={c.flag}
+                        alt={`${c.country} Flag`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : null}
 
                   {/* Country Name Only */}
                   <span className="text-[15px] sm:text-[16px] md:text-[17px] font-bold text-neutral-900 leading-none tracking-tight">
@@ -116,14 +147,14 @@ export default function InternationalWholesale({ heading }: InternationalWholesa
         {/* 50+ Countries Blue Action Button Taking to WhatsApp */}
         <div className="mt-6 text-center">
           <a
-            href="https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20am%20an%20international%20buyer%20and%20want%20to%20order%20wholesale%20jewellery%20with%20doorstep%20export%20to%20my%20country."
+            href={buttonLink || 'https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20am%20an%20international%20buyer%20and%20want%20to%20order%20wholesale%20jewellery%20with%20doorstep%20export%20to%20my%20country.'}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-tactile w-full inline-flex items-center justify-center gap-2.5 py-4 sm:py-4.5 px-8 sm:px-12 rounded-full bg-[#195799] hover:bg-[#124378] text-white font-bold text-[15px] sm:text-[17px] tracking-wide shadow-lg hover:shadow-xl active:scale-[0.985] transition-all text-center"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
             <Plane className="w-5 h-5 text-white shrink-0" />
-            <span>&amp; MORE &mdash; We Ship to 50+ Countries Worldwide &rarr;</span>
+            <span>{buttonText || '& MORE — We Ship to 50+ Countries Worldwide →'}</span>
           </a>
         </div>
 
@@ -136,10 +167,10 @@ export default function InternationalWholesale({ heading }: InternationalWholesa
                   <Globe className="w-5 h-5 sm:w-6 sm:h-6 text-[#FFD700]" />
                 </div>
                 <span className="text-[12.5px] sm:text-[15px] font-bold text-white block tracking-tight leading-tight">
-                  50+ Countries
+                  {badge1Title || '50+ Countries'}
                 </span>
                 <span className="text-[10.5px] sm:text-[12px] font-medium text-white/95 block mt-0.5">
-                  Direct Export
+                  {badge1Subtitle || 'Direct Export'}
                 </span>
               </div>
 
@@ -148,10 +179,10 @@ export default function InternationalWholesale({ heading }: InternationalWholesa
                   <PackageCheck className="w-5 h-5 sm:w-6 sm:h-6 text-[#FFD700]" />
                 </div>
                 <span className="text-[12.5px] sm:text-[15px] font-bold text-white block tracking-tight leading-tight">
-                  100% Insured
+                  {badge2Title || '100% Insured'}
                 </span>
                 <span className="text-[10.5px] sm:text-[12px] font-medium text-white/95 block mt-0.5">
-                  Air Cargo
+                  {badge2Subtitle || 'Air Cargo'}
                 </span>
               </div>
 
@@ -160,10 +191,10 @@ export default function InternationalWholesale({ heading }: InternationalWholesa
                   <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-[#FFD700]" />
                 </div>
                 <span className="text-[12.5px] sm:text-[15px] font-bold text-white block tracking-tight leading-tight">
-                  Customs Clear
+                  {badge3Title || 'Customs Clear'}
                 </span>
                 <span className="text-[10.5px] sm:text-[12px] font-medium text-white/95 block mt-0.5">
-                  Documentation
+                  {badge3Subtitle || 'Documentation'}
                 </span>
               </div>
             </div>

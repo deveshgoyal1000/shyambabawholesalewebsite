@@ -4,57 +4,77 @@ import React, { useEffect, useRef, useState } from 'react'
 import ScrollReveal from '@/components/ScrollReveal'
 import { Video } from 'lucide-react'
 
-export interface ManufacturerComparisonProps {
-  heading?: string
+export interface ComparisonRow {
+  feature: string
+  subfeature?: string
+  shyambaba: boolean
+  others: boolean
 }
 
-export default function ManufacturerComparison({ heading }: ManufacturerComparisonProps = {}) {
+export const DEFAULT_COMPARISON_ROWS: ComparisonRow[] = [
+  {
+    feature: 'Video Call Selection',
+    shyambaba: true,
+    others: true,
+  },
+  {
+    feature: 'International Shipping',
+    shyambaba: true,
+    others: false,
+  },
+  {
+    feature: 'Custom Designs',
+    shyambaba: true,
+    others: false,
+  },
+  {
+    feature: 'Quality Guarantee',
+    shyambaba: true,
+    others: false,
+  },
+  {
+    feature: 'Wholesale Prices',
+    shyambaba: true,
+    others: false,
+  },
+  {
+    feature: 'Replacement & Repair',
+    shyambaba: true,
+    others: false,
+  },
+  {
+    feature: 'Wide & Latest Design Collection',
+    shyambaba: true,
+    others: false,
+  },
+  {
+    feature: 'Made in Jaipur',
+    subfeature: '(In-House Manufacturing)',
+    shyambaba: true,
+    others: false,
+  },
+]
+
+export interface ManufacturerComparisonProps {
+  heading?: string
+  subheading?: string
+  featureColHeading?: string
+  usColHeading?: string
+  othersColHeading?: string
+  rows?: ComparisonRow[]
+}
+
+export default function ManufacturerComparison({
+  heading = 'Direct vs Traders',
+  subheading = 'Why 10,000+ Retailers Choose Direct Manufacturing',
+  featureColHeading = 'FEATURES',
+  usColHeading = 'SHYAMBABAWHOLESALE',
+  othersColHeading = 'OTHER SUPPLIERS',
+  rows = DEFAULT_COMPARISON_ROWS,
+}: ManufacturerComparisonProps = {}) {
   const tableRef = useRef<HTMLDivElement>(null)
   const [tableInView, setTableInView] = useState(false)
-
-  const rows = [
-    {
-      feature: 'Video Call Selection',
-      shyambaba: true,
-      others: true,
-    },
-    {
-      feature: 'International Shipping',
-      shyambaba: true,
-      others: false,
-    },
-    {
-      feature: 'Custom Designs',
-      shyambaba: true,
-      others: false,
-    },
-    {
-      feature: 'Quality Guarantee',
-      shyambaba: true,
-      others: false,
-    },
-    {
-      feature: 'Wholesale Prices',
-      shyambaba: true,
-      others: false,
-    },
-    {
-      feature: 'Replacement & Repair',
-      shyambaba: true,
-      others: false,
-    },
-    {
-      feature: 'Wide & Latest Design Collection',
-      shyambaba: true,
-      others: false,
-    },
-    {
-      feature: 'Made in Jaipur',
-      subfeature: '(In-House Manufacturing)',
-      shyambaba: true,
-      others: false,
-    },
-  ]
+  const displayRows = rows && rows.length > 0 ? rows : DEFAULT_COMPARISON_ROWS
 
   useEffect(() => {
     const el = tableRef.current
@@ -95,7 +115,7 @@ export default function ManufacturerComparison({ heading }: ManufacturerComparis
               style={{ fontFamily: 'Georgia, serif' }}
               className="text-[26px] sm:text-[34px] md:text-[42px] font-normal text-[#121212] tracking-[0.5px] leading-tight"
             >
-              {heading || 'ShyamBabaWholesale vs Other Suppliers'}
+              {heading || 'Direct vs Traders'}
             </h2>
 
             {/* Gold Accent Divider Bar matching Krishaz */}
@@ -108,7 +128,7 @@ export default function ManufacturerComparison({ heading }: ManufacturerComparis
               }}
               className="text-[13px] sm:text-[14px] text-[#2C2C2C] font-normal"
             >
-              Why 10,000+ Retailers Choose Direct Manufacturing
+              {subheading || 'Why 10,000+ Retailers Choose Direct Manufacturing'}
             </p>
           </div>
         </ScrollReveal>
@@ -127,18 +147,18 @@ export default function ManufacturerComparison({ heading }: ManufacturerComparis
             <thead>
               <tr className="border-b border-[#D4AF37] bg-[#FAF4E6]/90">
                 <th className="py-3 sm:py-3.5 px-3 sm:px-5 text-left font-bold text-[11px] sm:text-[13px] text-[#121212] uppercase tracking-wider">
-                  FEATURES
+                  {featureColHeading || 'FEATURES'}
                 </th>
                 <th className="py-3 sm:py-3.5 px-2 sm:px-4 text-center font-extrabold text-[11px] sm:text-[13px] text-[#8C5818] uppercase tracking-wider border-l border-[#D4AF37]">
-                  SHYAMBABAWHOLESALE
+                  {usColHeading || 'SHYAMBABAWHOLESALE'}
                 </th>
                 <th className="py-3 sm:py-3.5 px-2 sm:px-4 text-center font-bold text-[11px] sm:text-[13px] text-[#555555] uppercase tracking-wider border-l border-[#D4AF37]">
-                  OTHER SUPPLIERS
+                  {othersColHeading || 'OTHER SUPPLIERS'}
                 </th>
               </tr>
             </thead>
             <tbody>
-              {rows.map((row, idx) => (
+              {displayRows.map((row, idx) => (
                 <tr
                   key={row.feature}
                   className="border-b border-[#D4AF37] last:border-b-0 transition-colors bg-transparent"
