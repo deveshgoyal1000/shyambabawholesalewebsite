@@ -328,3 +328,78 @@ h1, h2, h3, h4, .font-serif {
     display: none;
   }
 }
+
+/* ==========================================================================
+   Puck Visual Editor Layout & Complete Scrolling Fixes
+   ========================================================================== */
+
+/* Fix Puck layout height when nested inside custom navigation hub (56px header) */
+div[class*="_PuckLayout-inner"] {
+  height: 100% !important;
+  max-height: 100% !important;
+  min-height: 0 !important;
+}
+
+div[class*="_Puck_"] {
+  height: 100% !important;
+  max-height: 100% !important;
+}
+
+/* Ensure left sidebar (Components & Outline) can scroll completely to the bottom */
+div[class*="_Sidebar_"] {
+  height: 100% !important;
+  max-height: 100% !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain !important;
+}
+
+div[class*="_Sidebar--left"] {
+  overflow-y: auto !important;
+  scrollbar-gutter: stable;
+  padding-bottom: 140px !important;
+}
+
+/* Ensure the drawer container inside left sidebar has bottom buffer */
+div[class*="_Sidebar--left"] [class*="_SidebarSection-content_"] {
+  padding-bottom: 120px !important;
+}
+
+div[class*="_Sidebar--left"] [class*="_Drawer_"] {
+  padding-bottom: 80px !important;
+}
+
+/* Ensure right sidebar (Inspector) can also scroll completely to the bottom */
+div[class*="_Sidebar--right"] {
+  overflow-y: auto !important;
+  scrollbar-gutter: stable;
+  padding-bottom: 140px !important;
+}
+
+div[class*="_Sidebar--right"] [class*="_SidebarSection-content_"] {
+  padding-bottom: 120px !important;
+}
+
+/* Custom luxury gold scrollbar for editor sidebars so user always sees the scroll track */
+div[class*="_Sidebar_"]::-webkit-scrollbar {
+  width: 9px !important;
+}
+div[class*="_Sidebar_"]::-webkit-scrollbar-track {
+  background: #f5f0e8 !important;
+}
+div[class*="_Sidebar_"]::-webkit-scrollbar-thumb {
+  background: #c9a84c !important;
+  border-radius: 9999px !important;
+}
+div[class*="_Sidebar_"]::-webkit-scrollbar-thumb:hover {
+  background: #9a7e2e !important;
+}
+
+/* Hide Next.js dev toast indicator that obstructs the bottom-left sidebar */
+nextjs-portal,
+[data-nextjs-toast],
+[data-nextjs-dev-tools-button],
+div[data-nextjs-dev-tools-button] {
+  display: none !important;
+  pointer-events: none !important;
+}
+

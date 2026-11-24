@@ -624,7 +624,63 @@ export default function EditorPage() {
           </div>
         ) : (
           /* VIEW C: Home Page Visual Editor (Puck) */
-          <div className="w-full h-full">
+          <div className="w-full h-full relative">
+            <style dangerouslySetInnerHTML={{ __html: `
+              div[class*="_PuckLayout-inner"] {
+                height: 100% !important;
+                max-height: 100% !important;
+                min-height: 0 !important;
+              }
+              div[class*="_Puck_"] {
+                height: 100% !important;
+                max-height: 100% !important;
+              }
+              div[class*="_Sidebar_"] {
+                height: 100% !important;
+                max-height: 100% !important;
+                overflow-y: auto !important;
+                overscroll-behavior: contain !important;
+              }
+              div[class*="_Sidebar--left"] {
+                overflow-y: auto !important;
+                scrollbar-gutter: stable;
+                padding-bottom: 140px !important;
+              }
+              div[class*="_Sidebar--left"] [class*="_SidebarSection-content_"] {
+                padding-bottom: 120px !important;
+              }
+              div[class*="_Sidebar--left"] [class*="_Drawer_"] {
+                padding-bottom: 80px !important;
+              }
+              div[class*="_Sidebar--right"] {
+                overflow-y: auto !important;
+                scrollbar-gutter: stable;
+                padding-bottom: 140px !important;
+              }
+              div[class*="_Sidebar--right"] [class*="_SidebarSection-content_"] {
+                padding-bottom: 120px !important;
+              }
+              div[class*="_Sidebar_"]::-webkit-scrollbar {
+                width: 9px !important;
+              }
+              div[class*="_Sidebar_"]::-webkit-scrollbar-track {
+                background: #f5f0e8 !important;
+              }
+              div[class*="_Sidebar_"]::-webkit-scrollbar-thumb {
+                background: #c9a84c !important;
+                border-radius: 9999px !important;
+              }
+              div[class*="_Sidebar_"]::-webkit-scrollbar-thumb:hover {
+                background: #9a7e2e !important;
+              }
+              nextjs-portal,
+              [data-nextjs-toast],
+              [data-nextjs-dev-tools-button],
+              div[data-nextjs-dev-tools-button] {
+                display: none !important;
+                pointer-events: none !important;
+              }
+            `}} />
             <Puck
               config={puckConfig}
               data={data}
