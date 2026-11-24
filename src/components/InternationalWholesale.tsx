@@ -104,7 +104,7 @@ export default function InternationalWholesale({
         <div className="space-y-3.5 sm:space-y-4">
           {displayed.map((c, idx) => (
             <ScrollReveal
-              key={c.country}
+              key={`country-${c.slug || c.country || ''}-${idx}`}
               direction="up"
               distance={20}
               duration={550}

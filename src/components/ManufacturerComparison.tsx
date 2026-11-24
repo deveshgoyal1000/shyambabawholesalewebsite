@@ -160,7 +160,7 @@ export default function ManufacturerComparison({
             <tbody>
               {displayRows.map((row, idx) => (
                 <tr
-                  key={row.feature}
+                  key={`row-${row.feature || ''}-${idx}`}
                   className="border-b border-[#D4AF37] last:border-b-0 transition-colors bg-transparent"
                   style={{
                     opacity: tableInView ? 1 : 0,

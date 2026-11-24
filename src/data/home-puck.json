@@ -51,6 +51,9 @@
         "id": "categories-block",
         "heading": "Explore Catalog",
         "subheading": "Explore our premium brass jewellery collections",
+        "buttonText": "VIEW FULL CATALOG →",
+        "buttonLink": "/collections/all",
+        "cardButtonText": "View Catalogue",
         "categories": [
           {
             "title": "Premium Jewellery",
@@ -77,14 +80,102 @@
       "type": "InternationalWholesaleBlock",
       "props": {
         "id": "intl-block",
-        "heading": "Worldwide Express Cargo"
+        "heading": "Worldwide Express Cargo",
+        "subheading": "Delivering Premium Jewellery to Your Country",
+        "buttonText": "✈ & MORE — We Ship to 50+ Countries Worldwide →",
+        "buttonLink": "https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20am%20an%20international%20buyer%20and%20want%20to%20order%20wholesale%20jewellery%20with%20doorstep%20export%20to%20my%20country.",
+        "badge1Title": "50+ Countries",
+        "badge1Subtitle": "Direct Export",
+        "badge2Title": "100% Insured",
+        "badge2Subtitle": "Air Cargo",
+        "badge3Title": "Customs Clear",
+        "badge3Subtitle": "Documentation",
+        "countries": [
+          {
+            "country": "USA",
+            "slug": "united-states",
+            "flag": "https://flagcdn.com/w80/us.png",
+            "popular": true
+          },
+          {
+            "country": "UK",
+            "slug": "united-kingdom",
+            "flag": "https://flagcdn.com/w80/gb.png",
+            "popular": false
+          },
+          {
+            "country": "CANADA",
+            "slug": "canada",
+            "flag": "https://flagcdn.com/w80/ca.png",
+            "popular": false
+          },
+          {
+            "country": "UAE",
+            "slug": "dubai",
+            "flag": "https://flagcdn.com/w80/ae.png",
+            "popular": false
+          },
+          {
+            "country": "AUSTRALIA",
+            "slug": "australia",
+            "flag": "https://flagcdn.com/w80/au.png",
+            "popular": false
+          }
+        ]
       }
     },
     {
       "type": "ManufacturerComparisonBlock",
       "props": {
         "id": "comp-block",
-        "heading": "Direct vs Traders"
+        "heading": "Direct vs Traders",
+        "subheading": "Why 10,000+ Retailers Choose Direct Manufacturing",
+        "featureColHeading": "FEATURES",
+        "usColHeading": "SHYAMBABAWHOLESALE",
+        "othersColHeading": "OTHER SUPPLIERS",
+        "rows": [
+          {
+            "feature": "Video Call Selection",
+            "shyambaba": true,
+            "others": true
+          },
+          {
+            "feature": "International Shipping",
+            "shyambaba": true,
+            "others": false
+          },
+          {
+            "feature": "Custom Designs",
+            "shyambaba": true,
+            "others": false
+          },
+          {
+            "feature": "Quality Guarantee",
+            "shyambaba": true,
+            "others": false
+          },
+          {
+            "feature": "Wholesale Prices",
+            "shyambaba": true,
+            "others": false
+          },
+          {
+            "feature": "Replacement & Repair",
+            "shyambaba": true,
+            "others": false
+          },
+          {
+            "feature": "Wide & Latest Design Collection",
+            "shyambaba": true,
+            "others": false
+          },
+          {
+            "feature": "Made in Jaipur",
+            "subfeature": "(In-House Manufacturing)",
+            "shyambaba": true,
+            "others": false
+          }
+        ]
       }
     },
     {
@@ -97,14 +188,48 @@
         "badge1": "In-house",
         "badge2": "Artisans",
         "badge3": "100% Quality",
-        "buttonText": "Visit Factory"
+        "buttonText": "Visit Factory",
+        "buttonLink": "https://wa.me/919680865791?text=Hello%20Shyambaba%20Wholesale%2C%20I%20want%20to%20visit%20your%20Jaipur%20manufacturing%20unit."
       }
     },
     {
       "type": "ManufacturingProcessBlock",
       "props": {
         "id": "proc-block",
-        "heading": "Jaipur Craftsmanship"
+        "heading": "Jaipur Craftsmanship",
+        "subheading": "Our 5-Step Precision Manufacturing Pipeline",
+        "steps": [
+          {
+            "num": 1,
+            "title": "Concept & Sketch",
+            "desc": "We start with your vision and create detailed sketches.",
+            "image": "/images/process/step-1-final.png"
+          },
+          {
+            "num": 2,
+            "title": "CAD Design",
+            "desc": "Transforming ideas into precise 3D CAD designs.",
+            "image": "/images/process/step-2-final.png"
+          },
+          {
+            "num": 3,
+            "title": "Sample Checking",
+            "desc": "We craft a sample piece for approval before bulk production.",
+            "image": "/images/process/step-3-final.png"
+          },
+          {
+            "num": 4,
+            "title": "Quality Check",
+            "desc": "Every piece undergoes rigorous quality inspection.",
+            "image": "/images/process/step-4-final.png"
+          },
+          {
+            "num": 5,
+            "title": "Order processing",
+            "desc": "Our stunning earrings are ready to deliver.",
+            "image": "/images/process/step-5-final.png"
+          }
+        ]
       }
     },
     {
@@ -112,7 +237,9 @@
       "props": {
         "id": "video-block",
         "heading": "Live Video Call",
-        "subheading": "Inspect real shine"
+        "subheading": "Inspect real shine",
+        "buttonText": "Book Video Call Now →",
+        "buttonLink": "https://wa.me/919680865791?text=Hi%20Shyambaba%20Wholesale,%20I%20want%20to%20book%20a%20Live%20Video%20Call%20Shopping%20session%20to%20inspect%20jewellery."
       }
     },
     {
@@ -144,7 +271,7 @@
       "props": {
         "id": "footer-block",
         "companyName": "ShyamBaba Wholesale",
-        "tagline": ""
+        "tagline": "Jaipur Factory Direct Brass Jewellery Manufacturer & Exporter"
       }
     }
   ],

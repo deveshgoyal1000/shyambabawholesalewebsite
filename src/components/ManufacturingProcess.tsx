@@ -88,7 +88,7 @@ export default function ManufacturingProcess({
         <div className="max-w-xl mx-auto space-y-3 sm:space-y-4">
           {displaySteps.map((step, idx) => (
             <ScrollReveal
-              key={step.num}
+              key={`step-${step.num || ''}-${idx}`}
               direction="none"
               distance={0}
               duration={550}

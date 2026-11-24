@@ -5,6 +5,9 @@ import { Puck, type Data, usePuck } from '@measured/puck'
 import '@measured/puck/puck.css'
 import { puckConfig, type ComponentProps } from '@/puck.config'
 import { DEFAULT_CATEGORIES } from '@/components/ShopByCategories'
+import { DEFAULT_COUNTRIES } from '@/components/InternationalWholesale'
+import { DEFAULT_COMPARISON_ROWS } from '@/components/ManufacturerComparison'
+import { DEFAULT_PROCESS_STEPS } from '@/components/ManufacturingProcess'
 import CollectionPageEditor from '@/components/cms/CollectionPageEditor'
 import CountryPageEditor from '@/components/cms/CountryPageEditor'
 import BulkUploadModal from '@/components/cms/BulkUploadModal'
@@ -95,6 +98,7 @@ const defaultHomeData: Data<ComponentProps> = {
         badge2Subtitle: 'Air Cargo',
         badge3Title: 'Customs Clear',
         badge3Subtitle: 'Documentation',
+        countries: DEFAULT_COUNTRIES,
       },
     },
     {
@@ -106,6 +110,7 @@ const defaultHomeData: Data<ComponentProps> = {
         featureColHeading: 'FEATURES',
         usColHeading: 'SHYAMBABAWHOLESALE',
         othersColHeading: 'OTHER SUPPLIERS',
+        rows: DEFAULT_COMPARISON_ROWS,
       },
     },
     {
@@ -129,6 +134,7 @@ const defaultHomeData: Data<ComponentProps> = {
         id: 'process-block',
         heading: 'Jaipur Craftsmanship',
         subheading: 'Our 5-Step Precision Manufacturing Pipeline',
+        steps: DEFAULT_PROCESS_STEPS,
       },
     },
     {
@@ -240,18 +246,44 @@ export default function EditorPage() {
         const json = await res.json()
         if (json.success && json.data && json.data.content?.length > 0) {
           const patchedContent = json.data.content.map((block: any) => {
+            const defaultBlock = defaultHomeData.content.find((b: any) => b.type === block.type)
+            const defaultProps = defaultBlock?.props || (puckConfig.components as any)[block.type]?.defaultProps || {}
+            
+            const mergedProps = { ...defaultProps, ...block.props }
+            
+            // Fill any missing or blank string values with default/current values
+            Object.keys(defaultProps).forEach((key) => {
+              if (mergedProps[key] === undefined || mergedProps[key] === null || mergedProps[key] === '') {
+                mergedProps[key] = defaultProps[key]
+              }
+            })
+
+            // Guarantee arrays are properly populated with real items
             if (block.type === 'ShopByCategoriesBlock') {
-              if (!block.props.categories || block.props.categories.length === 0) {
-                return {
-                  ...block,
-                  props: {
-                    ...block.props,
-                    categories: DEFAULT_CATEGORIES,
-                  },
-                }
+              if (!mergedProps.categories || mergedProps.categories.length === 0) {
+                mergedProps.categories = DEFAULT_CATEGORIES
               }
             }
-            return block
+            if (block.type === 'InternationalWholesaleBlock') {
+              if (!mergedProps.countries || mergedProps.countries.length === 0) {
+                mergedProps.countries = DEFAULT_COUNTRIES
+              }
+            }
+            if (block.type === 'ManufacturerComparisonBlock') {
+              if (!mergedProps.rows || mergedProps.rows.length === 0) {
+                mergedProps.rows = DEFAULT_COMPARISON_ROWS
+              }
+            }
+            if (block.type === 'ManufacturingProcessBlock') {
+              if (!mergedProps.steps || mergedProps.steps.length === 0) {
+                mergedProps.steps = DEFAULT_PROCESS_STEPS
+              }
+            }
+
+            return {
+              ...block,
+              props: mergedProps,
+            }
           })
           setData({
             ...json.data,
